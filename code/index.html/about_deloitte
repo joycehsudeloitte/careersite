@@ -1,0 +1,156 @@
+<style>
+  :root {
+    --brand-green: #86BC25;
+    --black: #111;
+    --white: #fff;
+  }
+
+  .fullwidth-container {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    padding: 20px 0;
+    font-family: "Microsoft JhengHei", sans-serif;
+    background-color: var(--white);
+    color: var(--black);
+  }
+
+  .video-section,
+  .text-section {
+    flex: 1 1 50%;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .video-wrapper {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    position: relative;
+  }
+
+  .video-wrapper iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 12px;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .text-section-content {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .text-section h1 {
+    font-size: 42px;
+    color: var(--brand-green);
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+
+  .text-section p {
+    font-size: 20px;
+    line-height: 2;
+    font-weight: bold;
+    margin-bottom: 28px;
+  }
+
+  .button-group {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+
+.button {
+  padding: 14px 32px;
+  background-color: #fff;       /* 白底 */
+  color: #000;                  /* 黑字 */
+  border: 2px solid #000 !important;       /* 黑框 */
+  border-radius: 999px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.button:hover,
+a.button:hover,
+.button:focus-visible,
+a.button:focus-visible {
+  background-color: #e0e0e0;       /* 灰底 */
+  color: #000 !important;          /* ← 這行記得加分號！ */
+  border-color: #333;              /* 深灰框 */
+  outline: none;
+}
+
+
+
+  @media (max-width: 768px) {
+    .fullwidth-container {
+      flex-direction: column;
+    }
+
+    .video-section,
+    .text-section {
+      flex: 1 1 100%;
+      padding: 16px;
+    }
+
+    .video-wrapper {
+      position: relative;
+      aspect-ratio: 16 / 9;
+    }
+
+    .video-wrapper iframe {
+      position: static;
+      border-radius: 12px;
+    }
+
+    .text-section h1 {
+      font-size: 32px;
+    }
+
+    .text-section p {
+      font-size: 18px;
+    }
+
+    .text-section-content {
+      max-width: 100%;
+    }
+  }
+</style>
+
+<div class="fullwidth-container">
+  <div class="video-section">
+    <div class="video-wrapper">
+      <iframe 
+        src="https://www.youtube.com/embed/P8nQkkkWJl4?autoplay=1&mute=1&loop=1&playlist=P8nQkkkWJl4&rel=0&modestbranding=1&playsinline=1"
+        title="Deloitte Video"
+        allow="autoplay; encrypted-media"
+        allowfullscreen>
+      </iframe>
+    </div>
+  </div>
+
+  <div class="text-section">
+    <div class="text-section-content">
+      <h1>About Deloitte</h1>
+      <p>
+        Deloitte為全球領先之審計、管理顧問、財務顧問、風險諮詢、稅務及其他相關服務的專業服務機構。
+        憑藉175多年的努力和致力於豎立「因我不同，惟有更好」的卓越典範，我們的組織規模多樣並不斷增長。
+        Deloitte遍及全球逾150個國家的會員所，以世界級優質專業服務，為逾457,000人提供因應複雜商業挑戰中所需的卓越見解。
+        Fortune Global 500大中，超過90%的企業由Deloitte提供卓越的優質服務。
+      </p>
+      <div class="button-group">
+        <a href="https://deloittecot2.valhalla50.stage.jobs2web.com/Taiwan/content/Start-your-career-with-Deloitte-Experienced-Hires/?locale=zh_TW" class="button">更多關於我們</a>
+        <a href="https://www.deloitte.com/tw/tc.html" class="button">回到Deloitte Taiwan首頁</a>
+      </div>
+    </div>
+  </div>
+</div>
