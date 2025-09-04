@@ -1,0 +1,73 @@
+<section style="background-color: #f4f4f4; padding: 40px 20px; font-family: 'Noto Sans TC', sans-serif; color: #333;">
+  <h2 style="text-align: center; color: #86BC25; font-size: 28px; font-weight: bold; margin-bottom: 40px; letter-spacing: 1px;">
+    2025校園徵才活動
+  </h2>
+
+  <style>
+    .card-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 24px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    @media (min-width: 768px) {
+      .card-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    .card {
+      display: flex;
+      background: white;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+      transition: box-shadow 0.3s ease, transform 0.3s ease;
+      text-decoration: none;
+    }
+
+    .card:hover {
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+      transform: translateY(-4px);
+    }
+
+    .card-line {
+      width: 6px;
+      background-color: #86BC25; /* ✅ 左側綠色線條 */
+    }
+
+    .card-body {
+      padding: 20px;
+      flex: 1;
+    }
+
+    .card-title {
+      font-size: 18px;
+      font-weight: bold;
+      color: #333;
+      margin-bottom: 10px;
+      border-bottom: 1px solid #eee;
+      padding-bottom: 6px;
+    }
+
+    .card-content {
+      font-size: 15px;
+      color: #666;
+      line-height: 1.6;
+    }
+  </style>
+
+  <div class="card-grid">
+
+    <a href="https://deloittecot2.valhalla50.stage.jobs2web.com/Taiwan/content/2025-AA-Campus-Program/?locale=zh_TW&previewLink=true&overrideEmployeeLogin=false&referrerSave=false" class="card">
+      <div class="card-line"></div>
+      <div class="card-body">
+        <div class="card-title">2025 審計與確信及電腦審計校園徵才</div>
+        <div class="card-content">2025校園說明會開放報名，10/1前投遞校園徵才職缺抽好禮 💝！</div>
+      </div>
+    </a>
+
+  </div>
+</section>
