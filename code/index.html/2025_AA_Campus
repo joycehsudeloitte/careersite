@@ -1,0 +1,163 @@
+<style>
+  :root{
+    --brand:#86BC25;
+    --brand-dark:#26890D;
+    --accent:#43B02A;
+    --text:#333;
+  }
+
+  .horizon-program { font-family:"Microsoft JhengHei", Arial, sans-serif; color:var(--text); font-size:18px; background:#fff; padding:40px 0; }
+  .horizon-program h1{ text-align:center; color:var(--brand); font-size:3rem; margin:40px 0 10px; font-weight:700; }
+  .horizon-program .subtitle{ text-align:center; font-size:1.3rem; margin:0 auto 20px; color:#555; line-height:1.8; max-width:1200px; font-weight:700; }
+
+  .horizon-program .btn{
+    display:inline-block; margin:16px auto 0; padding:12px 22px;
+    background:var(--accent); color:#fff; text-decoration:none; border-radius:8px;
+    font-size:1.05rem; width:auto;
+  }
+  .horizon-program .btn:hover{ background:var(--brand-dark); }
+
+  /* Tabs */
+  .horizon-program nav{ background:#fff; padding:14px 0; box-shadow:0 2px 5px rgba(0,0,0,.08);}
+  .horizon-program nav ul{ list-style:none; margin:0; padding:0; display:flex; justify-content:center; flex-wrap:wrap;}
+  .horizon-program nav li{ margin:0 18px;}
+  .horizon-program nav a{ position:relative; color:#046A38; text-decoration:none; font-weight:700; font-size:1.6rem; padding-bottom:8px; cursor:pointer;}
+  .horizon-program nav a.active{ color:var(--brand);}
+  .horizon-program nav a.active::after{ content:''; position:absolute; left:0; bottom:0; width:100%; height:3px; background:var(--brand); border-radius:2px; }
+
+  .horizon-program .container{ width:90%; max-width:1200px; margin:30px auto;}
+  .horizon-program .section{ display:none; background:#fff; border-radius:12px; padding:30px; margin-bottom:30px; box-shadow:0 2px 5px rgba(0,0,0,.08);}
+  .horizon-program .section.active{ display:block; }
+  .horizon-program .section h2{ color:#046A38; font-size:2rem; margin-bottom:20px; font-weight:800;text-align: center;}
+
+  /* Timeline */
+  .timeline{ display:flex; align-items:flex-start; justify-content:space-between; gap:32px; padding:24px; }
+  .step{ flex:1; display:flex; flex-direction:column; align-items:center; text-align:center; gap:12px;}
+ .circle {
+  width:150px; height:150px; border-radius:50%;
+  background:#ccc;     /* 改成淺灰色 */
+  color:#000;             /* 文字黑色 */
+  font-weight:700;
+  display:flex; align-items:center; justify-content:center;
+  box-shadow:0 2px 6px rgba(0,0,0,.08);
+}
+
+  .label{ font-size:15px; font-weight:700; color:#333; }
+
+  /* 實體說明會卡片 */
+  .card-container{ display:grid; grid-template-columns:repeat(2,1fr); gap:16px;}
+  .card-link{
+    display:flex; align-items:flex-start;
+    background:#fff; border:2px solid var(--brand); border-radius:12px;
+    padding:16px 20px; font-size:16px; color:#333; text-decoration:none;
+    box-shadow:0 2px 6px rgba(0,0,0,.08); transition:.2s;
+  }
+  .card-link:hover{ background:#f5f5f5; color:#000; transform:translateY(-3px);}
+  .card-link span.arrow{ margin-right:12px; font-weight:700; color:#000; font-size:20px; line-height:1;}
+  .card-link:hover span.arrow{ color:#fff;}
+  .card-content p{ margin:4px 0; font-size:15px; line-height:1.4;}
+
+  /* Jobs 卡片 */
+  #jobs .card-container{ display:grid; grid-template-columns:repeat(3,1fr); gap:24px;}
+  #jobs .card{ background:#fff; border-radius:16px; box-shadow:0 4px 10px rgba(0,0,0,.08); padding:22px;}
+  #jobs h2{ text-align:center; margin-bottom:20px; color:#046A38;}
+
+  @media(max-width:800px){
+    .card-container{ grid-template-columns:1fr; }
+    #jobs .card-container{ grid-template-columns:1fr; }
+  }
+</style>
+
+<div class="horizon-program">
+  <h1>2025 審計與確信及電腦審計校園徵才</h1>
+  <p class="subtitle">【Deloitte】2025校園徵才說明會熱烈報名中！</p>
+
+  <nav>
+    <ul>
+      <li><a data-target="process" class="active">甄選流程</a></li>
+      <li><a data-target="online">線上說明會</a></li>
+      <li><a data-target="onsite">實體說明會</a></li>
+    </ul>
+  </nav>
+
+  <div class="container">
+    <!-- 甄選流程 -->
+    <section id="process" class="section active">
+      <h2></h2>
+      <div class="timeline">
+        <div class="step"><div class="circle">10/3前</div><p class="label">線上履歷投遞</p></div>
+        <div class="step"><div class="circle">10–11月</div><p class="label">面試安排</p></div>
+        <div class="step"><div class="circle">11月底</div><p class="label">面談結果通知</p></div>
+        <div class="step"><div class="circle">2026/7–9</div><p class="label">報到入職</p></div>
+      </div>
+    </section>
+
+    <!-- 線上說明會 -->
+    <section id="online" class="section">
+      <h2></h2>
+      <p><strong>日期：</strong>2025/09/16　<br><strong>時間：</strong>12:30–13:30　<br><strong>地點：</strong>Zoom</p>
+      <a class="btn" href="https://forms.office.com/pages/responsepage.aspx?id=8UXaNizdH02vE1q-RrmZIcz-R34bm0tOgv8wNajBOd1UNlJXQVJMTVJQNURDVFM4M1JRQVVWV0taVyQlQCNjPTEkJUAjdD1n&route=shorturl" target="_blank">立即報名</a>
+    </section>
+
+    <!-- 實體說明會 -->
+    <section id="onsite" class="section">
+      <h2></h2>
+      <div class="card-container">
+        <a class="card-link" href="#"><span class="arrow">›</span><div class="card-content"><p><strong>國立臺北大學</strong></p><p>時間：2025/09/10　12:00–13:30</p><p>地點：商2F05</p></div></a>
+        <a class="card-link" href="#"><span class="arrow">›</span><div class="card-content"><p><strong>東吳大學</strong></p><p>時間：2025/09/17　15:10–16:40</p><p>地點：2123教室</p></div></a>
+        <a class="card-link" href="#"><span class="arrow">›</span><div class="card-content"><p><strong>輔仁大學</strong></p><p>時間：2025/09/19　12:00–13:30</p><p>地點：國璽樓11樓 MD1102郎世寧廳</p></div></a>
+        <a class="card-link" href="#"><span class="arrow">›</span><div class="card-content"><p><strong>淡江大學</strong></p><p>時間：2025/09/24　12:00–13:30</p><p>地點：驚聲國際會議廳</p></div></a>
+        <a class="card-link" href="#"><span class="arrow">›</span><div class="card-content"><p><strong>逢甲大學（會計）</strong></p><p>時間：2025/09/15　10:00–11:30</p><p>地點：活動前會以郵件通知</p></div></a>
+        <a class="card-link" href="#"><span class="arrow">›</span><div class="card-content"><p><strong>中原大學</strong></p><p>時間：2025/09/10　10:00–11:30</p><p>地點：401教室</p></div></a>
+        <a class="card-link" href="#"><span class="arrow">›</span><div class="card-content"><p><strong>國立彰化師範大學</strong></p><p>時間：2025/09/24　13:30–15:00</p><p>地點：經世館7樓演講廳</p></div></a>
+        <a class="card-link" href="#"><span class="arrow">›</span><div class="card-content"><p><strong>國立中興大學</strong></p><p>時間：2025/09/24　12:30–14:00</p><p>地點：社管229教室</p></div></a>
+        <a class="card-link" href="#"><span class="arrow">›</span><div class="card-content"><p><strong>國立臺北商業大學</strong></p><p>時間：2025/09/24　12:00–13:30</p><p>地點：藝512教室</p></div></a>
+        <a class="card-link" href="#"><span class="arrow">›</span><div class="card-content"><p><strong>國立成功大學</strong></p><p>時間：2025/09/11　12:00–13:30</p><p>地點：會計系館 63211教室</p></div></a>
+        <a class="card-link" href="#"><span class="arrow">›</span><div class="card-content"><p><strong>國立中正大學</strong></p><p>時間：2025/09/30　12:00–13:30</p><p>地點：會資系 R161演講廳</p></div></a>
+        <a class="card-link" href="#"><span class="arrow">›</span><div class="card-content"><p><strong>國立東華大學</strong></p><p>時間：2025/09/19　12:30–14:00</p><p>地點：管理學院 第二講堂D124</p></div></a>
+        <a class="card-link" href="#"><span class="arrow">›</span><div class="card-content"><p><strong>東海大學</strong></p><p>時間：2025/09/25　12:20–13:50</p><p>地點：活動前會以郵件通知</p></div></a>
+        <a class="card-link" href="#"><span class="arrow">›</span><div class="card-content"><p><strong>靜宜大學</strong></p><p>時間：2025/09/16　12:10–13:30</p><p>地點：主顧105教室</p></div></a>
+        <a class="card-link" href="#"><span class="arrow">›</span><div class="card-content"><p><strong>元智大學</strong></p><p>時間：2025/09/10　12:00–13:30</p><p>地點：活動前會以郵件通知</p></div></a>
+        <a class="card-link" href="#"><span class="arrow">›</span><div class="card-content"><p><strong>東吳大學(資管)</strong></p><p>時間：2025/09/18　13:20–15:00</p><p>地點：5117教室</p></div></a>
+        <a class="card-link" href="#"><span class="arrow">›</span><div class="card-content"><p><strong>淡江大學(資管)</strong></p><p>時間：2025/09/15</p><p>地點：守謙國際會議中心 HC306、HC307</p></div></a>
+      </div>
+    </section>
+
+    <!-- 職缺內容 -->
+    <section id="jobs">
+      <h2>職缺內容</h2>
+      <div class="card-container">
+        <div class="card">
+          <h4>初級審計員</h4>
+          <p>地點：台北／新竹／台中／台南／高雄</p>
+          <p>協助完成審計財務報表、分析文件、審查內控流程、數據分析</p>
+          <a class="btn" href="https://careers.apac.deloitte.com/Taiwan/job/%E5%88%9D%E7%B4%9A%E5%AF%A9%E8%A8%88%E5%93%A1-2026%E6%A0%A1%E5%9C%92%E5%BE%B5%E6%89%8D-%E5%AF%A9%E8%A8%88%E6%9C%8D%E5%8B%99-%E5%AF%A9%E8%A8%88%E8%88%87%E7%A2%BA%E4%BF%A1%E8%AB%AE%E8%A9%A2%E6%9C%8D%E5%8B%99/884-zh_TW/" target="_blank">Learn more...</a>
+        </div>
+        <div class="card">
+          <h4>確信諮詢服務顧問</h4>
+          <p>地點：台北／新竹／台中／台南／高雄</p>
+          <p>洗錢防制、個資保護、資安查核、永續相關確信、資訊管理諮詢</p>
+          <a class="btn" href="https://careers.apac.deloitte.com/Taiwan/job/%E7%A2%BA%E4%BF%A1%E8%AB%AE%E8%A9%A2%E6%9C%8D%E5%8B%99%E9%A1%A7%E5%95%8F-2026%E6%A0%A1%E5%9C%92%E5%BE%B5%E6%89%8D-%E7%A2%BA%E4%BF%A1%E8%AB%AE%E8%A9%A2-%E5%AF%A9%E8%A8%88%E8%88%87%E7%A2%BA%E4%BF%A1%E8%AB%AE%E8%A9%A2%E6%9C%8D%E5%8B%99/885-zh_TW/" target="_blank">Learn more...</a>
+        </div>
+        <div class="card">
+          <h4>電腦審計／資訊系統稽核顧問</h4>
+          <p>地點：台北／新竹／台中／台南／高雄</p>
+          <p>查核計畫擬定、內控檢視、流程改善建議、專案管理與客戶溝通</p>
+          <a class="btn" href="https://reurl.cc/OmVMQy" target="_blank">Learn more...</a>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+
+<script>
+  // 分頁切換
+  document.querySelectorAll('.horizon-program nav a').forEach(link=>{
+    link.addEventListener('click', function(){
+      document.querySelectorAll('.horizon-program nav a').forEach(a=>a.classList.remove('active'));
+      this.classList.add('active');
+      document.querySelectorAll('.horizon-program .section').forEach(sec=>sec.classList.remove('active'));
+      document.getElementById(this.dataset.target).classList.add('active');
+    });
+  });
+</script>
