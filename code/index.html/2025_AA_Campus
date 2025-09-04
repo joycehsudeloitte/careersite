@@ -43,7 +43,22 @@
 }
 
   .label{ font-size:15px; font-weight:700; color:#333; }
+/* 讓 #online 區塊的文字與按鈕置中 */
+#online { 
+  text-align: center; 
+}
 
+/* （可選）微調段落間距與可讀性 */
+#online p { 
+  margin: 8px auto; 
+  line-height: 1.8; 
+  max-width: 900px;   /* 讓長行不會太寬，閱讀更舒服 */
+}
+
+/* 確保按鈕在置中容器內自然置中 */
+#online .btn { 
+  display: inline-block; 
+}
   /* 實體說明會卡片 */
   .card-container{ display:grid; grid-template-columns:repeat(2,1fr); gap:16px;}
   .card-link{
@@ -92,22 +107,25 @@
       </div>
     </section>
 
-    <!-- 線上說明會 -->
-    <section id="online" class="section">
-      <h2>活動資訊</h2>
-      <p>🕧舉辦時間 : 2025/9/26(五) 12:30-13:30
-      <br>📍舉辦地點 : 線上講座Zoom Meeting(活動前將以郵件發送會議連結)
-      <br>✨報名截止日期：2025/9/24 下午16:00</p>
-      <p></p>
-      <p>活動適合對象：
-      <br>符合下列一項皆可報名線上徵才說明會
-      <br>1.各校會計科系、商管科系各年級同學、應屆畢業生
-      <br>2.資管系所應屆畢業生 及 雙主修、輔系資管系所應屆畢業生
-      <br>3.修習過中級會計學
-      <br>點選下方內容立即報名!!</p>
-      <p><strong>**資料請確實填寫，於講座的前1天會再次以Email提醒唷**<strong></p>
-      <a class="btn" href="https://forms.office.com/pages/responsepage.aspx?id=8UXaNizdH02vE1q-RrmZIcz-R34bm0tOgv8wNajBOd1UNlJXQVJMTVJQNURDVFM4M1JRQVVWV0taVyQlQCNjPTEkJUAjdD1n&route=shorturl" target="_blank">立即報名</a>
-    </section>
+<!-- 線上說明會 -->
+<section id="online" class="section">
+  <h2>活動資訊</h2>
+  <p>🕧舉辦時間 : 2025/9/26(五) 12:30-13:30
+  <br>📍舉辦地點 : 線上講座Zoom Meeting(活動前將以郵件發送會議連結)
+  <br>✨報名截止日期：2025/9/24 下午16:00</p>
+
+  <p>活動適合對象：
+  <br>符合下列一項皆可報名線上徵才說明會
+  <br>1.各校會計科系、商管科系各年級同學、應屆畢業生
+  <br>2.資管系所應屆畢業生 及 雙主修、輔系資管系所應屆畢業生
+  <br>3.修習過中級會計學
+  <br>點選下方內容立即報名!!</p>
+
+  <p><strong>**資料請確實填寫，於講座的前1天會再次以Email提醒唷**</strong></p>
+
+  <a class="btn" href="https://forms.office.com/pages/responsepage.aspx?id=8UXaNizdH02vE1q-RrmZIcz-R34bm0tOgv8wNajBOd1UNlJXQVJMTVJQNURDVFM4M1JRQVVWV0taVyQlQCNjPTEkJUAjdD1n&route=shorturl" target="_blank" rel="noopener noreferrer">立即報名</a>
+</section>
+
 
 <!-- 實體說明會（已依日期由近到遠排序） -->
 <section id="onsite" class="section">
