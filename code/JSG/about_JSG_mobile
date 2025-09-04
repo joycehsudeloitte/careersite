@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>關於日商服務 (JSG)</title>
+  <style>
+    :root {
+      --brand-green: #86BC25;
+      --black: #111;
+      --white: #fff;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Microsoft JhengHei", sans-serif;
+      background-color: var(--white);
+      color: var(--black);
+    }
+
+    .fullwidth-container {
+      display: flex;
+      width: 100%;
+      flex-wrap: wrap;
+      padding: 20px 0;
+    }
+
+    .video-section,
+    .text-section {
+      flex: 1 1 50%;
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .video-wrapper {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      position: relative;
+    }
+
+    .video-wrapper iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+      border-radius: 12px;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    .text-section-content {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .text-section h1 {
+      font-size: 42px;
+      color: var(--brand-green);
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    .text-section p {
+      font-size: 20px;
+      line-height: 2;
+      font-weight: bold;
+      margin-bottom: 28px;
+    }
+
+    .button-group {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .button {
+      padding: 14px 32px;
+      background-color: var(--brand-green);
+      color: var(--white);
+      border: none;
+      border-radius: 999px;
+      font-size: 18px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .button:hover {
+      background-color: #43B02A;
+    }
+
+    @media (max-width: 768px) {
+      .fullwidth-container {
+        flex-direction: column;
+      }
+
+      .video-section,
+      .text-section {
+        flex: 1 1 100%;
+        padding: 16px;
+      }
+
+      .video-wrapper {
+        position: relative;
+        aspect-ratio: 16 / 9;
+      }
+
+      .video-wrapper iframe {
+        position: static;
+        border-radius: 12px;
+      }
+
+      .text-section h1 {
+        font-size: 32px;
+      }
+
+      .text-section p {
+        font-size: 18px;
+      }
+
+      .text-section-content {
+        max-width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="fullwidth-container">
+    <div class="video-section">
+      <div class="video-wrapper">
+        <iframe 
+          src="https://www.youtube.com/embed/5PmHWmzXDG4?autoplay=1&mute=1&loop=1&playlist=5PmHWmzXDG4&rel=0&modestbranding=1&playsinline=1"
+          title="勤業眾信日系服務"
+          allow="autoplay; encrypted-media"
+          allowfullscreen>
+        </iframe>
+      </div>
+    </div>
+
+    <div class="text-section">
+      <div class="text-section-content">
+        <h1>關於日商服務 (JSG)</h1>
+        <p>
+          企業服務小組（台灣JSG）自1988年成立以來，已陪伴在台日系企業走過三十餘年。
+          我們台灣JSG致力於從日系企業踏出進軍台灣的第一步起，即提供全方位的支援，
+          目標是在審計、稅務、併購、風險顧問、管理顧問等各專業領域中，提供一站式的整合服務。
+        </p>
+        <p>
+          デロイト台湾日系企業サービスグループ（台湾JSG）は、1988年に発足し、以来、30数年にわたり
+          台湾における日系企業の皆様とともに歩んでまいりました。我々台湾JSGは、日系企業の皆様を台湾進出の第一歩から
+          サポートし、監査、税務、M&A、リスク・アドバイザリー、コンサルティングなど各専門分野において、
+          ワンストップのサービスを提供することを目標としています。
+        </p>
+        <div class="button-group">
+          <a href="https://www2.deloitte.com/tw/zh/pages/japanese-services/topics/japanese-services-group.html" class="button">深入了解JSG</a>
+          <a href="https://www.deloitte.com/tw/tc.html" class="button">回到Deloitte Taiwan首頁</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
