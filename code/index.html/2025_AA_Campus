@@ -109,19 +109,21 @@
 
 <!-- 線上說明會 -->
 <section id="online" class="section">
-  <h2>活動資訊</h2>
-  <p>🕧舉辦時間 : 2025/9/26(五) 12:30-13:30
+  <h2></h2>
+  <p>活動時間
+  <br>🕧舉辦時間 : 2025/9/26(五) 12:30-13:30
   <br>📍舉辦地點 : 線上講座Zoom Meeting(活動前將以郵件發送會議連結)
   <br>✨報名截止日期：2025/9/24 下午16:00</p>
-
+  <p></p>
   <p>活動適合對象：
   <br>符合下列一項皆可報名線上徵才說明會
   <br>1.各校會計科系、商管科系各年級同學、應屆畢業生
   <br>2.資管系所應屆畢業生 及 雙主修、輔系資管系所應屆畢業生
   <br>3.修習過中級會計學
-  <br>點選下方內容立即報名!!</p>
-
-  <p><strong>**資料請確實填寫，於講座的前1天會再次以Email提醒唷**</strong></p>
+  <br>
+  <br></p>
+  <p><strong>**資料請確實填寫，於講座的前1天會再次以Email提醒唷**
+  <br>點選下方連結立即報名!!</p></strong></p>
 
   <a class="btn" href="https://forms.office.com/pages/responsepage.aspx?id=8UXaNizdH02vE1q-RrmZIcz-R34bm0tOgv8wNajBOd1UNlJXQVJMTVJQNURDVFM4M1JRQVVWV0taVyQlQCNjPTEkJUAjdD1n&route=shorturl" target="_blank" rel="noopener noreferrer">立即報名</a>
 </section>
