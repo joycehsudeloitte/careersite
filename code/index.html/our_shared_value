@@ -1,0 +1,209 @@
+<section class="benefit-circle-section">
+  <div class="container">
+    <h2 class="benefit-title">
+      <strong style="color: #86BC25;">共同價值觀</strong><br>
+      <span style="font-size:18px; font-weight:normal; color: #86BC25;">Our Shared Values</span>
+    </h2>
+
+    <div class="benefit-card-grid">
+      <!-- 新增的卡片（排第一個，文字粗體） -->
+      <div class="benefit-item first-card">
+        <div class="benefit-icon-img">
+          <img src="https://github.com/joycehsudeloitte/careersite/blob/images/TW_Share%20Values.png?raw=true" alt="Our Shared Values Overview">
+        </div>
+               <p>
+          Deloitte秉持著提供卓越的客戶服務，對內我們透過「共同價值觀」緊密串聯Deloitte全球約33萬同仁，藉由基本專業行為準則全球提供一致的服務宗旨和品質，並持續引領我們與客戶、大眾及社會共創不凡的正面力量，致力於成就勤業眾信在專業服務領域的典範地位。
+        </p>
+      </div>
+
+      <!-- 原卡片一（往後推成第二張） -->
+      <div class="benefit-item">
+        <div class="benefit-icon-img">
+          <img src="https://github.com/joycehsudeloitte/careersite/blob/images/%E6%88%90%E5%B0%B1%E5%85%B8%E7%AF%84.png?raw=true" alt="成就典範">
+        </div>
+        <h3>成就典範<br><span class="en-sub">Lead the way</span></h3>
+        <p>
+          Deloitte不僅致力於專業領域的領先，更冀望引領趨勢，共創美好未來。<br>
+          <span class="en">We are not only leading the profession, but also reinventing it for the future. We are also committed to creating opportunity and leading the way to a more sustainable world.</span>
+        </p>
+      </div>
+
+      <!-- 原卡片二（第三張） -->
+      <div class="benefit-item">
+        <div class="benefit-icon-img">
+          <img src="https://github.com/joycehsudeloitte/careersite/blob/images/%E8%AA%A0%E6%AD%A3%E7%AF%A4%E5%AF%A6.png?raw=true" alt="誠正篤實">
+        </div>
+        <h3>誠正篤實<br><span class="en-sub">Serve with integrity</span></h3>
+        <p>
+          誠正篤實是我們堅定奉行之原則，這是所有決定與行動的基礎，亦是社會與客戶對我們信任的根基。<br>
+          <span class="en">By acting ethically and with integrity, we have earned the trust of clients, regulators, and the public. Upholding that trust is our single most important responsibility.</span>
+        </p>
+      </div>
+
+      <!-- 原卡片三（第四張） -->
+      <div class="benefit-item">
+        <div class="benefit-icon-img">
+          <img src="https://github.com/joycehsudeloitte/careersite/blob/images/%E9%97%9C%E6%87%B7%E4%BA%92%E5%8A%A9.png?raw=true" alt="關懷互助">
+        </div>
+        <h3>關懷互助<br><span class="en-sub">Take care of each other</span></h3>
+        <p>
+          Deloitte全球同仁全體一心，彼此尊重，以公平、信任相待，並以同理心出發，成就同儕間的成長與進步。<br>
+          <span class="en">We look out for one another and prioritize respect, fairness, development, and well-being.</span>
+        </p>
+      </div>
+
+      <!-- 原卡片四（第五張） -->
+      <div class="benefit-item">
+        <div class="benefit-icon-img">
+          <img src="https://github.com/joycehsudeloitte/careersite/blob/images/%E5%A4%9A%E5%85%83%E5%8C%85%E5%AE%B9.png?raw=true" alt="多元包容">
+        </div>
+        <h3>多元包容<br><span class="en-sub">Foster inclusion</span></h3>
+        <p>
+          重視性別平等，且廣納來自不同背景、具備不同經驗及不同想法的同仁，打造具有多元性與包容性的工作環境。<br>
+          <span class="en">We are at our best when we foster an inclusive culture and embrace diversity in all forms. We know this attracts top talent, enables innovation, and helps deliver well-rounded client solutions.</span>
+        </p>
+      </div>
+
+      <!-- 原卡片五（第六張） -->
+      <div class="benefit-item">
+        <div class="benefit-icon-img">
+          <img src="https://github.com/joycehsudeloitte/careersite/blob/images/%E5%90%88%E4%BD%9C%E5%85%B1%E6%A6%AE.png?raw=true" alt="合作共榮">
+        </div>
+        <h3>合作共榮<br><span class="en-sub">Collaborate for measurable impact</span></h3>
+        <p>
+          跨越部門、產業、及地域的限制，致力將專業價值最大化，建立更有意義的聯結，傳達有形有感的影響力。<br>
+          <span class="en">We approach our work with a collaborative mindset, teaming across businesses, geographies, and skills to deliver tangible, measurable, attributable impact.</span>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .benefit-circle-section {
+    background-color: #f5f5f5;
+    padding: 80px 20px;
+    font-family: 'Microsoft JhengHei', sans-serif;
+  }
+
+  .container {
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+
+  .benefit-title {
+    text-align: center;
+    font-size: 36px;
+    font-weight: bold;
+    color: #86BC25;
+    margin-bottom: 60px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 1s ease;
+  }
+
+  .benefit-card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 40px;
+    text-align: center;
+  }
+
+  .benefit-item {
+    padding: 20px 10px;
+    background-color: transparent;
+    border-radius: 16px;
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s ease;
+  }
+
+  .benefit-item.in-view {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .benefit-title.in-view {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .benefit-icon-img img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+  }
+
+  .benefit-item h3 {
+    font-size: 20px;
+    color: #26890D;
+    margin-bottom: 10px;
+    line-height: 1.4;
+  }
+
+  .en-sub {
+    font-size: 14px;
+    color: #666;
+    display: block;
+    margin-top: 4px;
+  }
+
+  .benefit-item p {
+    font-size: 15px;
+    color: #333;
+    line-height: 1.6;
+  }
+
+  /* 第一個卡片文字加粗 + 品牌綠色 */
+  .first-card p {
+    font-weight: 700;
+    font-size: 16px;
+    color: #000;
+    text-align: center;
+    line-height: 2.5;
+  }
+
+  .en {
+    font-size: 14px;
+    color: #666;
+    display: block;
+    margin-top: 8px;
+  }
+
+  @media (max-width: 768px) {
+    .benefit-title {
+      font-size: 28px;
+    }
+
+    .benefit-item h3 {
+      font-size: 18px;
+    }
+
+    .benefit-item p {
+      font-size: 14px;
+    }
+  }
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const observerOptions = { threshold: 0.2 };
+
+    const revealOnScroll = (entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in-view');
+          observer.unobserve(entry.target);
+        }
+      });
+    };
+
+    const observer = new IntersectionObserver(revealOnScroll, observerOptions);
+
+    document.querySelectorAll('.benefit-item').forEach(item => observer.observe(item));
+    const title = document.querySelector('.benefit-title');
+    if (title) observer.observe(title);
+  });
+</script>
