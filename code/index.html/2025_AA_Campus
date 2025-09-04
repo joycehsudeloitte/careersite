@@ -115,8 +115,69 @@
   align-self: center;     /* 水平置中 */
   width: fit-content;
 }
+/* === Mobile 調整（修正版）：不改圓圈顏色、導覽列保持置中 === */
+@media (max-width: 768px) {
 
+  /* 整體排版與字級微調 */
+  .horizon-program { padding: 24px 0; font-size: 16px; }
+  .horizon-program h1 { font-size: 2rem; margin: 16px 0 8px; }
+  .horizon-program .subtitle { font-size: 1rem; margin-bottom: 16px; }
+  .horizon-program .container { width: 92%; margin: 16px auto; padding: 0; }
 
+  /* 導覽列維持置中、不做橫向滑動 */
+  .horizon-program nav ul{
+    justify-content: center;   /* 保持置中 */
+    padding: 10px 12px;
+    gap: 12px;
+  }
+  .horizon-program nav a{ font-size: 1.5rem; padding-bottom: 6px; }
+
+  /* 甄選流程：改直向列表，每項一行 */
+  .timeline{
+    display: block;      /* 取消水平排列 */
+    padding: 8px 0;
+  }
+  .timeline .step{
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    text-align: left;
+    padding: 12px 8px;
+    border-bottom: 1px solid #eee;
+  }
+  .timeline .step:last-child{ border-bottom: none; }
+
+  /* 只縮尺寸，不改顏色（保留你原本的 #00ABAB 與白字） */
+  .timeline .circle{
+    width: 88px;
+    height: 88px;
+    min-width: 88px;
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 1.1;
+  }
+
+  /* 標籤字可讀性 */
+  .timeline .label{
+    font-size: 16px;
+    line-height: 1.5;
+    color: #222;
+  }
+
+  /* 卡片：手機單欄 */
+  .card-container{ grid-template-columns: 1fr !important; }
+  #jobs .card-container{ grid-template-columns: 1fr; }
+
+  /* 內距微調 */
+  .card-link{ padding: 14px 16px; }
+  #jobs .card{ padding: 16px; }
+
+  /* 行動裝置按鈕好按 */
+  .horizon-program .btn{ width: 100%; max-width: 360px; }
+}
+/* 重要：請刪掉你檔案最下面那段全域覆寫：
+.timeline .circle{ background:#E6E6E6; color:#000; ... }
+*/
 
 </style>
 
