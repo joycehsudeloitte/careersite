@@ -1,0 +1,189 @@
+<section class="benefit-circle-section">
+  <div class="container">
+    <h2 class="benefit-title">
+      Our Shared Values
+    </h2>
+
+    <div class="benefit-card-grid">
+      <!-- 第一張卡片 -->
+      <div class="benefit-item first-card">
+        <div class="benefit-icon-img">
+          <img src="https://github.com/joycehsudeloitte/careersite/blob/images/TW_Share%20Values.png?raw=true" alt="Our Shared Values Overview">
+        </div>
+        <p>
+          Our Shared Values are at the core of each decision we make, how we act, and how we impact those we serve where it matters most.
+        </p>
+      </div>
+
+      <!-- 第二張 -->
+      <div class="benefit-item">
+        <div class="benefit-icon-img">
+          <img src="https://github.com/joycehsudeloitte/careersite/blob/images/%E6%88%90%E5%B0%B1%E5%85%B8%E7%AF%84.png?raw=true" alt="Lead the way">
+        </div>
+        <h3>Lead the way</h3>
+        <p>
+          We are not only leading the profession, but also reinventing it for the future. We are also committed to creating opportunity and leading the way to a more sustainable world.
+        </p>
+      </div>
+
+      <!-- 第三張 -->
+      <div class="benefit-item">
+        <div class="benefit-icon-img">
+          <img src="https://github.com/joycehsudeloitte/careersite/blob/images/%E8%AA%A0%E6%AD%A3%E7%AF%A4%E5%AF%A6.png?raw=true" alt="Serve with integrity">
+        </div>
+        <h3>Serve with integrity</h3>
+        <p>
+          By acting ethically and with integrity, we have earned the trust of clients, regulators, and the public. Upholding that trust is our single most important responsibility.
+        </p>
+      </div>
+
+      <!-- 第四張 -->
+      <div class="benefit-item">
+        <div class="benefit-icon-img">
+          <img src="https://github.com/joycehsudeloitte/careersite/blob/images/%E9%97%9C%E6%87%B7%E4%BA%92%E5%8A%A9.png?raw=true" alt="Take care of each other">
+        </div>
+        <h3>Take care of each other</h3>
+        <p>
+          We look out for one another and prioritize respect, fairness, development, and well-being.
+        </p>
+      </div>
+
+      <!-- 第五張 -->
+      <div class="benefit-item">
+        <div class="benefit-icon-img">
+          <img src="https://github.com/joycehsudeloitte/careersite/blob/images/%E5%A4%9A%E5%85%83%E5%8C%85%E5%AE%B9.png?raw=true" alt="Foster inclusion">
+        </div>
+        <h3>Foster inclusion</h3>
+        <p>
+          We are at our best when we foster an inclusive culture and embrace diversity in all forms. We know this attracts top talent, enables innovation, and helps deliver well-rounded client solutions.
+        </p>
+      </div>
+
+      <!-- 第六張 -->
+      <div class="benefit-item">
+        <div class="benefit-icon-img">
+          <img src="https://github.com/joycehsudeloitte/careersite/blob/images/%E5%90%88%E4%BD%9C%E5%85%B1%E6%A6%AE.png?raw=true" alt="Collaborate for measurable impact">
+        </div>
+        <h3>Collaborate for measurable impact</h3>
+        <p>
+          We approach our work with a collaborative mindset, teaming across businesses, geographies, and skills to deliver tangible, measurable, attributable impact.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .benefit-circle-section {
+    background-color: #f5f5f5;
+    padding: 80px 20px;
+    font-family: 'Microsoft JhengHei', sans-serif;
+  }
+
+  .container {
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+
+  .benefit-title {
+    text-align: center;
+    font-size: 36px;
+    font-weight: bold;
+    color: #86BC25 ! important;
+    margin-bottom: 60px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 1s ease;
+  }
+
+  .benefit-card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 40px;
+    text-align: center;
+  }
+
+  .benefit-item {
+    padding: 20px 10px;
+    background-color: transparent;
+    border-radius: 16px;
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s ease;
+  }
+
+  .benefit-item.in-view {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .benefit-title.in-view {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .benefit-icon-img img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+  }
+
+  .benefit-item h3 {
+    font-size: 20px;
+    color: #26890D;
+    margin-bottom: 10px;
+    line-height: 1.4;
+  }
+
+  .benefit-item p {
+    font-size: 15px;
+    color: #333;
+    line-height: 1.6;
+  }
+
+  /* 第一個卡片文字加粗 */
+  .first-card p {
+    font-weight: 700;
+    font-size: 16px;
+    color: #000;
+    text-align: center;
+    line-height: 2.0;
+  }
+
+  @media (max-width: 768px) {
+    .benefit-title {
+      font-size: 28px;
+    }
+
+    .benefit-item h3 {
+      font-size: 18px;
+    }
+
+    .benefit-item p {
+      font-size: 14px;
+    }
+  }
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const observerOptions = { threshold: 0.2 };
+
+    const revealOnScroll = (entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in-view');
+          observer.unobserve(entry.target);
+        }
+      });
+    };
+
+    const observer = new IntersectionObserver(revealOnScroll, observerOptions);
+
+    document.querySelectorAll('.benefit-item').forEach(item => observer.observe(item));
+    const title = document.querySelector('.benefit-title');
+    if (title) observer.observe(title);
+  });
+</script>
