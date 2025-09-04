@@ -1,0 +1,112 @@
+<style>
+  :root {
+    --brand-green: #86BC25;
+    --accent-green: #43B02A;
+    --accent-green-dark: #0D8390;
+    --text-dark: #1a1a1a;
+    --bg-light: #ffffff;
+    --bg-dark: #121212;
+    --text-light: #f1f1f1;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg-light: var(--bg-dark);
+      --text-dark: var(--text-light);
+    }
+  }
+
+  .explore-section {
+    font-family: '微軟正黑體', sans-serif;
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+    box-sizing: border-box;
+  }
+
+  .explore-text {
+    text-align: center;
+    padding: 60px 20px 40px;
+    max-width: 960px;
+    margin: 0 auto;
+  }
+
+  .explore-text h2 {
+    color: var(--brand-green);
+    font-size: 2.75rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+
+  .explore-text p {
+    font-size: 1.25rem;
+    line-height: 1.8;
+    margin-bottom: 24px;
+  }
+
+  .btn-visit {
+    display: inline-block;
+    margin-top: 16px;
+    padding: 12px 24px;
+    background-color: var(--accent-green);
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 16px;
+    border: none;
+    border-radius: 0;
+    transition: background-color 0.3s ease;
+  }
+
+  .btn-visit:active,
+  .btn-visit:focus {
+    background-color: var(--accent-green-dark);
+  }
+
+  .embed-fullscreen {
+    width: 100%;
+    aspect-ratio: 16/9;
+    background-color: #000;
+    position: relative;
+  }
+
+  .embed-fullscreen iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  @media (max-width: 768px) {
+    .explore-text h2 {
+      font-size: 2rem;
+    }
+
+    .explore-text p {
+      font-size: 1rem;
+    }
+
+    .btn-visit {
+      font-size: 15px;
+      padding: 10px 20px;
+    }
+  }
+</style>
+
+<div class="explore-section">
+  <div class="explore-text">
+    <h2>探索你的潛能</h2>
+    <p>
+      探索你的潛能，不論你正準備起步，或已在職涯道路上穩健前行，<br>
+      我們為每一階段的你，都提供成長的機會與舞台。<br>
+      立即探索職涯機會。
+    </p>
+    <a class="btn-visit" href="https://explore.deloitte.com/" target="_blank">
+      若無法顯示，請點此在新分頁開啟
+    </a>
+  </div>
+
+  <div class="embed-fullscreen">
+    <iframe src="https://explore.deloitte.com/" allowfullscreen></iframe>
+  </div>
+</div>
