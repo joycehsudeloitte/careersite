@@ -8,7 +8,7 @@
       <!-- 第一張卡片 -->
       <div class="benefit-item first-card">
         <div class="benefit-icon-img">
-          <img src="https://github.com/joycehsudeloitte/careersite/blob/images/TW_Share%20Values.png?raw=true" alt="Our Shared Values Overview">
+          <img src="https://raw.githubusercontent.com/joycehsudeloitte/careersite/main/images/our_shared_value/TW_Share%20Values.png" alt="Our Shared Values Overview">
         </div>
         <p>
           Our Shared Values are at the core of each decision we make, how we act, and how we impact those we serve where it matters most.
@@ -18,7 +18,7 @@
       <!-- 第二張 -->
       <div class="benefit-item">
         <div class="benefit-icon-img">
-          <img src="https://github.com/joycehsudeloitte/careersite/blob/images/%E6%88%90%E5%B0%B1%E5%85%B8%E7%AF%84.png?raw=true" alt="Lead the way">
+          <img src="https://raw.githubusercontent.com/joycehsudeloitte/careersite/main/images/our_shared_value/%E6%88%90%E5%B0%B1%E5%85%B8%E7%AF%84.png" alt="Lead the way">
         </div>
         <h3>Lead the way</h3>
         <p>
@@ -29,7 +29,7 @@
       <!-- 第三張 -->
       <div class="benefit-item">
         <div class="benefit-icon-img">
-          <img src="https://github.com/joycehsudeloitte/careersite/blob/images/%E8%AA%A0%E6%AD%A3%E7%AF%A4%E5%AF%A6.png?raw=true" alt="Serve with integrity">
+          <img src="https://raw.githubusercontent.com/joycehsudeloitte/careersite/main/images/our_shared_value/%E8%AA%A0%E6%AD%A3%E7%AF%A4%E5%AF%A6.png" alt="Serve with integrity">
         </div>
         <h3>Serve with integrity</h3>
         <p>
@@ -40,7 +40,7 @@
       <!-- 第四張 -->
       <div class="benefit-item">
         <div class="benefit-icon-img">
-          <img src="https://github.com/joycehsudeloitte/careersite/blob/images/%E9%97%9C%E6%87%B7%E4%BA%92%E5%8A%A9.png?raw=true" alt="Take care of each other">
+          <img src="https://raw.githubusercontent.com/joycehsudeloitte/careersite/main/images/our_shared_value/%E9%97%9C%E6%87%B7%E4%BA%92%E5%8A%A9.png" alt="Take care of each other">
         </div>
         <h3>Take care of each other</h3>
         <p>
@@ -51,7 +51,7 @@
       <!-- 第五張 -->
       <div class="benefit-item">
         <div class="benefit-icon-img">
-          <img src="https://github.com/joycehsudeloitte/careersite/blob/images/%E5%A4%9A%E5%85%83%E5%8C%85%E5%AE%B9.png?raw=true" alt="Foster inclusion">
+          <img src="https://raw.githubusercontent.com/joycehsudeloitte/careersite/main/images/our_shared_value/%E5%A4%9A%E5%85%83%E5%8C%85%E5%AE%B9.png" alt="Foster inclusion">
         </div>
         <h3>Foster inclusion</h3>
         <p>
@@ -62,7 +62,7 @@
       <!-- 第六張 -->
       <div class="benefit-item">
         <div class="benefit-icon-img">
-          <img src="https://github.com/joycehsudeloitte/careersite/blob/images/%E5%90%88%E4%BD%9C%E5%85%B1%E6%A6%AE.png?raw=true" alt="Collaborate for measurable impact">
+          <img src="https://raw.githubusercontent.com/joycehsudeloitte/careersite/main/images/our_shared_value/%E5%90%88%E4%BD%9C%E5%85%B1%E6%A6%AE.png" alt="Collaborate for measurable impact">
         </div>
         <h3>Collaborate for measurable impact</h3>
         <p>
