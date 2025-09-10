@@ -9,7 +9,7 @@
       <!-- 新增的卡片（排第一個，文字粗體） -->
       <div class="benefit-item first-card">
         <div class="benefit-icon-img">
-          <img src="https://github.com/joycehsudeloitte/careersite/blob/images/TW_Share%20Values.png?raw=true" alt="Our Shared Values Overview">
+          <img src="https://raw.githubusercontent.com/joycehsudeloitte/careersite/main/images/our_shared_value/TW_Share%20Values.png">
         </div>
                <p>
           Deloitte秉持著提供卓越的客戶服務，對內我們透過「共同價值觀」緊密串聯Deloitte全球約33萬同仁，藉由基本專業行為準則全球提供一致的服務宗旨和品質，並持續引領我們與客戶、大眾及社會共創不凡的正面力量，致力於成就勤業眾信在專業服務領域的典範地位。
@@ -19,7 +19,7 @@
       <!-- 原卡片一（往後推成第二張） -->
       <div class="benefit-item">
         <div class="benefit-icon-img">
-          <img src="https://github.com/joycehsudeloitte/careersite/blob/images/%E6%88%90%E5%B0%B1%E5%85%B8%E7%AF%84.png?raw=true" alt="成就典範">
+          <img src="https://raw.githubusercontent.com/joycehsudeloitte/careersite/main/images/our_shared_value/%E6%88%90%E5%B0%B1%E5%85%B8%E7%AF%84.png" alt="成就典範">
         </div>
         <h3>成就典範<br><span class="en-sub">Lead the way</span></h3>
         <p>
@@ -31,7 +31,7 @@
       <!-- 原卡片二（第三張） -->
       <div class="benefit-item">
         <div class="benefit-icon-img">
-          <img src="https://github.com/joycehsudeloitte/careersite/blob/images/%E8%AA%A0%E6%AD%A3%E7%AF%A4%E5%AF%A6.png?raw=true" alt="誠正篤實">
+          <img src="https://raw.githubusercontent.com/joycehsudeloitte/careersite/main/images/our_shared_value/%E8%AA%A0%E6%AD%A3%E7%AF%A4%E5%AF%A6.png" alt="誠正篤實">
         </div>
         <h3>誠正篤實<br><span class="en-sub">Serve with integrity</span></h3>
         <p>
@@ -43,7 +43,7 @@
       <!-- 原卡片三（第四張） -->
       <div class="benefit-item">
         <div class="benefit-icon-img">
-          <img src="https://github.com/joycehsudeloitte/careersite/blob/images/%E9%97%9C%E6%87%B7%E4%BA%92%E5%8A%A9.png?raw=true" alt="關懷互助">
+          <img src="https://raw.githubusercontent.com/joycehsudeloitte/careersite/main/images/our_shared_value/%E9%97%9C%E6%87%B7%E4%BA%92%E5%8A%A9.png" alt="關懷互助">
         </div>
         <h3>關懷互助<br><span class="en-sub">Take care of each other</span></h3>
         <p>
@@ -55,7 +55,7 @@
       <!-- 原卡片四（第五張） -->
       <div class="benefit-item">
         <div class="benefit-icon-img">
-          <img src="https://github.com/joycehsudeloitte/careersite/blob/images/%E5%A4%9A%E5%85%83%E5%8C%85%E5%AE%B9.png?raw=true" alt="多元包容">
+          <img src="https://raw.githubusercontent.com/joycehsudeloitte/careersite/main/images/our_shared_value/%E5%A4%9A%E5%85%83%E5%8C%85%E5%AE%B9.png" alt="多元包容">
         </div>
         <h3>多元包容<br><span class="en-sub">Foster inclusion</span></h3>
         <p>
@@ -67,7 +67,7 @@
       <!-- 原卡片五（第六張） -->
       <div class="benefit-item">
         <div class="benefit-icon-img">
-          <img src="https://github.com/joycehsudeloitte/careersite/blob/images/%E5%90%88%E4%BD%9C%E5%85%B1%E6%A6%AE.png?raw=true" alt="合作共榮">
+          <img src="https://raw.githubusercontent.com/joycehsudeloitte/careersite/main/images/our_shared_value/%E5%90%88%E4%BD%9C%E5%85%B1%E6%A6%AE.png" alt="合作共榮">
         </div>
         <h3>合作共榮<br><span class="en-sub">Collaborate for measurable impact</span></h3>
         <p>
