@@ -1,0 +1,163 @@
+<!-- 人物專訪區塊（可直接貼上） -->
+<section class="interview-section">
+  <div class="container">
+    <!-- 專訪卡片 #1：左圖右文 -->
+    <article class="interview-item">
+      <figure class="interview-media">
+        <!-- 替換成你的圖：建議 3:2 或 4:3、jpg/webp -->
+        <img src="images/interview_01.jpg" alt="受訪者姓名肖像照" loading="lazy">
+      </figure>
+
+      <div class="interview-content">
+        <span class="tag">人物專訪</span>
+        <h2 class="title">顧問部｜王語晨 Senior Consultant</h2>
+        <p class="excerpt">
+          從校園到職場，如何把課堂上的邏輯訓練轉化為面對客戶的影響力？語晨分享她在顧問案中
+          最重要的「溝通與信任」，以及新人在專案中能快速上手的關鍵心法。
+        </p>
+        <a class="btn" href="#" target="_blank" rel="noopener noreferrer" aria-label="閱讀完整專訪：王語晨">
+          閱讀完整專訪
+          <span class="arrow">›</span>
+        </a>
+      </div>
+    </article>
+
+    <!-- 專訪卡片 #2：右圖左文（在桌機反向顯示） -->
+    <article class="interview-item reverse">
+      <figure class="interview-media">
+        <img src="images/interview_02.jpg" alt="受訪者姓名肖像照" loading="lazy">
+      </figure>
+
+      <div class="interview-content">
+        <span class="tag">人物專訪</span>
+        <h2 class="title">審計與確信｜林柏叡 Associate</h2>
+        <p class="excerpt">
+          第一年踏入審計工作，面對緊湊時程與跨團隊協作，柏叡分享如何規劃每日任務、與前輩配速，
+          以及在忙季中維持學習曲線與生活平衡的做法。
+        </p>
+        <a class="btn" href="#" target="_blank" rel="noopener noreferrer" aria-label="閱讀完整專訪：林柏叡">
+          閱讀完整專訪
+          <span class="arrow">›</span>
+        </a>
+      </div>
+    </article>
+  </div>
+</section>
+
+<style>
+  :root{
+    --brand:#86BC25;      /* 企業主色 */
+    --accent:#43B02A;     /* 輔色 */
+    --accent-dark:#26890D;/* 輔色深 */
+    --black:#111;
+    --text:#222;
+    --muted:#666;
+    --white:#fff;
+  }
+
+  .interview-section{
+    background: var(--white);
+    color: var(--text);
+    font-family: "Microsoft JhengHei", "Noto Sans TC", system-ui, -apple-system, Arial, sans-serif;
+    padding: 48px 16px;
+  }
+
+  .interview-section .container{
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .interview-item{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    align-items: center;
+    padding: 20px 0;
+    border-bottom: 1px solid #eee;
+  }
+
+  /* 桌機以上：左右雙欄 */
+  @media (min-width: 992px){
+    .interview-item{
+      grid-template-columns: 1fr 1fr;
+      gap: 36px;
+      padding: 36px 0;
+    }
+    /* 第二塊反向：右圖左文 */
+    .interview-item.reverse .interview-media{ order: 2; }
+    .interview-item.reverse .interview-content{ order: 1; }
+  }
+
+  .interview-media{
+    position: relative;
+    overflow: hidden;
+    border-radius: 16px;
+    box-shadow: 0 10px 24px rgba(0,0,0,.06);
+    background: #f7f7f7;
+  }
+
+  .interview-media img{
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4/3;      /* 可改 3/2；確保版面整齊 */
+    object-fit: cover;
+    transition: transform .5s ease;
+  }
+  .interview-media:hover img{ transform: scale(1.03); }
+
+  .interview-content .tag{
+    display: inline-block;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: .06em;
+    color: var(--brand);
+    background: rgba(134,188,37,.12);
+    border: 1px solid rgba(134,188,37,.35);
+    border-radius: 999px;
+    padding: 6px 12px;
+    margin-bottom: 10px;
+  }
+
+  .interview-content .title{
+    font-size: clamp(1.25rem, 2.2vw, 1.8rem);
+    line-height: 1.35;
+    margin: 6px 0 12px;
+    color: var(--black);
+    font-weight: 800;
+  }
+
+  .interview-content .excerpt{
+    color: var(--muted);
+    line-height: 1.9;
+    font-size: 1rem;
+    margin-bottom: 18px;
+  }
+
+  .btn{
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--brand);
+    color: var(--white);
+    text-decoration: none;
+    font-weight: 700;
+    padding: 12px 16px;
+    border-radius: 12px;
+    transition: background .2s ease, transform .08s ease;
+    outline: none;
+  }
+  .btn:hover{ background: var(--accent); }
+  .btn:active{ transform: translateY(1px); }
+  .btn .arrow{ font-size: 20px; line-height: 1; }
+
+  /* 可選：在深色背景區塊使用（若之後需要） */
+  .theme-dark{
+    background: var(--black);
+    color: var(--white);
+  }
+  .theme-dark .interview-item{ border-color: rgba(255,255,255,.12); }
+  .theme-dark .interview-content .title{ color: var(--white); }
+  .theme-dark .interview-content .excerpt{ color: rgba(255,255,255,.8); }
+}
+</style>
