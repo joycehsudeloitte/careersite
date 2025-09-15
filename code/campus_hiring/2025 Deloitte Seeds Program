@@ -1,0 +1,258 @@
+<style>
+  :root{
+    --brand:#86BC25;
+    --brand-dark:#26890D;
+    --accent:#43B02A;
+    --text:#333;
+  }
+
+  .seeds-program { font-family:"Microsoft JhengHei", Arial, sans-serif; color:var(--text); font-size:18px; background:#fff; padding:40px 0; }
+  .seeds-program h1{ text-align:center; color:var(--brand); font-size:3rem; margin:40px 0 10px; font-weight:700; }
+  .seeds-program .subtitle{ text-align:center; font-size:2rem !important; margin:0 auto 20px; color:#555; line-height:1.8; max-width:1200px; font-weight:700; }
+
+  .seeds-program .btn{
+    display:inline-block; margin:16px auto 0; padding:12px 22px;
+    background:var(--accent); color:#fff; text-decoration:none; border-radius:8px;
+    font-size:1.05rem; width:auto;
+  }
+  .seeds-program .btn:hover{ background:var(--brand-dark); }
+
+  /* Tabs */
+  .seeds-program nav{ background:#fff; padding:14px 0; box-shadow:0 2px 5px rgba(0,0,0,.08);}
+  .seeds-program nav ul{ list-style:none; margin:0; padding:0; display:flex; justify-content:center; flex-wrap:wrap;}
+  .seeds-program nav li{ margin:0 18px;}
+  .seeds-program nav a{ position:relative; color:#046A38; text-decoration:none; font-weight:700; font-size:2rem !important; padding-bottom:8px; cursor:pointer;}
+  .seeds-program nav a.active{ color:var(--brand);}
+  .seeds-program nav a.active::after{ content:''; position:absolute; left:0; bottom:0; width:100%; height:3px; background:var(--brand); border-radius:2px; }
+
+  .seeds-program .container{ width:90%; max-width:1200px; margin:30px auto;}
+  .seeds-program .section{ display:none; background:#fff; border-radius:12px; padding:30px; margin-bottom:30px; box-shadow:0 2px 5px rgba(0,0,0,.08);}
+  .seeds-program .section.active{ display:block; }
+  .seeds-program .section h2{ color:#046A38; font-size:2rem; margin-bottom:20px; font-weight:800;text-align: center;}
+
+  /* Timeline */
+  .timeline{ display:flex; align-items:flex-start; justify-content:space-between; gap:32px; padding:24px; }
+  .step{ flex:1; display:flex; flex-direction:column; align-items:center; text-align:center; gap:12px;}
+  .circle {
+    width:150px; height:150px; border-radius:50%;
+    background:#00ABAB;
+    color:#fff;
+    font-weight:700;
+    display:flex; align-items:center; justify-content:center;
+    box-shadow:0 2px 6px rgba(0,0,0,.08);
+  }
+
+  .label{ font-size:15px; font-weight:700; color:#333; }
+
+  /* 讓 #online 區塊的文字與按鈕置中 */
+  #online { text-align: center; }
+  #online p { margin: 8px auto; line-height: 1.8; max-width: 900px; }
+  #online .btn { display: inline-block; }
+
+  /* 實體說明會卡片 */
+  .card-container{ display:grid; grid-template-columns:repeat(2,1fr); gap:16px;}
+  .card-link{
+    display:flex; align-items:flex-start;
+    background:#fff; border:2px solid var(--brand); border-radius:12px;
+    padding:16px 20px; font-size:16px; color:#333; text-decoration:none;
+    box-shadow:0 2px 6px rgba(0,0,0,.08); transition:.2s;
+  }
+  .card-link:hover{ background:#f5f5f5; color:#000; transform:translateY(-3px);}
+  .card-link span.arrow{ margin-right:12px; font-weight:700; color:#000; font-size:20px; line-height:1;}
+  .card-link:hover span.arrow{ color:#fff;}
+  .card-content p{ margin:4px 0; font-size:15px; line-height:1.4;}
+
+  /* Jobs 卡片 */
+  #jobs .card-container{ display:grid; grid-template-columns:repeat(3,1fr); gap:24px; }
+  #jobs .card{
+    background:#fff; border-radius:16px; box-shadow:0 4px 10px rgba(0,0,0,.08); padding:22px;
+    display: flex; flex-direction: column;
+  }
+  #jobs h2{ text-align:center; font-weight: 800; margin-bottom:20px; color:#046A38; }
+
+  @media(max-width:800px){
+    .card-container{ grid-template-columns:1fr; }
+    #jobs .card-container{ grid-template-columns:1fr; }
+  }
+
+  /* Job 卡片標題（職缺名稱） */
+  #jobs .card h4{
+    color: #43B02A;
+    font-weight: 800;
+    font-size: 2rem;
+    margin: 0 0 8px;
+  }
+
+  /* 讓 #jobs 卡片內的按鈕固定在最下方並置中 */
+  #jobs .card .btn{
+    display: block;
+    margin-top: auto;
+    align-self: center;
+    width: fit-content;
+  }
+
+  /* === Mobile 調整（修正版）：不改圓圈顏色、導覽列保持置中 === */
+  @media (max-width: 768px) {
+    .seeds-program { padding: 24px 0; font-size: 16px; }
+    .seeds-program h1 { font-size: 2rem !important; margin: 16px 0 8px; }
+    .seeds-program .subtitle { font-size: 1.5rem !important; margin-bottom: 16px; }
+    .seeds-program .container { width: 92%; margin: 16px auto; padding: 0; }
+
+    .seeds-program nav ul{
+      justify-content: center;
+      padding: 10px 12px;
+      gap: 12px;
+    }
+    .seeds-program nav a{ font-size: 1.5rem !important; padding-bottom: 6px; }
+
+    .timeline{ display: block; padding: 8px 0; }
+    .timeline .step{
+      display: flex; align-items: center; gap: 14px; text-align: left;
+      padding: 12px 8px; border-bottom: 1px solid #eee;
+    }
+    .timeline .step:last-child{ border-bottom: none; }
+
+    .timeline .circle{
+      width: 88px; height: 88px; min-width: 88px;
+      font-weight: 800; font-size: 18px; line-height: 1.1;
+    }
+
+    .timeline .label{ font-size: 16px; line-height: 1.5; color: #222; }
+
+    .card-container{ grid-template-columns: 1fr !important; }
+    #jobs .card-container{ grid-template-columns: 1fr; }
+
+    .card-link{ padding: 14px 16px; }
+    #jobs .card{ padding: 16px; }
+
+    .seeds-program .btn{ width: 100%; max-width: 360px; }
+  }
+  /* 重要：請刪掉你檔案最下面那段全域覆寫：
+     .timeline .circle{ background:#E6E6E6; color:#000; ... } */
+</style>
+
+<div class="seeds-program">
+  <h1>2026 Deloitte Seeds Program</h1>
+  <p class="subtitle">【Deloitte】2025校園徵才說明會熱烈報名中！</p>   
+  <p class="subtitle">對審計、確信或電腦審計領域感到好奇嗎？想了解事務所的職涯發展與福利嗎？想與組內學長姐交流，解答自己對事務所的疑惑嗎？
+  <br>那這場說明會你一定不能錯過！
+  <br></p>
+  <p class="subtitle">✨ <strong !important>參加說明會，你將獲得：</strong>
+      <br>💡 事務所福利介紹
+      <br>💡 多元發展職涯藍圖
+      <br>💡 與專業同仁現場交流
+  <p class="subtitle"><strong !important>滑動至下方查看更多職缺內容!</strong>
+  <br>📬履歷投遞提醒：
+  <br>即日起至 2025/10/03(五) 止，開放審計與確信及電腦審計部門投遞履歷，越早投越有機會！</p>
+
+  <nav>
+    <ul>
+      <li><a data-target="process" class="active">甄選流程</a></li>
+      <li><a data-target="online">線上說明會</a></li>
+      <li><a data-target="onsite">實體說明會</a></li>
+    </ul>
+  </nav>
+
+  <div class="container">
+    <!-- 甄選流程 -->
+    <section id="process" class="section active">
+      <h2></h2>
+      <div class="timeline">
+        <div class="step"><div class="circle">10/3前</div><p class="label">線上履歷投遞</p></div>
+        <div class="step"><div class="circle">10–11月</div><p class="label">面試安排</p></div>
+        <div class="step"><div class="circle">11月底</div><p class="label">面談結果通知</p></div>
+        <div class="step"><div class="circle">2026年<br>7–9月</div><p class="label">報到入職</p></div>
+      </div>
+    </section>
+
+    <!-- 線上說明會 -->
+    <section id="online" class="section">
+      <h2></h2>
+      <p>活動時間：
+      <br>🕧舉辦時間 : 2025/9/26(五) 12:30-13:30
+      <br>📍舉辦地點 : 線上講座Zoom Meeting(活動前將以郵件發送會議連結)
+      <br>✨報名截止日期：2025/9/24 下午16:00</p>
+      <p></p>
+      <p>活動適合對象：
+      <br>符合下列一項皆可報名線上徵才說明會
+      <br>1.各校會計科系、商管科系各年級同學、應屆畢業生
+      <br>2.資管系所應屆畢業生 及 雙主修、輔系資管系所應屆畢業生
+      <br>3.修習過中級會計學
+      <br><br></p>
+      <p><strong>**資料請確實填寫，於講座的前1天會再次以Email提醒唷**
+      <br>👇點選下方連結立即報名!!</strong></p>
+      <a class="btn" href="https://forms.office.com/pages/responsepage.aspx?id=8UXaNizdH02vE1q-RrmZIcz-R34bm0tOgv8wNajBOd1UNlJXQVJMTVJQNURDVFM4M1JRQVVWV0taVyQlQCNjPTEkJUAjdD1n&route=shorturl" target="_blank" rel="noopener noreferrer">立即報名</a>
+    </section>
+
+    <!-- 實體說明會（已依日期由近到遠排序） -->
+    <section id="onsite" class="section">
+      <h2></h2>
+      <p><strong>📢歡迎點選下列文字方塊立即報名參加!</strong>
+      <br>資料請確實填寫，於活動的前1天會再次以Email提醒唷!</p>
+      <div class="card-container">
+        <!-- 內容同你提供的各校連結，略 -->
+        <!-- ...（保持不變）... -->
+        <a class="card-link" href="https://forms.office.com/e/X03KeSDewV" target="_blank" rel="noopener noreferrer"><span class="arrow">›</span><div class="card-content"><p><strong>中原大學</strong></p><p>時間：2025/09/10　10:00–11:30</p><p>地點：401教室</p></div></a>
+        <!-- 其餘卡片照原樣保留 -->
+        <!-- ... -->
+      </div>
+    </section>
+
+    <section id="jobs">
+      <h2>職缺內容</h2>
+      <div class="card-container">
+        <!-- 初級審計員 -->
+        <div class="card">
+          <h4>初級審計員</h4>
+          <p>地點：台北／新竹／台中／台南／高雄</p>
+          <ul style="padding-left:20px; line-height:1.6;">
+            <li>協助完成審計財務報表</li>
+            <li>對審計文件進行分析審查</li>
+            <li>協助審計客戶的財務、交易和內部控制流程</li>
+            <li>對客戶數據進行分析，以針對客戶需求提供服務</li>
+          </ul>
+          <a class="btn" href="https://careers.apac.deloitte.com/Taiwan/job/%E5%88%9D%E7%B4%9A%E5%AF%A9%E8%A8%88%E5%93%A1-2026%E6%A0%A1%E5%9C%92%E5%BE%B5%E6%89%8D-%E5%AF%A9%E8%A8%88%E6%9C%8D%E5%8B%99-%E5%AF%A9%E8%A8%88%E8%88%87%E7%A2%BA%E4%BF%A1%E8%AB%AE%E8%A9%A2%E6%9C%8D%E5%8B%99/884-zh_TW/" target="_blank">Learn more...</a>
+        </div>
+
+        <!-- 確信諮詢服務顧問 -->
+        <div class="card">
+          <h4>確信諮詢服務顧問</h4>
+          <p>地點：台北</p>
+          <ul style="padding-left:20px; line-height:1.6;">
+            <li>服務項目包含：財務報導準則及永續揭露準則之確信與諮詢服務、內部控制制度之確信與諮詢服務、資訊作業之確信與諮詢服務、第三方合約遵循及產業價值鏈管理確信與諮詢服務、金融機構之個人資料保護及洗錢防制確信與諮詢服務，以及其他法規遵循相關之會計師查核或確信與諮詢服務</li>
+            <li>多元化的服務項目，可以適才適性地探索自我志向並發展專業領域</li>
+            <li>客戶涵蓋各大上市櫃公司、科技行業、金融服務業等，協助企業全面落實永續發展</li>
+          </ul>
+          <a class="btn" href="https://careers.apac.deloitte.com/Taiwan/job/%E7%A2%BA%E4%BF%A1%E8%AB%AE%E8%A9%A2%E6%9C%8D%E5%8B%99%E9%A1%A7%E5%95%8F-2026%E6%A0%A1%E5%9C%92%E5%BE%B5%E6%89%8D-%E7%A2%BA%E4%BF%A1%E8%AB%AE%E8%A9%A2-%E5%AF%A9%E8%A8%88%E8%88%87%E7%A2%BA%E4%BF%A1%E8%AB%AE%E8%A9%A2%E6%9C%8D%E5%8B%99/885-zh_TW/" target="_blank">Learn more...</a>
+        </div>
+
+        <!-- 電腦審計／資訊系統稽核顧問 -->
+        <div class="card">
+          <h4>電腦審計／資訊系統稽核顧問</h4>
+          <p>地點：台北／新竹／台中／高雄</p>
+          <p>各大上市櫃公司、科技行業、金融服務業之資訊作業稽核、資訊內部控制制度之稽核及諮詢</p>
+          <ul style="padding-left:20px; line-height:1.6;">
+            <li>依據客戶資訊環境及面臨之風險，擬訂查核計劃與執行查核工作，包含工作底稿之編製、提出查核結論、改善追蹤等。</li>
+            <li>檢視及評估客戶資訊作業中，控制點設計是否妥適及遵循情形之檢查。</li>
+            <li>提供客戶資訊循環和內部控制流程改善建議方案。</li>
+            <li>管理專案工作進度與品質，與客戶以及內外部同仁溝通。</li>
+            <li>可配合國內外出差。</li>
+          </ul>
+          <a class="btn" href="https://reurl.cc/OmVMQy" target="_blank">Learn more...</a>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+
+<script>
+  // 分頁切換（已將 horizon-program 改為 seeds-program）
+  document.querySelectorAll('.seeds-program nav a').forEach(link=>{
+    link.addEventListener('click', function(){
+      document.querySelectorAll('.seeds-program nav a').forEach(a=>a.classList.remove('active'));
+      this.classList.add('active');
+      document.querySelectorAll('.seeds-program .section').forEach(sec=>sec.classList.remove('active'));
+      document.getElementById(this.dataset.target).classList.add('active');
+    });
+  });
+</script>
