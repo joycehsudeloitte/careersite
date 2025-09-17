@@ -191,15 +191,30 @@
       <p><strong>📢歡迎點選下列文字方塊立即報名參加!</strong>
       <br>資料請確實填寫，於活動的前1天會再次以Email提醒唷!</p>
       <div class="card-container">
-        <a class="card-link" href="https://forms.office.com/e/X03KeSDewV" target="_blank" rel="noopener noreferrer">
-          <span class="arrow">›</span>
-          <div class="card-content">
-            <p><strong>中原大學</strong></p>
-            <p>時間：2025/09/10　10:00–11:30</p>
-            <p>地點：401教室</p>
-          </div>
+      <a class="card-link" href="https://forms.office.com/e/rQwDdj2wFN" target="_blank" rel="noopener noreferrer"
+           data-end="2025/09/10 14:00">
+          <span class="arrow">›</span><div class="card-content"><p><strong>台灣大學</strong></p><p>時間：2025/09/10　12:30–14:00</p><p>地點：活動前會以郵件通知</p></div>
         </a>
-        <!-- 其餘卡片照原樣保留 -->
+      <a class="card-link" href="https://forms.office.com/e/rQwDdj2wFN" target="_blank" rel="noopener noreferrer"
+           data-end="2025/09/10 14:00">
+          <span class="arrow">›</span><div class="card-content"><p><strong>政治大學</strong></p><p>時間：2025/09/10　12:30–14:00</p><p>地點：活動前會以郵件通知</p></div>
+        </a>
+      <a class="card-link" href="https://forms.office.com/e/rQwDdj2wFN" target="_blank" rel="noopener noreferrer"
+           data-end="2025/09/10 14:00">
+          <span class="arrow">›</span><div class="card-content"><p><strong>元智大學</strong></p><p>時間：2025/09/10　12:30–14:00</p><p>地點：活動前會以郵件通知</p></div>
+        </a>
+      <a class="card-link" href="https://forms.office.com/e/rQwDdj2wFN" target="_blank" rel="noopener noreferrer"
+           data-end="2025/09/10 14:00">
+          <span class="arrow">›</span><div class="card-content"><p><strong>元智大學</strong></p><p>時間：2025/09/10　12:30–14:00</p><p>地點：活動前會以郵件通知</p></div>
+        </a>
+      <a class="card-link" href="https://forms.office.com/e/rQwDdj2wFN" target="_blank" rel="noopener noreferrer"
+           data-end="2025/09/10 14:00">
+          <span class="arrow">›</span><div class="card-content"><p><strong>元智大學</strong></p><p>時間：2025/09/10　12:30–14:00</p><p>地點：活動前會以郵件通知</p></div>
+        </a>
+      <a class="card-link" href="https://forms.office.com/e/rQwDdj2wFN" target="_blank" rel="noopener noreferrer"
+           data-end="2025/09/10 14:00">
+          <span class="arrow">›</span><div class="card-content"><p><strong>元智大學</strong></p><p>時間：2025/09/10　12:30–14:00</p><p>地點：活動前會以郵件通知</p></div>
+        </a>
       </div>
     </section>
 
