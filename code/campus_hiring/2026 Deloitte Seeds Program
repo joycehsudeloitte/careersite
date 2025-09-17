@@ -28,7 +28,7 @@
   .seeds-program .container{ width:90%; max-width:1200px; margin:30px auto;}
   .seeds-program .section{ display:none; background:#fff; border-radius:12px; padding:30px; margin-bottom:30px; box-shadow:0 2px 5px rgba(0,0,0,.08);}
   .seeds-program .section.active{ display:block; }
-  .seeds-program .section h2{ color:#046A38; font-size:2rem; margin-bottom:20px; font-weight:800;text-align: center;}
+  .seeds-program .section h2{ color:#046A38; font-size:2rem; margin-bottom:20px; font-weight:800; text-align:center; }
 
   /* Timeline */
   .timeline{ display:flex; align-items:flex-start; justify-content:space-between; gap:32px; padding:24px; }
@@ -43,11 +43,6 @@
   }
 
   .label{ font-size:15px; font-weight:700; color:#333; }
-
-  /* 讓 #online 區塊的文字與按鈕置中 */
-  #online { text-align: center; }
-  #online p { margin: 8px auto; line-height: 1.8; max-width: 900px; }
-  #online .btn { display: inline-block; }
 
   /* 實體說明會卡片 */
   .card-container{ display:grid; grid-template-columns:repeat(2,1fr); gap:16px;}
@@ -133,30 +128,55 @@
 
 <div class="seeds-program">
   <h1>2026 Deloitte Seeds Program</h1>
-  <p class="subtitle">【Deloitte】2025校園徵才說明會熱烈報名中！</p>   
-  <p class="subtitle">對審計、確信或電腦審計領域感到好奇嗎？想了解事務所的職涯發展與福利嗎？想與組內學長姐交流，解答自己對事務所的疑惑嗎？
-  <br>那這場說明會你一定不能錯過！
-  <br></p>
-  <p class="subtitle">✨ <strong !important>參加說明會，你將獲得：</strong>
-      <br>💡 事務所福利介紹
-      <br>💡 多元發展職涯藍圖
-      <br>💡 與專業同仁現場交流
-  <p class="subtitle"><strong !important>滑動至下方查看更多職缺內容!</strong>
-  <br>📬履歷投遞提醒：
-  <br>即日起至 2025/10/03(五) 止，開放審計與確信及電腦審計部門投遞履歷，越早投越有機會！</p>
+  <p class="subtitle">【Deloitte】2025校園徵才說明會熱烈報名中！</p>
+  <p class="subtitle">
+    對審計、確信或電腦審計領域感到好奇嗎？想了解事務所的職涯發展與福利嗎？想與組內學長姐交流、解答對事務所的疑惑嗎？
+    <br>那這場說明會你一定不能錯過！
+  </p>
+  <p class="subtitle">
+    ✨ <strong !important>參加說明會，你將獲得：</strong>
+    <br>💡 事務所福利介紹
+    <br>💡 多元發展職涯藍圖
+    <br>💡 與專業同仁現場交流
+  </p>
+  <p class="subtitle">
+    <strong !important>滑動至下方查看更多職缺內容!</strong>
+    <br>📬履歷投遞提醒：
+    <br>即日起至 2025/10/03(五) 止，開放審計與確信及電腦審計部門投遞履歷，越早投越有機會！
+  </p>
 
+  <!-- 導覽：調整為 關於計畫 → 徵選流程 → 實體說明會 -->
   <nav>
     <ul>
-      <li><a data-target="process" class="active">甄選流程</a></li>
-      <li><a data-target="online">線上說明會</a></li>
+      <li><a data-target="about" class="active">關於計畫</a></li>
+      <li><a data-target="process">徵選流程</a></li>
       <li><a data-target="onsite">實體說明會</a></li>
     </ul>
   </nav>
 
   <div class="container">
-    <!-- 甄選流程 -->
-    <section id="process" class="section active">
-      <h2></h2>
+    <!-- 關於計畫（新） -->
+    <section id="about" class="section active">
+      <h2>關於計畫</h2>
+      <p style="text-align:center; max-width:900px; margin:0 auto 12px; line-height:1.9;">
+        Deloitte Seeds Program 以 <strong>People First</strong> 為核心，提供為期 6 個月的實務導向訓練，
+        由專屬 Mentor 與部門夥伴帶領，透過專案實戰、專業課程與多元輪調，協助你快速理解產業運作、
+        建立職場硬實力與軟實力，並探索適合你的職涯方向。
+      </p>
+      <ul style="max-width:900px; margin:8px auto 0; line-height:1.9;">
+        <li><strong>實戰學習：</strong>參與實際客戶專案，從問題定義到解決方案產出。</li>
+        <li><strong>專屬導師：</strong>Mentor 一對一回饋，持續迭代成長。</li>
+        <li><strong>學習資源：</strong>內部訓練課程、專家分享與跨部門交流。</li>
+        <li><strong>多元發展：</strong>依興趣與專長探索審計、確信、電腦審計等不同職系。</li>
+      </ul>
+      <div style="text-align:center;">
+        <a class="btn" href="#jobs">前往查看職缺</a>
+      </div>
+    </section>
+
+    <!-- 徵選流程（原 process；標題同步改字） -->
+    <section id="process" class="section">
+      <h2>徵選流程</h2>
       <div class="timeline">
         <div class="step"><div class="circle">10/3前</div><p class="label">線上履歷投遞</p></div>
         <div class="step"><div class="circle">10–11月</div><p class="label">面試安排</p></div>
@@ -165,39 +185,25 @@
       </div>
     </section>
 
-    <!-- 線上說明會 -->
-    <section id="online" class="section">
-      <h2></h2>
-      <p>活動時間：
-      <br>🕧舉辦時間 : 2025/9/26(五) 12:30-13:30
-      <br>📍舉辦地點 : 線上講座Zoom Meeting(活動前將以郵件發送會議連結)
-      <br>✨報名截止日期：2025/9/24 下午16:00</p>
-      <p></p>
-      <p>活動適合對象：
-      <br>符合下列一項皆可報名線上徵才說明會
-      <br>1.各校會計科系、商管科系各年級同學、應屆畢業生
-      <br>2.資管系所應屆畢業生 及 雙主修、輔系資管系所應屆畢業生
-      <br>3.修習過中級會計學
-      <br><br></p>
-      <p><strong>**資料請確實填寫，於講座的前1天會再次以Email提醒唷**
-      <br>👇點選下方連結立即報名!!</strong></p>
-      <a class="btn" href="https://forms.office.com/pages/responsepage.aspx?id=8UXaNizdH02vE1q-RrmZIcz-R34bm0tOgv8wNajBOd1UNlJXQVJMTVJQNURDVFM4M1JRQVVWV0taVyQlQCNjPTEkJUAjdD1n&route=shorturl" target="_blank" rel="noopener noreferrer">立即報名</a>
-    </section>
-
-    <!-- 實體說明會（已依日期由近到遠排序） -->
+    <!-- 實體說明會 -->
     <section id="onsite" class="section">
-      <h2></h2>
+      <h2>實體說明會</h2>
       <p><strong>📢歡迎點選下列文字方塊立即報名參加!</strong>
       <br>資料請確實填寫，於活動的前1天會再次以Email提醒唷!</p>
       <div class="card-container">
-        <!-- 內容同你提供的各校連結，略 -->
-        <!-- ...（保持不變）... -->
-        <a class="card-link" href="https://forms.office.com/e/X03KeSDewV" target="_blank" rel="noopener noreferrer"><span class="arrow">›</span><div class="card-content"><p><strong>中原大學</strong></p><p>時間：2025/09/10　10:00–11:30</p><p>地點：401教室</p></div></a>
+        <a class="card-link" href="https://forms.office.com/e/X03KeSDewV" target="_blank" rel="noopener noreferrer">
+          <span class="arrow">›</span>
+          <div class="card-content">
+            <p><strong>中原大學</strong></p>
+            <p>時間：2025/09/10　10:00–11:30</p>
+            <p>地點：401教室</p>
+          </div>
+        </a>
         <!-- 其餘卡片照原樣保留 -->
-        <!-- ... -->
       </div>
     </section>
 
+    <!-- 職缺內容（原樣保留） -->
     <section id="jobs">
       <h2>職缺內容</h2>
       <div class="card-container">
@@ -246,13 +252,14 @@
 </div>
 
 <script>
-  // 分頁切換（已將 horizon-program 改為 seeds-program）
+  // 分頁切換：對應 about / process / onsite
   document.querySelectorAll('.seeds-program nav a').forEach(link=>{
     link.addEventListener('click', function(){
       document.querySelectorAll('.seeds-program nav a').forEach(a=>a.classList.remove('active'));
       this.classList.add('active');
       document.querySelectorAll('.seeds-program .section').forEach(sec=>sec.classList.remove('active'));
-      document.getElementById(this.dataset.target).classList.add('active');
+      var target = document.getElementById(this.dataset.target);
+      if(target){ target.classList.add('active'); }
     });
   });
 </script>
