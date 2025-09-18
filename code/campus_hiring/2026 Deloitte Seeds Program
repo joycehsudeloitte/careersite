@@ -154,15 +154,12 @@
     <section id="about" class="section active">
       <h2></h2>
       <p style="text-align:center; max-width:900px; margin:0 auto 12px; line-height:1.9;">
-        Deloitte Seeds Program 以 <strong>People First</strong> 為核心，提供為期 6 個月的實務導向訓練，
-        由專屬 Mentor 與部門夥伴帶領，透過專案實戰、專業課程與多元輪調，協助你快速理解產業運作、
-        建立職場硬實力與軟實力，並探索適合你的職涯方向。
       </p>
       <ul style="max-width:900px; margin:8px auto 0; line-height:1.9;">
         <li><strong>實戰學習：</strong>參與實際客戶專案，從問題定義到解決方案產出。</li>
         <li><strong>專屬導師：</strong>Mentor 一對一回饋，持續迭代成長。</li>
-        <li><strong>學習資源：</strong>內部訓練課程、專家分享與跨部門交流。</li>
-        <li><strong>多元發展：</strong>依興趣與專長探索審計、確信、電腦審計等不同職系。</li>
+        <li><strong>學習成長：</strong>內部訓練課程、專家分享與跨部門交流。</li>
+        <li><strong>交流活動：</strong>舉辦各式活動，讓同學有機會與不同專業的同事互動。</li>
       </ul>
     </section>
 
