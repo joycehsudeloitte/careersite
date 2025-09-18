@@ -136,7 +136,7 @@
     <strong>
       【招募對象】：2026應屆畢業生
       <br>【實習期間】：6個月 (Jan./ Feb. - Jun./Jul.)
-      <br>【履歷投遞截止】：即日起至10/31(五) 23:59 (台灣時間)🎃
+      <br>【履歷投遞截止】：即日起至10/31(五) 23:59 (台灣時間)🎃(會依照實際情況滾動式調整，建議您盡早投遞~)
     </strong>
   </p>
   <p class="subtitle"><strong>👇滑動至下方查看更多職缺內容!</strong></p>
@@ -164,16 +164,13 @@
         <li><strong>學習資源：</strong>內部訓練課程、專家分享與跨部門交流。</li>
         <li><strong>多元發展：</strong>依興趣與專長探索審計、確信、電腦審計等不同職系。</li>
       </ul>
-      <div style="text-align:center;">
-        <a class="btn" href="#jobs">前往查看職缺</a>
-      </div>
     </section>
 
     <!-- 徵選流程 -->
     <section id="process" class="section">
       <h2></h2>
       <div class="timeline">
-        <div class="step"><div class="circle">10/31前</div><p class="label">線上履歷投遞</p></div>
+        <div class="step"><div class="circle">10/31前</div><p class="label">線上履歷投遞/測驗完成</p></div>
         <div class="step"><div class="circle">10–11月</div><p class="label">面試安排</p></div>
         <div class="step"><div class="circle">11–12月</div><p class="label">一次面談／二次面談</p></div>
         <div class="step"><div class="circle">2026年<br>1–2月</div><p class="label">報到入職</p></div>
@@ -214,7 +211,7 @@
 
     <!-- 職缺內容（固定在最下方；內容沿用你的原文） -->
     <section id="jobs">
-      <h2>職缺內容</h2>
+      <h2>七大專業領域</h2>
       <div class="card-container">
         <!-- Actuarial & Insurance Services Stream -->
         <div class="card">
