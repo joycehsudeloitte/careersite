@@ -1,32 +1,62 @@
 <style>
   :root{
-    --brand:#86BC25;
-    --brand-dark:#26890D;
-    --accent:#43B02A;
+    --brand:#86BC25;      /* 主色 */
+    --brand-dark:#26890D; /* 主色-深 */
+    --accent:#43B02A;     /* 輔色 */
     --text:#333;
   }
 
-  .seeds-program { font-family:"Microsoft JhengHei", Arial, sans-serif; color:var(--text); font-size:18px; background:#fff; padding:40px 0; }
-  .seeds-program h1{ text-align:center; color:var(--brand); font-size:3rem; margin:40px 0 10px; font-weight:700; }
-  .seeds-program .subtitle{ text-align:center; font-size:2rem !important; margin:0 auto 20px; color:#555; line-height:1.8; max-width:1200px; font-weight:700; }
+  /* 版型與字體 */
+  .seeds-program {
+    font-family:"Microsoft JhengHei", Arial, sans-serif;
+    color:var(--text);
+    font-size:18px;
+    background:#fff;
+    padding:40px 0;
+    min-height: 100vh;                 /* 讓內容至少滿版 */
+    display:flex; flex-direction:column;
+  }
+  .seeds-program h1{
+    text-align:center; color:var(--brand);
+    font-size:3rem; margin:40px 0 10px; font-weight:700;
+  }
+  .seeds-program .subtitle{
+    text-align:center; font-size:2rem !important;
+    margin:0 auto 20px; color:#555; line-height:1.8;
+    max-width:1200px; font-weight:700;
+  }
 
   .seeds-program .btn{
     display:inline-block; margin:16px auto 0; padding:12px 22px;
     background:var(--accent); color:#fff; text-decoration:none; border-radius:8px;
-    font-size:1.05rem; width:auto;
+    font-size:1.05rem; width:auto; transition:.15s ease-in-out;
   }
-  .seeds-program .btn:hover{ background:var(--brand-dark); }
+  .seeds-program .btn:hover{ background:var(--brand-dark); transform: translateY(-1px); }
 
   /* Tabs */
   .seeds-program nav{ background:#fff; padding:14px 0; box-shadow:0 2px 5px rgba(0,0,0,.08);}
   .seeds-program nav ul{ list-style:none; margin:0; padding:0; display:flex; justify-content:center; flex-wrap:wrap;}
   .seeds-program nav li{ margin:0 18px;}
-  .seeds-program nav a{ position:relative; color:#046A38; text-decoration:none; font-weight:700; font-size:2rem !important; padding-bottom:8px; cursor:pointer;}
-  .seeds-program nav a.active{ color:var(--brand);}
-  .seeds-program nav a.active::after{ content:''; position:absolute; left:0; bottom:0; width:100%; height:3px; background:var(--brand); border-radius:2px; }
+  .seeds-program nav a{
+    position:relative; color:#046A38; text-decoration:none; font-weight:700;
+    font-size:2rem !important; padding-bottom:8px; cursor:pointer;
+  }
+  .seeds-program nav a.active{ color:var(--brand); }
+  .seeds-program nav a.active::after{
+    content:''; position:absolute; left:0; bottom:0; width:100%; height:3px; background:var(--brand); border-radius:2px;
+  }
 
-  .seeds-program .container{ width:90%; max-width:1200px; margin:30px auto;}
-  .seeds-program .section{ display:none; background:#fff; border-radius:12px; padding:30px; margin-bottom:30px; box-shadow:0 2px 5px rgba(0,0,0,.08);}
+  /* 內寬容器：讓內容維持 1200px */
+  .seeds-program .container{
+    width:90%; max-width:1200px; margin:30px auto;
+    flex:1; display:flex; flex-direction:column;
+  }
+
+  /* 分頁區塊（關於/流程/說明會） */
+  .seeds-program .section{
+    display:none; background:#fff; border-radius:12px; padding:30px; margin-bottom:30px;
+    box-shadow:0 2px 5px rgba(0,0,0,.08);
+  }
   .seeds-program .section.active{ display:block; }
   .seeds-program .section h2{ color:#046A38; font-size:2rem; margin-bottom:20px; font-weight:800; text-align:center; }
 
@@ -35,95 +65,64 @@
   .step{ flex:1; display:flex; flex-direction:column; align-items:center; text-align:center; gap:12px;}
   .circle {
     width:150px; height:150px; border-radius:50%;
-    background:#00ABAB;
-    color:#fff;
-    font-weight:700;
+    background:#00ABAB; color:#fff; font-weight:700;
     display:flex; align-items:center; justify-content:center;
     box-shadow:0 2px 6px rgba(0,0,0,.08);
   }
-
   .label{ font-size:15px; font-weight:700; color:#333; }
 
-  /* 實體說明會卡片 */
+  /* 實體說明會卡片（兩欄） */
   .card-container{ display:grid; grid-template-columns:repeat(2,1fr); gap:16px;}
   .card-link{
-    display:flex; align-items:flex-start;
-    background:#fff; border:2px solid var(--brand); border-radius:12px;
+    display:flex; align-items:flex-start; background:#fff; border:2px solid var(--brand); border-radius:12px;
     padding:16px 20px; font-size:16px; color:#333; text-decoration:none;
     box-shadow:0 2px 6px rgba(0,0,0,.08); transition:.2s;
   }
   .card-link:hover{ background:#f5f5f5; color:#000; transform:translateY(-3px);}
   .card-link span.arrow{ margin-right:12px; font-weight:700; color:#000; font-size:20px; line-height:1;}
-  .card-link:hover span.arrow{ color:#fff;}
   .card-content p{ margin:4px 0; font-size:15px; line-height:1.4;}
 
-  /* Jobs 卡片 */
-  #jobs .card-container{ display:grid; grid-template-columns:repeat(3,1fr); gap:24px; }
+  /* Jobs：自適應多欄卡片 + 內寬保險 */
+  #jobs{ margin-top:auto; } /* 讓職缺區塊自然靠頁面底部 */
+  #jobs .card-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));
+    gap:24px;
+    max-width:1200px; margin:0 auto;
+  }
   #jobs .card{
     background:#fff; border-radius:16px; box-shadow:0 4px 10px rgba(0,0,0,.08); padding:22px;
-    display: flex; flex-direction: column;
+    display:flex; flex-direction:column;
   }
   #jobs h2{ text-align:center; font-weight: 800; margin-bottom:20px; color:#046A38; }
 
-  @media(max-width:800px){
-    .card-container{ grid-template-columns:1fr; }
-    #jobs .card-container{ grid-template-columns:1fr; }
-  }
-
   /* Job 卡片標題（職缺名稱） */
   #jobs .card h4{
-    color: #43B02A;
-    font-weight: 800;
-    font-size: 2rem;
-    margin: 0 0 8px;
+    color: #43B02A; font-weight: 800; font-size: 2rem; margin: 0 0 8px;
   }
-
   /* 讓 #jobs 卡片內的按鈕固定在最下方並置中 */
-  #jobs .card .btn{
-    display: block;
-    margin-top: auto;
-    align-self: center;
-    width: fit-content;
-  }
+  #jobs .card .btn{ display:block; margin-top:auto; align-self:center; width:fit-content; }
 
-  /* === Mobile 調整（修正版）：不改圓圈顏色、導覽列保持置中 === */
+  /* RWD */
+  @media(max-width:800px){
+    .card-container{ grid-template-columns:1fr; }
+  }
   @media (max-width: 768px) {
     .seeds-program { padding: 24px 0; font-size: 16px; }
     .seeds-program h1 { font-size: 2rem !important; margin: 16px 0 8px; }
     .seeds-program .subtitle { font-size: 1.5rem !important; margin-bottom: 16px; }
     .seeds-program .container { width: 92%; margin: 16px auto; padding: 0; }
-
-    .seeds-program nav ul{
-      justify-content: center;
-      padding: 10px 12px;
-      gap: 12px;
-    }
+    .seeds-program nav ul{ justify-content:center; padding:10px 12px; gap:12px; }
     .seeds-program nav a{ font-size: 1.5rem !important; padding-bottom: 6px; }
-
-    .timeline{ display: block; padding: 8px 0; }
-    .timeline .step{
-      display: flex; align-items: center; gap: 14px; text-align: left;
-      padding: 12px 8px; border-bottom: 1px solid #eee;
-    }
-    .timeline .step:last-child{ border-bottom: none; }
-
-    .timeline .circle{
-      width: 88px; height: 88px; min-width: 88px;
-      font-weight: 800; font-size: 18px; line-height: 1.1;
-    }
-
-    .timeline .label{ font-size: 16px; line-height: 1.5; color: #222; }
-
-    .card-container{ grid-template-columns: 1fr !important; }
-    #jobs .card-container{ grid-template-columns: 1fr; }
-
+    .timeline{ display:block; padding:8px 0; }
+    .timeline .step{ display:flex; align-items:center; gap:14px; text-align:left; padding:12px 8px; border-bottom:1px solid #eee; }
+    .timeline .step:last-child{ border-bottom:none; }
+    .timeline .circle{ width:88px; height:88px; min-width:88px; font-weight:800; font-size:18px; line-height:1.1; }
+    .timeline .label{ font-size:16px; line-height:1.5; color:#222; }
     .card-link{ padding: 14px 16px; }
-    #jobs .card{ padding: 16px; }
-
+    #jobs .card{ padding:16px; }
     .seeds-program .btn{ width: 100%; max-width: 360px; }
   }
-  /* 重要：請刪掉你檔案最下面那段全域覆寫：
-     .timeline .circle{ background:#E6E6E6; color:#000; ... } */
 </style>
 
 <div class="seeds-program">
@@ -135,14 +134,14 @@
     <br>✨加入Deloitte Seeds，七大專業領域等你探索，展開你的職涯新篇章！
   </p>
   <p class="subtitle">
-    <strong !important>
-    <br>【招募對象】：2026應屆畢業生
-    <br>【實習期間】：6個月 (Jan./ Feb. - Jun./Jul. )
-    <br>【履歷投遞截止】：即日起至10/31(五) 23:59 (台灣時間)🎃</strong>
+    <strong>
+      【招募對象】：2026應屆畢業生
+      <br>【實習期間】：6個月 (Jan./ Feb. - Jun./Jul.)
+      <br>【履歷投遞截止】：即日起至10/31(五) 23:59 (台灣時間)🎃
+    </strong>
   </p>
-  <p class="subtitle">
-    <strong !important>👇滑動至下方查看更多職缺內容!</strong>
-  </p>
+  <p class="subtitle"><strong>👇滑動至下方查看更多職缺內容!</strong></p>
+
   <nav>
     <ul>
       <li><a data-target="about" class="active">關於計畫</a></li>
@@ -152,7 +151,7 @@
   </nav>
 
   <div class="container">
-    <!-- 關於計畫（新） -->
+    <!-- 關於計畫 -->
     <section id="about" class="section active">
       <h2>關於計畫</h2>
       <p style="text-align:center; max-width:900px; margin:0 auto 12px; line-height:1.9;">
@@ -171,20 +170,20 @@
       </div>
     </section>
 
-    <!-- 徵選流程（原 process；標題同步改字） -->
+    <!-- 徵選流程 -->
     <section id="process" class="section">
       <h2>徵選流程</h2>
       <div class="timeline">
         <div class="step"><div class="circle">10/31前</div><p class="label">線上履歷投遞</p></div>
         <div class="step"><div class="circle">10–11月</div><p class="label">面試安排</p></div>
-        <div class="step"><div class="circle">11-12</div><p class="label">一次面談<br>二次面談</p></div>
-        <div class="step"><div class="circle">2026年<br>1-2月</div><p class="label">報到入職</p></div>
+        <div class="step"><div class="circle">11–12月</div><p class="label">一次面談／二次面談</p></div>
+        <div class="step"><div class="circle">2026年<br>1–2月</div><p class="label">報到入職</p></div>
       </div>
     </section>
 
     <!-- 實體說明會 -->
     <section id="onsite" class="section">
-      <h2>實體說明會</h2>
+       <h2>實體說明會</h2>
       <p><strong>📢歡迎點選下列文字方塊立即報名參加!</strong>
       <br>資料請確實填寫，於活動的前1天會再次以Email提醒唷!</p>
       <div class="card-container">
@@ -194,7 +193,7 @@
         </a>
       <a class="card-link" href="https://forms.office.com/e/rQwDdj2wFN" target="_blank" rel="noopener noreferrer"
            data-end="2025/10/27 18:00">
-          <span class="arrow">›</span><div class="card-content"><p><strong>國立政治大學</strong></p><p>時間：2025/10/27　18:00–19:00</p><p>地點：活動前會以郵件通知</p></div>
+          <span class="arrow">›</span><div class="card-content"><p><strong>國立政治大學</strong></p><p>時間：2025/10/27　19:00–20:00</p><p>地點：活動前會以郵件通知</p></div>
         </a>
       <a class="card-link" href="https://forms.office.com/e/rQwDdj2wFN" target="_blank" rel="noopener noreferrer"
            data-end="2025/09/10 14:00">
@@ -212,16 +211,15 @@
            data-end="2025/09/10 14:00">
           <span class="arrow">›</span><div class="card-content"><p><strong>國立中山大學</strong></p><p>時間：2025//　00:00–00:00</p><p>地點：活動前會以郵件通知</p></div>
         </a>
-      </div>
     </section>
 
-    <!-- 職缺內容（原樣保留） -->
+    <!-- 職缺內容（固定在最下方；內容沿用你的原文） -->
     <section id="jobs">
       <h2>職缺內容</h2>
       <div class="card-container">
-        <!-- 初級審計員 -->
+        <!-- Actuarial & Insurance Services Stream -->
         <div class="card">
-          <h4>初級審計員</h4>
+          <h4>Actuarial & Insurance Services Stream</h4>
           <p>地點：台北／新竹／台中／台南／高雄</p>
           <ul style="padding-left:20px; line-height:1.6;">
             <li>協助完成審計財務報表</li>
@@ -229,39 +227,52 @@
             <li>協助審計客戶的財務、交易和內部控制流程</li>
             <li>對客戶數據進行分析，以針對客戶需求提供服務</li>
           </ul>
-          <a class="btn" href="https://careers.apac.deloitte.com/Taiwan/job/%E5%88%9D%E7%B4%9A%E5%AF%A9%E8%A8%88%E5%93%A1-2026%E6%A0%A1%E5%9C%92%E5%BE%B5%E6%89%8D-%E5%AF%A9%E8%A8%88%E6%9C%8D%E5%8B%99-%E5%AF%A9%E8%A8%88%E8%88%87%E7%A2%BA%E4%BF%A1%E8%AB%AE%E8%A9%A2%E6%9C%8D%E5%8B%99/884-zh_TW/" target="_blank">Learn more...</a>
+          <a class="btn" href="https://careers.apac.deloitte.com/Taiwan/job/%E5%88%9D%E7%B4%9A%E5%AF%A9%E8%A8%88%E5%93%A1-2026%E6%A0%A1%E5%9C%92%E5%BE%B5%E6%89%8D-%E5%AF%A9%E8%A8%88%E6%9C%8D%E5%8B%99-%E5%AF%A9%E8%A8%88%E8%88%87%E7%A2%BA%E4%BF%A1%E8%AB%AE%E8%A9%A2%E6%9C%8D%E5%8B%99/884-zh_TW/" target="_blank" rel="noopener">Learn more...</a>
         </div>
 
-        <!-- 確信諮詢服務顧問 -->
+        <!-- Cyber Stream -->
         <div class="card">
-          <h4>確信諮詢服務顧問</h4>
+          <h4>Cyber Stream</h4>
+          <p>地點：台北／新竹／台中／台南／高雄</p>
+          <ul style="padding-left:20px; line-height:1.6;">
+            <li>協助完成審計財務報表</li>
+            <li>對審計文件進行分析審查</li>
+            <li>協助審計客戶的財務、交易和內部控制流程</li>
+            <li>對客戶數據進行分析，以針對客戶需求提供服務</li>
+          </ul>
+          <a class="btn" href="https://careers.apac.deloitte.com/Taiwan/job/%E5%88%9D%E7%B4%9A%E5%AF%A9%E8%A8%88%E5%93%A1-2026%E6%A0%A1%E5%9C%92%E5%BE%B5%E6%89%8D-%E5%AF%A9%E8%A8%88%E6%9C%8D%E5%8B%99-%E5%AF%A9%E8%A8%88%E8%88%87%E7%A2%BA%E4%BF%A1%E8%AB%AE%E8%A9%A2%E6%9C%8D%E5%8B%99/884-zh_TW/" target="_blank" rel="noopener">Learn more...</a>
+        </div>
+
+        <!-- Digital Transformation Stream -->
+        <div class="card">
+          <h4>Digital Transformation Stream</h4>
           <p>地點：台北</p>
           <ul style="padding-left:20px; line-height:1.6;">
-            <li>服務項目包含：財務報導準則及永續揭露準則之確信與諮詢服務、內部控制制度之確信與諮詢服務、資訊作業之確信與諮詢服務、第三方合約遵循及產業價值鏈管理確信與諮詢服務、金融機構之個人資料保護及洗錢防制確信與諮詢服務，以及其他法規遵循相關之會計師查核或確信與諮詢服務</li>
+            <li>服務項目包含：財務報導準則及永續揭露準則之確信與諮詢服務…</li>
             <li>多元化的服務項目，可以適才適性地探索自我志向並發展專業領域</li>
-            <li>客戶涵蓋各大上市櫃公司、科技行業、金融服務業等，協助企業全面落實永續發展</li>
+            <li>客戶涵蓋各大上市櫃公司、科技行業、金融服務業等</li>
           </ul>
-          <a class="btn" href="https://careers.apac.deloitte.com/Taiwan/job/%E7%A2%BA%E4%BF%A1%E8%AB%AE%E8%A9%A2%E6%9C%8D%E5%8B%99%E9%A1%A7%E5%95%8F-2026%E6%A0%A1%E5%9C%92%E5%BE%B5%E6%89%8D-%E7%A2%BA%E4%BF%A1%E8%AB%AE%E8%A9%A2-%E5%AF%A9%E8%A8%88%E8%88%87%E7%A2%BA%E4%BF%A1%E8%AB%AE%E8%A9%A2%E6%9C%8D%E5%8B%99/885-zh_TW/" target="_blank">Learn more...</a>
+          <a class="btn" href="https://careers.apac.deloitte.com/Taiwan/job/%E7%A2%BA%E4%BF%A1%E8%AB%AE%E8%A9%A2%E6%9C%8D%E5%8B%99%E9%A1%A7%E5%95%8F-2026%E6%A0%A1%E5%9C%92%E5%BE%B5%E6%89%8D-%E7%A2%BA%E4%BF%A1%E8%AB%AE%E8%A9%A2-%E5%AF%A9%E8%A8%88%E8%88%87%E7%A2%BA%E4%BF%A1%E8%AB%AE%E8%A9%A2%E6%9C%8D%E5%8B%99/885-zh_TW/" target="_blank" rel="noopener">Learn more...</a>
         </div>
 
-        <!-- 電腦審計／資訊系統稽核顧問 -->
+        <!-- ESG Stream -->
         <div class="card">
-          <h4>電腦審計／資訊系統稽核顧問</h4>
+          <h4>ESG Stream</h4>
           <p>地點：台北／新竹／台中／高雄</p>
           <p>各大上市櫃公司、科技行業、金融服務業之資訊作業稽核、資訊內部控制制度之稽核及諮詢</p>
           <ul style="padding-left:20px; line-height:1.6;">
-            <li>依據客戶資訊環境及面臨之風險，擬訂查核計劃與執行查核工作，包含工作底稿之編製、提出查核結論、改善追蹤等。</li>
-            <li>檢視及評估客戶資訊作業中，控制點設計是否妥適及遵循情形之檢查。</li>
-            <li>提供客戶資訊循環和內部控制流程改善建議方案。</li>
-            <li>管理專案工作進度與品質，與客戶以及內外部同仁溝通。</li>
-            <li>可配合國內外出差。</li>
+            <li>依據客戶資訊環境及面臨之風險，擬訂查核計劃與執行查核工作</li>
+            <li>檢視及評估客戶資訊作業中，控制點設計是否妥適及遵循情形</li>
+            <li>提供客戶資訊循環和內部控制流程改善建議方案</li>
+            <li>管理專案工作進度與品質，與客戶以及內外部同仁溝通</li>
+            <li>可配合國內外出差</li>
           </ul>
-          <a class="btn" href="https://reurl.cc/OmVMQy" target="_blank">Learn more...</a>
+          <a class="btn" href="https://reurl.cc/OmVMQy" target="_blank" rel="noopener">Learn more...</a>
         </div>
-     <div class="card-container">
-        <!-- 初級審計員 -->
+
+        <!-- Finance Stream -->
         <div class="card">
-          <h4>初級審計員</h4>
+          <h4>Finance Stream</h4>
           <p>地點：台北／新竹／台中／台南／高雄</p>
           <ul style="padding-left:20px; line-height:1.6;">
             <li>協助完成審計財務報表</li>
@@ -269,46 +280,34 @@
             <li>協助審計客戶的財務、交易和內部控制流程</li>
             <li>對客戶數據進行分析，以針對客戶需求提供服務</li>
           </ul>
-          <a class="btn" href="https://careers.apac.deloitte.com/Taiwan/job/%E5%88%9D%E7%B4%9A%E5%AF%A9%E8%A8%88%E5%93%A1-2026%E6%A0%A1%E5%9C%92%E5%BE%B5%E6%89%8D-%E5%AF%A9%E8%A8%88%E6%9C%8D%E5%8B%99-%E5%AF%A9%E8%A8%88%E8%88%87%E7%A2%BA%E4%BF%A1%E8%AB%AE%E8%A9%A2%E6%9C%8D%E5%8B%99/884-zh_TW/" target="_blank">Learn more...</a>
+          <a class="btn" href="https://careers.apac.deloitte.com/Taiwan/job/%E5%88%9D%E7%B4%9A%E5%AF%A9%E8%A8%88%E5%93%A1-2026%E6%A0%A1%E5%9C%92%E5%BE%B5%E6%89%8D-%E5%AF%A9%E8%A8%88%E6%9C%8D%E5%8B%99-%E5%AF%A9%E8%A8%88%E8%88%87%E7%A2%BA%E4%BF%A1%E8%AB%AE%E8%A9%A2%E6%9C%8D%E5%8B%99/884-zh_TW/" target="_blank" rel="noopener">Learn more...</a>
         </div>
-     <div class="card-container">
-        <!-- 初級審計員 -->
+
+        <!-- Infrastructure & Real Estate Stream -->
         <div class="card">
-          <h4>初級審計員</h4>
-          <p>地點：台北／新竹／台中／台南／高雄</p>
+          <h4>Infrastructure & Real Estate Stream</h4>
+          <p>地點：台北</p>
           <ul style="padding-left:20px; line-height:1.6;">
-            <li>協助完成審計財務報表</li>
-            <li>對審計文件進行分析審查</li>
-            <li>協助審計客戶的財務、交易和內部控制流程</li>
-            <li>對客戶數據進行分析，以針對客戶需求提供服務</li>
+            <li>服務項目包含：財務報導準則及永續揭露準則之確信與諮詢服務…</li>
+            <li>多元化的服務項目，可以適才適性地探索自我志向並發展專業領域</li>
+            <li>客戶涵蓋各大上市櫃公司、科技行業、金融服務業等</li>
           </ul>
-          <a class="btn" href="https://careers.apac.deloitte.com/Taiwan/job/%E5%88%9D%E7%B4%9A%E5%AF%A9%E8%A8%88%E5%93%A1-2026%E6%A0%A1%E5%9C%92%E5%BE%B5%E6%89%8D-%E5%AF%A9%E8%A8%88%E6%9C%8D%E5%8B%99-%E5%AF%A9%E8%A8%88%E8%88%87%E7%A2%BA%E4%BF%A1%E8%AB%AE%E8%A9%A2%E6%9C%8D%E5%8B%99/884-zh_TW/" target="_blank">Learn more...</a>
+          <a class="btn" href="https://careers.apac.deloitte.com/Taiwan/job/%E7%A2%BA%E4%BF%A1%E8%AB%AE%E8%A9%A2%E6%9C%8D%E5%8B%99%E9%A1%A7%E5%95%8F-2026%E6%A0%A1%E5%9C%92%E5%BE%B5%E6%89%8D-%E7%A2%BA%E4%BF%A1%E8%AB%AE%E8%A9%A2-%E5%AF%A9%E8%A8%88%E8%88%87%E7%A2%BA%E4%BF%A1%E8%AB%AE%E8%A9%A2%E6%9C%8D%E5%8B%99/885-zh_TW/" target="_blank" rel="noopener">Learn more...</a>
         </div>
-     <div class="card-container">
-        <!-- 初級審計員 -->
+
+        <!-- Technical Stream -->
         <div class="card">
-          <h4>初級審計員</h4>
-          <p>地點：台北／新竹／台中／台南／高雄</p>
+          <h4>Technical Stream</h4>
+          <p>地點：台北／新竹／台中／高雄</p>
+          <p>各大上市櫃公司、科技行業、金融服務業之資訊作業稽核、資訊內部控制制度之稽核及諮詢</p>
           <ul style="padding-left:20px; line-height:1.6;">
-            <li>協助完成審計財務報表</li>
-            <li>對審計文件進行分析審查</li>
-            <li>協助審計客戶的財務、交易和內部控制流程</li>
-            <li>對客戶數據進行分析，以針對客戶需求提供服務</li>
+            <li>依據客戶資訊環境及面臨之風險，擬訂查核計劃與執行查核工作</li>
+            <li>檢視及評估客戶資訊作業中，控制點設計是否妥適及遵循情形</li>
+            <li>提供客戶資訊循環和內部控制流程改善建議方案</li>
+            <li>管理專案工作進度與品質，與客戶以及內外部同仁溝通</li>
+            <li>可配合國內外出差</li>
           </ul>
-          <a class="btn" href="https://careers.apac.deloitte.com/Taiwan/job/%E5%88%9D%E7%B4%9A%E5%AF%A9%E8%A8%88%E5%93%A1-2026%E6%A0%A1%E5%9C%92%E5%BE%B5%E6%89%8D-%E5%AF%A9%E8%A8%88%E6%9C%8D%E5%8B%99-%E5%AF%A9%E8%A8%88%E8%88%87%E7%A2%BA%E4%BF%A1%E8%AB%AE%E8%A9%A2%E6%9C%8D%E5%8B%99/884-zh_TW/" target="_blank">Learn more...</a>
-        </div>
-     <div class="card-container">
-        <!-- 初級審計員 -->
-        <div class="card">
-          <h4>初級審計員</h4>
-          <p>地點：台北／新竹／台中／台南／高雄</p>
-          <ul style="padding-left:20px; line-height:1.6;">
-            <li>協助完成審計財務報表</li>
-            <li>對審計文件進行分析審查</li>
-            <li>協助審計客戶的財務、交易和內部控制流程</li>
-            <li>對客戶數據進行分析，以針對客戶需求提供服務</li>
-          </ul>
-          <a class="btn" href="https://careers.apac.deloitte.com/Taiwan/job/%E5%88%9D%E7%B4%9A%E5%AF%A9%E8%A8%88%E5%93%A1-2026%E6%A0%A1%E5%9C%92%E5%BE%B5%E6%89%8D-%E5%AF%A9%E8%A8%88%E6%9C%8D%E5%8B%99-%E5%AF%A9%E8%A8%88%E8%88%87%E7%A2%BA%E4%BF%A1%E8%AB%AE%E8%A9%A2%E6%9C%8D%E5%8B%99/884-zh_TW/" target="_blank">Learn more...</a>
+          <a class="btn" href="https://reurl.cc/OmVMQy" target="_blank" rel="noopener">Learn more...</a>
         </div>
       </div>
     </section>
