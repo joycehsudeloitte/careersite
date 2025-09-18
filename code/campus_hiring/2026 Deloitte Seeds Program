@@ -136,7 +136,8 @@
     <strong>
       【招募對象】：2026應屆畢業生
       <br>【實習期間】：6個月 (Jan./ Feb. - Jun./Jul.)
-      <br>【履歷投遞截止】：即日起至10/31(五) 23:59 (台灣時間)🎃(會依照實際情況滾動式調整，建議您盡早投遞~)
+      <br>【履歷投遞截止】：即日起至11/07(五) 23:59 (台灣時間)
+      <br> (會依照實際情況滾動式調整，建議您盡早投遞~)
     </strong>
   </p>
   <p class="subtitle"><strong>👇滑動至下方查看更多職缺內容!</strong></p>
@@ -154,13 +155,22 @@
     <section id="about" class="section active">
       <h2></h2>
       <p style="text-align:center; max-width:900px; margin:0 auto 12px; line-height:1.9;">
+      Deloitte一直以「People First」為核心策略，致力於打造世界級的學習與發展平台，並提供多元化、個人化的職涯發展道路。
+      我們相信，每一位人才都能在Deloitte找到舞台，創造屬於自己的價值，並從中獲得成就與幸福。
+      <br>Deloitte Seeds Program 歡迎來自會計與財務、企業管理、資訊工程、資訊管理、環境科學、社會科學等相關領域的同學加入，一起挑戰真實課題、參與專業專案，並將創意化為實際影響力。
+      <br>
       </p>
       <ul style="max-width:900px; margin:8px auto 0; line-height:1.9;">
-        <li><strong>實戰學習：</strong>參與實際客戶專案，從問題定義到解決方案產出。</li>
-        <li><strong>專屬導師：</strong>Mentor 一對一回饋，持續迭代成長。</li>
-        <li><strong>學習成長：</strong>內部訓練課程、專家分享與跨部門交流。</li>
-        <li><strong>交流活動：</strong>舉辦各式活動，讓同學有機會與不同專業的同事互動。</li>
+        透過此計畫成為Deloitte創造影響力的夥伴，你將獲得:
+        <li><strong>專案實戰經驗:</strong>直接參與團隊合作，解決客戶與市場的真實挑戰</li>
+        <li><strong>Mentor制度: </strong>由資深顧問親自指導，陪伴你開啟職涯新篇章。</li>
+        <li><strong>專業訓練:</strong>結合理論與實務，培養專業技能與領導力 </li>
+        <li><strong>多元交流活動：</strong>與同儕、前輩共同學習，拓展人脈並培養國際視野。</li>
       </ul>
+      <p></p>
+      <p style="text-align:center; max-width:900px; margin:0 auto 12px; line-height:1.9;">
+       🟢與我們一起，將創意化為實際影響力
+        <br>Make an impact that matters.</p>
     </section>
 
     <!-- 徵選流程 -->
@@ -209,6 +219,8 @@
     <!-- 職缺內容（固定在最下方；內容沿用你的原文） -->
     <section id="jobs">
       <h2>七大專業領域</h2>
+      <p style="text-align:center; line-height:1.9;">‼️完成履歷投遞後，會收到TestGorilla 線上測驗的通知，煩請盡速完成，若未完成將不會進入後續審查。
+      <br>另外為避免重複測驗，建議投遞以最符合您的興趣的專業領域為主</p>
       <div class="card-container">
         <!-- Actuarial & Insurance Services Stream -->
         <div class="card">
