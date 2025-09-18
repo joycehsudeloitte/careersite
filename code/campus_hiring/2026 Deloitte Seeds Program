@@ -128,24 +128,21 @@
 
 <div class="seeds-program">
   <h1>2026 Deloitte Seeds Program</h1>
-  <p class="subtitle">【Deloitte】2025校園徵才說明會熱烈報名中！</p>
+  <p class="subtitle">【Plant the first Seeds of your journey with Deloitte! 🌱】</p>
   <p class="subtitle">
-    對審計、確信或電腦審計領域感到好奇嗎？想了解事務所的職涯發展與福利嗎？想與組內學長姐交流、解答對事務所的疑惑嗎？
-    <br>那這場說明會你一定不能錯過！
+    與專業顧問一起參與專案挑戰、併肩解決真實問題並把想法化為實際影響力💪
+    <br>透過6個月的實習旅程，累積專案經驗並獲得專業指導和職場技能，同時學習與發展機會交流平台，成為能創造影響力的專業人才🚀
+    <br>✨加入Deloitte Seeds，七大專業領域等你探索，展開你的職涯新篇章！
   </p>
   <p class="subtitle">
-    ✨ <strong !important>參加說明會，你將獲得：</strong>
-    <br>💡 事務所福利介紹
-    <br>💡 多元發展職涯藍圖
-    <br>💡 與專業同仁現場交流
+    <strong !important>
+    <br>【招募對象】：2026應屆畢業生
+    <br>【實習期間】：6個月 (Jan./ Feb. - Jun./Jul. )
+    <br>【履歷投遞截止】：即日起至10/31(五) 23:59 (台灣時間)🎃</strong>
   </p>
   <p class="subtitle">
-    <strong !important>滑動至下方查看更多職缺內容!</strong>
-    <br>📬履歷投遞提醒：
-    <br>即日起至 2025/10/03(五) 止，開放審計與確信及電腦審計部門投遞履歷，越早投越有機會！
+    <strong !important>👇滑動至下方查看更多職缺內容!</strong>
   </p>
-
-  <!-- 導覽：調整為 關於計畫 → 徵選流程 → 實體說明會 -->
   <nav>
     <ul>
       <li><a data-target="about" class="active">關於計畫</a></li>
@@ -178,10 +175,10 @@
     <section id="process" class="section">
       <h2>徵選流程</h2>
       <div class="timeline">
-        <div class="step"><div class="circle">10/3前</div><p class="label">線上履歷投遞</p></div>
+        <div class="step"><div class="circle">10/31前</div><p class="label">線上履歷投遞</p></div>
         <div class="step"><div class="circle">10–11月</div><p class="label">面試安排</p></div>
-        <div class="step"><div class="circle">11月底</div><p class="label">面談結果通知</p></div>
-        <div class="step"><div class="circle">2026年<br>7–9月</div><p class="label">報到入職</p></div>
+        <div class="step"><div class="circle">11-12</div><p class="label">一次面談<br>二次面談</p></div>
+        <div class="step"><div class="circle">2026年<br>1-2月</div><p class="label">報到入職</p></div>
       </div>
     </section>
 
@@ -193,27 +190,27 @@
       <div class="card-container">
       <a class="card-link" href="https://forms.office.com/e/rQwDdj2wFN" target="_blank" rel="noopener noreferrer"
            data-end="2025/09/10 14:00">
-          <span class="arrow">›</span><div class="card-content"><p><strong>台灣大學</strong></p><p>時間：2025/09/10　12:30–14:00</p><p>地點：活動前會以郵件通知</p></div>
+          <span class="arrow">›</span><div class="card-content"><p><strong>國立臺灣大學</strong></p><p>時間：2025//　00:00–00:00</p><p>地點：活動前會以郵件通知</p></div>
+        </a>
+      <a class="card-link" href="https://forms.office.com/e/rQwDdj2wFN" target="_blank" rel="noopener noreferrer"
+           data-end="2025/10/27 18:00">
+          <span class="arrow">›</span><div class="card-content"><p><strong>國立政治大學</strong></p><p>時間：2025/10/27　18:00–19:00</p><p>地點：活動前會以郵件通知</p></div>
         </a>
       <a class="card-link" href="https://forms.office.com/e/rQwDdj2wFN" target="_blank" rel="noopener noreferrer"
            data-end="2025/09/10 14:00">
-          <span class="arrow">›</span><div class="card-content"><p><strong>政治大學</strong></p><p>時間：2025/09/10　12:30–14:00</p><p>地點：活動前會以郵件通知</p></div>
+          <span class="arrow">›</span><div class="card-content"><p><strong>國立中央大學</strong></p><p>時間：2025//　00:00–00:00</p><p>地點：活動前會以郵件通知</p></div>
         </a>
       <a class="card-link" href="https://forms.office.com/e/rQwDdj2wFN" target="_blank" rel="noopener noreferrer"
            data-end="2025/09/10 14:00">
-          <span class="arrow">›</span><div class="card-content"><p><strong>元智大學</strong></p><p>時間：2025/09/10　12:30–14:00</p><p>地點：活動前會以郵件通知</p></div>
+          <span class="arrow">›</span><div class="card-content"><p><strong>國立臺北大學</strong></p><p>時間：2025//　00:00–00:00</p><p>地點：活動前會以郵件通知</p></div>
         </a>
       <a class="card-link" href="https://forms.office.com/e/rQwDdj2wFN" target="_blank" rel="noopener noreferrer"
            data-end="2025/09/10 14:00">
-          <span class="arrow">›</span><div class="card-content"><p><strong>元智大學</strong></p><p>時間：2025/09/10　12:30–14:00</p><p>地點：活動前會以郵件通知</p></div>
+          <span class="arrow">›</span><div class="card-content"><p><strong>國立台中科技大學</strong></p><p>時間：2025//　00:00–00:00</p><p>地點：活動前會以郵件通知</p></div>
         </a>
       <a class="card-link" href="https://forms.office.com/e/rQwDdj2wFN" target="_blank" rel="noopener noreferrer"
            data-end="2025/09/10 14:00">
-          <span class="arrow">›</span><div class="card-content"><p><strong>元智大學</strong></p><p>時間：2025/09/10　12:30–14:00</p><p>地點：活動前會以郵件通知</p></div>
-        </a>
-      <a class="card-link" href="https://forms.office.com/e/rQwDdj2wFN" target="_blank" rel="noopener noreferrer"
-           data-end="2025/09/10 14:00">
-          <span class="arrow">›</span><div class="card-content"><p><strong>元智大學</strong></p><p>時間：2025/09/10　12:30–14:00</p><p>地點：活動前會以郵件通知</p></div>
+          <span class="arrow">›</span><div class="card-content"><p><strong>國立中山大學</strong></p><p>時間：2025//　00:00–00:00</p><p>地點：活動前會以郵件通知</p></div>
         </a>
       </div>
     </section>
@@ -260,6 +257,58 @@
             <li>可配合國內外出差。</li>
           </ul>
           <a class="btn" href="https://reurl.cc/OmVMQy" target="_blank">Learn more...</a>
+        </div>
+     <div class="card-container">
+        <!-- 初級審計員 -->
+        <div class="card">
+          <h4>初級審計員</h4>
+          <p>地點：台北／新竹／台中／台南／高雄</p>
+          <ul style="padding-left:20px; line-height:1.6;">
+            <li>協助完成審計財務報表</li>
+            <li>對審計文件進行分析審查</li>
+            <li>協助審計客戶的財務、交易和內部控制流程</li>
+            <li>對客戶數據進行分析，以針對客戶需求提供服務</li>
+          </ul>
+          <a class="btn" href="https://careers.apac.deloitte.com/Taiwan/job/%E5%88%9D%E7%B4%9A%E5%AF%A9%E8%A8%88%E5%93%A1-2026%E6%A0%A1%E5%9C%92%E5%BE%B5%E6%89%8D-%E5%AF%A9%E8%A8%88%E6%9C%8D%E5%8B%99-%E5%AF%A9%E8%A8%88%E8%88%87%E7%A2%BA%E4%BF%A1%E8%AB%AE%E8%A9%A2%E6%9C%8D%E5%8B%99/884-zh_TW/" target="_blank">Learn more...</a>
+        </div>
+     <div class="card-container">
+        <!-- 初級審計員 -->
+        <div class="card">
+          <h4>初級審計員</h4>
+          <p>地點：台北／新竹／台中／台南／高雄</p>
+          <ul style="padding-left:20px; line-height:1.6;">
+            <li>協助完成審計財務報表</li>
+            <li>對審計文件進行分析審查</li>
+            <li>協助審計客戶的財務、交易和內部控制流程</li>
+            <li>對客戶數據進行分析，以針對客戶需求提供服務</li>
+          </ul>
+          <a class="btn" href="https://careers.apac.deloitte.com/Taiwan/job/%E5%88%9D%E7%B4%9A%E5%AF%A9%E8%A8%88%E5%93%A1-2026%E6%A0%A1%E5%9C%92%E5%BE%B5%E6%89%8D-%E5%AF%A9%E8%A8%88%E6%9C%8D%E5%8B%99-%E5%AF%A9%E8%A8%88%E8%88%87%E7%A2%BA%E4%BF%A1%E8%AB%AE%E8%A9%A2%E6%9C%8D%E5%8B%99/884-zh_TW/" target="_blank">Learn more...</a>
+        </div>
+     <div class="card-container">
+        <!-- 初級審計員 -->
+        <div class="card">
+          <h4>初級審計員</h4>
+          <p>地點：台北／新竹／台中／台南／高雄</p>
+          <ul style="padding-left:20px; line-height:1.6;">
+            <li>協助完成審計財務報表</li>
+            <li>對審計文件進行分析審查</li>
+            <li>協助審計客戶的財務、交易和內部控制流程</li>
+            <li>對客戶數據進行分析，以針對客戶需求提供服務</li>
+          </ul>
+          <a class="btn" href="https://careers.apac.deloitte.com/Taiwan/job/%E5%88%9D%E7%B4%9A%E5%AF%A9%E8%A8%88%E5%93%A1-2026%E6%A0%A1%E5%9C%92%E5%BE%B5%E6%89%8D-%E5%AF%A9%E8%A8%88%E6%9C%8D%E5%8B%99-%E5%AF%A9%E8%A8%88%E8%88%87%E7%A2%BA%E4%BF%A1%E8%AB%AE%E8%A9%A2%E6%9C%8D%E5%8B%99/884-zh_TW/" target="_blank">Learn more...</a>
+        </div>
+     <div class="card-container">
+        <!-- 初級審計員 -->
+        <div class="card">
+          <h4>初級審計員</h4>
+          <p>地點：台北／新竹／台中／台南／高雄</p>
+          <ul style="padding-left:20px; line-height:1.6;">
+            <li>協助完成審計財務報表</li>
+            <li>對審計文件進行分析審查</li>
+            <li>協助審計客戶的財務、交易和內部控制流程</li>
+            <li>對客戶數據進行分析，以針對客戶需求提供服務</li>
+          </ul>
+          <a class="btn" href="https://careers.apac.deloitte.com/Taiwan/job/%E5%88%9D%E7%B4%9A%E5%AF%A9%E8%A8%88%E5%93%A1-2026%E6%A0%A1%E5%9C%92%E5%BE%B5%E6%89%8D-%E5%AF%A9%E8%A8%88%E6%9C%8D%E5%8B%99-%E5%AF%A9%E8%A8%88%E8%88%87%E7%A2%BA%E4%BF%A1%E8%AB%AE%E8%A9%A2%E6%9C%8D%E5%8B%99/884-zh_TW/" target="_blank">Learn more...</a>
         </div>
       </div>
     </section>
