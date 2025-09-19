@@ -107,7 +107,6 @@
     max-width:1200px;
     margin:0 auto 20px;
     padding:0 20px;
-    text-align:center;
     color:#000;
   }
   #jobs .card-container{
@@ -207,7 +206,7 @@
     <section id="process" class="section">
       <h2></h2>
       <div class="timeline">
-        <div class="step"><div class="circle">10/31前</div><p class="label">線上履歷投遞/測驗完成</p></div>
+        <div class="step"><div class="circle">11/07前</div><p class="label">線上履歷投遞/測驗完成</p></div>
         <div class="step"><div class="circle">10–11月</div><p class="label">面試安排</p></div>
         <div class="step"><div class="circle">11–12月</div><p class="label">一次面談／二次面談</p></div>
         <div class="step"><div class="circle">2026年<br>1–2月</div><p class="label">報到入職</p></div>
@@ -225,7 +224,7 @@
           <span class="arrow">›</span><div class="card-content"><p><strong>國立臺灣大學</strong></p><p>時間：2025//　00:00–00:00</p><p>地點：活動前會以郵件通知</p></div>
         </a>
       <a class="card-link" href="https://forms.office.com/e/rQwDdj2wFN" target="_blank" rel="noopener noreferrer"
-           data-end="2025/10/27 18:00">
+           data-end="2025/10/27 19:00">
           <span class="arrow">›</span><div class="card-content"><p><strong>國立政治大學</strong></p><p>時間：2025/10/27　19:00–20:00</p><p>地點：活動前會以郵件通知</p></div>
         </a>
       <a class="card-link" href="https://forms.office.com/e/rQwDdj2wFN" target="_blank" rel="noopener noreferrer"
@@ -233,12 +232,12 @@
           <span class="arrow">›</span><div class="card-content"><p><strong>國立中央大學</strong></p><p>時間：2025//　00:00–00:00</p><p>地點：活動前會以郵件通知</p></div>
         </a>
       <a class="card-link" href="https://forms.office.com/e/rQwDdj2wFN" target="_blank" rel="noopener noreferrer"
-           data-end="2025/09/10 14:00">
-          <span class="arrow">›</span><div class="card-content"><p><strong>國立臺北大學</strong></p><p>時間：2025/11/4　18:00–19:30</p><p>地點：活動前會以郵件通知</p></div>
+           data-end="2025/11/04 14:00">
+          <span class="arrow">›</span><div class="card-content"><p><strong>國立臺北大學</strong></p><p>時間：2025/11/04　18:00–19:30</p><p>地點：活動前會以郵件通知</p></div>
         </a>
       <a class="card-link" href="https://forms.office.com/e/rQwDdj2wFN" target="_blank" rel="noopener noreferrer"
            data-end="2025/09/10 14:00">
-          <span class="arrow">›</span><div class="card-content"><p><strong>國立台中科技大學</strong></p><p>時間：2025//　00:00–00:00</p><p>地點：活動前會以郵件通知</p></div>
+          <span class="arrow">›</span><div class="card-content"><p><strong>國立台中科技大學</strong></p><p>時間：2025/10/14　12:00–13:00</p><p>地點：活動前會以郵件通知</p></div>
         </a>
       <a class="card-link" href="https://forms.office.com/e/rQwDdj2wFN" target="_blank" rel="noopener noreferrer"
            data-end="2025/09/10 14:00">
