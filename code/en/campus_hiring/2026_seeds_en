@@ -157,25 +157,26 @@
 <div class="seeds-program">
   <h1>Plant the first Seeds of your journey with Deloitte! 🌱</h1>
   <p class="subtitle">
-    與專業顧問一起參與專案挑戰、併肩解決真實問題並把想法化為實際影響力💪
-    <br>透過6個月的實習旅程，累積專案經驗並獲得專業指導和職場技能，同時學習與發展機會交流平台，成為能創造影響力的專業人才🚀
-    <br>✨加入Deloitte Seeds，七大專業領域等你探索，展開你的職涯新篇章！
+    Deloitte is a place where ambition is met with opportunity. 
+    <br>We offer opportunities that help you to dive deep into the professional services industry and get an authentic feel of the Deloitte culture. 
+    <br>Our internships are designed to challenge and inspire, leaving you longing to discover more.🚀
+    <br>✨Explore our 7 professional streams, unlock your future with us. Apply today!
   </p>
   <p class="subtitle">
     <strong>
-      【招募對象】：2026應屆畢業生
-      <br>【實習期間】：6個月 (Jan./ Feb. - Jun./Jul.)
-      <br>【履歷投遞截止】：即日起至11/07(五) 23:59 (台灣時間)
-      <br> (會依照實際情況滾動式調整，建議您盡早投遞~)
+      Eligibility to apply: Final-year students (2026)
+      <br> Internship period: 6 months (Jan / Feb – Jun /Jul 2026)
+      <br> Application Deadline: 07 November, 2025 (23:59 Taiwan Time)
+      <br> (Applications will be reviewed on a rolling basis.)
     </strong>
   </p>
-  <p class="subtitle"><strong>👇滑動至下方查看更多職缺內容!</strong></p>
+  <p class="subtitle"><strong>Learn More👇</strong></p>
 
   <nav>
     <ul>
-      <li><a data-target="about" class="active">關於計畫</a></li>
-      <li><a data-target="process">徵選流程</a></li>
-      <li><a data-target="onsite">實體說明會</a></li>
+      <li><a data-target="about" class="active">About Seeds Program</a></li>
+      <li><a data-target="process">Application Process</a></li>
+      <li><a data-target="onsite">Campus Event</a></li>
     </ul>
   </nav>
 
@@ -184,17 +185,16 @@
     <section id="about" class="section active">
       <h2></h2>
       <p style="text-align:center; max-width:900px; margin:0 auto 12px; line-height:1.9;">
-      Deloitte一直以「People First」為核心策略，致力於打造世界級的學習與發展平台，並提供多元化、個人化的職涯發展道路。
-      我們相信，每一位人才都能在Deloitte找到舞台，創造屬於自己的價值。
-      <br>Deloitte Seeds Program 歡迎來自會計與財務、企業管理、資訊工程、資訊管理、環境科學、社會科學等相關領域的同學加入，一起挑戰真實課題、參與實戰專案，並將創意化為實際影響力。
+      With the "People First" strategy, we are committed to being a cradle to cultivate talent capable of navigating the future. We keep up with the times, build world-class learning and development platforms, and provide personalized and diversified career development paths. We encourage our people to obtain a sense of achievement and happiness brought by creating values at work. We create a diversified and inclusive working, learning and growing environment so that everyone can unleash the potential. We empower talent with more autonomy and choice through Smart Talent Experience and Wellbeing, achieving an ideal work life balance.
+      <br>
+      <br>A world of opportunities awaits. Start your adventure and journey with us.
       <br>
       </p>
       <ul style="max-width:900px; margin:8px auto 0; line-height:1.9;">
-        透過此計畫成為Deloitte創造影響力的夥伴，你將獲得:
-        <li><strong>專案實戰經驗:</strong>直接參與團隊合作，解決客戶與市場的真實挑戰</li>
-        <li><strong>Mentor制度: </strong>由資深顧問親自指導，陪伴你開啟職涯新篇章</li>
-        <li><strong>專業訓練:</strong>結合理論與實務，培養專業技能與領導力 </li>
-        <li><strong>多元交流活動：</strong>與同儕、前輩共同學習，拓展人脈並培養國際視野</li>
+        <li><strong>Real-Life Work Exposure: </strong>Take on projects in a fast-paced and collaborative environment, while working with stakeholders across multiple business lines.</li>
+        <li><strong>Mentorship: </strong>Get coaching and feedback from leading professional and a dynamic, enriching work environment help you unlock full potential.</li>
+        <li><strong>Professional Growth:</strong>Experience the consulting profession from a real-world perspective and learn about the day-to-day responsibilities of a consultant.</li>
+        <li><strong>Professional Networking: </strong>Establish and nurture connections with our senior staff member and leaders.</li>
       </ul>
       <p></p>
       <p style="text-align:center; max-width:900px; margin:0 auto 12px; line-height:1.9;">
@@ -205,10 +205,11 @@
     <section id="process" class="section">
       <h2></h2>
       <div class="timeline">
-        <div class="step"><div class="circle">11/07前</div><p class="label">線上履歷投遞/測驗完成</p></div>
-        <div class="step"><div class="circle">10–11月</div><p class="label">面試安排</p></div>
-        <div class="step"><div class="circle">11–12月</div><p class="label">一次面談／二次面談</p></div>
-        <div class="step"><div class="circle">2026年<br>1–2月</div><p class="label">報到入職</p></div>
+       <div class="step"><div class="circle">Before 11/07</div><p class="label">Online Application / Online Test</p></div>
+       <div class="step"><div class="circle">Oct–Nov</div><p class="label">Interview Arrangement</p></div>
+       <div class="step"><div class="circle">Nov–Dec</div><p class="label">First Interview / Second Interview</p></div>
+       <div class="step"><div class="circle">Jan–Feb 2026</div><p class="label">Onboarding</p></div>
+
       </div>
     </section>
 
