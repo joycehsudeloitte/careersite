@@ -1,0 +1,324 @@
+<style>
+  :root{
+    --brand:#86BC25;      /* 主色 */
+    --brand-dark:#26890D; /* 主色-深 */
+    --accent:#43B02A;     /* 輔色 */
+    --text:#333;
+  }
+
+  /* 版型與字體 */
+  .seeds-program {
+    font-family:"Microsoft JhengHei", Arial, sans-serif;
+    color:var(--text);
+    font-size:18px;
+    background:#fff;
+    padding:40px 0;
+    min-height: 100vh;                 /* 讓內容至少滿版 */
+    display:flex; flex-direction:column;
+  }
+  .seeds-program h1{
+    text-align:center; color:var(--brand);
+    font-size:3rem; margin:40px 0 10px; font-weight:700;
+  }
+  .seeds-program .subtitle{
+    text-align:center; font-size:2rem !important;
+    margin:0 auto 20px; color:#555; line-height:1.8;
+    max-width:1200px; font-weight:700;
+  }
+
+  .seeds-program .btn{
+    display:inline-block; margin:16px auto 0; padding:12px 22px;
+    background:var(--accent); color:#fff; text-decoration:none; border-radius:8px;
+    font-size:1.05rem; width:auto; transition:.15s ease-in-out;
+  }
+  .seeds-program .btn:hover{ background:var(--brand-dark); transform: translateY(-1px); }
+
+  /* Tabs */
+  .seeds-program nav{ background:#fff; padding:14px 0; box-shadow:0 2px 5px rgba(0,0,0,.08);}
+  .seeds-program nav ul{ list-style:none; margin:0; padding:0; display:flex; justify-content:center; flex-wrap:wrap;}
+  .seeds-program nav li{ margin:0 18px;}
+  .seeds-program nav a{
+    position:relative; color:#046A38; text-decoration:none; font-weight:700;
+    font-size:2rem !important; padding-bottom:8px; cursor:pointer;
+  }
+  .seeds-program nav a.active{ color:var(--brand); }
+  .seeds-program nav a.active::after{
+    content:''; position:absolute; left:0; bottom:0; width:100%; height:3px; background:var(--brand); border-radius:2px;
+  }
+
+  /* 內寬容器：讓內容維持 1200px */
+  .seeds-program .container{
+    width:90%; max-width:1200px; margin:30px auto;
+    flex:1; display:flex; flex-direction:column;
+  }
+
+  /* 分頁區塊（關於/流程/說明會） */
+  .seeds-program .section{
+    display:none; background:#fff; border-radius:12px; padding:30px; margin-bottom:30px;
+    box-shadow:0 2px 5px rgba(0,0,0,.08);
+  }
+  .seeds-program .section.active{ display:block; }
+  .seeds-program .section h2{ color:#046A38; font-size:2rem; margin-bottom:20px; font-weight:800; text-align:center; }
+
+  /* Timeline */
+  .timeline{ display:flex; align-items:flex-start; justify-content:space-between; gap:32px; padding:24px; }
+  .step{ flex:1; display:flex; flex-direction:column; align-items:center; text-align:center; gap:12px;}
+  .circle {
+    width:150px; height:150px; border-radius:50%;
+    background:#00ABAB; color:#fff; font-weight:700;
+    display:flex; align-items:center; justify-content:center;
+    box-shadow:0 2px 6px rgba(0,0,0,.08);
+  }
+  .label{ font-size:15px; font-weight:700; color:#333; }
+
+  /* 實體說明會卡片（兩欄） */
+  .card-container{ display:grid; grid-template-columns:repeat(2,1fr); gap:16px;}
+  .card-link{
+    display:flex; align-items:flex-start; background:#fff; border:2px solid var(--brand); border-radius:12px;
+    padding:16px 20px; font-size:16px; color:#333; text-decoration:none;
+    box-shadow:0 2px 6px rgba(0,0,0,.08); transition:.2s;
+  }
+  .card-link:hover{ background:#f5f5f5; color:#000; transform:translateY(-3px);}
+  .card-link span.arrow{ margin-right:12px; font-weight:700; color:#000; font-size:20px; line-height:1;}
+  .card-content p{ margin:4px 0; font-size:15px; line-height:1.4;}
+
+  /* 七大專業領域區塊：左右延伸滿版灰底 */
+  #jobs{
+    background:#f5f5f5;
+    position:relative;
+    left:50%;
+    right:50%;
+    margin-left:-50vw;
+    margin-right:-50vw;
+    width:100vw;
+    padding:60px 0;
+    box-sizing:border-box;
+    box-shadow:none;
+  }
+  #jobs h2{
+    max-width:1200px;
+    margin:0 auto 20px;
+    padding:0 20px;
+    text-align:center;
+    color:#86BC25;
+    font-weight:800;
+  }
+  #jobs p{
+    max-width:1200px;
+    margin:0 auto 20px;
+    padding:0 20px;
+    color:#000;
+  }
+  #jobs .card-container{
+    max-width:1200px;
+    margin:0 auto;
+    padding:0 20px;
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));
+    gap:24px;
+  }
+  #jobs .card{
+    background:#fff;
+    border-radius:16px;
+    box-shadow:0 4px 10px rgba(0,0,0,.08);
+    padding:22px;
+    display:flex; flex-direction:column;
+  }
+  #jobs .card h4{
+    color:#43B02A; font-weight:800; font-size:2rem; margin:0 0 8px;
+  }
+  #jobs .card .btn{
+    display:block; margin-top:auto; align-self:center; width:fit-content;
+  }
+
+  /* RWD */
+  @media(max-width:800px){
+    .card-container{ grid-template-columns:1fr; }
+  }
+  @media (max-width: 768px) {
+    .seeds-program { padding: 24px 0; font-size: 16px; }
+    .seeds-program h1 { font-size: 2rem !important; margin: 16px 0 8px; }
+    .seeds-program .subtitle { font-size: 1.5rem !important; margin-bottom: 16px; }
+    .seeds-program .container { width: 92%; margin: 16px auto; padding: 0; }
+    .seeds-program nav ul{ justify-content:center; padding:10px 12px; gap:12px; }
+    .seeds-program nav a{ font-size: 1.5rem !important; padding-bottom: 6px; }
+    .timeline{ display:block; padding:8px 0; }
+    .timeline .step{ display:flex; align-items:center; gap:14px; text-align:left; padding:12px 8px; border-bottom:1px solid #eee; }
+    .timeline .step:last-child{ border-bottom:none; }
+    .timeline .circle{ width:88px; height:88px; min-width:88px; font-weight:800; font-size:18px; line-height:1.1; }
+    .timeline .label{ font-size:16px; line-height:1.5; color:#222; }
+    .card-link{ padding: 14px 16px; }
+    #jobs{ padding:40px 0; }
+    #jobs .card{ padding:16px; }
+    .seeds-program .btn{ width: 100%; max-width: 360px; }
+  }
+</style>
+
+<div class="seeds-program">
+  <h1>Plant the first Seeds of your journey with Deloitte! 🌱</h1>
+  <p class="subtitle">
+    與專業顧問一起參與專案挑戰、併肩解決真實問題並把想法化為實際影響力💪
+    <br>透過6個月的實習旅程，累積專案經驗並獲得專業指導和職場技能，同時學習與發展機會交流平台，成為能創造影響力的專業人才🚀
+    <br>✨加入Deloitte Seeds，七大專業領域等你探索，展開你的職涯新篇章！
+  </p>
+  <p class="subtitle">
+    <strong>
+      【招募對象】：2026應屆畢業生
+      <br>【實習期間】：6個月 (Jan./ Feb. - Jun./Jul.)
+      <br>【履歷投遞截止】：即日起至11/07(五) 23:59 (台灣時間)
+      <br> (會依照實際情況滾動式調整，建議您盡早投遞~)
+    </strong>
+  </p>
+  <p class="subtitle"><strong>👇滑動至下方查看更多職缺內容!</strong></p>
+
+  <nav>
+    <ul>
+      <li><a data-target="about" class="active">關於計畫</a></li>
+      <li><a data-target="process">徵選流程</a></li>
+      <li><a data-target="onsite">實體說明會</a></li>
+    </ul>
+  </nav>
+
+  <div class="container">
+    <!-- 關於計畫 -->
+    <section id="about" class="section active">
+      <h2></h2>
+      <p style="text-align:center; max-width:900px; margin:0 auto 12px; line-height:1.9;">
+      Deloitte一直以「People First」為核心策略，致力於打造世界級的學習與發展平台，並提供多元化、個人化的職涯發展道路。
+      我們相信，每一位人才都能在Deloitte找到舞台，創造屬於自己的價值。
+      <br>Deloitte Seeds Program 歡迎來自會計與財務、企業管理、資訊工程、資訊管理、環境科學、社會科學等相關領域的同學加入，一起挑戰真實課題、參與實戰專案，並將創意化為實際影響力。
+      <br>
+      </p>
+      <ul style="max-width:900px; margin:8px auto 0; line-height:1.9;">
+        透過此計畫成為Deloitte創造影響力的夥伴，你將獲得:
+        <li><strong>專案實戰經驗:</strong>直接參與團隊合作，解決客戶與市場的真實挑戰</li>
+        <li><strong>Mentor制度: </strong>由資深顧問親自指導，陪伴你開啟職涯新篇章</li>
+        <li><strong>專業訓練:</strong>結合理論與實務，培養專業技能與領導力 </li>
+        <li><strong>多元交流活動：</strong>與同儕、前輩共同學習，拓展人脈並培養國際視野</li>
+      </ul>
+      <p></p>
+      <p style="text-align:center; max-width:900px; margin:0 auto 12px; line-height:1.9;">
+       🟢Make an impact that matters.</p>
+    </section>
+
+    <!-- 徵選流程 -->
+    <section id="process" class="section">
+      <h2></h2>
+      <div class="timeline">
+        <div class="step"><div class="circle">11/07前</div><p class="label">線上履歷投遞/測驗完成</p></div>
+        <div class="step"><div class="circle">10–11月</div><p class="label">面試安排</p></div>
+        <div class="step"><div class="circle">11–12月</div><p class="label">一次面談／二次面談</p></div>
+        <div class="step"><div class="circle">2026年<br>1–2月</div><p class="label">報到入職</p></div>
+      </div>
+    </section>
+
+    <!-- 實體說明會 -->
+    <section id="onsite" class="section">
+       <h2></h2>
+      <p><strong>📢歡迎點選下列文字方塊立即報名參加!</strong>
+      <br>資料請確實填寫，於活動的前1天會再次以Email提醒唷!</p>
+      <div class="card-container">
+      <a class="card-link" href="https://forms.office.com/e/rQwDdj2wFN" target="_blank" rel="noopener noreferrer"
+           data-end="2025/09/10 14:00">
+          <span class="arrow">›</span><div class="card-content"><p><strong>國立臺灣大學</strong></p><p>時間：2025//　00:00–00:00</p><p>地點：活動前會以郵件通知</p></div>
+        </a>
+      <a class="card-link" href="https://forms.office.com/e/rQwDdj2wFN" target="_blank" rel="noopener noreferrer"
+           data-end="2025/10/27 19:00">
+          <span class="arrow">›</span><div class="card-content"><p><strong>國立政治大學</strong></p><p>時間：2025/10/27　19:00–20:00</p><p>地點：活動前會以郵件通知</p></div>
+        </a>
+      <a class="card-link" href="https://forms.office.com/e/rQwDdj2wFN" target="_blank" rel="noopener noreferrer"
+           data-end="2025/09/10 14:00">
+          <span class="arrow">›</span><div class="card-content"><p><strong>國立中央大學</strong></p><p>時間：2025//　00:00–00:00</p><p>地點：活動前會以郵件通知</p></div>
+        </a>
+      <a class="card-link" href="https://forms.office.com/e/rQwDdj2wFN" target="_blank" rel="noopener noreferrer"
+           data-end="2025/11/04 14:00">
+          <span class="arrow">›</span><div class="card-content"><p><strong>國立臺北大學</strong></p><p>時間：2025/11/04　18:00–19:30</p><p>地點：活動前會以郵件通知</p></div>
+        </a>
+      <a class="card-link" href="https://forms.office.com/e/rQwDdj2wFN" target="_blank" rel="noopener noreferrer"
+           data-end="2025/09/10 14:00">
+          <span class="arrow">›</span><div class="card-content"><p><strong>國立台中科技大學</strong></p><p>時間：2025/10/14　12:00–13:00</p><p>地點：活動前會以郵件通知</p></div>
+        </a>
+      <a class="card-link" href="https://forms.office.com/e/rQwDdj2wFN" target="_blank" rel="noopener noreferrer"
+           data-end="2025/09/10 14:00">
+          <span class="arrow">›</span><div class="card-content"><p><strong>國立中山大學</strong></p><p>時間：2025/10/17　00:00–00:00</p><p>地點：活動前會以郵件通知</p></div>
+        </a>
+    </section>
+
+    <!-- 職缺內容（固定在最下方；內容沿用你的原文） -->
+    <section id="jobs">
+      <h2>七大專業領域</h2>
+      <p style="text-align:center; line-height:1.9;">‼️完成履歷投遞後，會收到TestGorilla 線上測驗的通知，煩請盡速完成，若未完成將不會進入後續審查。
+      <br>另外為避免重複測驗，建議投遞以最符合您的興趣的專業領域為主</p>
+      <div class="card-container">
+        <!-- Actuarial & Insurance Services Stream -->
+        <div class="card">
+          <h4>Actuarial & Insurance Services Stream</h4>
+          <p>地點：台北／新竹／台中／台南／高雄</p>
+          <p>簡短職缺說明</p>
+          <a class="btn" href="https://careers.apac.deloitte.com/Taiwan/job/%E5%88%9D%E7%B4%9A%E5%AF%A9%E8%A8%88%E5%93%A1-2026%E6%A0%A1%E5%9C%92%E5%BE%B5%E6%89%8D-%E5%AF%A9%E8%A8%88%E6%9C%8D%E5%8B%99-%E5%AF%A9%E8%A8%88%E8%88%87%E7%A2%BA%E4%BF%A1%E8%AB%AE%E8%A9%A2%E6%9C%8D%E5%8B%99/884-zh_TW/" target="_blank" rel="noopener">Learn more...</a>
+        </div>
+
+        <!-- Cyber Stream -->
+        <div class="card">
+          <h4>Cyber Stream</h4>
+          <p>地點：台北／新竹／台中／台南／高雄</p>
+          <p>簡短職缺說明</p>
+          <a class="btn" href="https://careers.apac.deloitte.com/Taiwan/job/%E5%88%9D%E7%B4%9A%E5%AF%A9%E8%A8%88%E5%93%A1-2026%E6%A0%A1%E5%9C%92%E5%BE%B5%E6%89%8D-%E5%AF%A9%E8%A8%88%E6%9C%8D%E5%8B%99-%E5%AF%A9%E8%A8%88%E8%88%87%E7%A2%BA%E4%BF%A1%E8%AB%AE%E8%A9%A2%E6%9C%8D%E5%8B%99/884-zh_TW/" target="_blank" rel="noopener">Learn more...</a>
+        </div>
+
+        <!-- Digital Transformation Stream -->
+        <div class="card">
+          <h4>Digital Transformation Stream</h4>
+          <p>地點：台北／新竹／台中／台南／高雄</p>
+          <p>簡短職缺說明</p>
+          <a class="btn" href="https://careers.apac.deloitte.com/Taiwan/job/%E7%A2%BA%E4%BF%A1%E8%AB%AE%E8%A9%A2%E6%9C%8D%E5%8B%99%E9%A1%A7%E5%95%8F-2026%E6%A0%A1%E5%9C%92%E5%BE%B5%E6%89%8D-%E7%A2%BA%E4%BF%A1%E8%AB%AE%E8%A9%A2-%E5%AF%A9%E8%A8%88%E8%88%87%E7%A2%BA%E4%BF%A1%E8%AB%AE%E8%A9%A2%E6%9C%8D%E5%8B%99/885-zh_TW/" target="_blank" rel="noopener">Learn more...</a>
+        </div>
+
+        <!-- ESG Stream -->
+        <div class="card">
+          <h4>ESG Stream</h4>
+          <p>地點：台北／新竹／台中／台南／高雄</p>
+          <p>簡短職缺說明</p>
+          <a class="btn" href="https://reurl.cc/OmVMQy" target="_blank" rel="noopener">Learn more...</a>
+        </div>
+
+        <!-- Finance Stream -->
+        <div class="card">
+          <h4>Finance Stream</h4>
+          <p>地點：台北／新竹／台中／台南／高雄</p>
+          <p>簡短職缺說明</p>
+          <a class="btn" href="https://careers.apac.deloitte.com/Taiwan/job/%E5%88%9D%E7%B4%9A%E5%AF%A9%E8%A8%88%E5%93%A1-2026%E6%A0%A1%E5%9C%92%E5%BE%B5%E6%89%8D-%E5%AF%A9%E8%A8%88%E6%9C%8D%E5%8B%99-%E5%AF%A9%E8%A8%88%E8%88%87%E7%A2%BA%E4%BF%A1%E8%AB%AE%E8%A9%A2%E6%9C%8D%E5%8B%99/884-zh_TW/" target="_blank" rel="noopener">Learn more...</a>
+        </div>
+
+        <!-- Infrastructure & Real Estate Stream -->
+        <div class="card">
+          <h4>Infrastructure & Real Estate Stream</h4>
+          <p>地點：台北／新竹／台中／台南／高雄</p>
+          <p>簡短職缺說明</p>
+          <a class="btn" href="https://careers.apac.deloitte.com/Taiwan/job/%E7%A2%BA%E4%BF%A1%E8%AB%AE%E8%A9%A2%E6%9C%8D%E5%8B%99%E9%A1%A7%E5%95%8F-2026%E6%A0%A1%E5%9C%92%E5%BE%B5%E6%89%8D-%E7%A2%BA%E4%BF%A1%E8%AB%AE%E8%A9%A2-%E5%AF%A9%E8%A8%88%E8%88%87%E7%A2%BA%E4%BF%A1%E8%AB%AE%E8%A9%A2%E6%9C%8D%E5%8B%99/885-zh_TW/" target="_blank" rel="noopener">Learn more...</a>
+        </div>
+
+        <!-- Technical Stream -->
+        <div class="card">
+          <h4>Technical Stream</h4>
+          <p>地點：台北／新竹／台中／台南／高雄</p>
+          <p>簡短職缺說明</p>
+          <a class="btn" href="https://reurl.cc/OmVMQy" target="_blank" rel="noopener">Learn more...</a>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+
+<script>
+  // 分頁切換：對應 about / process / onsite
+  document.querySelectorAll('.seeds-program nav a').forEach(link=>{
+    link.addEventListener('click', function(){
+      document.querySelectorAll('.seeds-program nav a').forEach(a=>a.classList.remove('active'));
+      this.classList.add('active');
+      document.querySelectorAll('.seeds-program .section').forEach(sec=>sec.classList.remove('active'));
+      var target = document.getElementById(this.dataset.target);
+      if(target){ target.classList.add('active'); }
+    });
+  });
+</script>
