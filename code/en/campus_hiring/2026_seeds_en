@@ -219,35 +219,71 @@
       <p><strong>📢歡迎點選下列文字方塊立即報名參加!</strong>
       <br>資料請確實填寫，於活動的前1天會再次以Email提醒唷!</p>
       <div class="card-container">
-      <a class="card-link" href="https://forms.office.com/e/rQwDdj2wFN" target="_blank" rel="noopener noreferrer"
-           data-end="2025/09/10 14:00">
-          <span class="arrow">›</span><div class="card-content"><p><strong>國立臺灣大學</strong></p><p>時間：2025//　00:00–00:00</p><p>地點：活動前會以郵件通知</p></div>
-        </a>
-      <a class="card-link" href="https://forms.office.com/e/rQwDdj2wFN" target="_blank" rel="noopener noreferrer"
-           data-end="2025/10/27 19:00">
-          <span class="arrow">›</span><div class="card-content"><p><strong>國立政治大學</strong></p><p>時間：2025/10/27　19:00–20:00</p><p>地點：活動前會以郵件通知</p></div>
-        </a>
-      <a class="card-link" href="https://forms.office.com/e/rQwDdj2wFN" target="_blank" rel="noopener noreferrer"
-           data-end="2025/09/10 14:00">
-          <span class="arrow">›</span><div class="card-content"><p><strong>國立中央大學</strong></p><p>時間：2025//　00:00–00:00</p><p>地點：活動前會以郵件通知</p></div>
-        </a>
-      <a class="card-link" href="https://forms.office.com/e/rQwDdj2wFN" target="_blank" rel="noopener noreferrer"
-           data-end="2025/11/04 14:00">
-          <span class="arrow">›</span><div class="card-content"><p><strong>國立臺北大學</strong></p><p>時間：2025/11/04　18:00–19:30</p><p>地點：活動前會以郵件通知</p></div>
-        </a>
-      <a class="card-link" href="https://forms.office.com/e/rQwDdj2wFN" target="_blank" rel="noopener noreferrer"
-           data-end="2025/09/10 14:00">
-          <span class="arrow">›</span><div class="card-content"><p><strong>國立台中科技大學</strong></p><p>時間：2025/10/14　12:00–13:00</p><p>地點：活動前會以郵件通知</p></div>
-        </a>
-      <a class="card-link" href="https://forms.office.com/e/rQwDdj2wFN" target="_blank" rel="noopener noreferrer"
-           data-end="2025/09/10 14:00">
-          <span class="arrow">›</span><div class="card-content"><p><strong>國立中山大學</strong></p><p>時間：2025/10/17　00:00–00:00</p><p>地點：活動前會以郵件通知</p></div>
-        </a>
+    <a class="card-link" href="https://forms.office.com/e/rQwDdj2wFN" target="_blank" rel="noopener noreferrer"
+   data-end="2025/09/10 14:00">
+  <span class="arrow">›</span>
+  <div class="card-content">
+    <p><strong>National Taiwan University</strong></p>
+    <p>Date: 2025//　00:00–00:00</p>
+    <p>Location: Details will be notified via email before the event</p>
+  </div>
+</a>
+
+<a class="card-link" href="https://forms.office.com/e/rQwDdj2wFN" target="_blank" rel="noopener noreferrer"
+   data-end="2025/10/27 19:00">
+  <span class="arrow">›</span>
+  <div class="card-content">
+    <p><strong>National Chengchi University</strong></p>
+    <p>Date: 2025/10/27　19:00–20:00</p>
+    <p>Location: Details will be notified via email before the event</p>
+  </div>
+</a>
+
+<a class="card-link" href="https://forms.office.com/e/rQwDdj2wFN" target="_blank" rel="noopener noreferrer"
+   data-end="2025/09/10 14:00">
+  <span class="arrow">›</span>
+  <div class="card-content">
+    <p><strong>National Central University</strong></p>
+    <p>Date: 2025//　00:00–00:00</p>
+    <p>Location: Details will be notified via email before the event</p>
+  </div>
+</a>
+
+<a class="card-link" href="https://forms.office.com/e/rQwDdj2wFN" target="_blank" rel="noopener noreferrer"
+   data-end="2025/11/04 14:00">
+  <span class="arrow">›</span>
+  <div class="card-content">
+    <p><strong>National Taipei University</strong></p>
+    <p>Date: 2025/11/04　18:00–19:30</p>
+    <p>Location: Details will be notified via email before the event</p>
+  </div>
+</a>
+
+<a class="card-link" href="https://forms.office.com/e/rQwDdj2wFN" target="_blank" rel="noopener noreferrer"
+   data-end="2025/09/10 14:00">
+  <span class="arrow">›</span>
+  <div class="card-content">
+    <p><strong>National Taichung University of Science and Technology</strong></p>
+    <p>Date: 2025/10/14　12:00–13:00</p>
+    <p>Location: Details will be notified via email before the event</p>
+  </div>
+</a>
+
+<a class="card-link" href="https://forms.office.com/e/rQwDdj2wFN" target="_blank" rel="noopener noreferrer"
+   data-end="2025/09/10 14:00">
+  <span class="arrow">›</span>
+  <div class="card-content">
+    <p><strong>National Sun Yat-sen University</strong></p>
+    <p>Date: 2025/10/17　00:00–00:00</p>
+    <p>Location: Details will be notified via email before the event</p>
+  </div>
+</a>
+
     </section>
 
     <!-- 職缺內容（固定在最下方；內容沿用你的原文） -->
     <section id="jobs">
-      <h2>七大專業領域</h2>
+      <h2>7 Professional Streams</h2>
       <p style="text-align:center; line-height:1.9;">‼️完成履歷投遞後，會收到TestGorilla 線上測驗的通知，煩請盡速完成，若未完成將不會進入後續審查。
       <br>另外為避免重複測驗，建議投遞以最符合您的興趣的專業領域為主</p>
       <div class="card-container">
