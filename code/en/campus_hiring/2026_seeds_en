@@ -211,10 +211,11 @@
     <section id="process" class="section">
       <h2></h2>
       <div class="timeline">
-       <div class="step"><div class="circle">Before Nov. 07</div><p class="label">Online Application / Online Test</p></div>
-       <div class="step"><div class="circle">Oct.–Nov.</div><p class="label">Interview Arrangement</p></div>
-       <div class="step"><div class="circle">Nov.–Dec.</div><p class="label">First Interview / Second Interview</p></div>
-       <div class="step"><div class="circle">Jan.–Feb. 2026</div><p class="label">Onboarding</p></div>
+       <div class="step"><div class="circle">Before 07, Nov</div><p class="label">Online Application</p></div>
+       <div class="step"><div class="circle">Before 15, Nov</div><p class="label">Online Test</p></div>
+       <div class="step"><div class="circle">Nov</div><p class="label">First Interview</p></div>
+       <div class="step"><div class="circle">Nov–Dec</div><p class="label">Second Interview</p></div>
+       <div class="step"><div class="circle">Jan 2026</div><p class="label">Offer & Onboard</p></div>
 
       </div>
     </section>
