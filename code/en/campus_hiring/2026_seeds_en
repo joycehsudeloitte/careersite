@@ -284,75 +284,105 @@
     <!-- 職缺內容（固定在最下方；內容沿用你的原文） -->
     <section id="jobs">
       <h2>7 Professional Streams</h2>
-      <p style="text-align:center; line-height:1.9;">‼️完成履歷投遞後，會收到TestGorilla 線上測驗的通知，煩請盡速完成，若未完成將不會進入後續審查。
-      <br>另外為避免重複測驗，建議投遞以最符合您的興趣的專業領域為主</p>
       <div class="card-container">
-        <!-- Actuarial & Insurance Services Stream -->
-        <div class="card">
-          <h4>ESG Stream</h4>
-          <p>Location: Taipei</p>
-          <ul style="padding-left:20px; line-height:1.6;">
-            <li>Assist and analyze work connected to sustainability reports and conduct customized research relevant to climate change, carbon emissions, and sustainability issues; company level and country-level research. </li>
-            <li>Identifying and communicating trends, developments, and key performance drivers relevant to the client, while demonstrating a deep understanding of the industry and marketplace. </li>
-            <li>Supporting client relationships, business development, and account management leadership. </li>
-            <li>Support projects delivery and initiatives both externally and internally.
-          </ul>
-          <a class="btn" href="https://careers.apac.deloitte.com/Taiwan/job/%E5%88%9D%E7%B4%9A%E5%AF%A9%E8%A8%88%E5%93%A1-2026%E6%A0%A1%E5%9C%92%E5%BE%B5%E6%89%8D-%E5%AF%A9%E8%A8%88%E6%9C%8D%E5%8B%99-%E5%AF%A9%E8%A8%88%E8%88%87%E7%A2%BA%E4%BF%A1%E8%AB%AE%E8%A9%A2%E6%9C%8D%E5%8B%99/884-zh_TW/" target="_blank" rel="noopener">Learn more...</a>
-        </div>
+<!-- Actuarial & Insurance Services Stream -->
+<div class="card">
+  <h4>Actuarial & Insurance Stream</h4>
+  <p>Location: Taipei</p>
+  <ul style="padding-left:20px; line-height:1.6;">
+    <li>Work with our practice leaders and professional consultants as a team to solve complex business problems and deliver high quality solutions to our clients on areas including but not limited to:</li>
+    <li>Financial reporting</li>
+    <li>Solvency II / Economic Capital</li>
+    <li>IFRS 17</li>
+    <li>Embedded value etc.</li>
+  </ul>
+  <a class="btn" href="https://careers.apac.deloitte.com/Taiwan/job/884-zh_TW/" target="_blank" rel="noopener">Learn more...</a>
+</div>
 
-        <!-- Cyber Stream -->
-        <div class="card">
-          <h4>Cyber Stream</h4>
-          <p>地點：台北／新竹／台中／台南／高雄</p>
-          <p>簡短職缺說明</p>
-          <a class="btn" href="https://careers.apac.deloitte.com/Taiwan/job/%E5%88%9D%E7%B4%9A%E5%AF%A9%E8%A8%88%E5%93%A1-2026%E6%A0%A1%E5%9C%92%E5%BE%B5%E6%89%8D-%E5%AF%A9%E8%A8%88%E6%9C%8D%E5%8B%99-%E5%AF%A9%E8%A8%88%E8%88%87%E7%A2%BA%E4%BF%A1%E8%AB%AE%E8%A9%A2%E6%9C%8D%E5%8B%99/884-zh_TW/" target="_blank" rel="noopener">Learn more...</a>
-        </div>
+<!-- Cyber Stream -->
+<div class="card">
+  <h4>Cyber Stream</h4>
+  <p>Location: Taipei</p>
+  <ul style="padding-left:20px; line-height:1.6;">
+    <li>Support clients on establishing or enhancing end-to-end risk management systems, processes, and frameworks, ensuring alignment with business objectives, enabling effective decision-making, and ensuring compliance with regulations.</li>
+    <li>Enhance the quality, accuracy, and effectiveness of reports and presentations by applying advanced critical thinking, experience, and sound judgment.</li>
+    <li>Develop a thorough understanding of the client’s business operations, staying informed on industry trends, innovations, marketplace shifts, and best practices to add strategic value.</li>
+  </ul>
+  <a class="btn" href="https://careers.apac.deloitte.com/Taiwan/job/884-zh_TW/" target="_blank" rel="noopener">Learn more...</a>
+</div>
 
-        <!-- Digital Transformation Stream -->
-        <div class="card">
-          <h4>Finance Stream 
-          <br>(Valuation & Modeling, Mergers & Acquisitions / Enterprise Technology & Performance / Regulatory & Financial Risk）</h4>
-          <p>Location: Taipei / Kaohsiung</p>
-           <ul style="padding-left:20px; line-height:1.6;">
-            <li>Support in project engagements and business developments. </li>
-            <li>Able to synthesize large amounts of data and information from primary and secondary research and develop and present sound and accurate conclusions. </li>
-            <li>Assist in developing frameworks/models that address business problems and result in strategic insights.</li>
-            <li>Team with others to produce a high quality work product to ensure a superior client experience
-          </ul>
-          <a class="btn" href="https://careers.apac.deloitte.com/Taiwan/job/%E7%A2%BA%E4%BF%A1%E8%AB%AE%E8%A9%A2%E6%9C%8D%E5%8B%99%E9%A1%A7%E5%95%8F-2026%E6%A0%A1%E5%9C%92%E5%BE%B5%E6%89%8D-%E7%A2%BA%E4%BF%A1%E8%AB%AE%E8%A9%A2-%E5%AF%A9%E8%A8%88%E8%88%87%E7%A2%BA%E4%BF%A1%E8%AB%AE%E8%A9%A2%E6%9C%8D%E5%8B%99/885-zh_TW/" target="_blank" rel="noopener">Learn more...</a>
-        </div>
+<!-- Digital Transformation Stream -->
+<div class="card">
+  <h4>Digital Transformation Stream <br>(Customer / SAP / HR Transformation)</h4>
+  <p>Location: Taipei</p>
+  <ul style="padding-left:20px; line-height:1.6;">
+    <li>Work across a variety of projects and build knowledge across relevant domains.</li>
+    <li>Diagnose a problem, conduct analysis, and develop solutions for client problems.</li>
+    <li>Consider end user experience throughout the development cycle to deliver requirements and enhance adoption.</li>
+    <li>Support development and implementation of quality business digital solutions and align delivery to business goals.</li>
+  </ul>
+  <a class="btn" href="https://careers.apac.deloitte.com/Taiwan/job/885-zh_TW/" target="_blank" rel="noopener">Learn more...</a>
+</div>
 
-        <!-- ESG Stream -->
-        <div class="card">
-          <h4>ESG Stream</h4>
-          <p>地點：台北／新竹／台中／台南／高雄</p>
-          <p>簡短職缺說明</p>
-          <a class="btn" href="https://reurl.cc/OmVMQy" target="_blank" rel="noopener">Learn more...</a>
-        </div>
+<!-- ESG Stream -->
+<div class="card">
+  <h4>ESG Stream</h4>
+  <p>Location: Taipei</p>
+  <ul style="padding-left:20px; line-height:1.6;">
+    <li>Assist and analyze work connected to sustainability reports and conduct customized research relevant to climate change, carbon emissions, and sustainability issues; company-level and country-level research.</li>
+    <li>Identifying and communicating trends, developments, and key performance drivers relevant to the client, while demonstrating a deep understanding of the industry and marketplace.</li>
+    <li>Supporting client relationships, business development, and account management leadership.</li>
+    <li>Support projects delivery and initiatives both externally and internally.</li>
+  </ul>
+  <a class="btn" href="https://reurl.cc/OmVMQy" target="_blank" rel="noopener">Learn more...</a>
+</div>
 
-        <!-- Finance Stream -->
-        <div class="card">
-          <h4>Finance Stream</h4>
-          <p>地點：台北／新竹／台中／台南／高雄</p>
-          <p>簡短職缺說明</p>
-          <a class="btn" href="https://careers.apac.deloitte.com/Taiwan/job/%E5%88%9D%E7%B4%9A%E5%AF%A9%E8%A8%88%E5%93%A1-2026%E6%A0%A1%E5%9C%92%E5%BE%B5%E6%89%8D-%E5%AF%A9%E8%A8%88%E6%9C%8D%E5%8B%99-%E5%AF%A9%E8%A8%88%E8%88%87%E7%A2%BA%E4%BF%A1%E8%AB%AE%E8%A9%A2%E6%9C%8D%E5%8B%99/884-zh_TW/" target="_blank" rel="noopener">Learn more...</a>
-        </div>
+<!-- Finance Stream -->
+<div class="card">
+  <h4>Finance Stream <br>(Valuation & Modeling, Mergers & Acquisitions / Enterprise Technology & Performance / Regulatory & Financial Risk)</h4>
+  <p>Location: Taipei / Kaohsiung</p>
+  <ul style="padding-left:20px; line-height:1.6;">
+    <li>Support in project engagements and business developments.</li>
+    <li>Able to synthesize large amounts of data and information from primary and secondary research and develop and present sound and accurate conclusions.</li>
+    <li>Assist in developing frameworks/models that address business problems and result in strategic insights.</li>
+    <li>Team with others to produce a high quality work product to ensure a superior client experience.</li>
+  </ul>
+  <a class="btn" href="https://careers.apac.deloitte.com/Taiwan/job/885-zh_TW/" target="_blank" rel="noopener">Learn more...</a>
+</div>
 
-        <!-- Infrastructure & Real Estate Stream -->
-        <div class="card">
-          <h4>Infrastructure & Real Estate Stream</h4>
-          <p>地點：台北／新竹／台中／台南／高雄</p>
-          <p>簡短職缺說明</p>
-          <a class="btn" href="https://careers.apac.deloitte.com/Taiwan/job/%E7%A2%BA%E4%BF%A1%E8%AB%AE%E8%A9%A2%E6%9C%8D%E5%8B%99%E9%A1%A7%E5%95%8F-2026%E6%A0%A1%E5%9C%92%E5%BE%B5%E6%89%8D-%E7%A2%BA%E4%BF%A1%E8%AB%AE%E8%A9%A2-%E5%AF%A9%E8%A8%88%E8%88%87%E7%A2%BA%E4%BF%A1%E8%AB%AE%E8%A9%A2%E6%9C%8D%E5%8B%99/885-zh_TW/" target="_blank" rel="noopener">Learn more...</a>
-        </div>
+<!-- Infrastructure & Real Estate Stream -->
+<div class="card">
+  <h4>Infrastructure & Real Estate Stream</h4>
+  <p>Location: Taipei</p>
+  <ul style="padding-left:20px; line-height:1.6;">
+    <li>Conduct financial and economic analysis to support infrastructure projects, including feasibility studies, business cases, and financial models.</li>
+    <li>Perform market research, benchmarking, and sector analysis to assess trends, opportunities, and risks.</li>
+    <li>Support the development of client deliverables such as presentations, reports, and proposals, ensuring clarity and high-quality output.</li>
+    <li>Contribute to transaction support activities, including PPP advisory, project structuring, and due diligence.</li>
+  </ul>
+  <a class="btn" href="https://careers.apac.deloitte.com/Taiwan/job/885-zh_TW/" target="_blank" rel="noopener">Learn more...</a>
+</div>
 
-        <!-- Technical Stream -->
-        <div class="card">
-          <h4>Technical Stream</h4>
-          <p>地點：台北／新竹／台中／台南／高雄</p>
-          <p>簡短職缺說明</p>
-          <a class="btn" href="https://reurl.cc/OmVMQy" target="_blank" rel="noopener">Learn more...</a>
-        </div>
+<!-- Technical Stream -->
+<div class="card">
+  <h4>Technical Stream <br>(SAP – ABAP Developer / Customer – Full Stack Developer / Engineering AI & Data / Forensic & Financial Crime)</h4>
+  <p>Location: Taipei</p>
+  <ul style="padding-left:20px; line-height:1.6;">
+    <li>Support the design, development, and maintenance of solutions for clients across diverse industries.</li>
+    <li>Consider end user experience throughout the development cycle to deliver requirements and enhance adoption.</li>
+    <li>Engage in product design, technology research, and prototyping activities.</li>
+    <li>Understand the client’s business, follow sector trends and learn leading practices.</li>
+  </ul>
+  <a class="btn" href="https://reurl.cc/OmVMQy" target="_blank" rel="noopener">Learn more...</a>
+</div>
+
+<!-- Common Note -->
+<div class="note" style="margin-top:30px; font-size:15px; line-height:1.8; color:#555;">
+  <strong>7 Professional Streams</strong><br>
+  After submitting an application, you’ll receive an email invitation to complete an online test interview, powered by TestGorilla. TestGorilla is required, and your application will not be considered for further review until you have completed it.<br>
+  To avoid receiving duplicate online test invitations, we recommend applying only to the stream that best aligns with your experience and interests.
+</div>
+
       </div>
     </section>
   </div>
