@@ -69,7 +69,7 @@
     display:flex; align-items:center; justify-content:center;
     box-shadow:0 2px 6px rgba(0,0,0,.08);
   }
-  .label{ font-size:15px; font-weight:700; color:#333; }
+  .label{ font-size:15px; font-weight:700; color:#333; text-align: center; }
 
   /* 實體說明會卡片（兩欄） */
   .card-container{ display:grid; grid-template-columns:repeat(2,1fr); gap:16px;}
@@ -139,7 +139,7 @@
   }
 
   /* RWD */
-  @media(max-width:800px){
+@media(max-width:800px){
     .card-container{ grid-template-columns:1fr; }
   }
   @media (max-width: 768px) {
@@ -150,10 +150,10 @@
     .seeds-program nav ul{ justify-content:center; padding:10px 12px; gap:12px; }
     .seeds-program nav a{ font-size: 1.5rem !important; padding-bottom: 6px; }
     .timeline{ display:block; padding:8px 0; }
-    .timeline .step{ display:flex; align-items:center; gap:14px; text-align:left; padding:12px 8px; border-bottom:1px solid #eee; }
+    .timeline .step{ display:flex; align-items:center; gap:14px; text-align:center; padding:12px 8px; border-bottom:1px solid #eee; }
     .timeline .step:last-child{ border-bottom:none; }
-    .timeline .circle{ width:88px; height:88px; min-width:88px; font-weight:800; font-size:18px; line-height:1.1; }
-    .timeline .label{ font-size:16px; line-height:1.5; color:#222; }
+    .timeline .circle{ width:88px; height:88px; min-width:88px; font-weight:800; font-size:18px; line-height:1.1; text-align:center !important;}
+    .timeline .label{ font-size:16px; line-height:1.5; color:#222; text-align:center !important; }
     .card-link{ padding: 14px 16px; }
     #jobs{ padding:40px 0; }
     #jobs .card{ padding:16px; }
@@ -212,10 +212,10 @@
     <section id="process" class="section">
       <h2></h2>
       <div class="timeline">
-       <div class="step"><div class="circle">Before 11/07</div><p class="label">Online Application / Online Test</p></div>
-       <div class="step"><div class="circle">Oct–Nov</div><p class="label">Interview Arrangement</p></div>
-       <div class="step"><div class="circle">Nov–Dec</div><p class="label">First Interview / Second Interview</p></div>
-       <div class="step"><div class="circle">Jan–Feb 2026</div><p class="label">Onboarding</p></div>
+       <div class="step"><div class="circle">Before Nov. 07</div><p class="label">Online Application / Online Test</p></div>
+       <div class="step"><div class="circle">Oct.–Nov.</div><p class="label">Interview Arrangement</p></div>
+       <div class="step"><div class="circle">Nov.–Dec.</div><p class="l">abelFirst Interview / Second Interview</p></div>
+       <div class="step"><div class="circle">Jan.–Feb. 2026</div><p class="label">Onboarding</p></div>
 
       </div>
     </section>
@@ -283,7 +283,7 @@
     <p>Location: Details will be notified via email before the event</p>
   </div>
 </a>
-
+</div>
     </section>
 
     <!-- 職缺內容（固定在最下方；內容沿用你的原文） -->
@@ -309,10 +309,8 @@
 <!-- Finance Stream -->
 <div class="card">
   <h4>Finance Stream</h4>
+  <p style=" color:#43B02A;"><strong>(Valuation & Modeling, Mergers & Acquisitions | Enterprise Technology & Performance | Regulatory & Financial Risk)</strong></p>
   <p>Location: Taipei / Kaohsiung</p>
-  <p><strong>(Valuation & Modeling, Mergers & Acquisitions|
-  <br>Enterprise Technology & Performance | 
-  <br>Regulatory & Financial Risk)</strong></p>
   <ul style="padding-left:20px; line-height:1.6;">
     <li>Support in project engagements and business developments.</li>
     <li>Able to synthesize large amounts of data and information from primary and secondary research and develop and present sound and accurate conclusions.</li>
@@ -338,8 +336,8 @@
 <!-- Technical Stream -->
 <div class="card">
   <h4>Technical Stream</h4>
+  <p style=" color:#43B02A;"><strong>(SAP – ABAP Developer | Customer – Full Stack Developer | Engineering AI & Data | Forensic & Financial Crime)</strong></p>
   <p>Location: Taipei</p>
-  <p>(SAP – ABAP Developer / Customer – Full Stack Developer / Engineering AI & Data / Forensic & Financial Crime)</p>
   <ul style="padding-left:20px; line-height:1.6;">
     <li>Support the design, development, and maintenance of solutions for clients across diverse industries.</li>
     <li>Consider end user experience throughout the development cycle to deliver requirements and enhance adoption.</li>
@@ -364,8 +362,8 @@
 <!-- Digital Transformation Stream -->
 <div class="card">
   <h4>Digital Transformation Stream</h4>
+  <p style=" color:#43B02A;"><strong>(Customer | SAP | HR Transformation)</strong></p>
   <p>Location: Taipei</p>
-  <p>(Customer / SAP / HR Transformation)</p>
   <ul style="padding-left:20px; line-height:1.6;">
     <li>Work across a variety of projects and build knowledge across relevant domains.</li>
     <li>Diagnose a problem, conduct analysis, and develop solutions for client problems.</li>
