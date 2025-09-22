@@ -69,7 +69,7 @@
     display:flex; align-items:center; justify-content:center;
     box-shadow:0 2px 6px rgba(0,0,0,.08);
   }
-  .label{ font-size:15px; font-weight:700; color:#333; }
+  .label{ font-size:15px; font-weight:700; color:#333; text-align: center; }
 
   /* 實體說明會卡片（兩欄） */
   .card-container{ display:grid; grid-template-columns:repeat(2,1fr); gap:16px;}
@@ -103,11 +103,12 @@
     color:#86BC25;
     font-weight:800;
   }
-  #jobs p{
+  #jobs >p{
     max-width:1200px;
     margin:0 auto 20px;
     padding:0 20px;
     color:#000;
+    text-align: center;
   }
   #jobs .card-container{
     max-width:1200px;
@@ -127,17 +128,18 @@
   #jobs .card h4{
     color:#43B02A; font-weight:800; font-size:2rem; margin:0 0 8px;
   }
-#jobs .card p{
-  text-align:left;
-  margin:0 0 8px;
-  padding:0;
+#jobs .card p,
+#jobs .card ul,
+#jobs .card li,
+#jobs .note {
+  text-align: left !important;font-size:1.5rem
 }
   #jobs .card .btn{
     display:block; margin-top:auto; align-self:center; width:fit-content;
   }
 
   /* RWD */
-  @media(max-width:800px){
+@media(max-width:800px){
     .card-container{ grid-template-columns:1fr; }
   }
   @media (max-width: 768px) {
@@ -148,10 +150,10 @@
     .seeds-program nav ul{ justify-content:center; padding:10px 12px; gap:12px; }
     .seeds-program nav a{ font-size: 1.5rem !important; padding-bottom: 6px; }
     .timeline{ display:block; padding:8px 0; }
-    .timeline .step{ display:flex; align-items:center; gap:14px; text-align:left; padding:12px 8px; border-bottom:1px solid #eee; }
+    .timeline .step{ display:flex; align-items:center; gap:14px; text-align:center; padding:12px 8px; border-bottom:1px solid #eee; }
     .timeline .step:last-child{ border-bottom:none; }
-    .timeline .circle{ width:88px; height:88px; min-width:88px; font-weight:800; font-size:18px; line-height:1.1; }
-    .timeline .label{ font-size:16px; line-height:1.5; color:#222; }
+    .timeline .circle{ width:88px; height:88px; min-width:88px; font-weight:800; font-size:18px; line-height:1.1; text-align:center !important;}
+    .timeline .label{ font-size:16px; line-height:1.5; color:#222; text-align:center !important; }
     .card-link{ padding: 14px 16px; }
     #jobs{ padding:40px 0; }
     #jobs .card{ padding:16px; }
@@ -255,61 +257,99 @@
       <p style="text-align:center; line-height:1.9;">‼️完成履歷投遞後，會收到TestGorilla 線上測驗的通知，煩請盡速完成，若未完成將不會進入後續審查。
       <br>另外為避免重複測驗，建議投遞以最符合您的興趣的專業領域為主</p>
       <div class="card-container">
-        <!-- Actuarial & Insurance Services Stream -->
-        <div class="card">
-          <h4>Actuarial & Insurance Services Stream</h4>
-          <p>地點：台北／新竹／台中／台南／高雄</p>
-          <p>簡短職缺說明</p>
-          <a class="btn" href="#" target="_blank" rel="noopener">Learn more...</a>
-        </div>
-
-        <!-- Cyber Stream -->
-        <div class="card">
-          <h4>Cyber Stream</h4>
-          <p>地點：台北／新竹／台中／台南／高雄</p>
-          <p>簡短職缺說明</p>
-          <a class="btn" href="#" target="_blank" rel="noopener">Learn more...</a>
-        </div>
-
-        <!-- Digital Transformation Stream -->
-        <div class="card">
-          <h4>Digital Transformation Stream</h4>
-          <p>地點：台北／新竹／台中／台南／高雄</p>
-          <p>簡短職缺說明</p>
-          <a class="btn" href="#" target="_blank" rel="noopener">Learn more...</a>
-        </div>
-
         <!-- ESG Stream -->
-        <div class="card">
-          <h4>ESG Stream</h4>
-          <p>地點：台北／新竹／台中／台南／高雄</p>
-          <p>簡短職缺說明</p>
-          <a class="btn" href="#" target="_blank" rel="noopener">Learn more...</a>
-        </div>
+<div class="card">
+  <h4>ESG Stream</h4>
+  <p>Location: Taipei</p>
+  <ul style="padding-left:20px; line-height:1.6;">
+    <li>Assist and analyze work connected to sustainability reports and conduct customized research relevant to climate change, carbon emissions, and sustainability issues; company-level and country-level research.</li>
+    <li>Identifying and communicating trends, developments, and key performance drivers relevant to the client, while demonstrating a deep understanding of the industry and marketplace.</li>
+    <li>Supporting client relationships, business development, and account management leadership.</li>
+    <li>Support projects delivery and initiatives both externally and internally.</li>
+  </ul>
+  <a class="btn" href="https://reurl.cc/OmVMQy" target="_blank" rel="noopener">Learn more...</a>
+</div>
 
-        <!-- Finance Stream -->
-        <div class="card">
-          <h4>Finance Stream</h4>
-          <p>地點：台北／新竹／台中／台南／高雄</p>
-          <p>簡短職缺說明</p>
-          <a class="btn" href="#" target="_blank" rel="noopener">Learn more...</a>
-        </div>
+<!-- Finance Stream -->
+<div class="card">
+  <h4>Finance Stream</h4>
+  <p style=" color:#43B02A;"><strong>(Valuation & Modeling, Mergers & Acquisitions | Enterprise Technology & Performance | Regulatory & Financial Risk)</strong></p>
+  <p>Location: Taipei / Kaohsiung</p>
+  <ul style="padding-left:20px; line-height:1.6;">
+    <li>Support in project engagements and business developments.</li>
+    <li>Able to synthesize large amounts of data and information from primary and secondary research and develop and present sound and accurate conclusions.</li>
+    <li>Assist in developing frameworks/models that address business problems and result in strategic insights.</li>
+    <li>Team with others to produce a high quality work product to ensure a superior client experience.</li>
+  </ul>
+  <a class="btn" href="https://careers.apac.deloitte.com/Taiwan/job/885-zh_TW/" target="_blank" rel="noopener">Learn more...</a>
+</div>
 
-        <!-- Infrastructure & Real Estate Stream -->
-        <div class="card">
-          <h4>Infrastructure & Real Estate Stream</h4>
-          <p>地點：台北／新竹／台中／台南／高雄</p>
-          <p>簡短職缺說明</p>
-          <a class="btn" href="#" target="_blank" rel="noopener">Learn more...</a>
-        </div>
+<!-- Infrastructure & Real Estate Stream -->
+<div class="card">
+  <h4>Infrastructure & Real Estate Stream</h4>
+  <p>Location: Taipei</p>
+  <ul style="padding-left:20px; line-height:1.6;">
+    <li>Conduct financial and economic analysis to support infrastructure projects, including feasibility studies, business cases, and financial models.</li>
+    <li>Perform market research, benchmarking, and sector analysis to assess trends, opportunities, and risks.</li>
+    <li>Support the development of client deliverables such as presentations, reports, and proposals, ensuring clarity and high-quality output.</li>
+    <li>Contribute to transaction support activities, including PPP advisory, project structuring, and due diligence.</li>
+  </ul>
+  <a class="btn" href="https://careers.apac.deloitte.com/Taiwan/job/885-zh_TW/" target="_blank" rel="noopener">Learn more...</a>
+</div>
 
-        <!-- Technical Stream -->
-        <div class="card">
-          <h4>Technical Stream</h4>
-          <p>地點：台北／新竹／台中／台南／高雄</p>
-          <p>簡短職缺說明</p>
-          <a class="btn" href="#" rel="noopener">Learn more...</a>
-        </div>
+<!-- Technical Stream -->
+<div class="card">
+  <h4>Technical Stream</h4>
+  <p style=" color:#43B02A;"><strong>(SAP – ABAP Developer | Customer – Full Stack Developer | Engineering AI & Data | Forensic & Financial Crime)</strong></p>
+  <p>Location: Taipei</p>
+  <ul style="padding-left:20px; line-height:1.6;">
+    <li>Support the design, development, and maintenance of solutions for clients across diverse industries.</li>
+    <li>Consider end user experience throughout the development cycle to deliver requirements and enhance adoption.</li>
+    <li>Engage in product design, technology research, and prototyping activities.</li>
+    <li>Understand the client’s business, follow sector trends and learn leading practices.</li>
+  </ul>
+  <a class="btn" href="https://reurl.cc/OmVMQy" target="_blank" rel="noopener">Learn more...</a>
+</div>
+
+<!-- Cyber Stream -->
+<div class="card">
+  <h4>Cyber Stream</h4>
+  <p>Location: Taipei</p>
+  <ul style="padding-left:20px; line-height:1.6;">
+    <li>Support clients on establishing or enhancing end-to-end risk management systems, processes, and frameworks, ensuring alignment with business objectives, enabling effective decision-making, and ensuring compliance with regulations.</li>
+    <li>Enhance the quality, accuracy, and effectiveness of reports and presentations by applying advanced critical thinking, experience, and sound judgment.</li>
+    <li>Develop a thorough understanding of the client’s business operations, staying informed on industry trends, innovations, marketplace shifts, and best practices to add strategic value.</li>
+  </ul>
+  <a class="btn" href="https://careers.apac.deloitte.com/Taiwan/job/884-zh_TW/" target="_blank" rel="noopener">Learn more...</a>
+</div>
+
+<!-- Digital Transformation Stream -->
+<div class="card">
+  <h4>Digital Transformation Stream</h4>
+  <p style=" color:#43B02A;"><strong>(Customer | SAP | HR Transformation)</strong></p>
+  <p>Location: Taipei</p>
+  <ul style="padding-left:20px; line-height:1.6;">
+    <li>Work across a variety of projects and build knowledge across relevant domains.</li>
+    <li>Diagnose a problem, conduct analysis, and develop solutions for client problems.</li>
+    <li>Consider end user experience throughout the development cycle to deliver requirements and enhance adoption.</li>
+    <li>Support development and implementation of quality business digital solutions and align delivery to business goals.</li>
+  </ul>
+  <a class="btn" href="https://careers.apac.deloitte.com/Taiwan/job/885-zh_TW/" target="_blank" rel="noopener">Learn more...</a>
+</div>
+
+<!-- Actuarial & Insurance Services Stream -->
+<div class="card">
+  <h4>Actuarial & Insurance Stream</h4>
+  <p>Location: Taipei</p>
+  <ul style="padding-left:20px; line-height:1.6;">
+    Work with our practice leaders and professional consultants as a team to solve complex business problems and deliver high quality solutions to our clients on areas including but not limited to:
+    <li>Financial reporting</li>
+    <li>Solvency II / Economic Capital</li>
+    <li>IFRS 17</li>
+    <li>Embedded value etc.</li>
+  </ul>
+  <a class="btn" href="https://careers.apac.deloitte.com/Taiwan/job/884-zh_TW/" target="_blank" rel="noopener">Learn more...</a>
+</div>
       </div>
     </section>
   </div>
