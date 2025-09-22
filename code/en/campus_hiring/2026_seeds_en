@@ -103,12 +103,12 @@
     color:#86BC25;
     font-weight:800;
   }
-  #jobs p{
+  #jobs >p{
     max-width:1200px;
     margin:0 auto 20px;
     padding:0 20px;
     color:#000;
-    text-align: left !important;
+    text-align: center;
   }
   #jobs .card-container{
     max-width:1200px;
@@ -128,6 +128,12 @@
   #jobs .card h4{
     color:#43B02A; font-weight:800; font-size:2rem; margin:0 0 8px;
   }
+#jobs .card p,
+#jobs .card ul,
+#jobs .card li,
+#jobs .note {
+  text-align: left !important;font-size:1.5rem
+}
   #jobs .card .btn{
     display:block; margin-top:auto; align-self:center; width:fit-content;
   }
@@ -283,46 +289,10 @@
     <!-- 職缺內容（固定在最下方；內容沿用你的原文） -->
     <section id="jobs">
       <h2>7 Professional Streams</h2>
+      <p>‼️After submitting an application, you’ll receive an email invitation to complete an online test interview, powered by TestGorilla. 
+      <br>TestGorilla is required, and your application will not be considered for further review until you have completed it.
+      <br>To avoid receiving duplicate online test invitations, we recommend applying only to the stream that best aligns with your experience and interests.</p>
       <div class="card-container">
-<!-- Actuarial & Insurance Services Stream -->
-<div class="card">
-  <h4>Actuarial & Insurance Stream</h4>
-  <p>Location: Taipei</p>
-  <ul style="padding-left:20px; line-height:1.6;">
-    <li>Work with our practice leaders and professional consultants as a team to solve complex business problems and deliver high quality solutions to our clients on areas including but not limited to:</li>
-    <li>Financial reporting</li>
-    <li>Solvency II / Economic Capital</li>
-    <li>IFRS 17</li>
-    <li>Embedded value etc.</li>
-  </ul>
-  <a class="btn" href="https://careers.apac.deloitte.com/Taiwan/job/884-zh_TW/" target="_blank" rel="noopener">Learn more...</a>
-</div>
-
-<!-- Cyber Stream -->
-<div class="card">
-  <h4>Cyber Stream</h4>
-  <p>Location: Taipei</p>
-  <ul style="padding-left:20px; line-height:1.6;">
-    <li>Support clients on establishing or enhancing end-to-end risk management systems, processes, and frameworks, ensuring alignment with business objectives, enabling effective decision-making, and ensuring compliance with regulations.</li>
-    <li>Enhance the quality, accuracy, and effectiveness of reports and presentations by applying advanced critical thinking, experience, and sound judgment.</li>
-    <li>Develop a thorough understanding of the client’s business operations, staying informed on industry trends, innovations, marketplace shifts, and best practices to add strategic value.</li>
-  </ul>
-  <a class="btn" href="https://careers.apac.deloitte.com/Taiwan/job/884-zh_TW/" target="_blank" rel="noopener">Learn more...</a>
-</div>
-
-<!-- Digital Transformation Stream -->
-<div class="card">
-  <h4>Digital Transformation Stream <br>(Customer / SAP / HR Transformation)</h4>
-  <p>Location: Taipei</p>
-  <ul style="padding-left:20px; line-height:1.6;">
-    <li>Work across a variety of projects and build knowledge across relevant domains.</li>
-    <li>Diagnose a problem, conduct analysis, and develop solutions for client problems.</li>
-    <li>Consider end user experience throughout the development cycle to deliver requirements and enhance adoption.</li>
-    <li>Support development and implementation of quality business digital solutions and align delivery to business goals.</li>
-  </ul>
-  <a class="btn" href="https://careers.apac.deloitte.com/Taiwan/job/885-zh_TW/" target="_blank" rel="noopener">Learn more...</a>
-</div>
-
 <!-- ESG Stream -->
 <div class="card">
   <h4>ESG Stream</h4>
@@ -338,8 +308,11 @@
 
 <!-- Finance Stream -->
 <div class="card">
-  <h4>Finance Stream <br>(Valuation & Modeling, Mergers & Acquisitions / Enterprise Technology & Performance / Regulatory & Financial Risk)</h4>
+  <h4>Finance Stream</h4>
   <p>Location: Taipei / Kaohsiung</p>
+  <p><strong>(Valuation & Modeling, Mergers & Acquisitions|
+  <br>Enterprise Technology & Performance | 
+  <br>Regulatory & Financial Risk)</strong></p>
   <ul style="padding-left:20px; line-height:1.6;">
     <li>Support in project engagements and business developments.</li>
     <li>Able to synthesize large amounts of data and information from primary and secondary research and develop and present sound and accurate conclusions.</li>
@@ -364,8 +337,9 @@
 
 <!-- Technical Stream -->
 <div class="card">
-  <h4>Technical Stream <br>(SAP – ABAP Developer / Customer – Full Stack Developer / Engineering AI & Data / Forensic & Financial Crime)</h4>
+  <h4>Technical Stream</h4>
   <p>Location: Taipei</p>
+  <p>(SAP – ABAP Developer / Customer – Full Stack Developer / Engineering AI & Data / Forensic & Financial Crime)</p>
   <ul style="padding-left:20px; line-height:1.6;">
     <li>Support the design, development, and maintenance of solutions for clients across diverse industries.</li>
     <li>Consider end user experience throughout the development cycle to deliver requirements and enhance adoption.</li>
@@ -375,11 +349,44 @@
   <a class="btn" href="https://reurl.cc/OmVMQy" target="_blank" rel="noopener">Learn more...</a>
 </div>
 
-<!-- Common Note -->
-<div class="note" style="margin-top:30px; font-size:15px; line-height:1.8; color:#555;">
-  <strong>7 Professional Streams</strong><br>
-  After submitting an application, you’ll receive an email invitation to complete an online test interview, powered by TestGorilla. TestGorilla is required, and your application will not be considered for further review until you have completed it.<br>
-  To avoid receiving duplicate online test invitations, we recommend applying only to the stream that best aligns with your experience and interests.
+<!-- Cyber Stream -->
+<div class="card">
+  <h4>Cyber Stream</h4>
+  <p>Location: Taipei</p>
+  <ul style="padding-left:20px; line-height:1.6;">
+    <li>Support clients on establishing or enhancing end-to-end risk management systems, processes, and frameworks, ensuring alignment with business objectives, enabling effective decision-making, and ensuring compliance with regulations.</li>
+    <li>Enhance the quality, accuracy, and effectiveness of reports and presentations by applying advanced critical thinking, experience, and sound judgment.</li>
+    <li>Develop a thorough understanding of the client’s business operations, staying informed on industry trends, innovations, marketplace shifts, and best practices to add strategic value.</li>
+  </ul>
+  <a class="btn" href="https://careers.apac.deloitte.com/Taiwan/job/884-zh_TW/" target="_blank" rel="noopener">Learn more...</a>
+</div>
+
+<!-- Digital Transformation Stream -->
+<div class="card">
+  <h4>Digital Transformation Stream</h4>
+  <p>Location: Taipei</p>
+  <p>(Customer / SAP / HR Transformation)</p>
+  <ul style="padding-left:20px; line-height:1.6;">
+    <li>Work across a variety of projects and build knowledge across relevant domains.</li>
+    <li>Diagnose a problem, conduct analysis, and develop solutions for client problems.</li>
+    <li>Consider end user experience throughout the development cycle to deliver requirements and enhance adoption.</li>
+    <li>Support development and implementation of quality business digital solutions and align delivery to business goals.</li>
+  </ul>
+  <a class="btn" href="https://careers.apac.deloitte.com/Taiwan/job/885-zh_TW/" target="_blank" rel="noopener">Learn more...</a>
+</div>
+
+<!-- Actuarial & Insurance Services Stream -->
+<div class="card">
+  <h4>Actuarial & Insurance Stream</h4>
+  <p>Location: Taipei</p>
+  <ul style="padding-left:20px; line-height:1.6;">
+    Work with our practice leaders and professional consultants as a team to solve complex business problems and deliver high quality solutions to our clients on areas including but not limited to:
+    <li>Financial reporting</li>
+    <li>Solvency II / Economic Capital</li>
+    <li>IFRS 17</li>
+    <li>Embedded value etc.</li>
+  </ul>
+  <a class="btn" href="https://careers.apac.deloitte.com/Taiwan/job/884-zh_TW/" target="_blank" rel="noopener">Learn more...</a>
 </div>
 
       </div>
