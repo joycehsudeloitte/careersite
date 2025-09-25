@@ -223,32 +223,31 @@
     <!-- 實體說明會 -->
     <section id="onsite" class="section">
        <h2></h2>
-      <p><strong>📢歡迎點選下列文字方塊立即報名參加!</strong>
-      <br>資料請確實填寫，於活動的前1天會再次以Email提醒唷!</p>
+      <p><strong>📢歡迎大家踴躍報名參與~</strong></p>
       <div class="card-container">
-      <a class="card-link" href="https://forms.office.com/e/rQwDdj2wFN" target="_blank" rel="noopener noreferrer"
+      <a class="card-link" href="#" target="_blank" rel="noopener noreferrer"
            data-end="2025/09/10 14:00">
-          <span class="arrow">›</span><div class="card-content"><p><strong>國立臺灣大學</strong></p><p>時間：2025//　00:00–00:00</p><p>地點：活動前會以郵件通知</p></div>
+          <span class="arrow">›</span><div class="card-content"><p><strong>國立臺灣大學</strong></p><p>時間：TBC</p><p>地點：活動前會以郵件通知</p></div>
         </a>
-      <a class="card-link" href="https://forms.office.com/e/rQwDdj2wFN" target="_blank" rel="noopener noreferrer"
+      <a class="card-link" href="#" target="_blank" rel="noopener noreferrer"
            data-end="2025/10/27 19:00">
-          <span class="arrow">›</span><div class="card-content"><p><strong>國立政治大學</strong></p><p>時間：2025/10/27　19:00–20:00</p><p>地點：活動前會以郵件通知</p></div>
+          <span class="arrow">›</span><div class="card-content"><p><strong>國立政治大學</strong></p><p>時間：2025/10/27　19:00–20:00</p><p>地點：TBC</p></div>
         </a>
-      <a class="card-link" href="https://forms.office.com/e/rQwDdj2wFN" target="_blank" rel="noopener noreferrer"
+      <a class="card-link" href="#" target="_blank" rel="noopener noreferrer"
            data-end="2025/09/10 14:00">
-          <span class="arrow">›</span><div class="card-content"><p><strong>國立中央大學</strong></p><p>時間：2025//　00:00–00:00</p><p>地點：活動前會以郵件通知</p></div>
+          <span class="arrow">›</span><div class="card-content"><p><strong>國立台灣科技大學</strong></p><p>時間：TBC</p><p>地點：TBC</p></div>
         </a>
-      <a class="card-link" href="https://forms.office.com/e/rQwDdj2wFN" target="_blank" rel="noopener noreferrer"
+      <a class="card-link" href="#" target="_blank" rel="noopener noreferrer"
+           data-end="2025/09/10 14:00">
+          <span class="arrow">›</span><div class="card-content"><p><strong>國立中央大學</strong></p><p>時間：TBC</p><p>地點：TBC</p></div>
+        </a>
+      <a class="card-link" href="#" target="_blank" rel="noopener noreferrer"
            data-end="2025/11/04 14:00">
-          <span class="arrow">›</span><div class="card-content"><p><strong>國立臺北大學</strong></p><p>時間：2025/11/04　18:00–19:30</p><p>地點：活動前會以郵件通知</p></div>
+          <span class="arrow">›</span><div class="card-content"><p><strong>國立臺北大學</strong></p><p>時間：2025/11/04　18:00–19:30</p><p>地點：TBC</p></div>
         </a>
-      <a class="card-link" href="https://forms.office.com/e/rQwDdj2wFN" target="_blank" rel="noopener noreferrer"
+      <a class="card-link" href="#" target="_blank" rel="noopener noreferrer"
            data-end="2025/09/10 14:00">
-          <span class="arrow">›</span><div class="card-content"><p><strong>國立台中科技大學</strong></p><p>時間：2025/10/14　12:00–13:00</p><p>地點：活動前會以郵件通知</p></div>
-        </a>
-      <a class="card-link" href="https://forms.office.com/e/rQwDdj2wFN" target="_blank" rel="noopener noreferrer"
-           data-end="2025/09/10 14:00">
-          <span class="arrow">›</span><div class="card-content"><p><strong>國立中山大學</strong></p><p>時間：2025/10/17　00:00–00:00</p><p>地點：活動前會以郵件通知</p></div>
+          <span class="arrow">›</span><div class="card-content"><p><strong>國立台中科技大學</strong></p><p>時間：2025/10/14　12:00–13:00</p><p>地點：TBC</p></div>
         </a>
     </section>
 
