@@ -247,7 +247,7 @@
         </a>
       <a class="card-link" href="#" target="_blank" rel="noopener noreferrer"
            data-end="2025/09/10 14:00">
-          <span class="arrow">›</span><div class="card-content"><p><strong>國立台中科技大學</strong></p><p>時間：2025/10/14　12:00–13:00</p><p>地點：TBC</p></div>
+          <span class="arrow">›</span><div class="card-content"><p><strong>國立台中科技大學</strong></p><p>時間：2025/10/20　12:10–13:10</p><p>地點：TBC</p></div>
         </a>
     </section>
 
@@ -257,7 +257,7 @@
       <p style="text-align:center; line-height:1.9;">‼️完成履歷投遞後，會收到TestGorilla 線上測驗的通知，煩請盡速完成，若未完成將不會進入後續審查。
       <br>另外為避免重複測驗，建議投遞以最符合您的興趣的專業領域為主</p>
       <div class="card-container">
-        <!-- ESG Stream -->
+     <!-- ESG Stream -->
 <div class="card">
   <h4>ESG Stream</h4>
   <p>地點: 台北</p>
@@ -322,14 +322,14 @@
 
 <!-- Actuarial & Insurance Services Stream -->
 <div class="card">
-  <h4>Actuarial & Insurance Stream</h4>
+  <h4>Actuarial & Insurance Services Stream</h4>
   <p>地點: 台北</p>
   <p>Deloitte 擁有豐富的產業與專業經驗，長期協助保險與銀行業者在保險負債、資產配置、資本管理、績效衡量、成長與風險等面向做出更明智的決策。
   <br>
   <br>我們的領域專家及顧問協助客戶完成不同類型的專案，包括導入 IFRS 17、設計精算模型、風險管理等服務，提供高品質的解決方案，協助客戶解決複雜挑戰。</p>
-  </ul>
   <a class="btn" href="#" target="_blank" rel="noopener">Learn more...</a>
 </div>
+
       </div>
     </section>
   </div>
