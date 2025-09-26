@@ -223,32 +223,69 @@
     <!-- 實體說明會 -->
     <section id="onsite" class="section">
        <h2></h2>
-      <p><strong>📢歡迎大家踴躍報名參與~</strong></p>
+      <p><strong>相關活動資訊會持續更新在更新在</strong></p>
       <div class="card-container">
-      <a class="card-link" href="#" target="_blank" rel="noopener noreferrer"
-           data-end="2025/09/10 14:00">
-          <span class="arrow">›</span><div class="card-content"><p><strong>國立臺灣大學</strong></p><p>時間：TBC</p><p>地點：活動前會以郵件通知</p></div>
-        </a>
-      <a class="card-link" href="#" target="_blank" rel="noopener noreferrer"
-           data-end="2025/10/27 19:00">
-          <span class="arrow">›</span><div class="card-content"><p><strong>國立政治大學</strong></p><p>時間：2025/10/27　19:00–20:00</p><p>地點：TBC</p></div>
-        </a>
-      <a class="card-link" href="#" target="_blank" rel="noopener noreferrer"
-           data-end="2025/09/10 14:00">
-          <span class="arrow">›</span><div class="card-content"><p><strong>國立台灣科技大學</strong></p><p>時間：TBC</p><p>地點：TBC</p></div>
-        </a>
-      <a class="card-link" href="#" target="_blank" rel="noopener noreferrer"
-           data-end="2025/09/10 14:00">
-          <span class="arrow">›</span><div class="card-content"><p><strong>國立中央大學</strong></p><p>時間：TBC</p><p>地點：TBC</p></div>
-        </a>
-      <a class="card-link" href="#" target="_blank" rel="noopener noreferrer"
-           data-end="2025/11/04 14:00">
-          <span class="arrow">›</span><div class="card-content"><p><strong>國立臺北大學</strong></p><p>時間：2025/11/04　18:00–19:30</p><p>地點：TBC</p></div>
-        </a>
-      <a class="card-link" href="#" target="_blank" rel="noopener noreferrer"
-           data-end="2025/09/10 14:00">
-          <span class="arrow">›</span><div class="card-content"><p><strong>國立台中科技大學</strong></p><p>時間：2025/10/20　12:10–13:10</p><p>地點：TBC</p></div>
-        </a>
+<a class="card-link" href="#" target="_blank" rel="noopener noreferrer"
+     data-end="#">
+    <span class="arrow">›</span>
+    <div class="card-content">
+        <p><strong>國立臺灣大學</strong></p>
+        <p>時間：TBC</p>
+        <p>地點：TBC</p>
+    </div>
+</a>
+
+<a class="card-link" href="#" target="_blank" rel="noopener noreferrer"
+     data-end="2025/10/20 13:10">
+    <span class="arrow">›</span>
+    <div class="card-content">
+        <p><strong>國立台中科技大學</strong></p>
+        <p>時間：2025/10/20（星期一）12:10–13:10</p>
+        <p>地點：TBC</p>
+    </div>
+</a>
+
+<a class="card-link" href="#" target="_blank" rel="noopener noreferrer"
+     data-end="2025/10/27 20:00">
+    <span class="arrow">›</span>
+    <div class="card-content">
+        <p><strong>國立政治大學</strong></p>
+        <p>時間：2025/10/27（星期一）19:00–20:00</p>
+        <p>地點：TBC</p>
+    </div>
+</a>
+
+<a class="card-link" href="#" target="_blank" rel="noopener noreferrer"
+     data-end="2025/10/28 23:59">
+    <span class="arrow">›</span>
+    <div class="card-content">
+        <p><strong>國立中央大學</strong></p>
+        <p>時間：2025/10/28（星期二）</p>
+        <p>地點：TBC</p>
+    </div>
+</a>
+
+<a class="card-link" href="#" target="_blank" rel="noopener noreferrer"
+     data-end="2025/10/30 13:10">
+    <span class="arrow">›</span>
+    <div class="card-content">
+        <p><strong>國立台灣科技大學</strong></p>
+        <p>時間：2025/10/30（星期四）12:20–13:10</p>
+        <p>地點：綜合研究大樓 RB-102國際會議廳</p>
+    </div>
+</a>
+
+<a class="card-link" href="#" target="_blank" rel="noopener noreferrer"
+     data-end="2025/11/04 19:30">
+    <span class="arrow">›</span>
+    <div class="card-content">
+        <p><strong>國立臺北大學</strong></p>
+        <p>時間：2025/11/04（星期二）18:00–19:30</p>
+        <p>地點：TBC</p>
+    </div>
+</a>
+
+
     </section>
 
     <!-- 職缺內容（固定在最下方；內容沿用你的原文） -->
@@ -264,7 +301,7 @@
   <p>Deloitte將永續視為驅動客戶成長的引擎，從減碳策略到員工整合，我們提供端對端解決方案，協助企業邁向淨零未來。
   <br>
   <br>本計畫將依您的專長與興趣媒合至永續策略、氣候風險管理、供應鏈、金融或人才永續團隊，參與專案研究與報告撰寫，洞察產業趨勢並支援客戶關係與專案推動，共同創造具體的永續影響力。</p>
-  <a class="btn" href="#" target="_blank" rel="noopener">Learn more...</a>
+  <a class="btn" href="https://careers.apac.deloitte.com/Taiwan/job/%E3%80%90Deloitte-Seeds-Program%E3%80%91-ESG-STREAM/944-zh_TW" target="_blank" rel="noopener">Learn more...</a>
 </div>
 
 <!-- Finance Stream -->
@@ -275,7 +312,7 @@
   <p>在企業財務、策略與財務轉型方面具備深厚專業，協助客戶應對複雜的金融挑戰。
   <br>
   <br>本計畫將依您的專長與興趣分派至估值與併購、企業科技與績效、或風險管理團隊，參與專案與研究。實習中，您將培養數據分析能力與財務思維，應用解決問題的框架與洞察，與顧問團隊合作交付高品質成果，創造價值。</p>
-  <a class="btn" href="#" target="_blank" rel="noopener">Learn more...</a>
+  <a class="btn" href="https://careers.apac.deloitte.com/Taiwan/job/%E3%80%90Deloitte-Seeds-Program%E3%80%91FINANCE-STREAM/946-zh_TW" target="_blank" rel="noopener">Learn more...</a>
 </div>
 
 <!-- Digital Transformation Stream -->
@@ -286,7 +323,7 @@
   <p>結合專業與創意，推動數位轉型並探索解決全球挑戰的新方法。
   <br>
   <br>本計畫將依您的專長與興趣媒合至 Customer、SAP 或 HR Transformation 團隊，實際參與顧問專案、培養專業知識、提出創新解方，並協助開發高品質數位解決方案，與 Deloitte 一起塑造未來。</p>
-  <a class="btn" href="#" target="_blank" rel="noopener">Learn more...</a>
+  <a class="btn" href="https://careers.apac.deloitte.com/Taiwan/job/%E3%80%90Deloitte-Seeds-Program%E3%80%91DIGITAL-TRANSFORMATION-STREAM/954-zh_TW" target="_blank" rel="noopener">Learn more...</a>
 </div>
 
 <!-- Technical Stream -->
@@ -297,7 +334,7 @@
   <p>結合產業知識與尖端科技，協助企業推動數位轉型、提升效率，與世界共同前進。
   <br>
   <br>我們會依您的專長與興趣分派至 SAP、Customer、AI & Data、金融犯罪鑑識團隊。實習中，您將接觸最新科技與產業知識，參與產品設計、研究與解決方案開發，培養實戰力並創造影響力。</p>
-  <a class="btn" href="#" target="_blank" rel="noopener">Learn more...</a>
+  <a class="btn" href="https://careers.apac.deloitte.com/Taiwan/job/%E3%80%90Deloitte-Seeds-Program%E3%80%91TECHNICAL-STREAM/953-zh_TW" target="_blank" rel="noopener">Learn more...</a>
 </div>
 
 <!-- Cyber Stream -->
@@ -307,7 +344,7 @@
   <p>Deloitte協助企業在安全網路運作中持續成長，並快速因應市場變化及新興威脅提供創新解決方案，讓客戶掌握產業趨勢，創造價值。
   <br>
   <br>透過策略與轉型服務，我們提供客戶數位風險規劃、安全方案導入、主動偵測資安風險與應變計畫，建立完善的風險管理架構，提升決策效能與合規性。</p>
-  <a class="btn" href="#" target="_blank" rel="noopener">Learn more...</a>
+  <a class="btn" href="https://careers.apac.deloitte.com/Taiwan/job/%E3%80%90Deloitte-Seeds-Program%E3%80%91CYBER-STREAM/952-zh_TW" target="_blank" rel="noopener">Learn more...</a>
 </div>
 
 <!-- Infrastructure & Real Estate Stream -->
@@ -317,7 +354,7 @@
   <p>在基礎建設與不動產領域，結合全球視野與專業經驗，協助客戶掌握大型基礎建設與資本專案的複雜挑戰。
   <br>
   <br>本計畫將參與產業研究、財務與經濟分析、專案文件撰寫與交易支持，培養專案管理與問題解決能力，打造實戰經驗。</p>
-  <a class="btn" href="#" target="_blank" rel="noopener">Learn more...</a>
+  <a class="btn" href="https://careers.apac.deloitte.com/Taiwan/job/%E3%80%90Deloitte-Seeds-Program%E3%80%91INFRASTRUCTURE-&amp;-REAL-ESTATE-STREAM/948-zh_TW" target="_blank" rel="noopener">Learn more...</a>
 </div>
 
 <!-- Actuarial & Insurance Services Stream -->
@@ -327,7 +364,7 @@
   <p>Deloitte 擁有豐富的產業與專業經驗，長期協助保險與銀行業者在保險負債、資產配置、資本管理、績效衡量、成長與風險等面向做出更明智的決策。
   <br>
   <br>我們的領域專家及顧問協助客戶完成不同類型的專案，包括導入 IFRS 17、設計精算模型、風險管理等服務，提供高品質的解決方案，協助客戶解決複雜挑戰。</p>
-  <a class="btn" href="#" target="_blank" rel="noopener">Learn more...</a>
+  <a class="btn" href="https://careers.apac.deloitte.com/Taiwan/job/%E3%80%90Deloitte-Seeds-Program%E3%80%91ACTUARIAL-&amp;-INSURANCE-STREAM/947-zh_TW" target="_blank" rel="noopener">Learn more...</a>
 </div>
 
       </div>
