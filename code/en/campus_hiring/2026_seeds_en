@@ -159,7 +159,32 @@
     #jobs .card{ padding:16px; }
     .seeds-program .btn{ width: 100%; max-width: 360px; }
   }
+/* 實體說明會卡片：已結束 */
+#onsite .card-link.ended{
+  background:#f1f1f1;
+  border-color:#dcdcdc;
+  color:#9b9b9b;
+  filter: grayscale(100%);
+  pointer-events:none;
+  transform:none !important;
+  cursor:not-allowed;
+  position:relative; /* 放徽章用 */
+}
+#onsite .card-link .badge-ended{
+  position:absolute; top:8px; right:12px;
+  font-size:14px; font-weight:800;
+  background:#7e7e7e; color:#fff;
+  padding:4px 8px; border-radius:999px;
+  box-shadow:0 2px 6px rgba(0,0,0,.08);
+}
 
+/* 線上說明會（或報名）按鈕：已截止 */
+.seeds-program .btn.ended{
+  background:#bdbdbd !important;
+  color:#fff !important;
+  pointer-events:none;
+  cursor:not-allowed;
+}
 </style>
 
 <div class="seeds-program">
@@ -226,7 +251,7 @@
        <h2></h2>
       <div class="card-container">
  <a class="card-link" href="#" target="_blank" rel="noopener noreferrer"
-   data-end="#">
+   data-end="">
   <span class="arrow">›</span>
   <div class="card-content">
     <p><strong>National Taiwan University</strong></p>
@@ -300,7 +325,7 @@
   <h4>ESG Stream</h4>
   <p>Location: Taipei</p>
   <p>Join our ESG team to support sustainability initiatives such as climate risk management and carbon reduction. You will contribute to research, reporting, and client projects while creating meaningful impact for businesses and society.</p>
-  <a class="btn" href="https://reurl.cc/OmVMQy" target="_blank" rel="noopener">Learn more...</a>
+  <a class="btn" href="https://careers.apac.deloitte.com/Taiwan/job/%E3%80%90Deloitte-Seeds-Program%E3%80%91-ESG-STREAM/944-en_US" target="_blank" rel="noopener">Learn more...</a>
 </div>
 
 <!-- Finance Stream -->
@@ -309,16 +334,16 @@
   <p style=" color:#43B02A;"><strong>(Valuation & Modeling, Mergers & Acquisitions | Enterprise Technology & Performance | Regulatory & Financial Risk)</strong></p>
   <p>Location: Taipei / Kaohsiung</p>
   <p>In the Finance Stream, you can choose from positions in valuation, M&A, enterprise performance, or risk management. Depending on your role, you will conduct research and financial analysis, help design frameworks, and deliver strategic insights with our consulting teams.</p>
-  <a class="btn" href="https://careers.apac.deloitte.com/Taiwan/job/885-zh_TW/" target="_blank" rel="noopener">Learn more...</a>
+  <a class="btn" href="https://careers.apac.deloitte.com/Taiwan/job/%E3%80%90Deloitte-Seeds-Program%E3%80%91FINANCE-STREAM/946-en_US" target="_blank" rel="noopener">Learn more...</a>
 </div>
 
 <!-- Digital Transformation Stream -->
 <div class="card">
   <h4>Digital Transformation Stream</h4>
   <p style=" color:#43B02A;"><strong>(Customer | SAP | HR Transformation)</strong></p>
-  <p>Location: Taipei</p>
+  <p>Location: Taipei / Taichung / Kaohsiung</p>
   <p>In this stream, opportunities are available in customer, SAP, or HR transformation. You will analyze business challenges, design innovative solutions, and support the implementation of high-quality digital strategies that shape the future of clients’ organizations.</p>
-  <a class="btn" href="https://careers.apac.deloitte.com/Taiwan/job/885-zh_TW/" target="_blank" rel="noopener">Learn more...</a>
+  <a class="btn" href="https://careers.apac.deloitte.com/Taiwan/job/%E3%80%90Deloitte-Seeds-Program%E3%80%91DIGITAL-TRANSFORMATION-STREAM/954-en_US" target="_blank" rel="noopener">Learn more...</a>
 </div>
 
 <!-- Technical Stream -->
@@ -327,7 +352,7 @@
   <p style=" color:#43B02A;"><strong>(SAP – ABAP Developer | Customer – Full Stack Developer | Engineering AI & Data | Forensic & Financial Crime)</strong></p>
   <p>Location: Taipei</p>
   <p>The Technical Stream offers positions across SAP development, full-stack development, AI & data, and forensic analytics. You will work on product design, prototyping, and solution development, applying advanced technologies while building technical and business expertise.</p>
-  <a class="btn" href="https://reurl.cc/OmVMQy" target="_blank" rel="noopener">Learn more...</a>
+  <a class="btn" href="https://careers.apac.deloitte.com/Taiwan/job/%E3%80%90Deloitte-Seeds-Program%E3%80%91TECHNICAL-STREAM/953-en_US" target="_blank" rel="noopener">Learn more...</a>
 </div>
 
 <!-- Cyber Stream -->
@@ -335,7 +360,7 @@
   <h4>Cyber Stream</h4>
   <p>Location: Taipei</p>
   <p>Our Cyber Stream helps clients strengthen cybersecurity and risk management frameworks. You will support digital risk planning, security implementation, and proactive threat detection while staying ahead of industry trends and best practices.</p>
-  <a class="btn" href="https://careers.apac.deloitte.com/Taiwan/job/884-zh_TW/" target="_blank" rel="noopener">Learn more...</a>
+  <a class="btn" href="#" target="_blank" rel="noopener">Learn more...</a>
 </div>
 
 <!-- Infrastructure & Real Estate Stream -->
@@ -343,7 +368,7 @@
   <h4>Infrastructure & Real Estate Stream</h4>
   <p>Location: Taipei</p>
   <p>This stream focuses on large-scale infrastructure and real estate projects. You will conduct financial and market analysis, prepare client deliverables, and support transactions, gaining hands-on experience in project management and advisory work.</p>
-  <a class="btn" href="https://careers.apac.deloitte.com/Taiwan/job/885-zh_TW/" target="_blank" rel="noopener">Learn more...</a>
+  <a class="btn" href="https://careers.apac.deloitte.com/Taiwan/job/%E3%80%90Deloitte-Seeds-Program%E3%80%91INFRASTRUCTURE-&amp;-REAL-ESTATE-STREAM/948-en_US" target="_blank" rel="noopener">Learn more...</a>
 </div>
 
 <!-- Actuarial & Insurance Services Stream -->
@@ -351,10 +376,8 @@
   <h4>Actuarial & Insurance Services Stream</h4>
   <p>Location: Taipei</p>
   <p>In this stream, you will work with consultants to deliver actuarial and insurance services including financial reporting, IFRS 17, and risk management. You will design actuarial models, analyze industry trends, and help clients address complex challenges with practical solutions.</p>
-  <a class="btn" href="https://careers.apac.deloitte.com/Taiwan/job/884-zh_TW/" target="_blank" rel="noopener">Learn more...</a>
+  <a class="btn" href="https://careers.apac.deloitte.com/Taiwan/job/%E3%80%90Deloitte-Seeds-Program%E3%80%91ACTUARIAL-&amp;-INSURANCE-STREAM/947-en_US" target="_blank" rel="noopener">Learn more...</a>
 </div>
-
-
       </div>
     </section>
   </div>
@@ -371,4 +394,54 @@
       if(target){ target.classList.add('active'); }
     });
   });
+/** 將 "YYYY/MM/DD HH:MM" 轉成本地時間 Date。若字串無效回傳 NaN */
+function parseLocalDateTime(s) {
+  if (!s) return NaN;
+  const iso = s.trim().replace(/\//g, '-').replace(' ', 'T') + ':00';
+  return new Date(iso);
+}
+
+/** 對單張卡片套用「已結束」外觀與行為 */
+function markEndedCard(card){
+  if (card.classList.contains('ended')) return;
+  card.classList.add('ended');
+  card.setAttribute('aria-disabled','true');
+  card.setAttribute('tabindex','-1');
+  // 保險：阻止點擊開新頁
+  card.addEventListener('click', e => e.preventDefault(), {capture:true});
+  // 右上角徽章
+  const badge = document.createElement('span');
+  badge.className = 'badge-ended';
+  badge.textContent = '已結束';
+  card.appendChild(badge);
+}
+
+/** 實體說明會卡片：過了 data-end 自動標記已結束 */
+(function flagEndedOnsite(){
+  const now = new Date();
+  document.querySelectorAll('#onsite .card-link[data-end]').forEach(card=>{
+    const endStr = card.getAttribute('data-end');
+    const endTime = parseLocalDateTime(endStr);
+    if (isFinite(endTime) && endTime < now) {
+      markEndedCard(card);
+    }
+  });
+})();
+
+/** 線上說明會或報名按鈕：過了 data-deadline 改為已截止 */
+(function flagClosedButtons(){
+  // 可同時支援多顆按鈕（頁面上若有多個 data-deadline 也會處理）
+  document.querySelectorAll('.seeds-program .btn[data-deadline]').forEach(btn=>{
+    const deadline = parseLocalDateTime(btn.getAttribute('data-deadline'));
+    const now = new Date();
+    if (isFinite(deadline) && deadline < now){
+      btn.classList.add('ended');
+      btn.setAttribute('aria-disabled','true');
+      btn.setAttribute('tabindex','-1');
+      // 若尚未自訂文案，直接改成「已截止」
+      if (!/已截止/.test(btn.textContent)) btn.textContent = '已截止';
+      btn.addEventListener('click', e => e.preventDefault(), {capture:true});
+    }
+  });
+})();
 </script>
