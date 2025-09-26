@@ -159,12 +159,34 @@
     #jobs .card{ padding:16px; }
     .seeds-program .btn{ width: 100%; max-width: 360px; }
   }
-/* 已結束樣式 */
-.card-link.past { opacity: .6; filter: grayscale(.1); }
-.badge-ended{
-  display:inline-block; margin-left:8px; padding:2px 6px; border-radius:6px;
-  background:#bbb; color:#fff; font-size:12px; font-weight:700;
+
+/* 實體說明會卡片：已結束 */
+#onsite .card-link.ended{
+  background:#f1f1f1;
+  border-color:#dcdcdc;
+  color:#9b9b9b;
+  filter: grayscale(100%);
+  pointer-events:none;
+  transform:none !important;
+  cursor:not-allowed;
+  position:relative; /* 放徽章用 */
 }
+#onsite .card-link .badge-ended{
+  position:absolute; top:8px; right:12px;
+  font-size:14px; font-weight:800;
+  background:#7e7e7e; color:#fff;
+  padding:4px 8px; border-radius:999px;
+  box-shadow:0 2px 6px rgba(0,0,0,.08);
+}
+
+/* 線上說明會（或報名）按鈕：已截止 */
+.seeds-program .btn.ended{
+  background:#bdbdbd !important;
+  color:#fff !important;
+  pointer-events:none;
+  cursor:not-allowed;
+}
+
 </style>
 
 <div class="seeds-program">
@@ -232,7 +254,7 @@
       <p><strong>📢相關活動資訊持續更新中~</strong></p>
       <div class="card-container">
 <a class="card-link" href="#" target="_blank" rel="noopener noreferrer"
-     data-end="2025/09/10 23:59">
+     data-end="">
     <span class="arrow">›</span>
     <div class="card-content">
         <p><strong>國立臺灣大學</strong></p>
@@ -390,59 +412,54 @@
     });
   });
 
-  // ========= 自動補星期 / 已結束標記 / 自動排序 =========
-  (function(){
-    const ONSITE_CONTAINER = document.querySelector('#onsite .card-container');
-    if(!ONSITE_CONTAINER) return;
+/** 將 "YYYY/MM/DD HH:MM" 轉成本地時間 Date。若字串無效回傳 NaN */
+function parseLocalDateTime(s) {
+  if (!s) return NaN;
+  const iso = s.trim().replace(/\//g, '-').replace(' ', 'T') + ':00';
+  return new Date(iso);
+}
 
-    const WEEKMAP = ['星期日','星期一','星期二','星期三','星期四','星期五','星期六'];
+/** 對單張卡片套用「已結束」外觀與行為 */
+function markEndedCard(card){
+  if (card.classList.contains('ended')) return;
+  card.classList.add('ended');
+  card.setAttribute('aria-disabled','true');
+  card.setAttribute('tabindex','-1');
+  // 保險：阻止點擊開新頁
+  card.addEventListener('click', e => e.preventDefault(), {capture:true});
+  // 右上角徽章
+  const badge = document.createElement('span');
+  badge.className = 'badge-ended';
+  badge.textContent = '已結束';
+  card.appendChild(badge);
+}
 
-    function parseDataEnd(el){
-      const s = (el.getAttribute('data-end') || '').trim();
-      const m = s.match(/^(\d{4})\/(\d{2})\/(\d{2})\s+(\d{2}):(\d{2})$/);
-      if(!m) return null;
-      const [_, y, M, d, h, min] = m.map(Number);
-      return new Date(y, M-1, d, h, min, 0, 0);
+/** 實體說明會卡片：過了 data-end 自動標記已結束 */
+(function flagEndedOnsite(){
+  const now = new Date();
+  document.querySelectorAll('#onsite .card-link[data-end]').forEach(card=>{
+    const endStr = card.getAttribute('data-end');
+    const endTime = parseLocalDateTime(endStr);
+    if (isFinite(endTime) && endTime < now) {
+      markEndedCard(card);
     }
-    function isPast(endDate){
-      if(!endDate) return false;
-      return new Date().getTime() > endDate.getTime();
-    }
-    function ensureWeekday(el, endDate){
-      if(!endDate) return;
-      const pTime = Array.from(el.querySelectorAll('.card-content p'))
-        .find(p => p.textContent.trim().startsWith('時間：'));
-      if(!pTime) return;
-      if(/（星期[一二三四五六日]）/.test(pTime.textContent)) return;
-      const wd = WEEKMAP[endDate.getDay()];
-      pTime.textContent = pTime.textContent.replace(
-        /(時間：\d{4}\/\d{2}\/\d{2})/,
-        `$1（${wd}）`
-      );
-    }
-    function addEndedBadge(el){
-      const pTitle = el.querySelector('.card-content p strong');
-      if(!pTitle) return;
-      if(pTitle.nextElementSibling && pTitle.nextElementSibling.classList.contains('badge-ended')) return;
-      const b = document.createElement('span');
-      b.className = 'badge-ended';
-      b.textContent = '已結束';
-      pTitle.insertAdjacentElement('afterend', b);
-    }
+  });
+})();
 
-    const cards = Array.from(ONSITE_CONTAINER.querySelectorAll('.card-link'));
-    const enriched = cards.map(el => {
-      const endDate = parseDataEnd(el);
-      const past = isPast(endDate);
-      if(past){ el.classList.add('past'); addEndedBadge(el); }
-      ensureWeekday(el, endDate);
-      return { el, endDate, past, hasDate: !!endDate };
-    });
-
-    const tbc = enriched.filter(x => !x.hasDate);
-    const upcoming = enriched.filter(x => x.hasDate && !x.past).sort((a,b) => a.endDate - b.endDate);
-    const passed = enriched.filter(x => x.hasDate && x.past).sort((a,b) => a.endDate - b.endDate);
-
-    [...tbc, ...upcoming, ...passed].forEach(x => ONSITE_CONTAINER.appendChild(x.el));
-  })();
+/** 線上說明會或報名按鈕：過了 data-deadline 改為已截止 */
+(function flagClosedButtons(){
+  // 可同時支援多顆按鈕（頁面上若有多個 data-deadline 也會處理）
+  document.querySelectorAll('.seeds-program .btn[data-deadline]').forEach(btn=>{
+    const deadline = parseLocalDateTime(btn.getAttribute('data-deadline'));
+    const now = new Date();
+    if (isFinite(deadline) && deadline < now){
+      btn.classList.add('ended');
+      btn.setAttribute('aria-disabled','true');
+      btn.setAttribute('tabindex','-1');
+      // 若尚未自訂文案，直接改成「已截止」
+      if (!/已截止/.test(btn.textContent)) btn.textContent = '已截止';
+      btn.addEventListener('click', e => e.preventDefault(), {capture:true});
+    }
+  });
+})();
 </script>
