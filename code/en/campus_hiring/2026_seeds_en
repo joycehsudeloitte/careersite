@@ -412,7 +412,7 @@ function markEndedCard(card){
   // 右上角徽章
   const badge = document.createElement('span');
   badge.className = 'badge-ended';
-  badge.textContent = '已結束';
+  badge.textContent = 'Ended';
   card.appendChild(badge);
 }
 
@@ -439,7 +439,7 @@ function markEndedCard(card){
       btn.setAttribute('aria-disabled','true');
       btn.setAttribute('tabindex','-1');
       // 若尚未自訂文案，直接改成「已截止」
-      if (!/已截止/.test(btn.textContent)) btn.textContent = '已截止';
+      if (!/已截止/.test(btn.textContent)) btn.textContent = 'Closed';
       btn.addEventListener('click', e => e.preventDefault(), {capture:true});
     }
   });
