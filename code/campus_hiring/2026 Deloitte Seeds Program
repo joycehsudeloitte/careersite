@@ -159,6 +159,12 @@
     #jobs .card{ padding:16px; }
     .seeds-program .btn{ width: 100%; max-width: 360px; }
   }
+/* 已結束樣式 */
+.card-link.past { opacity: .6; filter: grayscale(.1); }
+.badge-ended{
+  display:inline-block; margin-left:8px; padding:2px 6px; border-radius:6px;
+  background:#bbb; color:#fff; font-size:12px; font-weight:700;
+}
 </style>
 
 <div class="seeds-program">
@@ -226,7 +232,7 @@
       <p><strong>📢相關活動資訊持續更新中~</strong></p>
       <div class="card-container">
 <a class="card-link" href="#" target="_blank" rel="noopener noreferrer"
-     data-end="#">
+     data-end="2025/09/10 23:59">
     <span class="arrow">›</span>
     <div class="card-content">
         <p><strong>國立臺灣大學</strong></p>
@@ -373,7 +379,7 @@
 </div>
 
 <script>
-  // 分頁切換：對應 about / process / onsite
+  // ========= 分頁切換 =========
   document.querySelectorAll('.seeds-program nav a').forEach(link=>{
     link.addEventListener('click', function(){
       document.querySelectorAll('.seeds-program nav a').forEach(a=>a.classList.remove('active'));
@@ -383,4 +389,60 @@
       if(target){ target.classList.add('active'); }
     });
   });
+
+  // ========= 自動補星期 / 已結束標記 / 自動排序 =========
+  (function(){
+    const ONSITE_CONTAINER = document.querySelector('#onsite .card-container');
+    if(!ONSITE_CONTAINER) return;
+
+    const WEEKMAP = ['星期日','星期一','星期二','星期三','星期四','星期五','星期六'];
+
+    function parseDataEnd(el){
+      const s = (el.getAttribute('data-end') || '').trim();
+      const m = s.match(/^(\d{4})\/(\d{2})\/(\d{2})\s+(\d{2}):(\d{2})$/);
+      if(!m) return null;
+      const [_, y, M, d, h, min] = m.map(Number);
+      return new Date(y, M-1, d, h, min, 0, 0);
+    }
+    function isPast(endDate){
+      if(!endDate) return false;
+      return new Date().getTime() > endDate.getTime();
+    }
+    function ensureWeekday(el, endDate){
+      if(!endDate) return;
+      const pTime = Array.from(el.querySelectorAll('.card-content p'))
+        .find(p => p.textContent.trim().startsWith('時間：'));
+      if(!pTime) return;
+      if(/（星期[一二三四五六日]）/.test(pTime.textContent)) return;
+      const wd = WEEKMAP[endDate.getDay()];
+      pTime.textContent = pTime.textContent.replace(
+        /(時間：\d{4}\/\d{2}\/\d{2})/,
+        `$1（${wd}）`
+      );
+    }
+    function addEndedBadge(el){
+      const pTitle = el.querySelector('.card-content p strong');
+      if(!pTitle) return;
+      if(pTitle.nextElementSibling && pTitle.nextElementSibling.classList.contains('badge-ended')) return;
+      const b = document.createElement('span');
+      b.className = 'badge-ended';
+      b.textContent = '已結束';
+      pTitle.insertAdjacentElement('afterend', b);
+    }
+
+    const cards = Array.from(ONSITE_CONTAINER.querySelectorAll('.card-link'));
+    const enriched = cards.map(el => {
+      const endDate = parseDataEnd(el);
+      const past = isPast(endDate);
+      if(past){ el.classList.add('past'); addEndedBadge(el); }
+      ensureWeekday(el, endDate);
+      return { el, endDate, past, hasDate: !!endDate };
+    });
+
+    const tbc = enriched.filter(x => !x.hasDate);
+    const upcoming = enriched.filter(x => x.hasDate && !x.past).sort((a,b) => a.endDate - b.endDate);
+    const passed = enriched.filter(x => x.hasDate && x.past).sort((a,b) => a.endDate - b.endDate);
+
+    [...tbc, ...upcoming, ...passed].forEach(x => ONSITE_CONTAINER.appendChild(x.el));
+  })();
 </script>
