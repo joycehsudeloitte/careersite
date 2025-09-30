@@ -281,12 +281,12 @@
 </a>
 
 <a class="card-link" href="#" target="_blank" rel="noopener noreferrer"
-   data-end="2025/10/28 23:59">
+   data-end="2025/10/28 13:00">
   <span class="arrow">›</span>
   <div class="card-content">
     <p><strong>National Central University</strong></p>
-    <p>Date: 2025/10/28 (Tue)</p>
-    <p>Location: TBC</p>
+    <p>Date: 2025/10/28 (Tue) 12:10-13:00</p>
+    <p>Location: Management Building #2 Room 408</p>
   </div>
 </a>
 
@@ -309,7 +309,15 @@
     <p>Location: TBC</p>
   </div>
 </a>
-
+<a class="card-link" href="#" target="_blank" rel="noopener noreferrer"
+   data-end="2025/11/05 23:59">
+  <span class="arrow">›</span>
+  <div class="card-content">
+    <p><strong>National Sun Yat-sen University</strong></p>
+    <p>Date: 2025/11/05 (Wed) </p>
+    <p>Location: TBC</p>
+  </div>
+</a>
 </div>
     </section>
 
