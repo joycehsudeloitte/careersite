@@ -193,7 +193,7 @@
   <h1>Plant the first Seeds of your journey with Deloitte! 🌱</h1>
   <p class="subtitle">
     與專業顧問一起參與專案挑戰、併肩解決真實問題並把想法化為實際影響力💪
-    <br>透過6個月的實習旅程，累積專案經驗並獲得專業指導和職場技能，同時學習與發展機會交流平台，成為能創造影響力的專業人才🚀
+    <br>透過6個月在勤業眾信顧問業務服務(Deloitte Consulting Businesses)的實習旅程，累積專案經驗並獲得專業指導和職場技能，同時學習與發展機會交流平台，成為能創造影響力的專業人才🚀
     <br>✨加入Deloitte Seeds，七大專業領域等你探索，展開你的職涯新篇章！
   </p>
   <p class="subtitle">
@@ -255,24 +255,13 @@
       <br>歡迎點選下方連結報名參加!</strong></p>
       <div class="card-container">
 <a class="card-link" href="#" target="_blank" rel="noopener noreferrer"
-     data-end="">
-    <span class="arrow">›</span>
-    <div class="card-content">
-        <p><strong>國立臺灣大學</strong></p>
-        <p>時間：TBC</p>
-        <p>地點：TBC
-        <br>(報名連結還在準備中，我們完成後會馬上分享給大家！)</p>
-    </div>
-</a>
-
-<a class="card-link" href="#" target="_blank" rel="noopener noreferrer"
      data-end="2025/10/20 13:10">
     <span class="arrow">›</span>
     <div class="card-content">
         <p><strong>國立台中科技大學</strong></p>
         <p>時間：2025/10/20（一）12:10–13:10</p>
-        <p>地點：TBC
-        <br>(報名連結還在準備中，我們完成後會馬上分享給大家！)</p>
+        <p>地點：TBC</p>
+        <p style= "color:#86BC25;">(報名連結還在準備中，我們完成後會馬上分享給大家！)</p>
     </div>
 </a>
 
@@ -282,8 +271,8 @@
     <div class="card-content">
         <p><strong>國立政治大學</strong></p>
         <p>時間：2025/10/27（一）19:10–20:00</p>
-        <p>地點：綜院270113
-        <br>(報名連結還在準備中，我們完成後會馬上分享給大家！)</p>
+        <p>地點：綜院270113</p>
+        <p style= "color:#86BC25;">(報名連結還在準備中，我們完成後會馬上分享給大家！)</p>
     </div>
 </a>
 
@@ -296,15 +285,22 @@
         <p>地點：管院二館 408 教室</p>
     </div>
 </a>
-
-<a class="card-link" href="#" target="_blank" rel="noopener noreferrer"
+<a class="card-link" href="https://reurl.cc/yA944E" target="_blank" rel="noopener noreferrer"
+     data-end="">
+    <span class="arrow">›</span>
+    <div class="card-content">
+        <p><strong>國立臺灣大學</strong></p>
+        <p>時間：2025/10/29（三）12:30–14:00</p>
+        <p>地點：管院一號館 B101教室</p>
+    </div>
+</a>
+<a class="card-link" href="https://career.ntust.edu.tw/#/lectures/internship/701" target="_blank" rel="noopener noreferrer"
      data-end="2025/10/30 13:10">
     <span class="arrow">›</span>
     <div class="card-content">
         <p><strong>國立台灣科技大學</strong></p>
         <p>時間：2025/10/30（四）12:20–13:10</p>
-        <p>地點：綜合研究大樓 RB-102國際會議廳
-        <br>(報名連結還在準備中，我們完成後會馬上分享給大家！)</p>
+        <p>地點：綜合研究大樓 RB-102國際會議廳</p>
     </div>
 </a>
 
@@ -314,8 +310,8 @@
     <div class="card-content">
         <p><strong>國立臺北大學</strong></p>
         <p>時間：2025/11/04（二）18:00–19:30</p>
-        <p>地點：TBC
-        <br>(報名連結還在準備中，我們完成後會馬上分享給大家！)</p>
+        <p>地點：TBC</p>
+        <p style= "color:#86BC25;">(報名連結還在準備中，我們完成後會馬上分享給大家！)</p>
     </div>
 </a>
 <a class="card-link" href="#" target="_blank" rel="noopener noreferrer"
@@ -324,8 +320,8 @@
     <div class="card-content">
         <p><strong>國立中山大學</strong></p>
         <p>時間：2025/11/05（三）</p>
-        <p>地點：管院2樓 CM2037教室
-        <br>(報名連結還在準備中，我們完成後會馬上分享給大家！)</p>
+        <p>地點：管院2樓 CM2037教室</p>
+        <p style= "color:#86BC25;">(報名連結還在準備中，我們完成後會馬上分享給大家！)</p>
     </div>
 </a>
 
