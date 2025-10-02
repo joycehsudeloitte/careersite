@@ -250,23 +250,14 @@
     <section id="onsite" class="section">
        <h2></h2>
       <div class="card-container">
- <a class="card-link" href="#" target="_blank" rel="noopener noreferrer"
-   data-end="">
-  <span class="arrow">›</span>
-  <div class="card-content">
-    <p><strong>National Taiwan University</strong></p>
-    <p>Date: TBC</p>
-    <p>Location: TBC</p>
-  </div>
-</a>
-
 <a class="card-link" href="#" target="_blank" rel="noopener noreferrer"
    data-end="2025/10/20 13:10">
   <span class="arrow">›</span>
   <div class="card-content">
     <p><strong>National Taichung University of Science and Technology</strong></p>
     <p>Date: 2025/10/20 (Mon) 12:10–13:10</p>
-    <p>Location: TBC</p>
+    <p>Location: TBC
+    <br>(Registration link is on the way—stay tuned!)</p>
   </div>
 </a>
 
@@ -276,11 +267,12 @@
   <div class="card-content">
     <p><strong>National Chengchi University</strong></p>
     <p>Date: 2025/10/27 (Mon) 19:10–20:00</p>
-    <p>Location: General Building of College 270113</p>
+    <p>Location: General Building of College 270113
+    <br>(Registration link is on the way—stay tuned!)</p>
   </div>
 </a>
 
-<a class="card-link" href="#" target="_blank" rel="noopener noreferrer"
+<a class="card-link" href="https://forms.gle/WcWKmzkU6rG4NCHs8" target="_blank" rel="noopener noreferrer"
    data-end="2025/10/28 13:00">
   <span class="arrow">›</span>
   <div class="card-content">
@@ -289,8 +281,16 @@
     <p>Location: Management Building #2 Room 408</p>
   </div>
 </a>
-
-<a class="card-link" href="#" target="_blank" rel="noopener noreferrer"
+ <a class="card-link" href="https://reurl.cc/yA944E" target="_blank" rel="noopener noreferrer"
+   data-end="2025/10/29 14:00">
+  <span class="arrow">›</span>
+  <div class="card-content">
+    <p><strong>National Taiwan University</strong></p>
+    <p>Date: 2025/10/29 (Wed) 12:30-14:00</p>
+    <p>Location: Building 1, College of Management Room B101</p>
+  </div>
+</a>
+<a class="card-link" href="https://career.ntust.edu.tw/#/lectures/internship/701" target="_blank" rel="noopener noreferrer"
    data-end="2025/10/30 13:10">
   <span class="arrow">›</span>
   <div class="card-content">
@@ -306,7 +306,8 @@
   <div class="card-content">
     <p><strong>National Taipei University</strong></p>
     <p>Date: 2025/11/04 (Tue) 18:00–19:30</p>
-    <p>Location: TBC</p>
+    <p>Location: TBC
+    <br>(Registration link is on the way—stay tuned!)</p>
   </div>
 </a>
 <a class="card-link" href="#" target="_blank" rel="noopener noreferrer"
@@ -315,7 +316,8 @@
   <div class="card-content">
     <p><strong>National Sun Yat-sen University</strong></p>
     <p>Date: 2025/11/05 (Wed) </p>
-    <p>Location: 2F, College of Management CM2037</p>
+    <p>Location: 2F, College of Management CM2037
+    <br>(Registration link is on the way—stay tuned!)</p>
   </div>
 </a>
 </div>
