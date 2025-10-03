@@ -1,0 +1,111 @@
+<!-- 人物勉勵話語區塊（兩個並排） -->
+<section class="mentor-quotes">
+  <div class="mq-grid">
+<!-- 人物卡片 #1 -->
+    <article class="mq-card">
+      <figure class="mq-avatar">
+        <img src="https://raw.githubusercontent.com/joycehsudeloitte/careersite/main/images/Hiromitsu%20Harada.jpg" alt="原田 浩光 Hiromitsu Harada 資深執行副總經理">
+      </figure>
+      <blockquote class="mq-quote">
+        「您將在Deloitte JSG找到揮灑創意、挑戰自我、實現理想的舞台，也能在實踐中累積成長與經驗，逐步展現屬於自己的價值與光芒。」
+      </blockquote>
+      <p class="mq-name">姚勝雄 Spencer Yao｜資深會計師</p>
+    </article>
+    <!-- 人物卡片 #2 -->
+    <article class="mq-card">
+      <figure class="mq-avatar">
+        <img src="https://raw.githubusercontent.com/joycehsudeloitte/careersite/main/images/Hiromitsu%20Harada.jpg" alt="原田 浩光 Hiromitsu Harada 資深執行副總經理">
+      </figure>
+      <blockquote class="mq-quote">
+        「我們相信，職涯是一段充滿可能性的旅程。這裡是一個能讓您盡情揮灑創意、勇於挑戰自我的舞台。期待看到您的加入，讓我們一起把想像化為行動！」
+      </blockquote>
+      <p class="mq-name">原田 浩光 Hiromitsu Harada｜資深執行副總經理</p>
+    </article>
+
+    <!-- 人物卡片 #3 -->
+    <article class="mq-card">
+      <figure class="mq-avatar">
+        <img src="https://raw.githubusercontent.com/joycehsudeloitte/careersite/main/images/Haruhiko%20Kondo.jpg" alt="近藤 晴彥 Haruhiko Kondo 資深執行副總經理">
+      </figure>
+      <blockquote class="mq-quote">
+        「在 Deloitte JSG，我們不只提供一份工作，更提供一條可持續成長的職涯路徑。從專業訓練到國際資源，您都能獲得最堅實的支持。邀請您加入，將影響力化為行動。」
+      </blockquote>
+      <p class="mq-name">近藤 晴彥 Haruhiko Kondo｜資深執行副總經理</p>
+    </article>
+  </div>
+</section>
+
+<style>
+  :root{
+    --brand:#86BC25; /* 主色 */
+    --text:#333;
+    --muted:#666;
+    --white:#fff;
+  }
+
+  .mentor-quotes{
+    background: var(--white);
+    padding: 48px 16px;
+    font-family: "Microsoft JhengHei","Noto Sans TC",sans-serif;
+    text-align: center;
+  }
+
+  /* ✅ 使用不會與全站衝突的網格容器 */
+  .mq-grid{
+    /* 先單欄：手機 */
+    display: grid !important;
+    grid-template-columns: 1fr;
+    gap: 32px;
+    max-width: 1800px;
+    margin: 0 auto;
+  }
+
+  /* ✅ 桌機：強制兩欄並排 */
+  @media (min-width: 768px){
+    .mq-grid{
+      grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+      align-items: start;
+    }
+  }
+
+  .mq-card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 12px;
+  }
+
+  .mq-avatar{
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: 16px;
+    border: 4px solid var(--brand);
+    box-shadow: 0 6px 16px rgba(0,0,0,.08);
+  }
+  .mq-avatar img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .mq-quote{
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: var(--text);
+    font-style: italic;
+    margin: 0 0 8px;
+    max-width: 90%;
+  }
+  .mq-quote::before{ content:"“"; font-size:1.8rem; color:var(--brand); margin-right:4px; }
+  .mq-quote::after{  content:"”"; font-size:1.8rem; color:var(--brand); margin-left:4px; }
+
+  .mq-name{
+    font-weight: 700;
+    color: var(--muted);
+    font-size: 0.95rem;
+    margin: 0;
+  }
+</style>
