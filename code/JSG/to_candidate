@@ -1,22 +1,27 @@
-<!-- 人物勉勵話語區塊（兩個並排） -->
+<!-- 人物勉勵話語區塊 -->
 <section class="mentor-quotes">
   <div class="mq-grid">
-<!-- 人物卡片 #1 -->
+    <!-- 人物卡片 #1 -->
     <article class="mq-card">
       <figure class="mq-avatar">
         <img src="https://raw.githubusercontent.com/joycehsudeloitte/careersite/main/images/Yao%20Spencer.jpg" alt="姚勝雄 Spencer Yao 資深會計師">
       </figure>
-      <blockquote class="mq-quote">
+      <blockquote class="mq-quote"
+        data-zh="「您將在Deloitte JSG找到揮灑創意、挑戰自我、實現理想的舞台，也能在實踐中累積成長與經驗，逐步展現屬於自己的價值與光芒。」"
+        data-ja="「Deloitte JSGでは、創造性を発揮し、自分自身に挑戦し、理想を実現する舞台を見つけることができます。実践を通じて成長と経験を積み重ね、自分自身の価値と輝きを発揮してください。」">
         「您將在Deloitte JSG找到揮灑創意、挑戰自我、實現理想的舞台，也能在實踐中累積成長與經驗，逐步展現屬於自己的價值與光芒。」
       </blockquote>
       <p class="mq-name">姚勝雄 Spencer Yao｜資深會計師</p>
     </article>
+
     <!-- 人物卡片 #2 -->
     <article class="mq-card">
       <figure class="mq-avatar">
         <img src="https://raw.githubusercontent.com/joycehsudeloitte/careersite/main/images/Hiromitsu%20Harada.jpg" alt="原田 浩光 Hiromitsu Harada 資深執行副總經理">
       </figure>
-      <blockquote class="mq-quote">
+      <blockquote class="mq-quote"
+        data-zh="「我們相信，職涯是一段充滿可能性的旅程。這裡是一個能讓您盡情揮灑創意、勇於挑戰自我的舞台。期待看到您的加入，讓我們一起把想像化為行動！」"
+        data-ja="「私たちは、キャリアは可能性に満ちた旅だと信じています。ここでは、創造力を発揮し、自分に挑戦できる舞台があります。皆さんの参加を楽しみにしています。一緒に想像を行動に変えていきましょう！」">
         「我們相信，職涯是一段充滿可能性的旅程。這裡是一個能讓您盡情揮灑創意、勇於挑戰自我的舞台。期待看到您的加入，讓我們一起把想像化為行動！」
       </blockquote>
       <p class="mq-name">原田 浩光 Hiromitsu Harada｜資深執行副總經理</p>
@@ -27,7 +32,9 @@
       <figure class="mq-avatar">
         <img src="https://raw.githubusercontent.com/joycehsudeloitte/careersite/main/images/Haruhiko%20Kondo.jpg" alt="近藤 晴彥 Haruhiko Kondo 資深執行副總經理">
       </figure>
-      <blockquote class="mq-quote">
+      <blockquote class="mq-quote"
+        data-zh="「在 Deloitte JSG，我們不只提供一份工作，更提供一條可持續成長的職涯路徑。從專業訓練到國際資源，您都能獲得最堅實的支持。邀請您加入，將影響力化為行動。」"
+        data-ja="「Deloitte JSGでは、単なる仕事を提供するのではなく、持続的に成長できるキャリアパスを提供します。専門的な研修から国際的なリソースまで、最も確かなサポートを受けられます。ぜひ参加して、影響力を行動に変えてください。」">
         「在 Deloitte JSG，我們不只提供一份工作，更提供一條可持續成長的職涯路徑。從專業訓練到國際資源，您都能獲得最堅實的支持。邀請您加入，將影響力化為行動。」
       </blockquote>
       <p class="mq-name">近藤 晴彥 Haruhiko Kondo｜資深執行副總經理</p>
@@ -50,9 +57,7 @@
     text-align: center;
   }
 
-  /* ✅ 使用不會與全站衝突的網格容器 */
   .mq-grid{
-    /* 先單欄：手機 */
     display: grid !important;
     grid-template-columns: 1fr;
     gap: 32px;
@@ -60,7 +65,6 @@
     margin: 0 auto;
   }
 
-  /* ✅ 桌機：強制兩欄並排 */
   @media (min-width: 768px){
     .mq-grid{
       grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
@@ -98,9 +102,29 @@
     font-style: italic;
     margin: 0 0 8px;
     max-width: 90%;
+    cursor: pointer; /* 提示可點擊 */
+    transition: opacity 1s ease, transform 1s ease;
+    will-change: opacity, transform;
   }
   .mq-quote::before{ content:"“"; font-size:1.8rem; color:var(--brand); margin-right:4px; }
   .mq-quote::after{  content:"”"; font-size:1.8rem; color:var(--brand); margin-left:4px; }
+
+  /* 切換時的動畫狀態 */
+  .mq-quote.is-swapping-out{
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  .mq-quote.is-swapping-in{
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* 尊重使用者的「減少動態」偏好 */
+  @media (prefers-reduced-motion: reduce){
+    .mq-quote{
+      transition: none;
+    }
+  }
 
   .mq-name{
     font-weight: 700;
@@ -109,3 +133,42 @@
     margin: 0;
   }
 </style>
+
+<script>
+  // 預設語言
+  let currentLang = "zh";
+  const quotes = Array.from(document.querySelectorAll(".mq-quote"));
+
+  // 封裝：執行一次帶動畫的文字切換
+  function swapLanguageWithAnimation(nextLang){
+    // 1) 先讓所有引言淡出
+    quotes.forEach(q => q.classList.add("is-swapping-out"));
+    // 2) 等待淡出完成後再換文字並淡入
+    //    這裡用 setTimeout 簡化（與 CSS transition 時間一致：250ms）
+    setTimeout(() => {
+      quotes.forEach(q => {
+        q.textContent = q.dataset[nextLang] || q.textContent;
+        // 清除 out 狀態並加上 in 狀態，觸發淡入
+        q.classList.remove("is-swapping-out");
+        // 先設一個初始透明度（避免瞬間跳動）
+        q.style.opacity = 0;
+        requestAnimationFrame(() => {
+          q.classList.add("is-swapping-in");
+          // 移除行內樣式以回到 CSS 控制
+          q.style.opacity = "";
+        });
+        // 在下一幀把 in 狀態移除，讓元素回歸常態（但保留已生效的最終樣式）
+        setTimeout(() => q.classList.remove("is-swapping-in"), 260);
+      });
+    }, 250);
+  }
+
+  // 點擊任一引言 => 全部卡片一起切換
+  quotes.forEach(el => {
+    el.addEventListener("click", () => {
+      const next = (currentLang === "zh") ? "ja" : "zh";
+      swapLanguageWithAnimation(next);
+      currentLang = next;
+    });
+  });
+</script>
