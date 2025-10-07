@@ -330,7 +330,7 @@
     <!-- 職缺內容（固定在最下方；內容沿用你的原文） -->
     <section id="jobs">
       <h2>七大專業領域</h2>
-      <p style="text-align:center; line-height:1.9;">‼️完成履歷投遞後，會收到TestGorilla 線上測驗的通知，煩請盡速完成，若未完成將不會進入後續審查。
+      <p style="text-align:center; line-height:1.9;">‼️完成履歷投遞後，會收到TestGorilla 線上測驗的通知，並煩請於7日內盡速完成，若未完成將不會進入後續審查。
       <br>另外為避免重複測驗，建議投遞以最符合您的興趣的專業領域為主</p>
       <div class="card-container">
      <!-- ESG Stream -->
