@@ -225,7 +225,7 @@
       <ul style="max-width:900px; margin:8px auto 0; line-height:1.9;">
         <li><strong>Real-Life Work Exposure: </strong>Take on projects in a fast-paced and collaborative environment, while working with stakeholders across multiple business lines.</li>
         <li><strong>Mentorship: </strong>Get coaching and feedback from leading professional and a dynamic, enriching work environment help you unlock full potential.</li>
-        <li><strong>Professional Growth:</strong>Experience the consulting profession from a real-world perspective and learn about the day-to-day responsibilities of a consultant.</li>
+        <li><strong>Professional Growth: </strong>Experience the consulting profession from a real-world perspective and learn about the day-to-day responsibilities of a consultant.</li>
         <li><strong>Professional Networking: </strong>Establish and nurture connections with our senior staff member and leaders.</li>
       </ul>
       <p></p>
@@ -327,7 +327,8 @@
     <!-- 職缺內容（固定在最下方；內容沿用你的原文） -->
     <section id="jobs">
       <h2>7 Professional Streams</h2>
-      <p>‼️After submitting an application, you’ll receive an email invitation to complete an online test interview, powered by TestGorilla. 
+      <p>‼️After submitting an application, you’ll receive an email invitation to complete an online test interview powered by TestGorilla.
+      <br><strong>Please complete the test within 7 days of receiving the invitation. </strong>
       <br>TestGorilla is required, and your application will not be considered for further review until you have completed it.
       <br>To avoid receiving duplicate online test invitations, we recommend applying only to the stream that best aligns with your experience and interests.</p>
       <div class="card-container">
