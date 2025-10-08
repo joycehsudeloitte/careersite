@@ -251,14 +251,13 @@
        <h2></h2>
        <p>Tap below to sign up for the event!</p>
       <div class="card-container">
-<a class="card-link" href="#" target="_blank" rel="noopener noreferrer"
+<a class="card-link" href="https://docs.google.com/forms/d/e/1FAIpQLScq_30_3B6bwDyIQiILLj7meuhGPwCUF5I53Z5I28M-D4stHQ/viewform?pli=1" target="_blank" rel="noopener noreferrer"
    data-end="2025/10/20 13:10">
   <span class="arrow">›</span>
   <div class="card-content">
     <p><strong>National Taichung University of Science and Technology</strong></p>
     <p>Date: 2025/10/20 (Mon) 12:10–13:10</p>
-    <p>Location: TBC</p>
-    <p style= "color:#86BC25;">(Registration link is on the way—stay tuned!)</p>
+    <p>Location: Technology Building H201</p>
   </div>
 </a>
 
