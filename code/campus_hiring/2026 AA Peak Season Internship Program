@@ -1,0 +1,136 @@
+<style>
+  :root{
+    --brand:#86BC25;       /* 主色 */
+    --black:#000;          /* 文字/深色 */
+    --white:#fff;          /* 背景/反白 */
+    --accent-1:#43B02A;    /* 輔色 */
+    --accent-2:#26890D;
+    --accent-3:#046A38;
+    --accent-4:#0D8390;
+    --accent-5:#007CB0;
+    --radius:16px;
+  }
+  .peak{padding:56px 20px;}
+  .container{max-width:1080px;margin:0 auto;}
+  .section-title{
+    font-size:clamp(24px,3vw,32px);
+    font-weight:800;
+    margin:0 0 16px;
+    color:var(--black);
+    letter-spacing:.5px;
+  }
+  .lead{
+    font-size:clamp(16px,2.2vw,18px);
+    line-height:1.7;
+    color:#222;
+    margin:0 0 16px;
+  }
+  .about{background:var(--white);}
+  .highlights{margin:12px 0 20px;padding:0 0 0 20px;}
+  .highlights li{margin:8px 0;line-height:1.7;}
+  .highlights li span{color:var(--brand);font-weight:700;}
+  .meta{display:grid;gap:8px;margin-top:8px;font-size:15px;color:#333;}
+
+  .apply{background:#f7f9f5;}
+  .job-list{display:grid;grid-template-columns:1fr;gap:16px;}
+  @media (min-width:720px){
+    .job-list{grid-template-columns:1fr 1fr;}
+  }
+  .job-card{
+    background:var(--white);
+    border:1px solid #e6e6e6;
+    border-radius:var(--radius);
+    padding:18px;
+    box-shadow:0 2px 10px rgba(0,0,0,.04);
+  }
+  .job-header{display:flex;align-items:center;justify-content:space-between;gap:12px;}
+  .job-title{font-size:18px;margin:0;color:#111;font-weight:700;}
+  .job-badge{
+    display:inline-block;
+    padding:6px 10px;
+    background:var(--brand);
+    color:var(--white);
+    border-radius:999px;
+    font-size:12px;
+    font-weight:700;
+    letter-spacing:.3px;
+    white-space:nowrap;
+  }
+  .job-info{list-style:none;margin:12px 0 16px;padding:0;color:#333;font-size:14px;}
+  .job-info li{margin:6px 0;}
+  .job-actions{display:flex;gap:10px;flex-wrap:wrap;}
+  .btn-primary,.btn-outline{
+    display:inline-block;text-decoration:none;padding:10px 14px;border-radius:10px;font-weight:700;font-size:14px;
+  }
+  .btn-primary{background:var(--brand);color:var(--white);}
+  .btn-primary:hover{filter:brightness(.95);}
+  .btn-outline{border:2px solid var(--black);color:var(--black);background:transparent;}
+  .btn-outline:hover{background:var(--black);color:var(--white);}
+  .note{margin-top:14px;color:#444;font-size:13px;}
+</style>
+
+<section class="peak about" id="about-peak">
+  <div class="container">
+    <h2 class="section-title">About Peak Season Program</h2>
+
+    <p class="lead">
+      Deloitte 審計與確信服務（Audit & Assurance）以高速且高效的團隊協作，結合最新數位工具，
+      為國內外知名企業提供高品質、具前瞻性的專業服務。
+      <br><br>
+      透過 <strong>Peak Season Program</strong>，你將在資深審計員帶領下，
+      參與下半年度的審計專案，協助查核流程、憑證追蹤、分析性程序等審計工作；
+      從團隊分工到跨部門協作，完整體驗數位化審計的實務歷程。
+      <br><br>
+      我們誠摯邀請對審計充滿熱情的你加入實習行列，
+      與我們一同學習成長，體驗真實職場的挑戰與成就。
+    </p>
+
+    <h3 style="color:var(--brand);margin-top:24px;">透過此計畫成為 Deloitte 發揮影響力的夥伴，你將獲得：</h3>
+    <ul class="highlights">
+      <li><span>專業課程訓練：</span>由資深審計專業團隊帶領，透過系統化培訓與案例教學，建立審計專業基礎與實務能力。</li>
+      <li><span>協助審計專案經驗：</span>參與真實審計專案，實際操作查核流程與分析性程序，深入了解企業運作與財務架構。</li>
+      <li><span>職涯方向探索：</span>透過導師制度與團隊交流，了解審計師的職涯發展藍圖，為未來專業執照與職涯定位奠定基礎。</li>
+    </ul>
+
+    <p style="font-weight:700;color:var(--accent-3);margin-top:12px;">🟢 Unleash your potential</p>
+
+    <h3 style="color:var(--brand);margin-top:28px;">關於 2026 審計忙季實習生計畫</h3>
+    <div class="meta">
+      <div><strong>實習地點：</strong>台北所、新竹所、台中所、台南所</div>
+      <div><strong>招募對象：</strong>大三以上會計系所及商管學院同學（需修畢初級會計學，修畢中級會計/審計學尤佳）</div>
+      <div><strong>實習期間：</strong>2026 年 1 月 19 日 – 5 月 29 日（可視情況延長）</div>
+      <div><strong>工作天數：</strong>寒假期間每週上班 5 天；學期中每週需至少上班連續 2 個整天</div>
+      <div><strong>履歷投遞截止：</strong>2025/11/10（一）23:59（台灣時間）</div>
+    </div>
+  </div>
+</section>
+
+<section class="peak apply" id="apply-now">
+  <div class="container">
+    <h2 class="section-title">Apply Now</h2>
+    <p class="note">小提醒：
+    <br>•	第一週將會安排實習生訓練課程，須全程參加。
+    <br>•	建立職缺時請務必上傳成績單以及於成績資訊欄位填寫初會/中會學期成績，若尚在修習，請填寫【修習中】
+    <br>•	未正確線上登錄或資料不齊全者將不予審核
+    </p>
+    <!-- 職缺群組：可新增/刪除 .job-card -->
+    <div class="job-list">
+      <!-- 範例職缺 1：請將 href 改為實際投遞連結 -->
+      <article class="job-card">
+        <header class="job-header">
+          <h3 class="job-title">2026 Deloitte審計忙季實習生</h3>
+          <span class="job-badge">Intern</span>
+        </header>
+        <ul class="job-info">
+          <li><strong>Team：</strong>Audit & Assurance</li>
+          <li><strong>Location：</strong>Taipei</li>
+          <li><strong>Period：</strong>2026/01–2026/03（視專案調整）</li>
+          <li><strong>Apply by：</strong>2025/11/30</li>
+        </ul>
+        <div class="job-actions">
+          <a class="btn-primary" href="https://careers.apac.deloitte.com/Taiwan/" target="_blank" rel="noopener">Learn more</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
