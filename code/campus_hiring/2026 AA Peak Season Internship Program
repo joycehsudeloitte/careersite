@@ -165,7 +165,78 @@ button:focus-visible,
 html:has(#about-peak, #application-requirements, #apply-now){
   scroll-behavior:smooth;
 }
+/* ===== Circles Timeline（命名空間避免衝突） ===== */
+.timeline-circles{
+  margin-top: 28px;
+  padding: 10px 0;
+  text-align:center;
+}
+.timeline-circles .timeline-title{
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--brand);
+  margin-bottom: 16px;
+}
 
+.timeline-circles .steps{
+  display:flex;
+  align-items:flex-start;
+  justify-content:space-between;
+  gap:32px;
+}
+
+.timeline-circles .step{
+  flex:1;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:12px;
+  text-align:center;
+}
+
+.timeline-circles .circle{
+  width:140px; height:140px; border-radius:50%;
+  display:flex; align-items:center; justify-content:center;
+  color:#D0D0CE; font-weight:800; line-height:1.15; text-align:center;
+  /* 綠色＋深綠漸層，和品牌一致 */
+  background: #9DD4CF;
+  box-shadow: 0 2px 8px rgba(0,0,0,.08);
+}
+.timeline-circles .circle span{
+  display:inline-block;
+  font-size:20px;
+}
+.timeline-circles .label{
+  font-size:15px; font-weight:600; color:#53565A;
+  margin:0;
+}
+
+/* 桌面水平導線（可選） */
+@media (min-width: 769px){
+  .timeline-circles .steps{
+    position:relative;
+  }
+  .timeline-circles .steps::before{
+    content:"";
+    position:absolute; left:0; right:0; top:70px;
+    height:4px; background:var(--brand);
+    z-index:-1; border-radius:2px;
+  }
+}
+
+/* RWD：手機改直式堆疊 */
+@media (max-width: 768px){
+  .timeline-circles .steps{
+    flex-direction:column;
+    gap:18px;
+  }
+  .timeline-circles .circle{
+    width:96px; height:96px;
+  }
+  .timeline-circles .circle span{
+    font-size:18px;
+  }
+}
 </style>
 
 <section class="peak about" id="about-peak">
@@ -186,7 +257,7 @@ html:has(#about-peak, #application-requirements, #apply-now){
     <ul class="highlights">
       <li><span>專業課程訓練：</span>由資深審計專業團隊帶領，透過系統化培訓與案例教學，建立審計專業基礎與實務能力。</li>
       <li><span>協助審計專案經驗：</span>參與真實審計專案，實際操作查核流程與分析性程序，深入了解企業運作與財務架構。</li>
-      <li><span>職涯方向探索：</span>透過導師制度與團隊交流，了解審計師的職涯發展藍圖，為未來專業執照與職涯定位奠定基礎。</li>
+      <li><span>職涯方向探索：</span>透過導師制度與團隊交流，了解審計的職涯發展藍圖，為未來專業執照與職涯定位奠定基礎。</li>
     </ul>
 </div>
 </section>
@@ -195,20 +266,37 @@ html:has(#about-peak, #application-requirements, #apply-now){
 <section class="peak requirements" id="application-requirements">
   <div class="container">
     <h2 class="section-title">Application Requirements</h2>
+
     <div class="meta">
-      <div><strong>實習地點：</strong>台北所、新竹所、台中所、台南所</div>
-      <div><strong>招募對象：</strong>大三以上會計系所及商管學院同學（需修畢初級會計學，修畢中級會計／審計學尤佳）</div>
-      <div><strong>實習期間：</strong>2026年1月19日–5月29日（可視情況延長）</div>
-      <div><strong>工作天數：</strong>寒假期間每週上班 5 天；學期中每週需至少上班連續 2 個整天</div>
+      <div><strong>招募對象：</strong>大三以上會計系所及商管學院同學（需修畢初級會計學）</div>
+      <div><strong>實習期間：</strong>2026年1月19日–5月29日(寒假期間每週5天；學期中每週需至少連續2個整天)</div>
       <div><strong>履歷投遞截止：</strong>2025/11/10（一）23:59（台灣時間）</div>
-    <p class="note">小提醒：
-    <br>•	第一週將會安排實習生訓練課程，須全程參加。
-    <br>•	建立職缺時請務必上傳成績單以及於成績資訊欄位填寫初會/中會學期成績，若尚在修習，請填寫【修習中】
-    <br>•	未正確線上登錄或資料不齊全者將不予審核
+    </div>
+
+    <p class="note">
+      小提醒：
+      <br>• 第一週將會安排實習生訓練課程，須全程參加。
+      <br>• 建立職缺時請務必上傳成績單以及於成績資訊欄位填寫初會/中會學期成績
+      <br>• 未正確線上登錄或資料不齊全者將不予審核
     </p>
+
+  <!-- ===== Timeline (Circles Style) ===== -->
+<div class="timeline-circles" aria-label="Important Dates">
+  <div class="steps">
+    <div class="step">
+      <div class="circle"><span>11/10前</span></div>
+      <p class="label">線上履歷投遞</p>
+    </div>
+    <div class="step">
+      <div class="circle"><span>12月</span></div>
+      <p class="label">錄取通知</p>
+    </div>
+    <div class="step">
+      <div class="circle"><span>2026年<br>1月</span></div>
+      <p class="label">報到入職</p>
     </div>
   </div>
-</section>
+</div>
 
 <section class="peak apply" id="apply-now">
   <div class="container">
@@ -220,6 +308,7 @@ html:has(#about-peak, #application-requirements, #apply-now){
         <header class="job-header">
           <h3 class="job-title">2026 審計忙季實習生</h3>
         </header>
+        <p>台北、新竹、台中、台南</p>
         <ul class="job-info">
           <li>1.	協助輔助執行證實性查核程序(ex:翻找憑證及核對憑證) </li>
           <li>2.	協助執行分析性覆核程序之數據</li>
