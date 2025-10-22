@@ -165,26 +165,25 @@ button:focus-visible,
 html:has(#about-peak, #application-requirements, #apply-now){
   scroll-behavior:smooth;
 }
+
 /* ===== Circles Timeline（命名空間避免衝突） ===== */
 .timeline-circles{
-  margin-top: 28px;
-  padding: 10px 0;
+  margin-top:28px;
+  padding:10px 0;
   text-align:center;
 }
 .timeline-circles .timeline-title{
-  font-size: 20px;
-  font-weight: 800;
-  color: var(--brand);
-  margin-bottom: 16px;
+  font-size:20px;
+  font-weight:800;
+  color:var(--brand);
+  margin-bottom:16px;
 }
-
 .timeline-circles .steps{
   display:flex;
   align-items:flex-start;
   justify-content:space-between;
   gap:32px;
 }
-
 .timeline-circles .step{
   flex:1;
   display:flex;
@@ -193,14 +192,12 @@ html:has(#about-peak, #application-requirements, #apply-now){
   gap:12px;
   text-align:center;
 }
-
 .timeline-circles .circle{
   width:140px; height:140px; border-radius:50%;
   display:flex; align-items:center; justify-content:center;
-  color:#D0D0CE; font-weight:800; line-height:1.15; text-align:center;
-  /* 綠色＋深綠漸層，和品牌一致 */
-  background: #9DD4CF;
-  box-shadow: 0 2px 8px rgba(0,0,0,.08);
+  color:#f5f5f5; font-weight:800; line-height:1.15; text-align:center;
+  background:#9DD4CF;
+  box-shadow:0 2px 8px rgba(0,0,0,.08);
 }
 .timeline-circles .circle span{
   display:inline-block;
@@ -212,7 +209,7 @@ html:has(#about-peak, #application-requirements, #apply-now){
 }
 
 /* 桌面水平導線（可選） */
-@media (min-width: 769px){
+@media (min-width:769px){
   .timeline-circles .steps{
     position:relative;
   }
@@ -224,14 +221,22 @@ html:has(#about-peak, #application-requirements, #apply-now){
   }
 }
 
-/* RWD：手機改直式堆疊 */
-@media (max-width: 768px){
+/* RWD：手機改直式堆疊 + 置中修正 */
+@media (max-width:768px){
   .timeline-circles .steps{
-    flex-direction:column;
-    gap:18px;
+    flex-direction:column;      /* 直向堆疊 */
+    align-items:center;         /* 水平置中每個 .step（含圈圈）*/
+    justify-content:flex-start; /* 取消 space-between 造成的上下撐開 */
+    gap:20px;
+  }
+  .timeline-circles .step{
+    flex:none;                  /* 避免 flex:1 撐滿寬度造成視覺偏左 */
+    width:100%;
+    text-align:center;
   }
   .timeline-circles .circle{
     width:96px; height:96px;
+    margin:0 auto;              /* 再保險，圈圈本身也置中 */
   }
   .timeline-circles .circle span{
     font-size:18px;
@@ -239,6 +244,7 @@ html:has(#about-peak, #application-requirements, #apply-now){
 }
 </style>
 
+<!-- ===== About ===== -->
 <section class="peak about" id="about-peak">
   <div class="container">
     <h2 class="section-title">About Peak Season Internship Program</h2>
@@ -259,7 +265,7 @@ html:has(#about-peak, #application-requirements, #apply-now){
       <li><span>協助審計專案經驗：</span>參與真實審計專案，實際操作查核流程與分析性程序，深入了解企業運作與財務架構。</li>
       <li><span>職涯方向探索：</span>透過導師制度與團隊交流，了解審計的職涯發展藍圖，為未來專業執照與職涯定位奠定基礎。</li>
     </ul>
-</div>
+  </div>
 </section>
 
 <!-- ===== Application Requirements ===== -->
@@ -268,56 +274,58 @@ html:has(#about-peak, #application-requirements, #apply-now){
     <h2 class="section-title">Application Requirements</h2>
 
     <div class="meta">
-      <div><strong>招募對象：</strong>大三以上已修畢初級會計學修畢或正在修習中會計學，並會計系所（含雙主修/輔系）及商管學院同學</div>
-      <div><strong>實習期間：</strong>2026年1月19日–5月29日(寒假期間每週5天；學期中每週需至少連續2個整天)</div>
+      <div><strong>招募對象：</strong>大三以上會計系所(含雙主修/輔系)及商管學院同學 <span style="color:#86BC25 !important;">(已修畢初級會計學且修畢或正在修習中級會計學)</span></div>
+      <div><strong>實習期間：</strong>2026年1月19日–5月29日（寒假期間每週5天；學期中每週需至少連續2個整天）</div>
       <div><strong>履歷投遞截止：</strong>2025/11/10（一）23:59（台灣時間）</div>
     </div>
 
     <p class="note">
       小提醒：
       <br>• 第一週將會安排實習生訓練課程，須全程參加。
-      <br>• 建立職缺時請務必上傳成績單以及於成績資訊欄位填寫初會/中會學期成績
-      <br>• 未正確線上登錄或資料不齊全者將不予審核
+      <br>• 建立職缺時請務必上傳成績單以及於成績資訊欄位填寫初會/中會學期成績。
+      <br>• 未正確線上登錄或資料不齊全者將不予審核。
     </p>
 
-  <!-- ===== Timeline (Circles Style) ===== -->
-<div class="timeline-circles" aria-label="Important Dates">
-  <div class="steps">
-    <div class="step">
-      <div class="circle"><span>11/10前</span></div>
-      <p class="label">線上履歷投遞</p>
+    <!-- ===== Timeline (Circles Style) ===== -->
+    <div class="timeline-circles" aria-label="Important Dates">
+      <div class="steps">
+        <div class="step">
+          <div class="circle"><span>11/10前</span></div>
+          <p class="label">線上履歷投遞</p>
+        </div>
+        <div class="step">
+          <div class="circle"><span>12月</span></div>
+          <p class="label">錄取通知</p>
+        </div>
+        <div class="step">
+          <div class="circle"><span>2026年<br>1月</span></div>
+          <p class="label">報到入職</p>
+        </div>
+      </div>
     </div>
-    <div class="step">
-      <div class="circle"><span>12月</span></div>
-      <p class="label">錄取通知</p>
-    </div>
-    <div class="step">
-      <div class="circle"><span>2026年<br>1月</span></div>
-      <p class="label">報到入職</p>
-    </div>
-  </div>
-</div>
+  </div> <!-- 關閉 .container（requirements 區） -->
+</section> <!-- 關閉 .peak.requirements -->
 
+<!-- ===== Apply Now ===== -->
 <section class="peak apply" id="apply-now">
   <div class="container">
     <h2 class="section-title">Apply Now</h2>
-    <!-- 職缺群組：可新增/刪除 .job-card -->
+
     <div class="job-list">
-      <!-- 範例職缺 1：請將 href 改為實際投遞連結 -->
       <article class="job-card">
         <header class="job-header">
           <h3 class="job-title">2026 審計忙季實習生</h3>
         </header>
         <p>台北、新竹、台中、台南</p>
         <ul class="job-info">
-          <li>1.	協助輔助執行證實性查核程序(ex:翻找憑證及核對憑證) </li>
-          <li>2.	協助執行分析性覆核程序之數據</li>
-          <li>3.	財務報表數字核對</li>
-          <li>4.	整理函證及回函</li>
-          <li>5.	其他主管交辦事項</li>
+          <li>1. 協助執行證實性查核程序（如：翻找憑證及核對憑證）</li>
+          <li>2. 協助執行分析性覆核程序之數據</li>
+          <li>3. 財務報表數字核對</li>
+          <li>4. 整理函證及回函</li>
+          <li>5. 其他主管交辦事項</li>
         </ul>
         <div class="job-actions">
-          <a class="btn-primary" href="https://careers.apac.deloitte.com/job/%E5%AF%A6%E7%BF%92%E7%94%9F-2026%E5%BF%99%E5%AD%A3%E5%AF%A6%E…" target="_blank" rel="noopener">Learn more</a>
+          <a class="btn-primary" href="#" target="_blank" rel="noopener">Learn more</a>
         </div>
       </article>
     </div>
