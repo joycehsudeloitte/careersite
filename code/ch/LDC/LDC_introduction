@@ -1,0 +1,110 @@
+<style>
+/* Section Base */
+.ldc-section {
+  width: 100%;
+  padding: 80px 0;
+  background-color: #ffffff;
+}
+
+/* Layout */
+.ldc-container {
+  width: 90%;
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+}
+
+/* Text */
+.ldc-text-box {
+  flex: 1;
+}
+
+.ldc-title {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.4;
+  color: #000000;
+  margin-bottom: 24px;
+}
+
+.ldc-content {
+  font-size: 18px;
+  line-height: 1.8;
+  color: #333333;
+  margin-bottom: 16px;
+}
+
+.ldc-highlight {
+  font-size: 20px;
+  font-weight: 600;
+  color: #86BC25; /* Deloitte 綠 */
+  margin-top: 24px;
+}
+
+/* Image */
+.ldc-image-box {
+  flex: 1;
+  text-align: right;
+}
+
+.ldc-image-box img {
+  width: 100%;
+  max-width: 550px;
+  border-radius: 12px;
+}
+
+/* RWD for mobile */
+@media (max-width: 900px) {
+  .ldc-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .ldc-text-box {
+    order: 2;
+  }
+
+  .ldc-image-box {
+    order: 1;
+  }
+
+  .ldc-image-box img {
+    max-width: 100%;
+  }
+}
+</style>
+
+<section class="ldc-section">
+  <div class="ldc-container">
+    
+    <!-- Text Area -->
+    <div class="ldc-text-box">
+      <h2 class="ldc-title">Deloitte Global Delivery Center<br>Growing value to the firm</h2>
+
+      <p class="ldc-content">
+        勤業眾信 Local Delivery Centre（LDC） 自 2021 年成立以來，已於
+        <strong>台北、台中、高雄</strong> 建立據點，成為審計轉型中不可或缺的關鍵力量。
+        透過數位化、標準化流程與精準分工，LDC 重新定義審計作業的效率與品質，
+        讓審計團隊能專注於更高價值的專業判斷。
+      </p>
+
+      <p class="ldc-content">
+        同時結合 AI 與多項數位工具，LDC 不僅提升整體效能，更在流程優化、智慧化
+        與跨部門協作中扮演關鍵角色，持續打造一致、透明且具延展性的審計服務模式。
+      </p>
+
+      <p class="ldc-content ldc-highlight">
+        誠摯邀請你加入 LDC，成為推動審計未來的重要力量。
+      </p>
+    </div>
+
+    <!-- Image Area -->
+    <div class="ldc-image-box">
+      <img src="你的圖片連結" alt="LDC Team">
+    </div>
+
+  </div>
+</section>
