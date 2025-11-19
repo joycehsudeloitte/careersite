@@ -4,7 +4,7 @@
     <!-- Person 1 -->
     <div class="mentor-card">
       <div class="mentor-photo">
-        <img src="https://via.placeholder.com/420x520" alt="LDC Mentor Photo">
+        <img src="https://raw.githubusercontent.com/joycehsudeloitte/careersite/main/images/Profile/Allen%20M.%20Chiang.jpg" alt="Frank Hsueh">
       </div>
 
       <div class="mentor-text-box">
@@ -22,7 +22,7 @@
     <!-- Person 2 -->
     <div class="mentor-card">
       <div class="mentor-photo">
-        <img src="https://via.placeholder.com/420x520" alt="LDC Mentor Photo">
+        <img src="https://raw.githubusercontent.com/joycehsudeloitte/careersite/main/images/Profile/Frank%20Hsueh.jpg" alt="Allen M. Chiang">
       </div>
 
       <div class="mentor-text-box">
