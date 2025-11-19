@@ -1,0 +1,88 @@
+<section class="ldc-mentor-section">
+  <div class="mentor-container">
+    <div class="mentor-photo">
+      <img src="https://via.placeholder.com/420x520" alt="LDC Mentor Photo">
+    </div>
+
+    <div class="mentor-text-box">
+      <div class="quote-bar"></div>
+
+      <p class="mentor-quote">
+        “在 LDC，我最喜歡的是團隊合作的文化。我們不只是完成任務，
+        而是一起思考、一起成長，並為審計帶來真正的價值。”
+      </p>
+
+      <p class="mentor-name">王同學｜LDC 審計服務</p>
+    </div>
+  </div>
+</section>
+
+<style>
+.ldc-mentor-section {
+  width: 100%;
+  background-color: #ffffff;
+  padding: 60px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.mentor-container {
+  max-width: 1080px;
+  width: 100%;
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.mentor-photo img {
+  width: 360px;
+  height: auto;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: 0px 8px 16px rgba(0,0,0,0.15);
+}
+
+.mentor-text-box {
+  flex: 1;
+  position: relative;
+  padding-left: 20px;
+}
+
+.quote-bar {
+  width: 6px;
+  height: 100%;
+  background-color: #86BC25; /* Deloitte green */
+  position: absolute;
+  left: 0;
+  top: 0;
+  border-radius: 4px;
+}
+
+.mentor-quote {
+  font-size: 20px;
+  line-height: 1.6;
+  color: #000000;
+  margin-bottom: 20px;
+}
+
+.mentor-name {
+  font-size: 18px;
+  font-weight: bold;
+  color: #007CB0; /* 輔色：藍色 */
+}
+
+/* RWD for mobile */
+@media (max-width: 768px) {
+  .mentor-container {
+    flex-direction: column;
+    text-align: center;
+  }
+  .mentor-text-box {
+    padding-left: 0;
+  }
+  .quote-bar {
+    display: none;
+  }
+}
+</style>
