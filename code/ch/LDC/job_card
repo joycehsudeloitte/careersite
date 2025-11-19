@@ -81,14 +81,14 @@
 
     <!-- Left Card: LDC Intern -->
     <div class="card-box left-card">
-      <h2 class="card-title">Explore LDC Internship</h2>
-      <a href="#" class="card-btn">Learn More</a>
+      <h2 class="card-title">實習及新鮮人專區</h2>
+      <a href="https://deloittecot2.valhalla50.stage.jobs2web.com/Taiwan/go/LDC-Intern/5323350/" class="card-btn">View Jobs</a>
     </div>
 
     <!-- Right Card: General Openings -->
     <div class="card-box right-card">
-      <h2 class="card-title">Explore Experienced Hires</h2>
-      <a href="#" class="card-btn">View Jobs</a>
+      <h2 class="card-title">社會招募專區</h2>
+      <a href="https://deloittecot2.valhalla50.stage.jobs2web.com/Taiwan/go/LDC-Experienced-Hires/5323450/" class="card-btn">View Jobs</a>
     </div>
 
   </div>
