@@ -3,7 +3,7 @@
 .ldc-section {
   width: 100%;
   padding: 80px 0;
-  background-color: #ffffff;
+  background-color: #f5f5f5;
 }
 
 /* Layout */
@@ -82,7 +82,7 @@
     
     <!-- Text Area -->
     <div class="ldc-text-box">
-      <h2 class="ldc-title">Deloitte Global Delivery Center<br>Growing value to the firm</h2>
+      <h2 class="ldc-title">Deloitte Local Delivery Center<br>Growing value with us</h2>
 
       <p class="ldc-content">
         勤業眾信 Local Delivery Centre（LDC） 自 2021 年成立以來，已於
