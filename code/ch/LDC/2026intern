@@ -1,13 +1,13 @@
 <style>
 /* Section Base */
-.ldc-section {
+.ldc-intern-section {
   width: 100%;
   padding: 80px 0;
   background-color: #f7f9f5;
 }
 
 /* Layout */
-.ldc-container {
+.ldc-intern-container {
   width: 90%;
   max-width: 1400px;
   margin: 0 auto;
@@ -18,11 +18,11 @@
 }
 
 /* Text */
-.ldc-text-box {
+.ldc-intern-text-box {
   flex: 1;
 }
 
-.ldc-title {
+.ldc-intern-title {
   font-size: 36px;
   font-weight: 700;
   line-height: 1.4;
@@ -30,14 +30,14 @@
   margin-bottom: 24px;
 }
 
-.ldc-content {
+.ldc-intern-content {
   font-size: 18px;
   line-height: 1.8;
   color: #333333;
   margin-bottom: 16px;
 }
 
-.ldc-highlight {
+.ldc-intern-highlight {
   font-size: 20px;
   font-weight: 600;
   color: #86BC25;
@@ -45,26 +45,26 @@
 }
 
 /* Image */
-.ldc-image-box {
+.ldc-intern-image-box {
   flex: 1;
   text-align: left;
 }
 
-.ldc-image-box img {
+.ldc-intern-image-box img {
   width: 100%;
   max-width: 550px;
   border-radius: 12px;
 }
 
 /* Timeline */
-.ldc-timeline {
+.ldc-intern-timeline {
   width: 90%;
   max-width: 900px;
   margin: 60px auto 0;
   position: relative;
 }
 
-.ldc-timeline-line {
+.ldc-intern-timeline-line {
   position: absolute;
   top: 40px;
   left: 0;
@@ -74,7 +74,7 @@
   z-index: 1;
 }
 
-.ldc-timeline-items {
+.ldc-intern-timeline-items {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
@@ -82,12 +82,12 @@
   z-index: 2;
 }
 
-.ldc-timeline-item {
+.ldc-intern-timeline-item {
   text-align: center;
   flex: 1;
 }
 
-.ldc-timeline-circle {
+.ldc-intern-timeline-circle {
   width: 80px;
   height: 80px;
   margin: 0 auto 12px;
@@ -102,14 +102,14 @@
   color: #000000;
 }
 
-.ldc-timeline-title {
+.ldc-intern-timeline-title {
   font-size: 18px;
   font-weight: 600;
   margin-bottom: 6px;
   color: #000000;
 }
 
-.ldc-timeline-text {
+.ldc-intern-timeline-text {
   font-size: 14px;
   line-height: 1.6;
   color: #555555;
@@ -119,57 +119,57 @@
 
 /* RWD */
 @media (max-width: 900px) {
-  .ldc-container {
+  .ldc-intern-container {
     flex-direction: column;
     text-align: center;
   }
 
-  .ldc-image-box,
-  .ldc-text-box {
+  .ldc-intern-image-box,
+  .ldc-intern-text-box {
     text-align: center;
   }
 
-  .ldc-image-box img {
+  .ldc-intern-image-box img {
     max-width: 100%;
   }
 
-  .ldc-timeline-items {
+  .ldc-intern-timeline-items {
     flex-direction: column;
     gap: 28px;
   }
 
-  .ldc-timeline-line {
+  .ldc-intern-timeline-line {
     display: none;
   }
 }
 </style>
 
-<section class="ldc-section">
-  <div class="ldc-container">
+<section class="ldc-intern-section">
+  <div class="ldc-intern-container">
 
     <!-- Image Left -->
-    <div class="ldc-image-box">
+    <div class="ldc-intern-image-box">
       <img src="https://raw.githubusercontent.com/joycehsudeloitte/careersite/main/images/2026_LDC_internship.png" alt="LDC Internship Program">
     </div>
 
     <!-- Text Right -->
-    <div class="ldc-text-box">
-      <h2 class="ldc-title">2026 LDC Internship Program<br>Grow Your Future with Deloitte</h2>
+    <div class="ldc-intern-text-box">
+      <h2 class="ldc-intern-title">2026 LDC Internship Program</h2>
 
-      <p class="ldc-content">
+      <p class="ldc-intern-content">
         Deloitte Local Delivery Centre (LDC) has established teams in
         <strong>Taipei, Taichung, and Kaohsiung</strong> since 2021, becoming a key force in audit transformation.
         With the support of AI tools, standardized workflow, and professional task division,
         LDC enhances audit efficiency and quality while allowing audit teams to focus on higher-value work.
       </p>
 
-      <p class="ldc-content">
+      <p class="ldc-intern-content">
         The 2026 LDC Internship Program offers hands-on experience in core audit procedures.
         Through structured training, cross-team collaboration, and the use of digital tools,
         you will build solid practical knowledge and contribute to the future of audit digitalization.
       </p>
 
-      <p class="ldc-content ldc-highlight">
+      <p class="ldc-intern-content ldc-intern-highlight">
         We welcome you to join LDC and start your career journey with us.
       </p>
     </div>
@@ -177,30 +177,30 @@
   </div>
 
   <!-- Timeline -->
-  <div class="ldc-timeline">
-    <div class="ldc-timeline-line"></div>
-    <div class="ldc-timeline-items">
+  <div class="ldc-intern-timeline">
+    <div class="ldc-intern-timeline-line"></div>
+    <div class="ldc-intern-timeline-items">
 
-      <div class="ldc-timeline-item">
-        <div class="ldc-timeline-circle">01</div>
-        <div class="ldc-timeline-title">Application</div>
-        <p class="ldc-timeline-text">
+      <div class="ldc-intern-timeline-item">
+        <div class="ldc-intern-timeline-circle">01</div>
+        <div class="ldc-intern-timeline-title">Application</div>
+        <p class="ldc-intern-timeline-text">
           Online application and CV submission for the 2026 LDC Internship Program.
         </p>
       </div>
 
-      <div class="ldc-timeline-item">
-        <div class="ldc-timeline-circle">02</div>
-        <div class="ldc-timeline-title">Interview & Selection</div>
-        <p class="ldc-timeline-text">
+      <div class="ldc-intern-timeline-item">
+        <div class="ldc-intern-timeline-circle">02</div>
+        <div class="ldc-intern-timeline-title">Interview & Selection</div>
+        <p class="ldc-intern-timeline-text">
           Interview, basic assessment, and team matching with LDC audit teams.
         </p>
       </div>
 
-      <div class="ldc-timeline-item">
-        <div class="ldc-timeline-circle">03</div>
-        <div class="ldc-timeline-title">Internship Begins</div>
-        <p class="ldc-timeline-text">
+      <div class="ldc-intern-timeline-item">
+        <div class="ldc-intern-timeline-circle">03</div>
+        <div class="ldc-intern-timeline-title">Internship Begins</div>
+        <p class="ldc-intern-timeline-text">
           Start your internship at LDC with real audit projects and mentor guidance.
         </p>
       </div>
