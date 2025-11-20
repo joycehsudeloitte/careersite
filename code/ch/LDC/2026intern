@@ -56,11 +56,40 @@
   border-radius: 12px;
 }
 
+/* Bottom Layout: Requirements + Timeline */
+.ldc-intern-bottom {
+  width: 90%;
+  max-width: 1400px;
+  margin: 60px auto 0;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 48px;
+}
+
+/* Application Requirements */
+.ldc-intern-req-box {
+  flex: 1;
+}
+
+.ldc-intern-req-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #000000;
+  margin-bottom: 16px;
+}
+
+.ldc-intern-req-list {
+  list-style: disc;
+  padding-left: 20px;
+  font-size: 16px;
+  line-height: 1.8;
+  color: #333333;
+}
+
 /* Timeline */
 .ldc-intern-timeline {
-  width: 90%;
-  max-width: 900px;
-  margin: 60px auto 0;
+  flex: 1;
   position: relative;
 }
 
@@ -133,6 +162,15 @@
     max-width: 100%;
   }
 
+  .ldc-intern-bottom {
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  .ldc-intern-req-box {
+    width: 100%;
+  }
+
   .ldc-intern-timeline-items {
     flex-direction: column;
     gap: 28px;
@@ -156,24 +194,44 @@
     <div class="ldc-intern-text-box">
       <h2 class="ldc-intern-title">2026 LDC Internship Program</h2>
 
+      <!-- Intro -->
       <p class="ldc-intern-content">
-        LDC是 Deloitte 審計服務的重要合作夥伴，透過LDC Intern Program讓同學深入體驗審計工作的實務流程，累積專業能力並建立職涯基礎。我們歡迎不限科系、對數位化審計與商業流程有興趣的同學加入，一同探索審計工作的真實樣貌，並能在這裡找到屬於自己的挑戰與突破。透過此計畫成為影響未來的關鍵力量，你將獲得： 
-      <br>• 強化數據與細節處理能力: 在大量資料檢核、流程測試與數位化審計工具的操作中，你將培養高度精準度、邏輯分析能力與細節敏銳度 數位轉型<br>
-• 實戰經驗及技能提升: 直接參與審計專案支援工作，包含資料核對、測試執行、流程文件整理與系統操作等，讓你在真實場景中快速累積專業技能，並學習如何在結構化與高速節奏的環境中協作。
-<br>• 探索職涯方向: 透過團隊合作，你能清楚掌LDC的專業定位是否符合你的興趣與職涯方向。表現優異者更有機會取得轉正的機會成為Deloitte的未來夥伴。
-Application Requirements
-招募對象：大三以上商管學院同學 (正在修習或已修畢初級會計學)
-實習期間：2026年2月–6月（寒假期間每週5天；學期中每週需至少連續2個整天）
-履歷投遞截止：2026/1/9（五）23:59（台灣時間）
-</p>
+        LDC 是 Deloitte 審計服務的重要合作夥伴，透過 LDC Internship Program 讓同學深入體驗審計與數位化作業的實務流程，累積專業能力並建立職涯基礎。<br>
+        我們歡迎不同科系、對數位化審計與商業流程有興趣的同學，加入LDC探索審計工作並實現自我突破。
+      </p>
+
+      <!-- Sub-title -->
+      <h3 class="ldc-intern-highlight">
+        透過此計畫成為 LDC 發揮影響力的夥伴，你將獲得：
+      </h3>
+
+      <!-- Highlights (same style as Peak) -->
+      <ul class="highlights">
+        <li>
+          <span>培養數位轉型與細節敏銳度 :</span>
+          透過數位化審計工具，在大量資料檢核、流程測試，培養精準度、邏輯思維與對細節的敏銳度
+        </li>
+        <li>
+          <span>實務經驗與技能提升：</span>
+          直接參與審計專案支援工作，快速累積實務經驗及專業技能。
+        </li>
+        <li>
+          <span>探索職涯方向與轉正機會：</span>
+          透過團隊合作，理解自身的職涯發展方向；表現優異者，有機會獲得轉正機會，成為 Deloitte 的未來夥伴。
+        </li>
+      </ul>
+
+      <!-- Deadline Highlight -->
       <p class="ldc-intern-content ldc-intern-highlight">
-      履歷投遞於1/9截止!
+        make an impact that matters!
       </p>
     </div>
-
   </div>
 
-  <!-- Timeline -->
+  <!-- Bottom: Requirements (left) + Timeline (right) -->
+<div class="ldc-intern-bottom">
+
+  <!-- Timeline Left -->
   <div class="ldc-intern-timeline">
     <div class="ldc-intern-timeline-line"></div>
     <div class="ldc-intern-timeline-items">
@@ -181,24 +239,35 @@ Application Requirements
       <div class="ldc-intern-timeline-item">
         <div class="ldc-intern-timeline-circle">1/9前</div>
         <div class="ldc-intern-timeline-title">履歷投遞截止日</div>
-        <p class="ldc-intern-timeline-text">
-        </p>
+        <p class="ldc-intern-timeline-text"></p>
       </div>
 
       <div class="ldc-intern-timeline-item">
         <div class="ldc-intern-timeline-circle">1月</div>
         <div class="ldc-intern-timeline-title">面談</div>
-        <p class="ldc-intern-timeline-text">
-        </p>
+        <p class="ldc-intern-timeline-text"></p>
       </div>
 
       <div class="ldc-intern-timeline-item">
         <div class="ldc-intern-timeline-circle">2月</div>
         <div class="ldc-intern-timeline-title">入職</div>
-        <p class="ldc-intern-timeline-text">
-        </p>
+        <p class="ldc-intern-timeline-text"></p>
       </div>
 
     </div>
+  </div>
+
+  <!-- Application Requirements Right -->
+  <div class="ldc-intern-req-box">
+    <h3 class="ldc-intern-req-title">Application Requirements</h3>
+    <ul class="ldc-intern-req-list">
+      <li>招募對象：大三以上商管學院同學 (正在修習或已修畢初級會計學)</li>
+      <li>實習期間：2026年2月–6月（寒假期間每週5天；學期中每週需至少連續2個整天）</li>
+      <li>履歷投遞截止：2026/1/9（五）23:59（台灣時間）</li>
+    </ul>
+  </div>
+
+</div>
+
   </div>
 </section>
