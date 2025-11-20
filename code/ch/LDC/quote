@@ -41,6 +41,7 @@
 </section>
 
 <style>
+/* Section Base */
 .ldc-mentor-section {
   width: 100%;
   background-color: #ffffff;
@@ -58,35 +59,35 @@
   justify-content: space-between;
 }
 
-/* ===== 卡片（左右兩張） ===== */
+/* Cards */
 .mentor-card {
   width: 48%;
   background: #ffffff;
   display: flex;
   gap: 20px;
   align-items: flex-start;
-  opacity: 0;              /* fade 初始 */
+  opacity: 0;             
   transform: translateY(30px);
   transition: opacity 1s ease, transform 1s ease;
 }
 
-/* 淡入後的 class */
+/* Fade-in active */
 .fade-in {
   opacity: 1;
   transform: translateY(0);
 }
 
-/* ===== 圓形頭像 ===== */
+/* Avatar */
 .mentor-photo img {
   width: 180px;
   height: 180px;
-  border-radius: 50%;     /* 圓形裁切 */
+  border-radius: 50%;
   object-fit: cover;
   object-position: center;
   box-shadow: 0px 8px 16px rgba(0,0,0,0.15);
 }
 
-/* ===== 文字區塊 ===== */
+/* Text box */
 .mentor-text-box {
   flex: 1;
   position: relative;
@@ -116,22 +117,29 @@
   color: #007CB0;
 }
 
-/* ===== RWD ===== */
+/* ============ Mobile ============ */
 @media (max-width: 768px) {
+  .ldc-mentor-section {
+    padding: 40px 16px;
+  }
+
   .mentor-container {
     flex-direction: column;
-    gap: 40px;
+    gap: 32px;
+    align-items: center; /* center all cards */
   }
 
   .mentor-card {
     width: 100%;
+    max-width: 480px;
     flex-direction: column;
     text-align: center;
+    align-items: center; /* center photo and text */
   }
 
   .mentor-photo img {
-    width: 200px;
-    height: 200px;
+    width: 160px;
+    height: 160px;
     margin: 0 auto;
   }
 
@@ -141,9 +149,20 @@
 
   .mentor-text-box {
     padding-left: 0;
+    text-align: center; /* center text on mobile */
+  }
+
+  .mentor-quote {
+    font-size: 16px;   /* smaller text on mobile */
+    line-height: 1.6;
+  }
+
+  .mentor-name {
+    font-size: 14px;   /* smaller name on mobile */
   }
 }
 </style>
+
 
 <script>
 // ===== Intersection Observer for fade-in =====
