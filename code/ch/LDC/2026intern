@@ -60,7 +60,7 @@
 .ldc-intern-bottom {
   width: 90%;
   max-width: 1400px;
-  margin: 60px auto 0;
+  margin: 20px auto 0;
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
@@ -73,9 +73,9 @@
 }
 
 .ldc-intern-req-title {
-  font-size: 20px;
+  font-size: 24px;
   font-weight: 700;
-  color: #000000;
+  color: #86BC25!important;
   margin-bottom: 16px;
 }
 
@@ -83,7 +83,7 @@
   list-style: disc;
   padding-left: 20px;
   font-size: 16px;
-  line-height: 1.8;
+  line-height: 2;
   color: #333333;
 }
 
@@ -146,40 +146,162 @@
   margin: 0 auto;
 }
 
-/* RWD */
 @media (max-width: 900px) {
+
+  /* ================================
+     上方主視覺（圖片 + 文字）
+  ================================= */
   .ldc-intern-container {
     flex-direction: column;
-    text-align: center;
+    text-align: left; /* 全段靠左 */
   }
 
-  .ldc-intern-image-box,
   .ldc-intern-text-box {
-    text-align: center;
+    text-align: left; /* 文字靠左 */
+  }
+
+  .ldc-intern-image-box {
+    text-align: center; /* 圖片置中 */
   }
 
   .ldc-intern-image-box img {
     max-width: 100%;
   }
 
+  /* ================================
+     字體大小（手機專用）
+  ================================= */
+  .ldc-intern-title {
+    font-size: 20px; /* 主標題 */
+  }
+
+  .ldc-intern-content {
+    font-size: 16px; /* 內文 */
+  }
+
+  .ldc-intern-highlight {
+    font-size: 16px; /* 小標題 */
+  }
+
+  .ldc-intern-req-title {
+    font-size: 18px;
+  }
+
+  .ldc-intern-req-list {
+    font-size: 16px;
+  }
+
+  .ldc-intern-timeline-circle {
+    font-size: 18px;
+    width: 100px;
+    height: 100px;
+  }
+
+  .ldc-intern-timeline-title {
+    font-size: 16px;
+  }
+
+  .ldc-intern-timeline-text {
+    font-size: 14px;
+  }
+
+  /* ================================
+     下方區塊（Requirements + Timeline）
+  ================================= */
   .ldc-intern-bottom {
     flex-direction: column;
     gap: 32px;
+    align-items: center; /* 讓 timeline + req 整組置中 */
   }
 
+  /* Requirements — 在手機版排最上面 */
   .ldc-intern-req-box {
+    width: 100%;
+    text-align: left;
+    order: 1;
+  }
+
+  /* Timeline — 在手機版排第二，整塊置中 */
+  .ldc-intern-timeline {
+    order: 2;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  /* Timeline 垂直排列，置中呈現 */
+  .ldc-intern-timeline-items {
+    flex-direction: column;
+    align-items: center;
+    gap: 28px;
+    max-width: 320px;
     width: 100%;
   }
 
-  .ldc-intern-timeline-items {
-    flex-direction: column;
-    gap: 28px;
+  .ldc-intern-timeline-item {
+    text-align: center;
   }
 
+  /* 手機版不需要水平線 */
   .ldc-intern-timeline-line {
     display: none;
   }
 }
+/* =========================================
+   Highlights 列表（bullet points）縮排優化
+   電腦版 & 手機版皆適用
+========================================= */
+
+.highlights {
+  list-style: none;   /* 拿掉預設圓點 */
+  padding-left: 0;
+  margin: 0;
+}
+
+.highlights li {
+  margin-bottom: 12px;
+  position: relative;
+  padding-left: 20px; /* 圓點位置 */
+  line-height: 1.7;
+}
+
+/* 自訂圓點 */
+.highlights li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  top: 4px;
+  font-size: 20px;
+  color: #86BC25; /* Deloitte 綠 */
+}
+
+/* 第二行以後縮排：與第一行文字對齊 */
+.highlights li span {
+  font-weight: 600;
+  display: inline;
+}
+
+.highlights li {
+  text-indent: 0px;   /* 將第一行文字往左微推 */
+}
+
+.highlights li > span {
+  text-indent: 0;
+}
+
+/* 讓整段第二行以後縮排對齊（最重要的設定） */
+.highlights li {
+  padding-left: 20px;    
+}
+
+.highlights li * {
+  display: inline;
+}
+
+.highlights li {
+  display: block;
+}
+
 </style>
 
 <section class="ldc-intern-section">
@@ -220,11 +342,6 @@
           透過團隊合作，理解自身的職涯發展方向；表現優異者，有機會獲得轉正機會，成為 Deloitte 的未來夥伴。
         </li>
       </ul>
-
-      <!-- Deadline Highlight -->
-      <p class="ldc-intern-content ldc-intern-highlight">
-        make an impact that matters!
-      </p>
     </div>
   </div>
 
@@ -259,7 +376,7 @@
 
   <!-- Application Requirements Right -->
   <div class="ldc-intern-req-box">
-    <h3 class="ldc-intern-req-title">Application Requirements</h3>
+    <h3 class="ldc-intern-req-title">申請資格</h3>
     <ul class="ldc-intern-req-list">
       <li>招募對象：大三以上商管學院同學 (正在修習或已修畢初級會計學)</li>
       <li>實習期間：2026年2月–6月（寒假期間每週5天；學期中每週需至少連續2個整天）</li>
