@@ -60,19 +60,34 @@
 @media (max-width: 900px) {
   .ldc-container {
     flex-direction: column;
-    text-align: center;
+    text-align: left; /* 讓整個容器文字靠左 */
   }
 
   .ldc-text-box {
     order: 2;
+    text-align: left; /* 內容文字確定靠左 */
   }
 
   .ldc-image-box {
     order: 1;
+    text-align: center;
   }
 
   .ldc-image-box img {
     max-width: 100%;
+  }
+
+  /* 手機字體大小調整 */
+  .ldc-title {
+    font-size: 20px;
+  }
+
+  .ldc-content {
+    font-size: 16px;
+  }
+
+  .ldc-highlight {
+    font-size: 16px;
   }
 }
 </style>
