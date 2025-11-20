@@ -301,6 +301,36 @@
 .highlights li {
   display: block;
 }
+/* Apply Button */
+.ldc-apply-btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 28px;
+  background-color:  #86BC25;       /* Deloitte 黑 */
+  color: #ffffff;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.ldc-apply-btn:hover {
+  background-color: #43B02A;        /* Deloitte 輔色綠 */
+  color: #ffffff;
+}
+
+/* Mobile button styling */
+@media (max-width: 900px) {
+  .ldc-apply-btn {
+    display: block;
+    width: fit-content;
+    margin-top: 20px;
+    margin-left: 0; /* 保持靠左 */
+    font-size: 14px;
+    padding: 10px 22px;
+  }
+}
 
 </style>
 
@@ -382,6 +412,7 @@
       <li>實習期間：2026年2月–6月（寒假期間每週5天；學期中每週需至少連續2個整天）</li>
       <li>履歷投遞截止：2026/1/9（五）23:59（台灣時間）</li>
     </ul>
+<a href="#" class="ldc-apply-btn">立即投遞履歷</a>
   </div>
 
 </div>
