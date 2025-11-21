@@ -1,0 +1,186 @@
+<section class="hero-slider">
+  <style>
+    .hero-slider {
+      position: relative;
+      width: 100%;
+      overflow: hidden;
+      background: #000000;
+      margin: 0;
+      padding: 0;
+    }
+
+    .hero-slider-inner {
+      position: relative;
+      width: 100%;
+    }
+
+    .hero-slide {
+      display: none;
+      opacity: 0;
+      transition: opacity 0.6s ease-in-out;
+    }
+
+    .hero-slide.active {
+      display: block;
+      opacity: 1;
+    }
+
+    .hero-slide a {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+
+    .hero-img-desktop,
+    .hero-img-mobile {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    /* desktop: show desktop banner */
+    .hero-img-mobile {
+      display: none;
+    }
+
+    /* dots */
+    .hero-dots {
+      position: absolute;
+      left: 50%;
+      bottom: 16px;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 8px;
+      z-index: 10;
+    }
+
+    .hero-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 999px;
+      border: 1px solid #ffffff;
+      background: rgba(0, 0, 0, 0.4);
+      cursor: pointer;
+      padding: 0;
+      outline: none;
+    }
+
+    .hero-dot.active {
+      background: #86BC25;
+      border-color: #86BC25;
+    }
+
+    @media (max-width: 768px) {
+      .hero-img-desktop {
+        display: none;
+      }
+
+      .hero-img-mobile {
+        display: block;
+      }
+
+      .hero-dots {
+        bottom: 10px;
+      }
+    }
+  </style>
+
+  <div class="hero-slider-inner">
+    <!-- Slide 1 -->
+    <div class="hero-slide active">
+      <a href="#" target="_blank">
+        <img
+          class="hero-img-desktop"
+          src="https://raw.githubusercontent.com/joycehsudeloitte/careersite/main/images/banner/desktop/LDC_desktop.png"
+          alt="LDC desktop banner">
+        <img
+          class="hero-img-mobile"
+          src="https://raw.githubusercontent.com/joycehsudeloitte/careersite/main/images/banner/mobile/LDC_mobile.png"
+          alt="LDC mobile banner">
+      </a>
+    </div>
+
+    <!-- Slide 2 -->
+    <div class="hero-slide">
+      <a href="#" target="_blank">
+        <img
+          class="hero-img-desktop"
+          src="https://raw.githubusercontent.com/joycehsudeloitte/careersite/main/images/banner/desktop/LDC_intern_desktop.png"
+          alt="LDC intern desktop banner">
+        <img
+          class="hero-img-mobile"
+          src="https://raw.githubusercontent.com/joycehsudeloitte/careersite/main/images/banner/mobile/LDC_intern_mobile.png"
+          alt="LDC intern mobile banner">
+      </a>
+    </div>
+  </div>
+
+  <!-- dots -->
+  <div class="hero-dots">
+    <button class="hero-dot active" type="button" data-slide="0"></button>
+    <button class="hero-dot" type="button" data-slide="1"></button>
+  </div>
+
+  <script>
+    (function () {
+      var slider = document.querySelector('.hero-slider');
+      if (!slider) return;
+
+      var slides = slider.querySelectorAll('.hero-slide');
+      var dots = slider.querySelectorAll('.hero-dot');
+      var index = 0;
+      var interval = 5000; // 5000 ms = 5 seconds per slide
+      var timer = null;
+
+      function showSlide(i) {
+        slides.forEach(function (s, idx) {
+          if (idx === i) {
+            s.classList.add('active');
+          } else {
+            s.classList.remove('active');
+          }
+        });
+
+        dots.forEach(function (d, idx) {
+          if (idx === i) {
+            d.classList.add('active');
+          } else {
+            d.classList.remove('active');
+          }
+        });
+
+        index = i;
+      }
+
+      function nextSlide() {
+        var next = (index + 1) % slides.length;
+        showSlide(next);
+      }
+
+      function startAutoPlay() {
+        stopAutoPlay();
+        timer = setInterval(nextSlide, interval);
+      }
+
+      function stopAutoPlay() {
+        if (timer) {
+          clearInterval(timer);
+          timer = null;
+        }
+      }
+
+      dots.forEach(function (dot, idx) {
+        dot.addEventListener('click', function () {
+          showSlide(idx);
+          startAutoPlay();
+        });
+      });
+
+      slider.addEventListener('mouseenter', stopAutoPlay);
+      slider.addEventListener('mouseleave', startAutoPlay);
+
+      showSlide(0);
+      startAutoPlay();
+    })();
+  </script>
+</section>
