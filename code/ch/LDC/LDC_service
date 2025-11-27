@@ -1,4 +1,4 @@
-<section class="ldc-impact-section">
+<section class="ldc-impact-section"> 
   <style>
     .ldc-impact-section {
       width: 100%;
@@ -13,10 +13,21 @@
       text-align: center;
     }
 
+    /* eyebrow text */
+    .ldc-impact-eyebrow {
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #86BC25;
+      margin-bottom: 10px;
+    }
+
+    /* main title */
     .ldc-impact-title {
       font-size: 32px;
       font-weight: 700;
-      color: #000000;
+      color: #86BC25; /* Deloitte enterprise green */
       margin-bottom: 12px;
     }
 
@@ -28,6 +39,7 @@
       line-height: 1.7;
     }
 
+    /* grid */
     .ldc-impact-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -35,6 +47,7 @@
       margin-top: 16px;
     }
 
+    /* card */
     .ldc-impact-item {
       padding: 28px 24px 32px;
       border-radius: 16px;
@@ -42,6 +55,7 @@
       border: 1px solid #e3e3e3;
       text-align: center;
       transition: all 0.3s ease;
+      position: relative;
     }
 
     .ldc-impact-item:hover {
@@ -49,13 +63,40 @@
       box-shadow: 0 10px 20px rgba(0,0,0,0.10);
     }
 
-    .ldc-img {
-      width: 80px;
-      height: 80px;
-      object-fit: contain;
-      margin-bottom: 20px;
+    /* badge 左上角圓角矩形 */
+    .ldc-impact-badge {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      padding: 6px 14px;
+      border-radius: 999px;
+      background-color: #000000;
+      color: #ffffff;
+      font-size: 14px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      font-weight: 600;
     }
 
+/* 圖片固定框架 */
+.ldc-img-wrapper {
+  width: 300px;
+  height: 200px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 40px auto 20px auto;
+}
+
+/* 圖片強制滿版填滿 */
+.ldc-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+    /* card title */
     .ldc-impact-heading {
       font-size: 20px;
       font-weight: 700;
@@ -63,6 +104,7 @@
       margin-bottom: 12px;
     }
 
+    /* description */
     .ldc-impact-text {
       font-size: 14px;
       color: #555555;
@@ -78,17 +120,24 @@
 
   <div class="ldc-impact-inner">
 
-    <h2 class="ldc-impact-title">LDC 三大核心服務</h2>
+    <!-- eyebrow -->
+    <div class="ldc-impact-eyebrow">LDC SERVICES</div>
+
+    <h2 class="ldc-impact-title">LDC 三大服務</h2>
+
     <p class="ldc-impact-subtitle">
-  LDC 運用標準化流程與企業級 AI 工具，以標準、專業、集中三大核心提供優質服務，
-<br>協助審計團隊提升效率、確保品質，打造更一致且高效的查核作業。
+      LDC 運用標準化流程與企業級 AI 工具，以標準、專業、集中三大核心提供優質服務，
+      <br>協助審計團隊提升效率、確保品質，打造更一致且高效的查核作業。
     </p>
 
     <div class="ldc-impact-grid">
 
       <!-- Service 01 -->
       <div class="ldc-impact-item">
-        <img class="ldc-img" src="image1.png" alt="service1">
+        <div class="ldc-impact-badge">標準化</div>
+        <div class="ldc-img-wrapper">
+          <img class="ldc-img" src="https://raw.githubusercontent.com/joycehsudeloitte/careersite/main/images/LDC/service1.png" alt="service1">
+        </div>
         <h3 class="ldc-impact-heading">專業支援服務</h3>
         <p class="ldc-impact-text">
           以標準化流程與 AI 工具協助執行查核作業，提升效率與準確度。
@@ -97,7 +146,10 @@
 
       <!-- Service 02 -->
       <div class="ldc-impact-item">
-        <img class="ldc-img" src="image2.png" alt="service2">
+        <div class="ldc-impact-badge">專業化</div>
+        <div class="ldc-img-wrapper">
+          <img class="ldc-img" src="https://raw.githubusercontent.com/joycehsudeloitte/careersite/main/images/LDC/service2.png" alt="service2">
+        </div>
         <h3 class="ldc-impact-heading">資料處理服務</h3>
         <p class="ldc-impact-text">
           運用 SQL 與 Power BI 進行資料清整、抽樣與視覺化分析。
@@ -106,7 +158,10 @@
 
       <!-- Service 03 -->
       <div class="ldc-impact-item">
-        <img class="ldc-img" src="image3.png" alt="service3">
+        <div class="ldc-impact-badge">集中化</div>
+        <div class="ldc-img-wrapper">
+          <img class="ldc-img" src="https://raw.githubusercontent.com/joycehsudeloitte/careersite/main/images/LDC/service3.png" alt="service3">
+        </div>
         <h3 class="ldc-impact-heading">函證處理服務</h3>
         <p class="ldc-impact-text">
           集中化管理函證寄發、回覆與文件流程，提高作業效率。
