@@ -1,0 +1,97 @@
+<section class="ldc-service-section">
+  <style>
+    .ldc-service-section {
+      width: 100%;
+      padding: 80px 0;
+      background-color: #ffffff;
+    }
+
+    .ldc-service-container {
+      width: 90%;
+      max-width: 1400px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+    }
+
+    .ldc-service-card {
+      background: #f7f9f5;
+      border-radius: 16px;
+      padding: 32px;
+      border: 1px solid #e5e5e5;
+      box-shadow: 0 6px 14px rgba(0,0,0,0.06);
+      transition: all 0.3s ease;
+    }
+
+    .ldc-service-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.12);
+    }
+
+    .ldc-service-title {
+      font-size: 24px;
+      font-weight: 700;
+      color: #000000;
+      margin-bottom: 20px;
+      border-left: 6px solid #86BC25;
+      padding-left: 12px;
+      line-height: 1.4;
+    }
+
+    .ldc-service-card ul {
+      padding-left: 20px;
+      margin: 0;
+    }
+
+    .ldc-service-card li {
+      font-size: 16px;
+      line-height: 1.8;
+      color: #333333;
+      margin-bottom: 10px;
+    }
+
+    /* mobile */
+    @media (max-width: 900px) {
+      .ldc-service-container {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+
+  <div class="ldc-service-container">
+
+    <!-- 1. 專業支援服務 -->
+    <div class="ldc-service-card">
+      <div class="ldc-service-title">專業支援服務</div>
+      <ul>
+        <li>運用 AI 工具（Levvia、Omnia）支援查核流程</li>
+        <li>憑證與文件核對（含年報核對、外勤支援）</li>
+        <li>標準化查核程序執行</li>
+        <li>協助新查核平台與工具測試、導入及審計轉型任務</li>
+      </ul>
+    </div>
+
+    <!-- 2. 資料處理服務 -->
+    <div class="ldc-service-card">
+      <div class="ldc-service-title">資料處理服務</div>
+      <ul>
+        <li>SQL 資料清整、格式化並上傳至 Omnia Data</li>
+        <li>依查核需求撰寫 SQL 進行抽樣</li>
+        <li>樣本格式整理為 Deloitte 標準範本</li>
+        <li>Power BI 資料視覺化與報表整理</li>
+      </ul>
+    </div>
+
+    <!-- 3. 函證處理服務 -->
+    <div class="ldc-service-card">
+      <div class="ldc-service-title">函證處理服務</div>
+      <ul>
+        <li>函證寄發與進度管理</li>
+        <li>回函追蹤、掃描與紀錄整理</li>
+        <li>流程與文件管理支援</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
