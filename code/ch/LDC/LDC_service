@@ -1,97 +1,118 @@
-<section class="ldc-service-section">
+<section class="ldc-impact-section">
   <style>
-    .ldc-service-section {
+    .ldc-impact-section {
       width: 100%;
       padding: 80px 0;
       background-color: #ffffff;
     }
 
-    .ldc-service-container {
+    .ldc-impact-inner {
       width: 90%;
-      max-width: 1400px;
+      max-width: 1200px;
       margin: 0 auto;
+      text-align: center;
+    }
+
+    .ldc-impact-title {
+      font-size: 32px;
+      font-weight: 700;
+      color: #000000;
+      margin-bottom: 12px;
+    }
+
+    .ldc-impact-subtitle {
+      font-size: 16px;
+      color: #555555;
+      max-width: 700px;
+      margin: 0 auto 40px auto;
+      line-height: 1.7;
+    }
+
+    .ldc-impact-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 32px;
+      margin-top: 16px;
     }
 
-    .ldc-service-card {
-      background: #f7f9f5;
+    .ldc-impact-item {
+      padding: 28px 24px 32px;
       border-radius: 16px;
-      padding: 32px;
-      border: 1px solid #e5e5e5;
-      box-shadow: 0 6px 14px rgba(0,0,0,0.06);
+      background-color: #f7f9f5;
+      border: 1px solid #e3e3e3;
+      text-align: center;
       transition: all 0.3s ease;
     }
 
-    .ldc-service-card:hover {
+    .ldc-impact-item:hover {
       transform: translateY(-6px);
-      box-shadow: 0 10px 20px rgba(0,0,0,0.12);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.10);
     }
 
-    .ldc-service-title {
-      font-size: 24px;
+    .ldc-img {
+      width: 80px;
+      height: 80px;
+      object-fit: contain;
+      margin-bottom: 20px;
+    }
+
+    .ldc-impact-heading {
+      font-size: 20px;
       font-weight: 700;
       color: #000000;
-      margin-bottom: 20px;
-      border-left: 6px solid #86BC25;
-      padding-left: 12px;
-      line-height: 1.4;
+      margin-bottom: 12px;
     }
 
-    .ldc-service-card ul {
-      padding-left: 20px;
-      margin: 0;
+    .ldc-impact-text {
+      font-size: 14px;
+      color: #555555;
+      line-height: 1.7;
     }
 
-    .ldc-service-card li {
-      font-size: 16px;
-      line-height: 1.8;
-      color: #333333;
-      margin-bottom: 10px;
-    }
-
-    /* mobile */
-    @media (max-width: 900px) {
-      .ldc-service-container {
+    @media (max-width: 960px) {
+      .ldc-impact-grid {
         grid-template-columns: 1fr;
       }
     }
   </style>
 
-  <div class="ldc-service-container">
+  <div class="ldc-impact-inner">
 
-    <!-- 1. 專業支援服務 -->
-    <div class="ldc-service-card">
-      <div class="ldc-service-title">專業支援服務</div>
-      <ul>
-        <li>運用 AI 工具（Levvia、Omnia）支援查核流程</li>
-        <li>憑證與文件核對（含年報核對、外勤支援）</li>
-        <li>標準化查核程序執行</li>
-        <li>協助新查核平台與工具測試、導入及審計轉型任務</li>
-      </ul>
+    <h2 class="ldc-impact-title">LDC 三大核心服務</h2>
+    <p class="ldc-impact-subtitle">
+  LDC 運用標準化流程與企業級 AI 工具，以標準、專業、集中三大核心提供優質服務，
+<br>協助審計團隊提升效率、確保品質，打造更一致且高效的查核作業。
+    </p>
+
+    <div class="ldc-impact-grid">
+
+      <!-- Service 01 -->
+      <div class="ldc-impact-item">
+        <img class="ldc-img" src="image1.png" alt="service1">
+        <h3 class="ldc-impact-heading">專業支援服務</h3>
+        <p class="ldc-impact-text">
+          以標準化流程與 AI 工具協助執行查核作業，提升效率與準確度。
+        </p>
+      </div>
+
+      <!-- Service 02 -->
+      <div class="ldc-impact-item">
+        <img class="ldc-img" src="image2.png" alt="service2">
+        <h3 class="ldc-impact-heading">資料處理服務</h3>
+        <p class="ldc-impact-text">
+          運用 SQL 與 Power BI 進行資料清整、抽樣與視覺化分析。
+        </p>
+      </div>
+
+      <!-- Service 03 -->
+      <div class="ldc-impact-item">
+        <img class="ldc-img" src="image3.png" alt="service3">
+        <h3 class="ldc-impact-heading">函證處理服務</h3>
+        <p class="ldc-impact-text">
+          集中化管理函證寄發、回覆與文件流程，提高作業效率。
+        </p>
+      </div>
+
     </div>
-
-    <!-- 2. 資料處理服務 -->
-    <div class="ldc-service-card">
-      <div class="ldc-service-title">資料處理服務</div>
-      <ul>
-        <li>SQL 資料清整、格式化並上傳至 Omnia Data</li>
-        <li>依查核需求撰寫 SQL 進行抽樣</li>
-        <li>樣本格式整理為 Deloitte 標準範本</li>
-        <li>Power BI 資料視覺化與報表整理</li>
-      </ul>
-    </div>
-
-    <!-- 3. 函證處理服務 -->
-    <div class="ldc-service-card">
-      <div class="ldc-service-title">函證處理服務</div>
-      <ul>
-        <li>函證寄發與進度管理</li>
-        <li>回函追蹤、掃描與紀錄整理</li>
-        <li>流程與文件管理支援</li>
-      </ul>
-    </div>
-
   </div>
 </section>
