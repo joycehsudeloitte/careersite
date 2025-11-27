@@ -344,12 +344,12 @@
 
     <!-- Text Right -->
     <div class="ldc-intern-text-box">
-      <h2 class="ldc-intern-title">2026 LDC Internship Program</h2>
+      <h2 class="ldc-intern-title">2026 LDC Campus Recruitment</h2>
 
       <!-- Intro -->
       <p class="ldc-intern-content">
-        LDC 是 Deloitte 審計服務的重要合作夥伴，透過 LDC Internship Program 讓同學深入體驗審計與數位化作業的實務流程，累積專業能力並建立職涯基礎。<br>
-        我們歡迎不同科系、對數位化審計與商業流程有興趣的同學，加入LDC探索審計工作並實現自我突破。
+        Deloitte LDC 是 Deloitte 審計服務的重要合作夥伴，結合創新流程與企業級AI工具，提升工作效率與品質，你將有機會接觸多元產業專案，累積實務經驗，解鎖履歷新亮點。<br>
+        我們歡迎不同科系、對數位化審計與商業流程有興趣的，加入LDC探索審計工作並實現自我突破。
       </p>
 
       <!-- Sub-title -->
@@ -365,11 +365,11 @@
         </li>
         <li>
           <span>實務經驗與技能提升：</span>
-          直接參與審計專案支援工作，快速累積實務經驗及專業技能。
+          協助多元審計專案，問題分析、數據判讀與跨團隊協作，快速累積實務經驗及專業技能。
         </li>
         <li>
-          <span>探索職涯方向與轉正機會：</span>
-          透過團隊合作，理解自身的職涯發展方向；表現優異者，有機會獲得轉正機會，成為 Deloitte 的未來夥伴。
+          <span>探索職涯方向與未來機會：</span>
+          透過團隊合作，逐步了解審計工作的全貌，掌握自我定位並探索未來的職涯發展方向。
         </li>
       </ul>
     </div>
@@ -384,20 +384,20 @@
     <div class="ldc-intern-timeline-items">
 
       <div class="ldc-intern-timeline-item">
-        <div class="ldc-intern-timeline-circle">1/9前</div>
-        <div class="ldc-intern-timeline-title">履歷投遞截止日</div>
+        <div class="ldc-intern-timeline-circle">3-4月</div>
+        <div class="ldc-intern-timeline-title">履歷投遞/校園徵才說明會</div>
         <p class="ldc-intern-timeline-text"></p>
       </div>
 
       <div class="ldc-intern-timeline-item">
-        <div class="ldc-intern-timeline-circle">1月</div>
-        <div class="ldc-intern-timeline-title">面談</div>
+        <div class="ldc-intern-timeline-circle">5-6月</div>
+        <div class="ldc-intern-timeline-title">安排面談/寄送錄取通知</div>
         <p class="ldc-intern-timeline-text"></p>
       </div>
 
       <div class="ldc-intern-timeline-item">
-        <div class="ldc-intern-timeline-circle">2月</div>
-        <div class="ldc-intern-timeline-title">入職</div>
+        <div class="ldc-intern-timeline-circle">7-9月</div>
+        <div class="ldc-intern-timeline-title">入職報到</div>
         <p class="ldc-intern-timeline-text"></p>
       </div>
 
@@ -408,11 +408,10 @@
   <div class="ldc-intern-req-box">
     <h3 class="ldc-intern-req-title">申請資格</h3>
     <ul class="ldc-intern-req-list">
-      <li>招募對象：大三以上商管學院同學 (正在修習或已修畢初級會計學)</li>
-      <li>實習期間：2026年2月–6月（寒假期間每週5天；學期中每週需至少連續2個整天）</li>
-      <li>履歷投遞截止：2026/1/9（五）23:59（台灣時間）</li>
+      <li>招募對象：2026應屆畢業生 (正在修習或已修畢初級會計學)</li>
+      <li>入職報到：2026年7月–9月</li>
     </ul>
-<a href="#" class="ldc-apply-btn">立即投遞履歷</a>
+<a href="https://careers.apac.deloitte.com/Taiwan/job/%E3%80%902026%E5%AF%A9%E8%A8%88%E6%A0%A1%E5%9C%92%E5%BE%B5%E6%89%8D%E3%80%91-%E5%AF%A9%E8%A8%88%E5%B0%88%E5%93%A1-%E5%B0%88%E6%A1%88%E6%9C%8D%E5%8B%99%E4%B8%AD%E5%BF%83-%28LDC%29-%E5%AF%A9%E8%A8%88%E8%88%87%E7%A2%BA%E4%BF%A1%E8%AB%AE%E8%A9%A2%E6%9C%8D%E5%8B%99/1001-zh_TW" class="ldc-apply-btn">立即投遞履歷</a>
   </div>
 
 </div>
