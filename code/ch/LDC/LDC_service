@@ -134,7 +134,6 @@
 
       <!-- Service 01 -->
       <div class="ldc-impact-item">
-        <div class="ldc-impact-badge">標準化</div>
         <div class="ldc-img-wrapper">
           <img class="ldc-img" src="https://raw.githubusercontent.com/joycehsudeloitte/careersite/main/images/LDC/service1.png" alt="service1">
         </div>
@@ -146,7 +145,6 @@
 
       <!-- Service 02 -->
       <div class="ldc-impact-item">
-        <div class="ldc-impact-badge">專業化</div>
         <div class="ldc-img-wrapper">
           <img class="ldc-img" src="https://raw.githubusercontent.com/joycehsudeloitte/careersite/main/images/LDC/service2.png" alt="service2">
         </div>
@@ -158,7 +156,6 @@
 
       <!-- Service 03 -->
       <div class="ldc-impact-item">
-        <div class="ldc-impact-badge">集中化</div>
         <div class="ldc-img-wrapper">
           <img class="ldc-img" src="https://raw.githubusercontent.com/joycehsudeloitte/careersite/main/images/LDC/service3.png" alt="service3">
         </div>
