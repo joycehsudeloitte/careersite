@@ -1,0 +1,18 @@
+<section style="position: relative; background: url('https://github.com/joycehsudeloitte/careersite/blob/images/DSC_4863%20copy_lo.png?raw=true') center center / cover no-repeat; color: white; font-family: 'Noto Sans TC', sans-serif; padding: 60px 20px;">
+  <!-- 淡化遮罩層 -->
+  <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+              background: rgba(0, 0, 0, 0.5); z-index: 0;"></div>
+
+  <!-- 內容區塊 -->
+  <div style="position: relative; max-width: 900px; margin: auto; text-align: center; z-index: 1;">
+    <h2 style="color: #86BC25; font-size: 36px; font-weight: bold;">Why Deloitte?</h2>
+    <p style="font-size: 20px; line-height: 1.8; margin-top: 30px;">
+      Deloitte 致力打造一個多元、平等、共融的工作環境。<br>
+      我們尊重每位同仁的背景與觀點，鼓勵創新與合作。<br>
+      在招募過程中，我們公平對待每位應徵者。<br>
+      不論種族、性別、年齡、性傾向、宗教等，<br>
+      只看你的能力與潛力。<br><br>
+      <strong style="color: #ffffff;">與 Deloitte 齊心共進！</strong>
+    </p>
+  </div>
+</section>
