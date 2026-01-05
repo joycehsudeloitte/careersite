@@ -1,0 +1,190 @@
+<style>
+  :root {
+    --brand-green: #86BC25;
+    --gray-dark: #333;
+    --gray-medium: #666;
+    --white: #ffffff;
+  }
+
+  .benefits-section {
+    font-family: 'Noto Sans TC', sans-serif;
+    background-color: var(--white);
+    padding: 40px 20px;
+    color: var(--gray-dark);
+  }
+
+  .benefits-section h2 {
+    text-align: center;
+    color: var(--brand-green);
+    font-weight: bold;
+    font-size: 28px;
+    margin-bottom: 40px;
+    letter-spacing: 1px;
+  }
+
+  .card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 32px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .card {
+    background: var(--white);
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 24px;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    cursor: pointer;
+  }
+
+  .card:hover {
+    box-shadow: 0 8px 16px rgba(0,0,0,0.08);
+    transform: translateY(-4px);
+  }
+
+  .card-image {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 12px;
+  }
+
+  .card-title {
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--gray-dark);
+    margin-bottom: 10px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 6px;
+  }
+
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 99;
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    overflow: auto;
+  }
+
+  .modal-content {
+    background-color: #fff;
+    margin: 10% auto;
+    padding: 30px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 600px;
+    position: relative;
+    font-size: 16px;
+    line-height: 1.8;
+    color: var(--gray-dark);
+    white-space: pre-line;
+  }
+
+  .close-btn {
+    color: var(--gray-dark);
+    position: absolute;
+    top: 10px; right: 16px;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+  .modal-title {
+    font-weight: bold;
+    font-size: 20px;
+    color: var(--brand-green);
+    margin-bottom: 12px;
+  }
+</style>
+
+<div class="benefits-section">
+  <h2>福利制度</h2>
+  <div class="card-grid">
+
+    <div class="card" onclick="openModal('彈性的上下班時間', `為了讓同仁們可以靈活且有效率的運用時間，Deloitte提供彈性上下班時間及居家上班的制度，更好平衡職場與家庭生活且減少通勤時間。
+．上班時間為 上午 8:30 至 9:00、下班時間為 下午 5:30 至 6:00
+．每月最多 8 天的居家辦公日`)">
+      <img class="card-image" src="https://github.com/joycehsudeloitte/careersite/raw/images/%E5%BD%88%E6%80%A7%E5%B7%A5%E4%BD%9C%E6%99%82%E9%96%93.png" alt="彈性上班">
+      <div class="card-title">彈性的上下班時間</div>
+    </div>
+
+    <div class="card" onclick="openModal('優於勞基法的休假制度', `．預給年假休假制：員工到職即享有休假，不受限於年資屆滿方可休假之限制。
+．溫書假：最多可有2個月溫書假`)">
+      <img class="card-image" src="https://github.com/joycehsudeloitte/careersite/raw/images/%E4%BC%91%E5%81%87%E5%88%B6%E5%BA%A6.png" alt="休假制度">
+      <div class="card-title">優於勞基法的休假制度</div>
+    </div>
+
+    <div class="card" onclick="openModal('完善的保險規劃', `除了依法投保勞保、健保與勞退提撥以外，我們為每位同仁提供全方位的保險制度，讓你在工作之餘也能安心無虞：
+．公司全額負擔團體保險：包含壽險、意外險、住院與癌症醫療險
+．眷屬可享優惠自費加保方案（子女人數不影響保費）
+．出差專屬旅行平安險：加強意外與醫療保障
+．24 小時國際 SOS 緊急醫療支援與安全諮詢服務
+．定期駐點保險專業諮詢：協助你規劃個人保險需求`)">
+      <img class="card-image" src="https://github.com/joycehsudeloitte/careersite/raw/images/%E4%BF%9D%E9%9A%AA%E8%A6%8F%E5%8A%83.png" alt="保險規劃">
+      <div class="card-title">完善的保險規劃</div>
+    </div>
+
+    <div class="card" onclick="openModal('專業工作的支持與補助', `我們致力於提供舒適便利的工作環境與實用補助，讓每位同仁專注發揮專業：
+．專業證照獎勵金及協會會員費之補助
+．行動通訊費補助及VPN超優惠費率
+．夜歸計程車車資補助
+．個人配置筆記型電腦/網路電話
+．同仁專屬coffee bar`)">
+      <img class="card-image" src="https://github.com/joycehsudeloitte/careersite/raw/images/%E5%B0%88%E6%A5%AD%E5%B7%A5%E4%BD%9C%E6%94%AF%E6%8C%81.png" alt="專業支持">
+      <div class="card-title">專業工作的支持與補助</div>
+    </div>
+
+    <div class="card" onclick="openModal('健康保健服務', `我們重視每一位同仁的健康與福祉，提供多項身心照護資源，讓你工作安心、生活更有力：
+．健康檢查：安排免費健檢，除事務所簽約之特約醫院/健診中心外，亦可依同仁意願自行選擇受檢醫療院所
+．流感疫苗接種活動
+．企業按摩師服務
+．員工協助方案：協助員工及時處理個人/生活/和工作相關的議題`)">
+      <img class="card-image" src="https://github.com/joycehsudeloitte/careersite/raw/images/%E5%81%A5%E5%BA%B7%E4%BF%9D%E5%81%A5%E6%9C%8D%E5%8B%99.png" alt="健康照護">
+      <div class="card-title">健康保健服務</div>
+    </div>
+
+    <div class="card" onclick="openModal('工作與生活平衡', `在勤業眾信，我們相信工作與生活都值得被熱情對待！所內每年舉辦各式活動，讓同仁在職場中找到歸屬感與生活感：
+．藝文與生活體驗：舉辦各類藝文欣賞活動並提供購票補助，另有定期發送電影票，讓你在忙碌之餘也能享受生活美學
+．運動與團隊凝聚：透過運動嘉年華、校外球類聯誼賽等活動，促進健康也強化團隊向心力
+．家庭日 Family Day：邀請同仁的家人與朋友一同參與，分享工作的喜悅與成就
+．年節與慶典活動：包含尾牙餐會摸彩、忙季慶功、春節開工日等多樣慶典活動，為你打氣、創造回憶
+．員工專屬團購優惠：不定期提供優質產品團購資訊，讓你輕鬆享受生活便利`)">
+      <img class="card-image" src="https://github.com/joycehsudeloitte/careersite/raw/images/%E5%B7%A5%E4%BD%9C%E7%94%9F%E6%B4%BB%E5%B9%B3%E8%A1%A1.png" alt="生活平衡">
+      <div class="card-title">工作與生活平衡</div>
+    </div>
+
+  </div>
+</div>
+
+<!-- Modal 結構 -->
+<div id="modal" class="modal">
+  <div class="modal-content">
+    <span class="close-btn" onclick="closeModal()">&times;</span>
+    <div class="modal-title" id="modalTitle"></div>
+    <div id="modalBody"></div>
+  </div>
+</div>
+
+<script>
+  function openModal(title, content) {
+    document.getElementById('modalTitle').textContent = title;
+    document.getElementById('modalBody').textContent = content;
+    document.getElementById('modal').style.display = 'block';
+  }
+
+  function closeModal() {
+    document.getElementById('modal').style.display = 'none';
+  }
+
+  window.onclick = function(event) {
+    const modal = document.getElementById('modal');
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }
+</script>
