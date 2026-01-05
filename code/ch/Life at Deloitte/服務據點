@@ -1,0 +1,108 @@
+<div class="gray-background">
+  <div class="container">
+    <h2 class="section-title">服務據點</h2>
+
+    <div class="map-office-wrapper">
+      <div class="map-section">
+        <img src="https://github.com/joycehsudeloitte/careersite/blob/images/Taiwan%E5%9C%B0%E5%9C%96.png?raw=true" alt="台灣地圖">
+      </div>
+
+      <div class="office-list">
+        <div class="office-card">
+          <h3>台北所</h3>
+          <p>地址：台北市信義區松仁路100號20樓</p>
+          <p>電話：+886 (2) 2725‑9988</p>
+        </div>
+        <div class="office-card">
+          <h3>新竹所</h3>
+          <p>地址：新竹市東區科學園區展業一路2號6樓</p>
+          <p>電話：+886 (3) 578‑0899</p>
+        </div>
+        <div class="office-card">
+          <h3>台中所</h3>
+          <p>地址：台中市西屯區惠中路一段88號22樓</p>
+          <p>電話：+886 (4) 3705‑9988</p>
+        </div>
+        <div class="office-card">
+          <h3>台南所</h3>
+          <p>地址：台南市中西區永福路一段189號13樓</p>
+          <p>電話：+886 (6) 213‑9988</p>
+        </div>
+        <div class="office-card">
+          <h3>高雄所</h3>
+          <p>地址：高雄市前鎮區成功二路88號3樓</p>
+          <p>電話：+886 (7) 530‑1888</p> 
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  .gray-background {
+    background-color: #f0f0f0;
+    padding: 60px 0;
+  }
+  .container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+    font-family: 'Noto Sans TC', sans-serif;
+  }
+  .section-title {
+    text-align: center;
+    font-size: 32px;
+    color: #86BC25;
+    margin-bottom: 40px;
+    font-weight: bold;
+  }
+  .map-office-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: flex-start;
+  }
+  .map-section {
+    flex: 1 1 35%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .map-section img {
+    max-width: 90%;
+    height: auto;
+    display: block;
+  }
+  .office-list {
+    flex: 1 1 60%;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    max-height: 400px;
+    overflow-y: auto;
+    padding-right: 10px;
+  }
+  .office-card {
+    background-color: #ffffff;
+    border-left: 6px solid #86BC25;
+    padding: 16px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  }
+  .office-card h3 {
+    margin: 0 0 8px;
+    color: #26890D;
+  }
+  .office-card p {
+    margin: 4px 0;
+    line-height: 1.4;
+  }
+  @media (max-width: 768px) {
+    .map-office-wrapper {
+      flex-direction: column;
+    }
+    .office-list {
+      max-height: none;
+      overflow-y: visible;
+    }
+  }
+</style>
