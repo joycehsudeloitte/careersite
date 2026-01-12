@@ -1,0 +1,193 @@
+<section class="campus-event-recruitment-timeline-section">
+
+  <style>
+    /* ===== Section ===== */
+    .campus-event-recruitment-timeline-section {
+      width: 100%;
+      padding: 80px 0;
+      background-color: #ffffff;
+    }
+
+    .campus-event-recruitment-timeline-inner {
+      width: 90%;
+      max-width: 1100px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    /* ===== Header ===== */
+    .campus-event-recruitment-timeline-eyebrow {
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      color: #86BC25;
+      margin-bottom: 10px;
+    }
+
+    .campus-event-recruitment-timeline-title {
+      font-size: 32px;
+      font-weight: 700;
+      color: #86BC25;
+      margin-bottom: 12px;
+    }
+
+    .campus-event-recruitment-timeline-subtitle {
+      font-size: 16px;
+      color: #555555;
+      margin-bottom: 60px;
+      line-height: 1.7;
+    }
+
+    /* ===== Horizontal Timeline ===== */
+    .campus-event-recruitment-horizontal-timeline {
+      position: relative;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-top: 40px;
+      padding-top: 40px;
+    }
+
+    /* Horizontal line */
+    .campus-event-recruitment-horizontal-line {
+      position: absolute;
+      top: 72px;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background-color: #86BC25;
+      z-index: 0;
+    }
+
+    /* Item */
+    .campus-event-recruitment-horizontal-item {
+      width: 25%;
+      text-align: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* Circle */
+    .campus-event-recruitment-horizontal-circle {
+      width: 72px;
+      height: 72px;
+      margin: 0 auto;
+      border-radius: 50%;
+      border: 3px solid #86BC25;
+      background-color: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      font-weight: 600;
+      color: #000000;
+    }
+
+    /* School name */
+    .campus-event-recruitment-horizontal-text {
+      margin-top: 16px;
+      font-size: 15px;
+      color: #000000;
+    }
+
+    /* ===== Fade In ===== */
+    .fade-item {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+
+    .fade-item.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ===== Mobile ===== */
+    @media (max-width: 768px) {
+      .campus-event-recruitment-horizontal-timeline {
+        flex-direction: column;
+        align-items: center;
+        padding-top: 0;
+      }
+
+      .campus-event-recruitment-horizontal-line {
+        display: none;
+      }
+
+      .campus-event-recruitment-horizontal-item {
+        width: 100%;
+        margin-bottom: 40px;
+      }
+    }
+  </style>
+
+  <div class="campus-event-recruitment-timeline-inner">
+
+    <div class="campus-event-recruitment-timeline-eyebrow">
+      CAMPUS EVENT
+    </div>
+
+    <h2 class="campus-event-recruitment-timeline-title">
+      Campus Event Recruitment Timeline
+    </h2>
+
+    <p class="campus-event-recruitment-timeline-subtitle">
+      校園招募活動依照既定時程安排，依序進行校園徵才活動。
+    </p>
+
+    <div class="campus-event-recruitment-horizontal-timeline">
+
+      <div class="campus-event-recruitment-horizontal-line"></div>
+
+      <div class="campus-event-recruitment-horizontal-item fade-item">
+        <div class="campus-event-recruitment-horizontal-circle">3/7</div>
+        <div class="campus-event-recruitment-horizontal-text">
+          台灣大學
+        </div>
+      </div>
+
+      <div class="campus-event-recruitment-horizontal-item fade-item">
+        <div class="campus-event-recruitment-horizontal-circle">3/11</div>
+        <div class="campus-event-recruitment-horizontal-text">
+          台北大學
+        </div>
+      </div>
+
+      <div class="campus-event-recruitment-horizontal-item fade-item">
+        <div class="campus-event-recruitment-horizontal-circle">3/15</div>
+        <div class="campus-event-recruitment-horizontal-text">
+          成功大學
+        </div>
+      </div>
+
+      <div class="campus-event-recruitment-horizontal-item fade-item">
+        <div class="campus-event-recruitment-horizontal-circle">3/20</div>
+        <div class="campus-event-recruitment-horizontal-text">
+          政治大學
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const items = document.querySelectorAll(".fade-item");
+
+      const observer = new IntersectionObserver(
+        entries => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("is-visible");
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.2 }
+      );
+
+      items.forEach(item => observer.observe(item));
+    });
+  </script>
+
+</section>
