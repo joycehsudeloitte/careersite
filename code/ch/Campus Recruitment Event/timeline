@@ -54,11 +54,11 @@
 
     /* Circle */
     .campus-event-recruitment-horizontal-circle {
-      width: 100px;
-      height: 100px;
+      width: 150px;
+      height: 150px;
       margin: 0 auto;
       border-radius: 50%;
-      border: 3px solid #86BC25;
+      border: 5px solid #86BC25;
       background-color: #ffffff;
       display: flex;
       align-items: center;
