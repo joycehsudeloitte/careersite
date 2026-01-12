@@ -12,7 +12,7 @@
       width: 90%;
       max-width: 1100px;
       margin: 0 auto;
-      text-align: center;
+      text-align: left;
     }
 
     /* ===== Header ===== */
@@ -40,37 +40,22 @@
 
     /* ===== Horizontal Timeline ===== */
     .campus-event-recruitment-horizontal-timeline {
-      position: relative;
       display: flex;
       justify-content: space-between;
       align-items: flex-start;
       margin-top: 40px;
-      padding-top: 40px;
-    }
-
-    /* Horizontal line */
-    .campus-event-recruitment-horizontal-line {
-      position: absolute;
-      top: 72px;
-      left: 0;
-      width: 100%;
-      height: 2px;
-      background-color: #86BC25;
-      z-index: 0;
     }
 
     /* Item */
     .campus-event-recruitment-horizontal-item {
-      width: 25%;
+      width: calc(100% / 6);
       text-align: center;
-      position: relative;
-      z-index: 1;
     }
 
     /* Circle */
     .campus-event-recruitment-horizontal-circle {
-      width: 72px;
-      height: 72px;
+      width: 100px;
+      height: 100px;
       margin: 0 auto;
       border-radius: 50%;
       border: 3px solid #86BC25;
@@ -78,16 +63,17 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 14px;
-      font-weight: 600;
+      font-size: 20px;
+      font-weight: 800;
       color: #000000;
     }
 
-    /* School name */
+    /* Text */
     .campus-event-recruitment-horizontal-text {
       margin-top: 16px;
-      font-size: 15px;
+      font-size: 20px;
       color: #000000;
+      line-height: 1.4;
     }
 
     /* ===== Fade In ===== */
@@ -107,11 +93,6 @@
       .campus-event-recruitment-horizontal-timeline {
         flex-direction: column;
         align-items: center;
-        padding-top: 0;
-      }
-
-      .campus-event-recruitment-horizontal-line {
-        display: none;
       }
 
       .campus-event-recruitment-horizontal-item {
@@ -128,7 +109,7 @@
     </div>
 
     <h2 class="campus-event-recruitment-timeline-title">
-      Campus Event Recruitment Timeline
+      2026校園徵才博覽會時程表
     </h2>
 
     <p class="campus-event-recruitment-timeline-subtitle">
@@ -137,33 +118,45 @@
 
     <div class="campus-event-recruitment-horizontal-timeline">
 
-      <div class="campus-event-recruitment-horizontal-line"></div>
-
       <div class="campus-event-recruitment-horizontal-item fade-item">
-        <div class="campus-event-recruitment-horizontal-circle">3/7</div>
+        <div class="campus-event-recruitment-horizontal-circle">03/07</div>
         <div class="campus-event-recruitment-horizontal-text">
           台灣大學
         </div>
       </div>
 
       <div class="campus-event-recruitment-horizontal-item fade-item">
-        <div class="campus-event-recruitment-horizontal-circle">3/11</div>
+        <div class="campus-event-recruitment-horizontal-circle">03/11</div>
         <div class="campus-event-recruitment-horizontal-text">
           台北大學
         </div>
       </div>
 
       <div class="campus-event-recruitment-horizontal-item fade-item">
-        <div class="campus-event-recruitment-horizontal-circle">3/15</div>
+        <div class="campus-event-recruitment-horizontal-circle">03/15</div>
         <div class="campus-event-recruitment-horizontal-text">
           成功大學
         </div>
       </div>
 
       <div class="campus-event-recruitment-horizontal-item fade-item">
-        <div class="campus-event-recruitment-horizontal-circle">3/20</div>
+        <div class="campus-event-recruitment-horizontal-circle">03/22</div>
         <div class="campus-event-recruitment-horizontal-text">
-          政治大學
+          中央大學
+        </div>
+      </div>
+
+      <div class="campus-event-recruitment-horizontal-item fade-item">
+        <div class="campus-event-recruitment-horizontal-circle">05/06</div>
+        <div class="campus-event-recruitment-horizontal-text">
+          輔仁大學
+        </div>
+      </div>
+
+      <div class="campus-event-recruitment-horizontal-item fade-item">
+        <div class="campus-event-recruitment-horizontal-circle">05/08</div>
+        <div class="campus-event-recruitment-horizontal-text">
+          東華大學
         </div>
       </div>
 
