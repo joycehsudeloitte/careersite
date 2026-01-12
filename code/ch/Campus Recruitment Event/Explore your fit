@@ -16,30 +16,50 @@
     }
   }
 
+  /* ===== Section ===== */
   .explore-section {
     font-family: '微軟正黑體', sans-serif;
     background-color: var(--bg-light);
     color: var(--text-dark);
     box-sizing: border-box;
+    padding: 80px 0;
+    overflow: hidden;
   }
 
+  /* ===== Layout ===== */
+  .explore-container {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    width: 100%;
+    align-items: start;
+  }
+
+  /* ===== Left Content ===== */
   .explore-text {
-    text-align: left;
-    padding: 60px 20px 40px;
-    max-width: 960px;
-    margin: 0 auto;
+    padding: 0 40px;
+    max-width: 520px;
+    margin-left: auto;
   }
 
-  .explore-text h2 {
+  .explore-eyebrow {
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
     color: var(--brand-green);
-    font-size: 2.75rem;
-    font-weight: bold;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
   }
 
-  .explore-text p {
-    font-size: 1.25rem;
-    line-height: 1.8;
+  .explore-title {
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--brand-green);
+    margin-bottom: 12px;
+  }
+
+  .explore-subtitle {
+    font-size: 16px;
+    color: #555555;
+    line-height: 1.7;
     margin-bottom: 24px;
   }
 
@@ -56,34 +76,49 @@
     transition: background-color 0.3s ease;
   }
 
-  .btn-visit:active,
+  .btn-visit:hover,
   .btn-visit:focus {
     background-color: var(--accent-green-dark);
   }
 
+  /* ===== Right Embed ===== */
   .embed-fullscreen {
-    width: 100%;
-    aspect-ratio: 16/9;
-    background-color: #000;
     position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
   }
 
   .embed-fullscreen iframe {
+    position: absolute;
+    inset: 0;
     width: 100%;
     height: 100%;
     border: none;
-    position: absolute;
-    top: 0;
-    left: 0;
   }
 
+  /* ===== Mobile ===== */
   @media (max-width: 768px) {
-    .explore-text h2 {
-      font-size: 2rem;
+    .explore-container {
+      grid-template-columns: 1fr;
     }
 
-    .explore-text p {
-      font-size: 1rem;
+    /* 隱藏右側網站 */
+    .embed-fullscreen {
+      display: none;
+    }
+
+    .explore-text {
+      max-width: none;
+      padding: 0 20px;
+      margin: 0;
+    }
+
+    .explore-title {
+      font-size: 32px;
+    }
+
+    .explore-subtitle {
+      font-size: 16px;
     }
 
     .btn-visit {
@@ -94,19 +129,29 @@
 </style>
 
 <div class="explore-section">
-  <div class="explore-text">
-    <h2>探索你的潛能</h2>
-    <p>
-      探索你的潛能，不論你正準備起步，或已在職涯道路上穩健前行，<br>
-      我們為每一階段的你，都提供成長的機會與舞台。<br>
-      立即探索職涯機會。
-    </p>
-    <a class="btn-visit" href="https://explore.deloitte.com/" target="_blank">
-      若無法顯示，請點此在新分頁開啟
-    </a>
-  </div>
+  <div class="explore-container">
 
-  <div class="embed-fullscreen">
-    <iframe src="https://explore.deloitte.com/" allowfullscreen></iframe>
+    <!-- Left -->
+    <div class="explore-text">
+      <div class="explore-eyebrow">EXPLORE CAREERS</div>
+
+      <h2 class="explore-title">探索你的潛能</h2>
+
+      <p class="explore-subtitle">
+        探索你的潛能，不論你正準備起步，或已在職涯道路上穩健前行，<br>
+        我們為每一階段的你，都提供成長的機會與舞台。<br>
+        立即探索職涯機會。
+      </p>
+
+      <a class="btn-visit" href="https://explore.deloitte.com/" target="_blank">
+        若無法顯示，請點此在新分頁開啟
+      </a>
+    </div>
+
+    <!-- Right (Desktop only) -->
+    <div class="embed-fullscreen">
+      <iframe src="https://explore.deloitte.com/" allowfullscreen></iframe>
+    </div>
+
   </div>
 </div>
