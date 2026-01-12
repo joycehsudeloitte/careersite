@@ -32,6 +32,7 @@
     grid-template-columns: 40% 60%;
     width: 100%;
     align-items: start;
+
   }
 
   /* ===== Left Content ===== */
