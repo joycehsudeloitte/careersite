@@ -58,8 +58,8 @@
       height: 150px;
       margin: 0 auto;
       border-radius: 50%;
-      border: 5px solid #86BC25;
-      background-color: #ffffff;
+      border: 8px solid #86BC25;
+      background-color: #f5f5f5;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -129,13 +129,6 @@
         <div class="campus-event-recruitment-horizontal-circle">03/11</div>
         <div class="campus-event-recruitment-horizontal-text">
           台北大學
-        </div>
-      </div>
-
-      <div class="campus-event-recruitment-horizontal-item fade-item">
-        <div class="campus-event-recruitment-horizontal-circle">03/15</div>
-        <div class="campus-event-recruitment-horizontal-text">
-          成功大學
         </div>
       </div>
 
