@@ -1,0 +1,161 @@
+<section class="JSG-introduction">
+
+  <style>
+    /* ===== Section ===== */
+    .JSG-introduction {
+      width: 100%;
+      padding: 80px 0;
+      background-color: #000000;
+      box-sizing: border-box;
+    }
+
+    .JSG-introduction-inner {
+      width: 90%;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    /* ===== Layout ===== */
+    .JSG-introduction-content {
+      display: grid;
+      grid-template-columns: 40% 60%;
+      gap: 80px;
+      align-items: flex-start;
+    }
+
+    /* ===== Left : Text ===== */
+    .JSG-introduction-text {
+      text-align: left;
+    }
+
+    .JSG-introduction-eyebrow {
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      color: #86BC25;
+      margin-bottom: 12px;
+      text-transform: uppercase;
+    }
+
+.JSG-introduction-title {
+  position: relative;
+  padding-left: 20px;        /* 綠線到文字的距離 */
+  line-height: 1.25;         /* 控制兩行標題的行高 */
+  margin-bottom: 24px;
+  font-size: 32px;
+  font-weight: 700;
+  color: #ffffff!important;
+  margin-bottom: 24px;
+}
+
+/* 綠線：與 eyebrow 左側對齊，且固定覆蓋兩行高度 */
+.JSG-introduction-title::before {
+  content: "";
+  position: absolute;
+  left: 0;                   /* 與 eyebrow 左邊界一致 */
+  top: 0;                    /* 從標題區塊頂端開始 */
+  width: 6px;                /* 線條寬度 */
+  height: calc(1em * 1.25);  /* 兩行高度 = 1 * font-size * line-height */
+  background-color: #86BC25;
+}
+
+    .JSG-introduction-text p {
+      font-size: 16px;
+      line-height: 1.8;
+      color: #ffffff;
+      margin-bottom: 20px;
+    }
+
+    /* ===== Button ===== */
+.JSG-introduction-btn {
+  display: inline-block;
+  margin-top: 16px;
+  padding: 12px 24px;
+  background-color: #86BC25;
+  color: #000000;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+  border-radius: 30px; /* 圓角矩形 */
+}
+
+.JSG-introduction-btn:hover {
+  background-color: #43B02A;
+}
+
+    /* ===== Right : Video ===== */
+    .JSG-introduction-video {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      overflow: hidden;
+    }
+
+    .JSG-introduction-video iframe {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    /* ===== Mobile ===== */
+    @media (max-width: 768px) {
+      .JSG-introduction-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+    }
+  </style>
+
+  <div class="JSG-introduction-inner">
+    <div class="JSG-introduction-content">
+
+      <!-- Left : Text -->
+      <div class="JSG-introduction-text">
+
+        <div class="JSG-introduction-eyebrow">
+          日系企業サービスグループ
+        </div>
+
+        <h2 class="JSG-introduction-title">
+          關於日商服務
+        </h2>
+
+        <p>
+          勤業眾信台灣日系企業服務小組（台灣JSG）自1988年成立以來，已陪伴在台日系企業走過三十餘年。
+          我們台灣JSG致力於從日系企業踏出進軍台灣的第一步起，即提供全方位的支援，
+          目標是在審計、稅務、併購、風險顧問、管理顧問等各專業領域中，
+          提供一站式的整合服務。
+        </p>
+
+        <p>
+          デロイト台湾日系企業サービスグループ（台湾JSG）は、1988年に発足し、
+          以来、30数年にわたり台湾における日系企業の皆様とともに歩んでまいりました。
+          我々台湾JSGは、日系企業の皆様を台湾進出の第一歩からサポートし、
+          監査、税務、M&A、リスク・アドバイザリー、コンサルティングなど
+          各専門分野において、ワンストップのサービスを提供することを目標としています。
+        </p>
+
+        <a
+          href="https://www.deloitte.com/tw/tc/services/international-specialist-services/services/deloitte-tw-jsg.html?icid=top_deloitte-tw-jsg"
+          target="_blank"
+          class="JSG-introduction-btn">
+          &gt; 更多關於 JSG
+        </a>
+
+      </div>
+
+      <!-- Right : Video -->
+      <div class="JSG-introduction-video">
+        <iframe
+          src="https://www.youtube.com/embed/5PmHWmzXDG4?autoplay=1&mute=1&loop=1&playlist=5PmHWmzXDG4&controls=0&modestbranding=1&showinfo=0"
+          allow="autoplay; encrypted-media"
+          allowfullscreen>
+        </iframe>
+      </div>
+
+    </div>
+  </div>
+
+</section>
