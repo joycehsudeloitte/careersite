@@ -1,31 +1,31 @@
-<section class="campus-event-recruitment-campaign-section">
+<section class="campus-event-recruitment-explore-section">
 
   <style>
     /* ===== Section ===== */
-    .campus-event-recruitment-campaign-section {
+    .campus-event-recruitment-explore-section {
       width: 100%;
       padding: 80px 0;
-      background-color: #f5f5f5;
+      background-color: #000000;
       box-sizing: border-box;
     }
 
-    .campus-event-recruitment-campaign-inner {
+    .campus-event-recruitment-explore-inner {
       width: 90%;
       max-width: 1400px;
       margin: 0 auto;
     }
 
     /* ===== Two Column Layout ===== */
-    .campus-event-recruitment-campaign-content {
+    .campus-event-recruitment-explore-content {
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 30% 70%;
       gap: 80px;
       margin-top: 40px;
       align-items: flex-start;
     }
 
-    /* ===== Left (Explore) ===== */
-    .campaign-left {
+    /* ===== Left ===== */
+    .explore-left {
       text-align: left;
     }
 
@@ -40,14 +40,14 @@
     .explore-title {
       font-size: 32px;
       font-weight: 700;
-      color: #000000;
+      color: #ffffff !important;
       margin-bottom: 20px;
     }
 
     .explore-subtitle {
       font-size: 16px;
       line-height: 1.8;
-      color: #555555;
+      color: #ffffff;
       margin-bottom: 28px;
     }
 
@@ -56,7 +56,7 @@
       padding: 12px 24px;
       font-size: 14px;
       font-weight: 600;
-      color: #ffffff;
+      color: #ffffff!important;
       background-color: #86BC25;
       text-decoration: none;
     }
@@ -66,43 +66,41 @@
     }
 
     /* ===== Right (Iframe) ===== */
-    .campaign-right {
-      border-left: 3px solid #86BC25;
-      padding-left: 40px;
+    .explore-right {
+      border-left: none;
+      padding-left: 0;
     }
 
-    /* Height auto by viewport/width ratio (no JS) */
-    .campaign-right iframe {
+    .explore-right iframe {
       width: 100%;
       border: none;
       display: block;
-      aspect-ratio: 16 / 9;
+      aspect-ratio: 1 / 1;
       height: auto;
-      min-height: 360px;
-      max-height: 70vh;
+      min-height: 400px;
+      max-height: 80vh;
     }
 
-    /* ===== Mobile: Hide iframe, keep only button ===== */
+    /* ===== Mobile ===== */
     @media (max-width: 768px) {
-      .campus-event-recruitment-campaign-content {
+      .campus-event-recruitment-explore-content {
         grid-template-columns: 1fr;
         gap: 0;
         margin-top: 0;
       }
 
-      .campaign-right {
+      .explore-right {
         display: none;
       }
     }
   </style>
 
-  <div class="campus-event-recruitment-campaign-inner">
-
-    <div class="campus-event-recruitment-campaign-content">
+  <div class="campus-event-recruitment-explore-inner">
+    <div class="campus-event-recruitment-explore-content">
 
       <!-- Left -->
-      <div class="campaign-left">
-        <div class="explore-eyebrow">EXPLORE CAREERS</div>
+      <div class="explore-left">
+        <div class="explore-eyebrow">EXPLORE YOUR FIT</div>
 
         <h2 class="explore-title">探索你的潛能</h2>
 
@@ -112,17 +110,17 @@
           立即探索職涯機會。
         </p>
 
-        <a class="btn-visit" href="https://explore.deloitte.com/" target="_blank" rel="noopener noreferrer">
-          若無法顯示，請點此在新分頁開啟
+        <a class="btn-visit"
+           href="https://explore.deloitte.com/"
+           target="_blank"
+           rel="noopener noreferrer">
+          進入探索更多可能
         </a>
       </div>
 
       <!-- Right -->
-      <div class="campaign-right">
-        <iframe
-          src="https://explore.deloitte.com/"
-          allowfullscreen>
-        </iframe>
+      <div class="explore-right">
+        <iframe src="https://explore.deloitte.com/" allowfullscreen></iframe>
       </div>
 
     </div>
