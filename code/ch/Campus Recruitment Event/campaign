@@ -1,130 +1,121 @@
-<style>
-/* Section Base */
-.campus-recruitment-event-campaign-section {
-  width: 100%;
-  padding: 80px 0;
-  background-color: #f5f5f5;
-}
+<section class="campus-event-recruitment-campaign-section">
 
-/* Layout */
-.campus-recruitment-event-campaign-container {
-  width: 90%;
-  max-width: 1400px;
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 60px;
-}
+  <style>
+    /* ===== Section ===== */
+    .campus-event-recruitment-campaign-section {
+      width: 100%;
+      padding: 80px 0;
+      background-color: #f5f5f5;
+      box-sizing: border-box;
+    }
 
-/* Text */
-.campus-recruitment-event-campaign-text-box {
-  flex: 1;
-}
+    .campus-event-recruitment-campaign-inner {
+      width: 90%;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
 
-.campus-recruitment-event-campaign-title {
-  font-size: 36px;
-  font-weight: 700;
-  line-height: 1.4;
-  color: #000000;
-  margin-bottom: 24px;
-}
+    /* ===== Header ===== */
+    .campus-event-recruitment-campaign-eyebrow {
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      color: #86BC25;
+      margin-bottom: 10px;
+    }
 
-.campus-recruitment-event-campaign-content {
-  font-size: 18px;
-  line-height: 1.8;
-  color: #333333;
-  margin-bottom: 16px;
-}
+    .campus-event-recruitment-campaign-title {
+      font-size: 32px;
+      font-weight: 700;
+      color: #86BC25;
+      margin-bottom: 16px;
+    }
 
-.campus-recruitment-event-campaign-highlight {
-  font-size: 20px;
-  font-weight: 600;
-  color: #86BC25;
-  margin-top: 24px;
-}
+    .campus-event-recruitment-campaign-subtitle {
+      font-size: 16px;
+      color: #555555;
+      line-height: 1.7;
+      max-width: 520px;
+    }
 
-/* Image */
-.campus-recruitment-event-campaign-image-box {
-  flex: 1;
-  text-align: right;
-}
+    /* ===== Two Column Layout ===== */
+    .campus-event-recruitment-campaign-content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: flex-start;
+      margin-top: 60px;
+    }
 
-.campus-recruitment-event-campaign-image-box img {
-  width: 100%;
-  max-width: 550px;
-  border-radius: 12px;
-}
+    /* ===== Left ===== */
+    .campaign-left {
+      text-align: left;
+    }
 
-/* RWD for mobile */
-@media (max-width: 900px) {
-  .campus-recruitment-event-campaign-container {
-    flex-direction: column;
-    text-align: left;
-  }
+    /* ===== Right ===== */
+    .campaign-right {
+      border-left: 3px solid #86BC25;
+      padding-left: 40px;
+    }
 
-  .campus-recruitment-event-campaign-text-box {
-    order: 2;
-    text-align: left;
-  }
+    .campaign-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
 
-  .campus-recruitment-event-campaign-image-box {
-    order: 1;
-    text-align: center;
-  }
+    .campaign-list li {
+      font-size: 20px;
+      font-weight: 600;
+      color: #000000;
+      padding: 16px 0;
+      border-bottom: 1px solid #e0e0e0;
+    }
 
-  .campus-recruitment-event-campaign-image-box img {
-    max-width: 100%;
-  }
+    /* ===== Mobile ===== */
+    @media (max-width: 768px) {
+      .campus-event-recruitment-campaign-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
 
-  .campus-recruitment-event-campaign-title {
-    font-size: 20px;
-  }
+      .campaign-right {
+        border-left: none;
+        padding-left: 0;
+        border-top: 3px solid #86BC25;
+        padding-top: 24px;
+      }
+    }
+  </style>
 
-  .campus-recruitment-event-campaign-content {
-    font-size: 16px;
-  }
+  <div class="campus-event-recruitment-campaign-inner">
 
-  .campus-recruitment-event-campaign-highlight {
-    font-size: 16px;
-  }
-}
-</style>
-
-<section class="campus-recruitment-event-campaign-section">
-  <div class="campus-recruitment-event-campaign-container">
-
-    <!-- Text Area -->
-    <div class="campus-recruitment-event-campaign-text-box">
-      <h2 class="campus-recruitment-event-campaign-title">
-        Deloitte Local Delivery Centre<br>
-        Growing value with us
-      </h2>
-
-      <p class="campus-recruitment-event-campaign-content">
-        勤業眾信 Local Delivery Centre（LDC） 自 2021 年成立以來，已於
-        <strong>台北、台中、高雄</strong> 建立據點，成為審計轉型中不可或缺的關鍵力量。
-        透過數位化、標準化流程與精準分工，LDC 重新定義審計作業的效率與品質，
-        讓審計團隊能專注於更高價值的專業判斷。
-      </p>
-
-      <p class="campus-recruitment-event-campaign-content">
-        同時結合 AI 與多項數位工具，LDC 不僅提升整體效能，更在流程優化、智慧化
-        與跨部門協作中扮演關鍵角色，持續打造一致、透明且具延展性的審計服務模式。
-      </p>
-
-      <p class="campus-recruitment-event-campaign-content campus-recruitment-event-campaign-highlight">
-        誠摯邀請你加入 LDC，成為推動審計未來的重要力量。
-      </p>
+    <div class="campus-event-recruitment-campaign-eyebrow">
+      CAMPUS CAMPAIGN
     </div>
 
-    <!-- Image Area -->
-    <div class="campus-recruitment-event-campaign-image-box">
-      <img
-        src="https://raw.githubusercontent.com/joycehsudeloitte/careersite/main/images/LDC/LDC_introduction.png"
-        alt="LDC Team"
-      >
-    </div>
+    <h2 class="campus-event-recruitment-campaign-title">
+      2026 校園招募計畫
+    </h2>
 
+    <div class="campus-event-recruitment-campaign-content">
+
+      <!-- Left -->
+      <div class="campaign-left">
+        <p class="campus-event-recruitment-campaign-subtitle">
+          校園招募以多元招募計畫進行，依不同學習階段與職涯規劃，提供對應的參與管道與甄選流程。
+        </p>
+      </div>
+
+      <!-- Right -->
+      <div class="campaign-right">
+        <ul class="campaign-list">
+          <li>忙季實習生</li>
+          <li>Seeds Program</li>
+        </ul>
+      </div>
+
+    </div>
   </div>
+
 </section>
