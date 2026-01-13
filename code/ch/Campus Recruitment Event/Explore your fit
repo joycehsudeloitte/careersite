@@ -1,158 +1,131 @@
-<style>
-  :root {
-    --brand-green: #86BC25;
-    --accent-green: #43B02A;
-    --accent-green-dark: #0D8390;
-    --text-dark: #1a1a1a;
-    --bg-light: #ffffff;
-    --bg-dark: #121212;
-    --text-light: #f1f1f1;
-  }
+<section class="campus-event-recruitment-campaign-section">
 
-  @media (prefers-color-scheme: dark) {
-    :root {
-      --bg-light: var(--bg-dark);
-      --text-dark: var(--text-light);
-    }
-  }
-
-  /* ===== Section ===== */
-  .explore-section {
-    font-family: '微軟正黑體', sans-serif;
-    background-color: var(--bg-light);
-    color: var(--text-dark);
-    box-sizing: border-box;
-    padding: 80px 0;
-    overflow: hidden;
-  }
-
-  /* ===== Layout ===== */
-  .explore-container {
-    display: grid;
-    grid-template-columns: 40% 60%;
-    width: 100%;
-    align-items: start;
-
-  }
-
-  /* ===== Left Content ===== */
-  .explore-text {
-    padding: 0 40px;
-    max-width: 520px;
-    margin-left: auto;
-  }
-
-  .explore-eyebrow {
-    font-size: 14px;
-    font-weight: 600;
-    letter-spacing: 0.12em;
-    color: var(--brand-green);
-    margin-bottom: 10px;
-  }
-
-  .explore-title {
-    font-size: 32px;
-    font-weight: 700;
-    color: var(--brand-green);
-    margin-bottom: 12px;
-  }
-
-  .explore-subtitle {
-    font-size: 16px;
-    color: #555555;
-    line-height: 1.7;
-    margin-bottom: 24px;
-  }
-
-  .btn-visit {
-    display: inline-block;
-    margin-top: 16px;
-    padding: 12px 24px;
-    background-color: var(--accent-green);
-    color: #ffffff;
-    text-decoration: none;
-    font-size: 16px;
-    border: none;
-    border-radius: 0;
-    transition: background-color 0.3s ease;
-  }
-
-  .btn-visit:hover,
-  .btn-visit:focus {
-    background-color: var(--accent-green-dark);
-  }
-
-  /* ===== Right Embed ===== */
-  .embed-fullscreen {
-    position: relative;
-    width: 100%;
-    aspect-ratio: 16 / 9;
-  }
-
-  .embed-fullscreen iframe {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    border: none;
-  }
-
-  /* ===== Mobile ===== */
-  @media (max-width: 768px) {
-    .explore-container {
-      grid-template-columns: 1fr;
+  <style>
+    /* ===== Section ===== */
+    .campus-event-recruitment-campaign-section {
+      width: 100%;
+      padding: 80px 0;
+      background-color: #f5f5f5;
+      box-sizing: border-box;
     }
 
-    /* 隱藏右側網站 */
-    .embed-fullscreen {
-      display: none;
+    .campus-event-recruitment-campaign-inner {
+      width: 90%;
+      max-width: 1400px;
+      margin: 0 auto;
     }
 
-    .explore-text {
-      max-width: none;
-      padding: 0 20px;
-      margin: 0;
+    /* ===== Two Column Layout ===== */
+    .campus-event-recruitment-campaign-content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      margin-top: 40px;
+      align-items: flex-start;
+    }
+
+    /* ===== Left (Explore) ===== */
+    .campaign-left {
+      text-align: left;
+    }
+
+    .explore-eyebrow {
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      color: #86BC25;
+      margin-bottom: 12px;
     }
 
     .explore-title {
       font-size: 32px;
+      font-weight: 700;
+      color: #000000;
+      margin-bottom: 20px;
     }
 
     .explore-subtitle {
       font-size: 16px;
+      line-height: 1.8;
+      color: #555555;
+      margin-bottom: 28px;
     }
 
     .btn-visit {
-      font-size: 15px;
-      padding: 10px 20px;
+      display: inline-block;
+      padding: 12px 24px;
+      font-size: 14px;
+      font-weight: 600;
+      color: #ffffff;
+      background-color: #86BC25;
+      text-decoration: none;
     }
-  }
-</style>
 
-<div class="explore-section">
-  <div class="explore-container">
+    .btn-visit:hover {
+      background-color: #43B02A;
+    }
 
-    <!-- Left -->
-    <div class="explore-text">
-      <div class="explore-eyebrow">EXPLORE CAREERS</div>
+    /* ===== Right (Iframe) ===== */
+    .campaign-right {
+      border-left: 3px solid #86BC25;
+      padding-left: 40px;
+    }
 
-      <h2 class="explore-title">探索你的潛能</h2>
+    /* Height auto by viewport/width ratio (no JS) */
+    .campaign-right iframe {
+      width: 100%;
+      border: none;
+      display: block;
+      aspect-ratio: 16 / 9;
+      height: auto;
+      min-height: 360px;
+      max-height: 70vh;
+    }
 
-      <p class="explore-subtitle">
-        探索你的潛能，不論你正準備起步，或已在職涯道路上穩健前行，<br>
-        我們為每一階段的你，都提供成長的機會與舞台。<br>
-        立即探索職涯機會。
-      </p>
+    /* ===== Mobile: Hide iframe, keep only button ===== */
+    @media (max-width: 768px) {
+      .campus-event-recruitment-campaign-content {
+        grid-template-columns: 1fr;
+        gap: 0;
+        margin-top: 0;
+      }
 
-      <a class="btn-visit" href="https://explore.deloitte.com/" target="_blank">
-        若無法顯示，請點此在新分頁開啟
-      </a>
+      .campaign-right {
+        display: none;
+      }
+    }
+  </style>
+
+  <div class="campus-event-recruitment-campaign-inner">
+
+    <div class="campus-event-recruitment-campaign-content">
+
+      <!-- Left -->
+      <div class="campaign-left">
+        <div class="explore-eyebrow">EXPLORE CAREERS</div>
+
+        <h2 class="explore-title">探索你的潛能</h2>
+
+        <p class="explore-subtitle">
+          探索你的潛能，不論你正準備起步，或已在職涯道路上穩健前行，<br>
+          我們為每一階段的你，都提供成長的機會與舞台。<br>
+          立即探索職涯機會。
+        </p>
+
+        <a class="btn-visit" href="https://explore.deloitte.com/" target="_blank" rel="noopener noreferrer">
+          若無法顯示，請點此在新分頁開啟
+        </a>
+      </div>
+
+      <!-- Right -->
+      <div class="campaign-right">
+        <iframe
+          src="https://explore.deloitte.com/"
+          allowfullscreen>
+        </iframe>
+      </div>
+
     </div>
-
-    <!-- Right (Desktop only) -->
-    <div class="embed-fullscreen">
-      <iframe src="https://explore.deloitte.com/" allowfullscreen></iframe>
-    </div>
-
   </div>
-</div>
+
+</section>
