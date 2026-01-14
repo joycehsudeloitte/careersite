@@ -1,0 +1,426 @@
+<section class="campus-event-recruitment-job-section">
+  <style>
+    /* ===== Section ===== */
+    .campus-event-recruitment-job-section {
+      width: 100%;
+      padding: 80px 0;
+      background-color: #f7f9f5;
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .campus-event-recruitment-job-inner {
+      width: 90%;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    /* ===== Two Column Layout ===== */
+    .campus-event-recruitment-job-content {
+      display: grid;
+      grid-template-columns: 2fr 3fr;
+      gap: 80px;
+      align-items: flex-start;
+    }
+
+    /* ===== Left ===== */
+    .job-left {
+      text-align: left;
+    }
+
+    .campus-event-recruitment-job-eyebrow {
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      color: #86BC25;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+    }
+
+    .campus-event-recruitment-job-title {
+      font-size: 32px;
+      font-weight: 700;
+      color: #000000;
+      margin: 0 0 16px 0;
+    }
+
+    .campus-event-recruitment-job-subtitle {
+      font-size: 16px;
+      color: #555555;
+      line-height: 1.7;
+      max-width: 520px;
+      margin: 0 0 24px 0;
+    }
+
+    /* ===== BU Buttons ===== */
+    .job-bu-buttons {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 12px;
+      margin-top: 12px;
+      max-width: 520px;
+    }
+
+    .job-bu-btn {
+      width: 100%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+
+      padding: 14px 16px;
+      border-radius: 12px;
+      border: 1px solid #dddddd;
+      background: #ffffff;
+      color: #000000;
+
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      text-align: left;
+    }
+
+    .job-bu-btn:focus {
+      outline: none;
+      border-color: #86BC25;
+      box-shadow: 0 0 0 3px rgba(134, 188, 37, 0.25);
+    }
+
+    .job-bu-btn.is-active {
+      border-color: #86BC25;
+      background: #000000;
+      color: #ffffff;
+    }
+
+    .job-bu-tag {
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      color: #86BC25;
+      text-transform: uppercase;
+    }
+
+    .job-bu-btn.is-active .job-bu-tag {
+      color: #86BC25;
+    }
+
+    /* ===== Right ===== */
+    .job-right {
+      border-left: 3px solid #86BC25;
+      padding-left: 40px;
+      min-height: 240px;
+    }
+
+    .job-right-head {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 18px;
+    }
+
+    .job-right-title {
+      margin: 0;
+      font-size: 18px;
+      font-weight: 700;
+      color: #000000;
+    }
+
+    .job-count {
+      font-size: 13px;
+      color: #555555;
+      margin: 0;
+      white-space: nowrap;
+    }
+
+    /* ===== Job Grid ===== */
+    .job-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .job-card {
+      background: #ffffff;
+      border: 1px solid #e6e6e6;
+      border-radius: 14px;
+      padding: 16px;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .job-card-title {
+      margin: 0;
+      font-size: 16px;
+      font-weight: 700;
+      color: #000000;
+      line-height: 1.4;
+    }
+
+    .job-card-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      align-items: center;
+    }
+
+    .job-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 10px;
+      border-radius: 999px;
+      border: 1px solid #dddddd;
+      font-size: 12px;
+      color: #000000;
+      background: #ffffff;
+      width: fit-content;
+    }
+
+    .job-pill strong {
+      font-weight: 700;
+    }
+
+    .job-card-desc {
+      margin: 0;
+      font-size: 14px;
+      line-height: 1.6;
+      color: #555555;
+    }
+
+    .job-card-link {
+      margin-top: auto;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+
+      padding: 10px 12px;
+      border-radius: 10px;
+      border: 1px solid #86BC25;
+      color: #000000;
+      background: #ffffff;
+
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 700;
+      width: fit-content;
+    }
+
+    .job-card-link:focus {
+      outline: none;
+      box-shadow: 0 0 0 3px rgba(134, 188, 37, 0.25);
+    }
+
+    /* ===== Empty State ===== */
+    .job-empty {
+      padding: 18px;
+      border: 1px dashed #cccccc;
+      border-radius: 14px;
+      background: #ffffff;
+      color: #555555;
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    /* ===== Mobile ===== */
+    @media (max-width: 1024px) {
+      .job-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .campus-event-recruitment-job-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+
+      .job-right {
+        border-left: none;
+        padding-left: 0;
+        border-top: 3px solid #86BC25;
+        padding-top: 24px;
+      }
+    }
+  </style>
+
+  <div class="campus-event-recruitment-job-inner">
+    <div class="campus-event-recruitment-job-content">
+      <!-- Left -->
+      <div class="job-left">
+        <div class="campus-event-recruitment-job-eyebrow">FEATURED POSITIONS</div>
+
+        <h2 class="campus-event-recruitment-job-title">精選職缺</h2>
+
+        <p class="campus-event-recruitment-job-subtitle">
+          點選以下列表查看更多精選職缺
+        </p>
+
+        <div class="job-bu-buttons" role="tablist" aria-label="Business Unit Tabs">
+          <button class="job-bu-btn is-active" type="button" role="tab" aria-selected="true" data-bu="audit">
+            <span>審計與確信服務</span>
+            <span class="job-bu-tag">Audit</span>
+          </button>
+
+          <button class="job-bu-btn" type="button" role="tab" aria-selected="false" data-bu="tax">
+            <span>稅務與法律服務</span>
+            <span class="job-bu-tag">Tax & Legal</span>
+          </button>
+
+          <button class="job-bu-btn" type="button" role="tab" aria-selected="false" data-bu="risk">
+            <span>風險諮詢服務</span>
+            <span class="job-bu-tag">Risk</span>
+          </button>
+
+          <button class="job-bu-btn" type="button" role="tab" aria-selected="false" data-bu="tt">
+            <span>科技與轉型服務</span>
+            <span class="job-bu-tag">Tech & Transform</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Right -->
+      <div class="job-right">
+        <div class="job-right-head">
+          <h3 class="job-right-title" id="jobPanelTitle">審計與確信服務職缺</h3>
+          <p class="job-count" id="jobCount">0 roles</p>
+        </div>
+
+        <div id="jobGrid" class="job-grid" aria-live="polite"></div>
+
+        <div id="jobEmpty" class="job-empty" style="display:none;">
+          無可顯示職缺。可於下方資料結構新增職缺項目。
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const buButtons = Array.from(document.querySelectorAll(".job-bu-btn"));
+      const jobGrid = document.getElementById("jobGrid");
+      const jobEmpty = document.getElementById("jobEmpty");
+      const jobCount = document.getElementById("jobCount");
+      const jobPanelTitle = document.getElementById("jobPanelTitle");
+
+      const buTitleMap = {
+        audit: "審計與確信服務職缺",
+        tax: "稅務與法律服務職缺",
+        risk: "風險諮詢服務職缺",
+        tt: "科技與轉型服務職缺",
+      };
+
+      const jobData = {
+        audit: [
+          {
+            title: "審計與確信及電腦審計專員",
+            location: "台北",
+            desc: "參與審計與確信案件流程，執行查核程序與文件整理。",
+            url: "https://example.com/job/audit-1",
+          },
+          {
+            title: "審計忙季實習生",
+            location: "台北",
+            desc: "忙季期間參與專案任務，依指派完成資料彙整與底稿協助。",
+            url: "https://example.com/job/audit-intern",
+          },
+        ],
+        tax: [
+          {
+            title: "稅務顧問",
+            location: "台北",
+            desc: "協助稅務規劃與申報資料準備，支援專案交付。",
+            url: "https://example.com/job/tax-1",
+          },
+        ],
+        risk: [
+          {
+            title: "風險諮詢顧問",
+            location: "台北",
+            desc: "協助風險評估、內控流程盤點與改善建議產出。",
+            url: "https://example.com/job/risk-1",
+          },
+        ],
+        tt: [
+          {
+            title: "科技與轉型顧問",
+            location: "台北",
+            desc: "支援轉型專案需求分析、流程設計與系統導入協作。",
+            url: "https://example.com/job/tt-1",
+          },
+        ],
+      };
+
+      function escapeHtml(str) {
+        return String(str)
+          .replaceAll("&", "&amp;")
+          .replaceAll("<", "&lt;")
+          .replaceAll(">", "&gt;")
+          .replaceAll('"', "&quot;")
+          .replaceAll("'", "&#039;");
+      }
+
+      function renderJobs(buKey) {
+        const jobs = jobData[buKey] || [];
+        jobGrid.innerHTML = "";
+
+        jobPanelTitle.textContent = buTitleMap[buKey] || "職缺";
+        jobCount.textContent = `${jobs.length} roles`;
+
+        if (!jobs.length) {
+          jobEmpty.style.display = "block";
+          return;
+        }
+        jobEmpty.style.display = "none";
+
+        const cardsHtml = jobs
+          .map((j) => {
+            const title = escapeHtml(j.title || "");
+            const location = escapeHtml(j.location || "");
+            const desc = escapeHtml(j.desc || "");
+            const url = escapeHtml(j.url || "#");
+
+            return `
+              <div class="job-card">
+                <h4 class="job-card-title">${title}</h4>
+
+                <div class="job-card-meta">
+                  <span class="job-pill"><strong>地點</strong> ${location}</span>
+                </div>
+
+                <p class="job-card-desc">${desc}</p>
+
+                <a class="job-card-link" href="${url}" target="_blank" rel="noopener noreferrer">
+                  查看職缺
+                </a>
+              </div>
+            `;
+          })
+          .join("");
+
+        jobGrid.innerHTML = cardsHtml;
+      }
+
+      function setActiveButton(activeBtn) {
+        buButtons.forEach((btn) => {
+          const isActive = btn === activeBtn;
+          btn.classList.toggle("is-active", isActive);
+          btn.setAttribute("aria-selected", isActive ? "true" : "false");
+        });
+      }
+
+      buButtons.forEach((btn) => {
+        btn.addEventListener("click", function () {
+          const buKey = btn.getAttribute("data-bu");
+          setActiveButton(btn);
+          renderJobs(buKey);
+        });
+      });
+
+      renderJobs("audit");
+    });
+  </script>
+</section>
