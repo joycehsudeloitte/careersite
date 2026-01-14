@@ -4,11 +4,11 @@
     <!-- 人物卡片 #1 -->
     <article class="mq-card">
       <figure class="mq-avatar">
-        <img src="https://raw.githubusercontent.com/joycehsudeloitte/careersite/main/images/Yao%20Spencer.jpg" alt="姚勝雄 Spencer Yao 資深會計師">
+        <img src="https://raw.githubusercontent.com/joycehsudeloitte/careersite/main/images/Profile/Yao%20Spencer.jpg" alt="姚勝雄 Spencer Yao 資深會計師">
       </figure>
       <blockquote class="mq-quote"
-        data-zh="加入Deloitte JSG你有機會接觸日商經營管理，或伴隨著台商赴日投資一同前往日本提供服務，無論審計或顧問服務，你將有機會與我們立足台灣、放眼國際。"
-        data-ja="Deloitte Taiwan JSG に加わることで、日系企業の経営管理案件に携わる機会に加え、日本への投資を行う台湾企業に伴走し、現地でサービスを提供する機会が得られます。監査・アドバイザリーのいずれにおいても、台湾に根ざしつつ、国際的な視野で活躍していただけます。"
+        data-zh="「加入Deloitte JSG你有機會接觸日商經營管理，或伴隨著台商赴日投資一同前往日本提供服務，無論審計或顧問服務，你將有機會與我們立足台灣、放眼國際。」"
+        data-ja="「Deloitte Taiwan JSG に加わることで、日系企業の経営管理案件に携わる機会に加え、日本への投資を行う台湾企業に伴走し、現地でサービスを提供する機会が得られます。監査・アドバイザリーのいずれにおいても、台湾に根ざしつつ、国際的な視野で活躍していただけます。」"
       </blockquote>
       <p class="mq-name">姚勝雄 Spencer Yao｜資深會計師</p>
     </article>
