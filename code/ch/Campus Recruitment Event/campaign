@@ -46,7 +46,7 @@
       grid-template-columns: 2fr 3fr;
       gap: 80px;
       align-items: flex-start;
-      margin-top: 60px;
+      margin-top: 40px;
     }
 
     /* ===== Left ===== */
@@ -196,9 +196,7 @@
   </style>
 
   <div class="campus-event-recruitment-campaign-inner">
-
     <div class="campus-event-recruitment-campaign-content">
-
       <!-- Left -->
       <div class="campaign-left">
     <div class="campus-event-recruitment-campaign-eyebrow">
@@ -248,10 +246,10 @@
               <!-- Item 3 -->
               <div class="campaign-carousel-item">
                 <div class="campaign-carousel-image">
-                  <img src="YOUR_IMAGE_2.jpg" alt="2026 Deloitte Seeds Program">
+                  <img src="YOUR_IMAGE_2.jpg" alt="Deloitte Seeds Program">
                 </div>
                 <div class="campaign-carousel-eyebrow">CONSULTING BUSINESSES (T&amp;T, SR&amp;T)</div>
-                <div class="campaign-carousel-title">2026 Deloitte Seeds Program</div>
+                <div class="campaign-carousel-title">Deloitte Seeds Program</div>
                 <div class="campaign-carousel-desc">
                   為在校學生設計的培育計畫，透過訓練與輪調探索未來職涯方向。
                 </div>
