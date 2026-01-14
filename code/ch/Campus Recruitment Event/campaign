@@ -43,7 +43,7 @@
     /* ===== Two Column Layout ===== */
     .campus-event-recruitment-campaign-content {
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 2fr 3fr;
       gap: 80px;
       align-items: flex-start;
       margin-top: 60px;
