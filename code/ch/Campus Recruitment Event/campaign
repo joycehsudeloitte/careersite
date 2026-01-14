@@ -98,9 +98,19 @@
       display: block;
     }
 
+    /* ===== Card Eyebrow ===== */
+    .campaign-carousel-eyebrow {
+      margin-top: 14px;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      color: #86BC25;
+      text-transform: uppercase;
+    }
+
     /* ===== Text ===== */
     .campaign-carousel-title {
-      margin-top: 16px;
+      margin-top: 10px;
       font-size: 20px;
       font-weight: 600;
       color: #000000;
@@ -134,6 +144,11 @@
       display: flex;
       align-items: center;
       justify-content: center;
+    }
+
+    .carousel-btn:focus {
+      outline: none;
+      border-color: #86BC25;
     }
 
     .campaign-carousel-dots {
@@ -210,9 +225,10 @@
               <!-- Item 1 -->
               <div class="campaign-carousel-item">
                 <div class="campaign-carousel-image">
-                  <img src="YOUR_IMAGE_1.jpg" alt="忙季實習生">
+                  <img src="YOUR_IMAGE_1.jpg" alt="審計與確信及電腦審計專員">
                 </div>
-                <div class="campaign-carousel-title">忙季實習生</div>
+                <div class="campaign-carousel-eyebrow">AUDIT & ASSURANCE</div>
+                <div class="campaign-carousel-title">審計與確信及電腦審計專員</div>
                 <div class="campaign-carousel-desc">
                   於忙季期間參與實務專案，了解專業服務流程與實際工作內容。
                 </div>
@@ -221,9 +237,22 @@
               <!-- Item 2 -->
               <div class="campaign-carousel-item">
                 <div class="campaign-carousel-image">
-                  <img src="YOUR_IMAGE_2.jpg" alt="Seeds Program">
+                  <img src="YOUR_IMAGE_1.jpg" alt="審計忙季實習生">
                 </div>
-                <div class="campaign-carousel-title">Seeds Program</div>
+                <div class="campaign-carousel-eyebrow">AUDIT & ASSURANCE</div>
+                <div class="campaign-carousel-title">審計忙季實習生</div>
+                <div class="campaign-carousel-desc">
+                  於忙季期間參與實務專案，了解專業服務流程與實際工作內容。
+                </div>
+              </div>
+
+              <!-- Item 3 -->
+              <div class="campaign-carousel-item">
+                <div class="campaign-carousel-image">
+                  <img src="YOUR_IMAGE_2.jpg" alt="2026 Deloitte Seeds Program">
+                </div>
+                <div class="campaign-carousel-eyebrow">CONSULTING BUSINESSES (T&amp;T, SR&amp;T)</div>
+                <div class="campaign-carousel-title">2026 Deloitte Seeds Program</div>
                 <div class="campaign-carousel-desc">
                   為在校學生設計的培育計畫，透過訓練與輪調探索未來職涯方向。
                 </div>
@@ -234,14 +263,9 @@
 
           <!-- Bottom controls -->
           <div class="campaign-carousel-bottom">
-            <button class="carousel-btn prev" type="button">‹</button>
-
-            <div class="campaign-carousel-dots">
-              <button class="campaign-dot is-active" type="button"></button>
-              <button class="campaign-dot" type="button"></button>
-            </div>
-
-            <button class="carousel-btn next" type="button">›</button>
+            <button class="carousel-btn prev" type="button" aria-label="Previous">‹</button>
+            <div class="campaign-carousel-dots"></div>
+            <button class="carousel-btn next" type="button" aria-label="Next">›</button>
           </div>
 
         </div>
@@ -257,37 +281,65 @@
       const items = document.querySelectorAll(".campaign-carousel-item");
       const prevBtn = document.querySelector(".carousel-btn.prev");
       const nextBtn = document.querySelector(".carousel-btn.next");
-      const dots = document.querySelectorAll(".campaign-dot");
+      const dotsWrap = document.querySelector(".campaign-carousel-dots");
 
       let index = 0;
       const gap = 24;
-      const itemWidth = items[0].offsetWidth + gap;
+      const total = items.length;
 
-      function updateCarousel() {
-        track.style.transform = `translateX(-${index * itemWidth}px)`;
-        dots.forEach((d, i) =>
-          d.classList.toggle("is-active", i === index)
-        );
+      function getItemWidth() {
+        if (!items.length) return 0;
+        return items[0].offsetWidth + gap;
       }
 
-      prevBtn.addEventListener("click", function () {
-        index = Math.max(index - 1, 0);
-        updateCarousel();
-      });
+      function buildDots() {
+        if (!dotsWrap) return;
+        dotsWrap.innerHTML = "";
+        for (let i = 0; i < total; i++) {
+          const btn = document.createElement("button");
+          btn.type = "button";
+          btn.className = "campaign-dot" + (i === 0 ? " is-active" : "");
+          btn.setAttribute("aria-label", `Go to slide ${i + 1}`);
+          btn.addEventListener("click", function () {
+            index = i;
+            updateCarousel();
+          });
+          dotsWrap.appendChild(btn);
+        }
+      }
 
-      nextBtn.addEventListener("click", function () {
-        index = Math.min(index + 1, items.length - 1);
-        updateCarousel();
-      });
-
-      dots.forEach((dot, i) => {
-        dot.addEventListener("click", function () {
-          index = i;
-          updateCarousel();
+      function updateDots() {
+        const dots = dotsWrap ? dotsWrap.querySelectorAll(".campaign-dot") : [];
+        dots.forEach((d, i) => {
+          d.classList.toggle("is-active", i === index);
         });
-      });
+      }
 
+      function updateCarousel() {
+        const itemWidth = getItemWidth();
+        track.style.transform = `translateX(-${index * itemWidth}px)`;
+        updateDots();
+      }
+
+      function next() {
+        index = (index + 1) % total;
+        updateCarousel();
+      }
+
+      function prev() {
+        index = (index - 1 + total) % total;
+        updateCarousel();
+      }
+
+      nextBtn.addEventListener("click", next);
+      prevBtn.addEventListener("click", prev);
+
+      buildDots();
       updateCarousel();
+
+      window.addEventListener("resize", function () {
+        updateCarousel();
+      });
     });
   </script>
 
