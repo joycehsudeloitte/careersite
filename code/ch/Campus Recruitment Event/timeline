@@ -133,20 +133,20 @@
       </div>
 
       <div class="campus-event-recruitment-horizontal-item fade-item">
+        <div class="campus-event-recruitment-horizontal-circle">03/20</div>
+        <div class="campus-event-recruitment-horizontal-text">
+          政治大學
+        </div>
+      </div>
+
+      <div class="campus-event-recruitment-horizontal-item fade-item">
         <div class="campus-event-recruitment-horizontal-circle">03/22</div>
         <div class="campus-event-recruitment-horizontal-text">
           中央大學
         </div>
       </div>
 
-      <div class="campus-event-recruitment-horizontal-item fade-item">
-        <div class="campus-event-recruitment-horizontal-circle">05/06</div>
-        <div class="campus-event-recruitment-horizontal-text">
-          輔仁大學
-        </div>
-      </div>
-
-      <div class="campus-event-recruitment-horizontal-item fade-item">
+<div class="campus-event-recruitment-horizontal-item fade-item">
         <div class="campus-event-recruitment-horizontal-circle">05/08</div>
         <div class="campus-event-recruitment-horizontal-text">
           東華大學
