@@ -52,7 +52,7 @@
       margin: 0 0 24px 0;
     }
 
-    /* ===== BU Buttons ===== */
+    /* ===== BU Buttons (Grid) ===== */
     .job-bu-buttons {
       display: grid;
       grid-template-columns: 1fr;
@@ -63,9 +63,9 @@
 
     .job-bu-btn {
       width: 100%;
-      display: inline-flex;
+      display: grid;
+      grid-template-columns: 1fr auto;
       align-items: center;
-      justify-content: space-between;
       gap: 12px;
 
       padding: 14px 16px;
@@ -78,6 +78,7 @@
       font-weight: 600;
       cursor: pointer;
       text-align: left;
+      box-sizing: border-box;
     }
 
     .job-bu-btn:focus {
@@ -92,12 +93,20 @@
       color: #ffffff;
     }
 
+    .job-bu-btn > span:first-child {
+      min-width: 0;
+      line-height: 1.35;
+    }
+
     .job-bu-tag {
       font-size: 12px;
       font-weight: 700;
       letter-spacing: 0.12em;
       color: #86BC25;
       text-transform: uppercase;
+      text-align: right;
+      white-space: nowrap;
+      line-height: 1.2;
     }
 
     .job-bu-btn.is-active .job-bu-tag {
@@ -256,28 +265,33 @@
         <h2 class="campus-event-recruitment-job-title">精選職缺</h2>
 
         <p class="campus-event-recruitment-job-subtitle">
-          點選以下列表查看更多精選職缺
+          點選以下列表了解更多職缺
         </p>
 
         <div class="job-bu-buttons" role="tablist" aria-label="Business Unit Tabs">
           <button class="job-bu-btn is-active" type="button" role="tab" aria-selected="true" data-bu="audit">
-            <span>審計與確信服務</span>
-            <span class="job-bu-tag">Audit</span>
+            <span>審計與確信諮詢服務</span>
+            <span class="job-bu-tag">Audit &amp; Assurance</span>
           </button>
 
           <button class="job-bu-btn" type="button" role="tab" aria-selected="false" data-bu="tax">
             <span>稅務與法律服務</span>
-            <span class="job-bu-tag">Tax & Legal</span>
+            <span class="job-bu-tag">Tax &amp; Legal</span>
           </button>
 
           <button class="job-bu-btn" type="button" role="tab" aria-selected="false" data-bu="risk">
-            <span>風險諮詢服務</span>
-            <span class="job-bu-tag">Risk</span>
+            <span>策略、風險與交易服務</span>
+            <span class="job-bu-tag">Strategy, Risk &amp; Transactions</span>
           </button>
 
           <button class="job-bu-btn" type="button" role="tab" aria-selected="false" data-bu="tt">
             <span>科技與轉型服務</span>
-            <span class="job-bu-tag">Tech & Transform</span>
+            <span class="job-bu-tag">Technology &amp; Transformation</span>
+          </button>
+
+          <button class="job-bu-btn" type="button" role="tab" aria-selected="false" data-bu="ics">
+            <span>內部客戶服務</span>
+            <span class="job-bu-tag">Internal Client Service</span>
           </button>
         </div>
       </div>
@@ -285,7 +299,7 @@
       <!-- Right -->
       <div class="job-right">
         <div class="job-right-head">
-          <h3 class="job-right-title" id="jobPanelTitle">審計與確信服務職缺</h3>
+          <h3 class="job-right-title" id="jobPanelTitle">審計與確信諮詢服務職缺</h3>
           <p class="job-count" id="jobCount">0 roles</p>
         </div>
 
@@ -307,10 +321,11 @@
       const jobPanelTitle = document.getElementById("jobPanelTitle");
 
       const buTitleMap = {
-        audit: "審計與確信服務職缺",
+        audit: "審計與確信諮詢服務職缺",
         tax: "稅務與法律服務職缺",
-        risk: "風險諮詢服務職缺",
+        risk: "策略、風險與交易服務職缺",
         tt: "科技與轉型服務職缺",
+        ics: "內部客戶服務職缺",
       };
 
       const jobData = {
@@ -320,6 +335,12 @@
             location: "台北",
             desc: "參與審計與確信案件流程，執行查核程序與文件整理。",
             url: "https://example.com/job/audit-1",
+          },
+          {
+            title: "審計忙季實習生",
+            location: "台北",
+            desc: "忙季期間參與專案任務，依指派完成資料彙整與底稿協助。",
+            url: "https://example.com/job/audit-intern",
           },
           {
             title: "審計忙季實習生",
@@ -350,6 +371,14 @@
             location: "台北",
             desc: "支援轉型專案需求分析、流程設計與系統導入協作。",
             url: "https://example.com/job/tt-1",
+          },
+        ],
+        ics: [
+          {
+            title: "Internal Client Service - Role Title",
+            location: "台北",
+            desc: "內部支援職能職缺簡介。",
+            url: "https://example.com/job/ics-1",
           },
         ],
       };
