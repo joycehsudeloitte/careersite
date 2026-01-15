@@ -1,0 +1,351 @@
+<!-- JSG 人物介紹 / Quote 區塊（標題在上、三人並排、圓形頭像、中日切換） -->
+<section class="JSG-quote">
+
+  <style>
+    :root{
+      --brand:#86BC25;
+      --bg:#f5f5f5;
+      --white:#ffffff;
+      --text:#111111;
+      --muted:#555555;
+      --line:#dddddd;
+    }
+
+    /* ===== Section ===== */
+    .JSG-quote{
+      width:100%;
+      padding:80px 0;
+      background-color:var(--bg);
+      box-sizing:border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .JSG-quote-inner{
+      width:90%;
+      max-width:1400px;
+      margin:0 auto;
+      box-sizing:border-box;
+    }
+
+    /* ===== Header ===== */
+    .JSG-quote-eyebrow{
+      font-size:14px;
+      font-weight:600;
+      letter-spacing:0.12em;
+      color:var(--brand);
+      margin-bottom:10px;
+      text-transform:uppercase;
+    }
+
+    .JSG-quote-title{
+      font-size:32px;
+      font-weight:700;
+      color:var(--brand);
+      margin:0 0 16px;
+    }
+
+    .JSG-quote-subtitle{
+      font-size:16px;
+      color:var(--muted);
+      line-height:1.7;
+      max-width:720px;
+      margin:0;
+    }
+
+    .mentor-header{
+      margin-bottom:28px;
+    }
+
+    /* ===== Language Toggle ===== */
+    .mentor-langbar{
+      display:flex;
+      justify-content:flex-end;
+      align-items:center;
+      gap:10px;
+      margin:0 0 18px;
+    }
+
+    .mentor-lang-label{
+      font-size:12px;
+      letter-spacing:0.08em;
+      color:var(--muted);
+      text-transform:uppercase;
+    }
+
+    .mentor-lang-btn{
+      height:36px;
+      padding:0 14px;
+      border-radius:999px;
+      border:1px solid var(--line);
+      background:var(--white);
+      font-size:13px;
+      font-weight:600;
+      cursor:pointer;
+    }
+
+    .mentor-lang-btn.is-active{
+      background:var(--brand);
+      border-color:var(--brand);
+      color:#ffffff;
+    }
+
+    .mentor-lang-btn:focus{
+      outline:none;
+      border-color:var(--brand);
+    }
+
+    /* ===== Cards: 3 columns ===== */
+    .mentor-cards{
+      display:grid;
+      grid-template-columns:repeat(3, minmax(0, 1fr));
+      gap:24px;
+      align-items:start;
+    }
+
+    /* ===== Card ===== */
+    .mentor-card{
+      background:var(--white);
+      border:1px solid var(--line);
+      border-radius:14px;
+      padding:18px 16px;
+      box-sizing:border-box;
+      display:flex;
+      flex-direction:column;
+      gap:12px;
+    }
+
+    /* ===== Avatar + Name block (stacked, centered) ===== */
+    .mentor-figure{
+      margin:0;
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      gap:10px;
+    }
+
+    .mentor-avatar{
+      width:120px;
+      height:120px;
+      border-radius:50%;
+      overflow:hidden;
+      border:3px solid var(--brand);
+      box-sizing:border-box;
+      background:#eaeaea;
+    }
+
+    .mentor-avatar img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .mentor-nameblock{
+      width:100%;
+      text-align:center;
+      line-height:1.35;
+    }
+
+    .mentor-name-zh{
+      font-size:14px;
+      font-weight:700;
+      color:var(--text);
+      margin:0;
+    }
+
+    .mentor-name-ja{
+      font-size:13px;
+      font-weight:700;
+      color:var(--text);
+      margin:4px 0 0;
+    }
+
+    .mentor-title-zh{
+      font-size:12px;
+      color:var(--muted);
+      margin:6px 0 0;
+    }
+
+    .mentor-title-ja{
+      font-size:12px;
+      color:var(--muted);
+      margin:4px 0 0;
+    }
+
+    /* ===== Quote ===== */
+    .mentor-quote{
+      margin:0;
+      padding:10px 10px 10px 14px;
+      border-left:3px solid var(--brand);
+      box-sizing:border-box;
+    }
+
+    .mentor-quote-text{
+      margin:0;
+      font-size:15px;
+      line-height:1.8;
+      color:var(--text);
+      transition:opacity 0.2s ease, transform 0.2s ease;
+      will-change: opacity, transform;
+    }
+
+    .mentor-quote-text.is-out{
+      opacity:0;
+      transform:translateY(4px);
+    }
+
+    /* ===== Responsive ===== */
+    @media (max-width: 900px){
+      .mentor-langbar{
+        justify-content:flex-start;
+      }
+      .mentor-cards{
+        grid-template-columns:repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 520px){
+      .mentor-cards{
+        grid-template-columns:1fr;
+      }
+      .mentor-avatar{
+        width:88px;
+        height:88px;
+      }
+    }
+  </style>
+
+  <div class="JSG-quote-inner">
+
+    <!-- Header -->
+    <div class="mentor-header">
+      <div class="JSG-quote-eyebrow">人物介紹</div>
+      <h2 class="JSG-quote-title">人物介紹</h2>
+      <p class="JSG-quote-subtitle">
+        提供 JSG 團隊核心成員之經驗分享與職涯觀點。
+      </p>
+    </div>
+
+    <!-- Language Toggle -->
+    <div class="mentor-langbar" role="group" aria-label="Language toggle">
+      <span class="mentor-lang-label">Language</span>
+      <button class="mentor-lang-btn is-active" type="button" data-lang="zh" aria-pressed="true">中文</button>
+      <button class="mentor-lang-btn" type="button" data-lang="ja" aria-pressed="false">日本語</button>
+    </div>
+
+    <!-- Cards -->
+    <div class="mentor-cards">
+
+      <!-- Card 1 -->
+      <article class="mentor-card">
+        <figure class="mentor-figure">
+          <div class="mentor-avatar">
+            <img src="https://raw.githubusercontent.com/joycehsudeloitte/careersite/main/images/Profile/Yao%20Spencer.jpg" alt="姚勝雄 Spencer Yao">
+          </div>
+          <div class="mentor-nameblock">
+            <p class="mentor-name-zh">姚勝雄 Spencer Yao</p>
+            <p class="mentor-name-ja">姚 勝雄（ヤオ・ションション）Spencer Yao</p>
+            <p class="mentor-title-zh">資深會計師</p>
+            <p class="mentor-title-ja">シニア会計士</p>
+          </div>
+        </figure>
+
+        <blockquote class="mentor-quote">
+          <p class="mentor-quote-text"
+             data-zh="加入 Deloitte JSG 後，可參與跨國審計與顧問專案，累積跨國專案流程與交付經驗。"
+             data-ja="Deloitte JSG では、国際的な監査・アドバイザリー案件に参画し、プロジェクトの進行と成果物の提供を経験できます。">
+            加入 Deloitte JSG 後，可參與跨國審計與顧問專案，累積跨國專案流程與交付經驗。
+          </p>
+        </blockquote>
+      </article>
+
+      <!-- Card 2 -->
+      <article class="mentor-card">
+        <figure class="mentor-figure">
+          <div class="mentor-avatar">
+            <img src="https://raw.githubusercontent.com/joycehsudeloitte/careersite/main/images/Hiromitsu%20Harada.jpg" alt="原田 浩光 Hiromitsu Harada">
+          </div>
+          <div class="mentor-nameblock">
+            <p class="mentor-name-zh">原田 浩光 Hiromitsu Harada</p>
+            <p class="mentor-name-ja">原田 浩光（はらだ ひろみつ）Hiromitsu Harada</p>
+            <p class="mentor-title-zh">資深執行副總經理</p>
+            <p class="mentor-title-ja">シニア執行副総経理</p>
+          </div>
+        </figure>
+
+        <blockquote class="mentor-quote">
+          <p class="mentor-quote-text"
+             data-zh="可透過專案分工、訓練與回饋機制，逐步建立可轉移的工作方法與產出節奏。"
+             data-ja="役割分担、研修、フィードバックの仕組みを通じて、再現可能な働き方とアウトプットの作り方を身につけられます。">
+            可透過專案分工、訓練與回饋機制，逐步建立可轉移的工作方法與產出節奏。
+          </p>
+        </blockquote>
+      </article>
+
+      <!-- Card 3 -->
+      <article class="mentor-card">
+        <figure class="mentor-figure">
+          <div class="mentor-avatar">
+            <img src="https://raw.githubusercontent.com/joycehsudeloitte/careersite/main/images/Haruhiko%20Kondo.jpg" alt="近藤 晴彥 Haruhiko Kondo">
+          </div>
+          <div class="mentor-nameblock">
+            <p class="mentor-name-zh">近藤 晴彥 Haruhiko Kondo</p>
+            <p class="mentor-name-ja">近藤 晴彥（こんどう はるひこ）Haruhiko Kondo</p>
+            <p class="mentor-title-zh">資深執行副總經理</p>
+            <p class="mentor-title-ja">シニア執行副総経理</p>
+          </div>
+        </figure>
+
+        <blockquote class="mentor-quote">
+          <p class="mentor-quote-text"
+             data-zh="建議以可量化的交付項目設定目標，並在固定節點回顧成果與下一步行動。"
+             data-ja="測定可能な成果物を目標に設定し、節目ごとに結果と次のアクションをレビューすることを勧めます。">
+            建議以可量化的交付項目設定目標，並在固定節點回顧成果與下一步行動。
+          </p>
+        </blockquote>
+      </article>
+
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const buttons = Array.from(document.querySelectorAll(".JSG-quote .mentor-lang-btn"));
+      const quotes = Array.from(document.querySelectorAll(".JSG-quote .mentor-quote-text"));
+      let current = "zh";
+
+      function setActive(lang){
+        buttons.forEach(b => {
+          const on = b.dataset.lang === lang;
+          b.classList.toggle("is-active", on);
+          b.setAttribute("aria-pressed", on ? "true" : "false");
+        });
+      }
+
+      function switchLang(lang){
+        quotes.forEach(q => q.classList.add("is-out"));
+
+        setTimeout(() => {
+          quotes.forEach(q => {
+            q.textContent = q.dataset[lang] || q.textContent;
+            q.classList.remove("is-out");
+          });
+        }, 200);
+
+        setActive(lang);
+        current = lang;
+      }
+
+      buttons.forEach(btn => {
+        btn.addEventListener("click", () => {
+          const lang = btn.dataset.lang;
+          if (!lang || lang === current) return;
+          switchLang(lang);
+        });
+      });
+
+      setActive("zh");
+    });
+  </script>
+
+</section>
