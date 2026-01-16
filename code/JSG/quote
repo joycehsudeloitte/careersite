@@ -219,10 +219,12 @@
 
     <!-- Header -->
     <div class="mentor-header">
-      <div class="JSG-quote-eyebrow">人物介紹</div>
-      <h2 class="JSG-quote-title">人物介紹</h2>
+      <div class="JSG-quote-eyebrow">私たちのチーム</div>
+      <h2 class="JSG-quote-title">我們的團隊</h2>
       <p class="JSG-quote-subtitle">
-        提供 JSG 團隊核心成員之經驗分享與職涯觀點。
+        歡迎加入 JSG 團隊，這裡有來自審計、稅務與顧問服務等不同領域的夥伴，與你分享服務日商客戶的實務經驗。
+        <br>JSGチームへようこそ。<br>
+       監査・税務・アドバイザリーサービスなど、さまざまな分野のメンバーが在籍し、日系企業向けサービスの実務経験を共有しています。
       </p>
     </div>
 
@@ -244,7 +246,6 @@
           </div>
           <div class="mentor-nameblock">
             <p class="mentor-name-zh">姚勝雄 Spencer Yao</p>
-            <p class="mentor-name-ja">姚 勝雄（ヤオ・ションション）Spencer Yao</p>
             <p class="mentor-title-zh">資深會計師</p>
             <p class="mentor-title-ja">シニア会計士</p>
           </div>
@@ -252,8 +253,8 @@
 
         <blockquote class="mentor-quote">
           <p class="mentor-quote-text"
-             data-zh="加入 Deloitte JSG 後，可參與跨國審計與顧問專案，累積跨國專案流程與交付經驗。"
-             data-ja="Deloitte JSG では、国際的な監査・アドバイザリー案件に参画し、プロジェクトの進行と成果物の提供を経験できます。">
+             data-zh="加入Deloitte JSG你有機會接觸日商經營管理，或伴隨著台商赴日投資一同前往日本提供服務，無論審計或顧問服務，你將有機會與我們立足台灣、放眼國際。"
+             data-ja="Deloitte Taiwan JSG に加わることで、日系企業の経営管理案件に携わる機会に加え、日本への投資を行う台湾企業に伴走し、現地でサービスを提供する機会が得られます。監査・アドバイザリーのいずれにおいても、台湾に根ざしつつ、国際的な視野で活躍していただけます。">
             加入 Deloitte JSG 後，可參與跨國審計與顧問專案，累積跨國專案流程與交付經驗。
           </p>
         </blockquote>
@@ -263,11 +264,10 @@
       <article class="mentor-card">
         <figure class="mentor-figure">
           <div class="mentor-avatar">
-            <img src="https://raw.githubusercontent.com/joycehsudeloitte/careersite/main/images/Hiromitsu%20Harada.jpg" alt="原田 浩光 Hiromitsu Harada">
+            <img src="https://raw.githubusercontent.com/joycehsudeloitte/careersite/main/images/Profile/Hiromitsu%20Harada.jpg" alt="原田 浩光 Hiromitsu Harada">
           </div>
           <div class="mentor-nameblock">
             <p class="mentor-name-zh">原田 浩光 Hiromitsu Harada</p>
-            <p class="mentor-name-ja">原田 浩光（はらだ ひろみつ）Hiromitsu Harada</p>
             <p class="mentor-title-zh">資深執行副總經理</p>
             <p class="mentor-title-ja">シニア執行副総経理</p>
           </div>
@@ -286,11 +286,10 @@
       <article class="mentor-card">
         <figure class="mentor-figure">
           <div class="mentor-avatar">
-            <img src="https://raw.githubusercontent.com/joycehsudeloitte/careersite/main/images/Haruhiko%20Kondo.jpg" alt="近藤 晴彥 Haruhiko Kondo">
+            <img src="https://raw.githubusercontent.com/joycehsudeloitte/careersite/main/images/Profile/Haruhiko%20Kondo.jpg" alt="近藤 晴彥 Haruhiko Kondo">
           </div>
           <div class="mentor-nameblock">
             <p class="mentor-name-zh">近藤 晴彥 Haruhiko Kondo</p>
-            <p class="mentor-name-ja">近藤 晴彥（こんどう はるひこ）Haruhiko Kondo</p>
             <p class="mentor-title-zh">資深執行副總經理</p>
             <p class="mentor-title-ja">シニア執行副総経理</p>
           </div>
