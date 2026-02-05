@@ -1,11 +1,24 @@
 <section class="campus-event-recruitment-timeline-section">
 
   <style>
-    /* ===== Section ===== */
+    /* =========================================
+       1. 基礎設定 & 企業色變數
+       ========================================= */
+    :root {
+      --brand-primary: #86BC25;      /* 企業主色 */
+      --brand-dark: #046A38;         /* 輔助深綠 (用於文字強調) */
+      --brand-grey: #d1d1d1;         /* 已結束灰色 */
+      --bg-grey-light: #f7f9f5;      /* 圓圈背景淡色 */
+      --text-main: #000000;
+      --text-sub: #555555;
+    }
+
     .campus-event-recruitment-timeline-section {
       width: 100%;
       padding: 80px 0;
       background-color: #ffffff;
+      font-family: "Segoe UI", "Microsoft JhengHei", sans-serif;
+      box-sizing: border-box;
     }
 
     .campus-event-recruitment-timeline-inner {
@@ -15,90 +28,179 @@
       text-align: left;
     }
 
-    /* ===== Header ===== */
+    /* =========================================
+       2. 標題區域
+       ========================================= */
     .campus-event-recruitment-timeline-eyebrow {
       font-size: 14px;
       font-weight: 600;
       letter-spacing: 0.12em;
-      color: #86BC25;
+      color: var(--brand-primary);
       margin-bottom: 10px;
+      text-transform: uppercase;
     }
 
     .campus-event-recruitment-timeline-title {
       font-size: 32px;
       font-weight: 700;
-      color: #86BC25;
+      color: var(--text-main);
       margin-bottom: 12px;
+      margin-top: 0;
     }
 
     .campus-event-recruitment-timeline-subtitle {
       font-size: 16px;
-      color: #555555;
+      color: var(--text-sub);
       margin-bottom: 60px;
       line-height: 1.7;
     }
 
-    /* ===== Horizontal Timeline ===== */
+    /* =========================================
+       3. 核心時間軸樣式 (Desktop 預設)
+       ========================================= */
     .campus-event-recruitment-horizontal-timeline {
       display: flex;
       justify-content: space-between;
       align-items: flex-start;
       margin-top: 40px;
+      gap: 20px;
     }
 
-    /* Item */
     .campus-event-recruitment-horizontal-item {
-      width: calc(100% / 6);
+      flex: 1;
       text-align: center;
+      position: relative;
     }
 
-    /* Circle */
+    /* 圓圈樣式 - 更新為垂直置中排列 */
     .campus-event-recruitment-horizontal-circle {
-      width: 150px;
-      height: 150px;
+      width: 140px;
+      height: 140px;
       margin: 0 auto;
       border-radius: 50%;
-      border: 8px solid #86BC25;
-      background-color: #f7f9f5;
+      border: 6px solid var(--brand-primary);
+      background-color: var(--bg-grey-light);
       display: flex;
+      flex-direction: column; /* 讓日期與星期垂直排列 */
       align-items: center;
       justify-content: center;
-      font-size: 20px;
-      font-weight: 800;
-      color: #000000;
+      font-size: 24px; /* 日期字體 */
+      font-weight: 800; /* 日期字重 */
+      color: var(--text-main);
+      transition: all 0.4s ease;
+      position: relative;
+      line-height: 1.1;
     }
 
-    /* Text */
+    /* 星期幾的文字樣式 */
+    .weekday-label {
+      font-size: 18px;  /* 字體大小 */
+      font-weight: 800; /* 改為 800，與上方日期一致 */
+      margin-top: 4px;
+      color: var(--text-main); /* 顏色改為深色，讓視覺比重一致 */
+    }
+
+    /* 文字與攤位 */
     .campus-event-recruitment-horizontal-text {
-      margin-top: 16px;
-      font-size: 20px;
-      color: #000000;
-      line-height: 1.4;
+      margin-top: 20px;
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--text-main);
+      line-height: 1.5;
     }
 
-    /* ===== Fade In ===== */
+    .booth-number {
+      display: inline-block;
+      margin-top: 8px;
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--brand-dark);
+      background-color: #f0f8f0;
+      padding: 4px 12px;
+      border-radius: 20px;
+    }
+
+    /* =========================================
+       4. 狀態：已結束 (.is-past)
+       ========================================= */
+    .campus-event-recruitment-horizontal-item.is-past .campus-event-recruitment-horizontal-circle {
+      border-color: var(--brand-grey);
+      background-color: #f0f0f0;
+      color: #999;
+    }
+    
+    .campus-event-recruitment-horizontal-item.is-past .weekday-label {
+      color: #999; /* 已結束時星期幾也變灰 */
+    }
+
+    .campus-event-recruitment-horizontal-item.is-past .campus-event-recruitment-horizontal-circle::after {
+      content: "已結束";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) rotate(-15deg);
+      background-color: rgba(100, 100, 100, 0.7);
+      color: #fff;
+      font-size: 14px;
+      padding: 4px 10px;
+      border-radius: 4px;
+      white-space: nowrap;
+      z-index: 10;
+    }
+
+    .campus-event-recruitment-horizontal-item.is-past .booth-number {
+      background-color: #f0f0f0;
+      color: #999;
+    }
+
+    /* =========================================
+       5. 手機版樣式 (RWD) - 垂直置中無連線
+       ========================================= */
+    @media (max-width: 768px) {
+      .campus-event-recruitment-horizontal-timeline {
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+      }
+
+      .campus-event-recruitment-horizontal-item {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 0;
+      }
+
+      .campus-event-recruitment-horizontal-item::before {
+        display: none;
+      }
+
+      .campus-event-recruitment-horizontal-circle {
+        width: 120px;
+        height: 120px;
+        font-size: 20px;
+      }
+      
+      .weekday-label {
+        font-size: 16px;
+      }
+
+      .campus-event-recruitment-horizontal-text {
+        margin-top: 15px;
+        font-size: 20px;
+      }
+    }
+
+    /* =========================================
+       6. 進場動畫
+       ========================================= */
     .fade-item {
       opacity: 0;
-      transform: translateY(40px);
+      transform: translateY(30px);
       transition: opacity 0.8s ease, transform 0.8s ease;
     }
 
     .fade-item.is-visible {
       opacity: 1;
       transform: translateY(0);
-    }
-
-    /* ===== Mobile ===== */
-    @media (max-width: 768px) {
-      .campus-event-recruitment-horizontal-timeline {
-        flex-direction: column;
-        align-items: center;
-      }
-
-      .campus-event-recruitment-horizontal-item {
-        width: 100%;
-        margin-bottom: 40px;
-      }
     }
   </style>
 
@@ -109,47 +211,72 @@
     </div>
 
     <h2 class="campus-event-recruitment-timeline-title">
-      2026校園徵才博覽會
+      2026 校園徵才博覽會
     </h2>
 
     <p class="campus-event-recruitment-timeline-subtitle">
-      校園招募活動依照既定時程安排，依序進行校園徵才活動。
+      以下為各場次攤位資訊，歡迎大家來攤位與我們互動，期待相見。
     </p>
 
     <div class="campus-event-recruitment-horizontal-timeline">
 
-      <div class="campus-event-recruitment-horizontal-item fade-item">
-        <div class="campus-event-recruitment-horizontal-circle">03/07</div>
+      <div class="campus-event-recruitment-horizontal-item fade-item" data-date="2026-03-07">
+        <div class="campus-event-recruitment-horizontal-circle">
+          03/07
+          <span class="weekday-label">(六)</span>
+        </div>
         <div class="campus-event-recruitment-horizontal-text">
           台灣大學
+          <br>
+          <span class="booth-number">攤位 86、87</span>
         </div>
       </div>
 
-      <div class="campus-event-recruitment-horizontal-item fade-item">
-        <div class="campus-event-recruitment-horizontal-circle">03/11</div>
+      <div class="campus-event-recruitment-horizontal-item fade-item" data-date="2026-03-11">
+        <div class="campus-event-recruitment-horizontal-circle">
+          03/11
+          <span class="weekday-label">(三)</span>
+        </div>
         <div class="campus-event-recruitment-horizontal-text">
           台北大學
+          <br>
+          <span class="booth-number">TBC</span>
         </div>
       </div>
 
-      <div class="campus-event-recruitment-horizontal-item fade-item">
-        <div class="campus-event-recruitment-horizontal-circle">03/20</div>
+      <div class="campus-event-recruitment-horizontal-item fade-item" data-date="2026-03-20">
+        <div class="campus-event-recruitment-horizontal-circle">
+          03/20
+          <span class="weekday-label">(五)</span>
+        </div>
         <div class="campus-event-recruitment-horizontal-text">
           政治大學
+          <br>
+          <span class="booth-number">攤位 F2</span>
         </div>
       </div>
 
-      <div class="campus-event-recruitment-horizontal-item fade-item">
-        <div class="campus-event-recruitment-horizontal-circle">03/22</div>
+      <div class="campus-event-recruitment-horizontal-item fade-item" data-date="2026-03-22">
+        <div class="campus-event-recruitment-horizontal-circle">
+          03/22
+          <span class="weekday-label">(日)</span>
+        </div>
         <div class="campus-event-recruitment-horizontal-text">
           中央大學
+          <br>
+          <span class="booth-number">攤位 44</span>
         </div>
       </div>
 
-<div class="campus-event-recruitment-horizontal-item fade-item">
-        <div class="campus-event-recruitment-horizontal-circle">05/08</div>
+      <div class="campus-event-recruitment-horizontal-item fade-item" data-date="2026-05-08">
+        <div class="campus-event-recruitment-horizontal-circle">
+          05/08
+          <span class="weekday-label">(五)</span>
+        </div>
         <div class="campus-event-recruitment-horizontal-text">
           東華大學
+          <br>
+          <span class="booth-number">TBC</span>
         </div>
       </div>
 
@@ -159,6 +286,18 @@
   <script>
     document.addEventListener("DOMContentLoaded", function () {
       const items = document.querySelectorAll(".fade-item");
+      const today = new Date();
+      today.setHours(0, 0, 0, 0);
+
+      items.forEach(item => {
+        const dateString = item.getAttribute("data-date");
+        if (dateString) {
+          const eventDate = new Date(dateString);
+          if (eventDate < today) {
+            item.classList.add("is-past");
+          }
+        }
+      });
 
       const observer = new IntersectionObserver(
         entries => {
@@ -169,7 +308,7 @@
             }
           });
         },
-        { threshold: 0.2 }
+        { threshold: 0.15 }
       );
 
       items.forEach(item => observer.observe(item));
