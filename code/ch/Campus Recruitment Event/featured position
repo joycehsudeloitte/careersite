@@ -6,7 +6,7 @@
       padding: 80px 0;
       background-color: #f7f9f5;
       box-sizing: border-box;
-      font-family: Arial, Helvetica, sans-serif;
+      font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
     }
 
     .campus-event-recruitment-job-inner {
@@ -23,10 +23,8 @@
       align-items: flex-start;
     }
 
-    /* ===== Left ===== */
-    .job-left {
-      text-align: left;
-    }
+    /* ===== Left: Navigation ===== */
+    .job-left { text-align: left; }
 
     .campus-event-recruitment-job-eyebrow {
       font-size: 14px;
@@ -52,7 +50,7 @@
       margin: 0 0 24px 0;
     }
 
-    /* ===== BU Buttons (Grid) ===== */
+    /* ===== BU Buttons ===== */
     .job-bu-buttons {
       display: grid;
       grid-template-columns: 1fr;
@@ -67,57 +65,35 @@
       grid-template-columns: 1fr auto;
       align-items: center;
       gap: 12px;
-
       padding: 14px 16px;
       border-radius: 12px;
       border: 1px solid #dddddd;
       background: #ffffff;
       color: #000000;
-
       font-size: 16px;
       font-weight: 600;
       cursor: pointer;
       text-align: left;
-      box-sizing: border-box;
+      transition: all 0.3s ease;
     }
 
-    .job-bu-btn:focus {
-      outline: none;
-      border-color: #86BC25;
-      box-shadow: 0 0 0 3px rgba(134, 188, 37, 0.25);
-    }
-
-    .job-bu-btn.is-active {
-      border-color: #86BC25;
-      background: #000000;
-      color: #ffffff;
-    }
-
-    .job-bu-btn > span:first-child {
-      min-width: 0;
-      line-height: 1.35;
-    }
+    .job-bu-btn:hover { border-color: #86BC25; }
+    .job-bu-btn.is-active { border-color: #86BC25; background: #000000; color: #ffffff; }
 
     .job-bu-tag {
       font-size: 12px;
       font-weight: 700;
-      letter-spacing: 0.12em;
       color: #86BC25;
       text-transform: uppercase;
-      text-align: right;
-      white-space: nowrap;
-      line-height: 1.2;
     }
 
-    .job-bu-btn.is-active .job-bu-tag {
-      color: #86BC25;
-    }
-
-    /* ===== Right ===== */
+    /* ===== Right: Job List ===== */
     .job-right {
       border-left: 3px solid #86BC25;
       padding-left: 40px;
-      min-height: 240px;
+      min-height: 400px;
+      display: flex;
+      flex-direction: column;
     }
 
     .job-right-head {
@@ -125,188 +101,227 @@
       align-items: baseline;
       justify-content: space-between;
       gap: 16px;
-      margin-bottom: 18px;
+      margin-bottom: 24px;
     }
 
-    .job-right-title {
-      margin: 0;
-      font-size: 18px;
-      font-weight: 700;
-      color: #000000;
-    }
+    .job-right-title { font-size: 20px; font-weight: 700; margin: 0; }
+    .job-count { font-size: 14px; color: #666; margin: 0; }
 
-    .job-count {
-      font-size: 13px;
-      color: #555555;
-      margin: 0;
-      white-space: nowrap;
-    }
-
-    /* ===== Job Grid ===== */
     .job-grid {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 16px;
+      gap: 20px;
+      margin-bottom: 30px;
     }
 
+    /* ===== Job Card ===== */
     .job-card {
       background: #ffffff;
       border: 1px solid #e6e6e6;
       border-radius: 14px;
-      padding: 16px;
-      box-sizing: border-box;
+      padding: 20px;
       display: flex;
       flex-direction: column;
-      gap: 10px;
+      gap: 12px;
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden; /* 確保內容不會溢出 */
     }
 
-    .job-card-title {
-      margin: 0;
-      font-size: 16px;
-      font-weight: 700;
-      color: #000000;
-      line-height: 1.4;
-    }
-
-    .job-card-meta {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      align-items: center;
-    }
+    .job-card:hover { transform: translateY(-4px); box-shadow: 0 8px 24px rgba(0,0,0,0.08); }
+    .job-card-title { font-size: 17px; font-weight: 700; margin: 0; line-height: 1.4; }
 
     .job-pill {
       display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      padding: 6px 10px;
+      padding: 4px 12px;
       border-radius: 999px;
-      border: 1px solid #dddddd;
+      border: 1px solid #0D8390;
       font-size: 12px;
-      color: #000000;
-      background: #ffffff;
+      color: #0D8390;
+      background: #f0fbfc;
       width: fit-content;
     }
 
-    .job-pill strong {
-      font-weight: 700;
-    }
-
     .job-card-desc {
-      margin: 0;
-      font-size: 14px;
-      line-height: 1.6;
-      color: #555555;
+      font-size: 14px; line-height: 1.6; color: #555; margin: 0;
+      display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden;
     }
 
+    /* ===== ✨ 自定義地點清單樣式 (直接出現在 Card 內) ✨ ===== */
+    .job-custom-dropdown {
+      margin-top: auto;
+      width: 100%;
+      position: relative;
+    }
+
+    .job-dropdown-trigger {
+      width: 100%;
+      padding: 12px 16px;
+      border-radius: 8px;
+      border: 1.5px solid #86BC25;
+      background-color: #ffffff;
+      font-size: 14px;
+      font-weight: 700;
+      color: #000000;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: all 0.2s ease;
+    }
+
+    .job-dropdown-trigger:hover { background-color: #f7f9f5; }
+
+    .job-dropdown-trigger .arrow-icon {
+      width: 14px;
+      height: 14px;
+      transition: transform 0.3s ease;
+      fill: #86BC25;
+    }
+
+    /* 當列表展開時旋轉箭頭 */
+    .job-custom-dropdown.is-open .arrow-icon { transform: rotate(180deg); }
+
+    .job-location-list {
+      display: none; /* 預設隱藏 */
+      padding: 8px 0;
+      margin-top: 8px;
+      border-top: 1px solid #eee;
+      animation: fadeInDown 0.3s ease forwards;
+    }
+
+    .job-custom-dropdown.is-open .job-location-list {
+      display: block;
+    }
+
+    .job-location-item {
+      display: block;
+      padding: 10px 12px;
+      color: #555;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 600;
+      border-radius: 6px;
+      transition: all 0.2s ease;
+    }
+
+    .job-location-item:hover {
+      background-color: #86BC25;
+      color: #ffffff;
+      padding-left: 18px; /* 稍微位移增加動感 */
+    }
+
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* 單一職缺連結樣式保持一致 */
     .job-card-link {
       margin-top: auto;
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      gap: 10px;
-
-      padding: 10px 12px;
-      border-radius: 10px;
-      border: 1px solid #86BC25;
-      color: #000000;
-      background: #ffffff;
-
+      padding: 12px 16px;
+      border-radius: 8px;
+      border: 1.5px solid #86BC25;
+      color: #000;
       text-decoration: none;
       font-size: 14px;
       font-weight: 700;
-      width: fit-content;
+      transition: all 0.2s ease;
     }
 
-    .job-card-link:focus {
-      outline: none;
-      box-shadow: 0 0 0 3px rgba(134, 188, 37, 0.25);
+    .job-card-link:hover { background: #86BC25; color: #fff; }
+
+    /* ===== Learn More 按鈕 ===== */
+    .learn-more-container {
+      margin-top: auto;
+      padding: 40px 0 20px;
+      text-align: center;
     }
 
-    /* ===== Empty State ===== */
-    .job-empty {
-      padding: 18px;
-      border: 1px dashed #cccccc;
-      border-radius: 14px;
-      background: #ffffff;
-      color: #555555;
-      font-size: 14px;
-      line-height: 1.6;
+    .learn-more-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      font-size: 18px;
+      font-weight: 700;
+      color: #000000;
+      text-decoration: none;
+      position: relative;
+      padding: 10px 0;
     }
 
-    /* ===== Mobile ===== */
-    @media (max-width: 1024px) {
-      .job-grid {
-        grid-template-columns: 1fr;
-      }
+    .learn-more-btn::after {
+      content: "";
+      position: absolute;
+      bottom: 0; left: 0; width: 100%; height: 3px;
+      background-color: #86BC25;
+      transition: all 0.3s ease;
     }
 
+    .learn-more-btn:hover { color: #86BC25; }
+    .learn-more-btn:hover::after { height: 5px; }
+
+    .btn-arrow-right { width: 22px; height: 22px; transition: transform 0.3s ease; }
+    .learn-more-btn:hover .btn-arrow-right { transform: translateX(8px); }
+
+    @media (max-width: 1100px) { .job-grid { grid-template-columns: 1fr; } }
     @media (max-width: 768px) {
-      .campus-event-recruitment-job-content {
-        grid-template-columns: 1fr;
-        gap: 40px;
-      }
-
-      .job-right {
-        border-left: none;
-        padding-left: 0;
-        border-top: 3px solid #86BC25;
-        padding-top: 24px;
-      }
+      .campus-event-recruitment-job-content { grid-template-columns: 1fr; }
+      .job-right { border-left: none; border-top: 3px solid #86BC25; padding: 30px 0 0 0; }
     }
   </style>
 
   <div class="campus-event-recruitment-job-inner">
     <div class="campus-event-recruitment-job-content">
-      <!-- Left -->
       <div class="job-left">
         <div class="campus-event-recruitment-job-eyebrow">FEATURED POSITIONS</div>
-
         <h2 class="campus-event-recruitment-job-title">精選職缺</h2>
+        <p class="campus-event-recruitment-job-subtitle">點選以下事業單位，探索最適合您的職涯機會。</p>
 
-        <p class="campus-event-recruitment-job-subtitle">
-          點選以下列表了解更多職缺
-        </p>
-
-        <div class="job-bu-buttons" role="tablist" aria-label="Business Unit Tabs">
-          <button class="job-bu-btn is-active" type="button" role="tab" aria-selected="true" data-bu="audit">
+        <div class="job-bu-buttons" role="tablist">
+          <button class="job-bu-btn is-active" type="button" role="tab" data-bu="audit">
             <span>審計與確信諮詢服務</span>
-            <span class="job-bu-tag">Audit &amp; Assurance</span>
+            <span class="job-bu-tag">Audit & Assurance</span>
           </button>
-
-          <button class="job-bu-btn" type="button" role="tab" aria-selected="false" data-bu="tax">
+          <button class="job-bu-btn" type="button" role="tab" data-bu="tax">
             <span>稅務與法律服務</span>
-            <span class="job-bu-tag">Tax &amp; Legal</span>
+            <span class="job-bu-tag">Tax & Legal</span>
           </button>
-
-          <button class="job-bu-btn" type="button" role="tab" aria-selected="false" data-bu="risk">
+          <button class="job-bu-btn" type="button" role="tab" data-bu="risk">
             <span>策略、風險與交易服務</span>
-            <span class="job-bu-tag">Strategy, Risk &amp; Transactions</span>
+            <span class="job-bu-tag">Strategy, Risk & Transactions</span>
           </button>
-
-          <button class="job-bu-btn" type="button" role="tab" aria-selected="false" data-bu="tt">
+          <button class="job-bu-btn" type="button" role="tab" data-bu="tt">
             <span>科技與轉型服務</span>
-            <span class="job-bu-tag">Technology &amp; Transformation</span>
+            <span class="job-bu-tag">Technology & Transformation</span>
           </button>
-
-          <button class="job-bu-btn" type="button" role="tab" aria-selected="false" data-bu="ics">
-            <span>內部客戶服務</span>
-            <span class="job-bu-tag">Internal Client Service</span>
+          <button class="job-bu-btn" type="button" role="tab" data-bu="jsg">
+            <span>JSG 日商服務</span>
+            <span class="job-bu-tag">Japanese Services Group</span>
           </button>
         </div>
       </div>
 
-      <!-- Right -->
       <div class="job-right">
         <div class="job-right-head">
           <h3 class="job-right-title" id="jobPanelTitle">審計與確信諮詢服務職缺</h3>
           <p class="job-count" id="jobCount">0 roles</p>
         </div>
-
+        
         <div id="jobGrid" class="job-grid" aria-live="polite"></div>
+        <div id="jobEmpty" class="job-empty" style="display:none;">目前暫無開放職缺。</div>
 
-        <div id="jobEmpty" class="job-empty" style="display:none;">
-          無可顯示職缺。可於下方資料結構新增職缺項目。
+        <div class="learn-more-container" id="learnMoreContainer">
+          <a href="#" id="learnMoreLink" class="learn-more-btn" target="_blank">
+            <span>查看所有職缺 Learn More</span>
+            <svg class="btn-arrow-right" viewBox="0 0 24 24">
+              <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="#86BC25" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
         </div>
       </div>
     </div>
@@ -314,138 +329,154 @@
 
   <script>
     document.addEventListener("DOMContentLoaded", function () {
-      const buButtons = Array.from(document.querySelectorAll(".job-bu-btn"));
+      const buButtons = document.querySelectorAll(".job-bu-btn");
       const jobGrid = document.getElementById("jobGrid");
       const jobEmpty = document.getElementById("jobEmpty");
       const jobCount = document.getElementById("jobCount");
       const jobPanelTitle = document.getElementById("jobPanelTitle");
+      const learnMoreLink = document.getElementById("learnMoreLink");
 
       const buTitleMap = {
         audit: "審計與確信諮詢服務職缺",
         tax: "稅務與法律服務職缺",
         risk: "策略、風險與交易服務職缺",
         tt: "科技與轉型服務職缺",
-        ics: "內部客戶服務職缺",
+        jsg: "JSG 日本服務組職缺",
       };
+
+      const buLearnMoreLinks = { audit: "https://careers.apac.deloitte.com/Taiwan/go/Audit-&amp;-Assurance/511550/",
+                                tax: "https://careers.apac.deloitte.com/Taiwan/go/Tax-&amp;-Legal/511650/", 
+                                risk: "https://careers.apac.deloitte.com/Taiwan/go/Strategy%2C-Risk-&amp;-Transactions/511750/",
+                                tt: "https://careers.apac.deloitte.com/Taiwan/go/Technology-&amp;-Transformation/511850/",
+                                jsg: "https://careers.apac.deloitte.com/Taiwan/go/JSG/511950/" };
 
       const jobData = {
         audit: [
-          {
-            title: "審計與確信及電腦審計專員",
-            location: "台北",
-            desc: "參與審計與確信案件流程，執行查核程序與文件整理。",
-            url: "https://example.com/job/audit-1",
+          { 
+            title: "初級審計員", 
+            location: "全台多點", 
+            desc: "負責協助完成審計財務報表、文件分析審查及客戶內部控制流程評估。在團隊中，運用數位工具進行數據分析，透過參與不同國內外客戶專案，深入瞭解多元產業業務風險以及企業運營流程，累積豐富審計實務經驗。", 
+            multiLocations: [
+              { name: "台北所", url: "https://careers.apac.deloitte.com/Taiwan/job/%E5%88%9D%E7%B4%9A%E5%AF%A9%E8%A8%88%E5%93%A1-2026%E6%A0%A1%E5%9C%92%E5%BE%B5%E6%89%8D-%E5%AF%A9%E8%A8%88%E6%9C%8D%E5%8B%99-%E5%AF%A9%E8%A8%88%E8%88%87%E7%A2%BA%E4%BF%A1%E8%AB%AE%E8%A9%A2%E6%9C%8D%E5%8B%99%28%E5%8F%B0%E5%8C%97%29/1058-zh_TW" },
+              { name: "新竹所", url: "https://careers.apac.deloitte.com/Taiwan/job/%E5%88%9D%E7%B4%9A%E5%AF%A9%E8%A8%88%E5%93%A1-2026%E6%A0%A1%E5%9C%92%E5%BE%B5%E6%89%8D-%E5%AF%A9%E8%A8%88%E6%9C%8D%E5%8B%99-%E5%AF%A9%E8%A8%88%E8%88%87%E7%A2%BA%E4%BF%A1%E8%AB%AE%E8%A9%A2%E6%9C%8D%E5%8B%99%28%E6%96%B0%E7%AB%B9%29/1050-zh_TW" },
+              { name: "台南所", url: "https://careers.apac.deloitte.com/Taiwan/job/%E5%88%9D%E7%B4%9A%E5%AF%A9%E8%A8%88%E5%93%A1-2026%E6%A0%A1%E5%9C%92%E5%BE%B5%E6%89%8D-%E5%AF%A9%E8%A8%88%E6%9C%8D%E5%8B%99-%E5%AF%A9%E8%A8%88%E8%88%87%E7%A2%BA%E4%BF%A1%E8%AB%AE%E8%A9%A2%E6%9C%8D%E5%8B%99%28%E5%8F%B0%E5%8D%97%29/1052-zh_TW" },
+              { name: "高雄所", url: "https://careers.apac.deloitte.com/Taiwan/job/%E5%88%9D%E7%B4%9A%E5%AF%A9%E8%A8%88%E5%93%A1-2026%E6%A0%A1%E5%9C%92%E5%BE%B5%E6%89%8D-%E5%AF%A9%E8%A8%88%E6%9C%8D%E5%8B%99-%E5%AF%A9%E8%A8%88%E8%88%87%E7%A2%BA%E4%BF%A1%E8%AB%AE%E8%A9%A2%E6%9C%8D%E5%8B%99%28%E9%AB%98%E9%9B%84%29/1053-zh_TW" }
+            ]
           },
-          {
-            title: "審計忙季實習生",
-            location: "台北",
-            desc: "忙季期間參與專案任務，依指派完成資料彙整與底稿協助。",
-            url: "https://example.com/job/audit-intern",
-          },
-          {
-            title: "審計忙季實習生",
-            location: "台北",
-            desc: "忙季期間參與專案任務，依指派完成資料彙整與底稿協助。",
-            url: "https://example.com/job/audit-intern",
-          },
+          { title: "電腦審計顧問", location: "", desc: "依據客戶資安環境擬定查核策略與計畫，執行工作底稿編製、提出結論及改善追蹤。透過資訊作業控制點評估與資訊循環深度分析，協助國內外客戶辨識合規風險並優化作業流程，是結合資訊技術與審計專業的關鍵角色。",
+            url: "https://careers.apac.deloitte.com/Taiwan/job/%E9%A1%A7%E5%95%8F-%E9%9B%BB%E8%85%A6%E5%AF%A9%E8%A8%88-%E8%B3%87%E8%A8%8A%E8%88%87%E5%B0%88%E6%A5%AD%E7%A2%BA%E4%BF%A1-%E5%AF%A9%E8%A8%88%E8%88%87%E7%A2%BA%E4%BF%A1%E8%AB%AE%E8%A9%A2%E6%9C%8D%E5%8B%99/551-zh_TW" },
+          { title: "確信諮詢服務顧問", location: "台北", desc: "提供金融業、各大上市/櫃企業、科技產業等產業客戶顧問諮詢服務，業務範疇涵蓋永續確信與內控稽核諮詢、金融洗錢防制、個資保護確信及新興科技資安查核服務。透過專業諮詢協助客戶實踐永續治理，協助客戶建立合規機制並優化治理品質。",
+            url: "https://careers.apac.deloitte.com/Taiwan/job/%E9%A1%A7%E5%95%8F-%E7%A2%BA%E4%BF%A1%E8%AB%AE%E8%A9%A2-%E5%AF%A9%E8%A8%88%E8%88%87%E7%A2%BA%E4%BF%A1%E8%AB%AE%E8%A9%A2%E6%9C%8D%E5%8B%99/571-zh_TW" },
+          { title: "企業永續ESG服務顧問", location: "台北", desc: "主要負責永續發展專案的執行，透過嚴謹的抽查程序與數據盤點，核實企業內部的 ESG 資訊真實性。在辨別缺失與潛在風險後，提供專業的輔導與改善建議，協助企業從中發掘成長機會。此外，需針對氣候風險分析進行覆核，確保數據品質與資訊揭露的可靠性，並編製符合國際標準的永續報告書，支持企業達成合規管理與永續轉型目標。", 
+            url: "https://careers.apac.deloitte.com/Taiwan/job/%E9%A1%A7%E5%95%8F-%E4%BC%81%E6%A5%AD%E6%B0%B8%E7%BA%8CESG-%E7%A2%BA%E4%BF%A1%E8%AB%AE%E8%A9%A2-%E5%AF%A9%E8%A8%88%E8%88%87%E7%A2%BA%E4%BF%A1%E8%AB%AE%E8%A9%A2%E6%9C%8D%E5%8B%99/574-zh_TW" },
+          { title: "【專案服務中心(LDC)】審計專員", location: "台北", desc: "參與 Deloitte 審計核心環節，負責編製標準化底稿、資料整理及年報與財報內容核校。除參與外勤作業與憑證核對，確保審計作業符合國際標準外，亦協助導入 AI 與數位工具以優化流程。透過跨團隊協作接觸多元產業專案，在數位轉型浪潮中累積豐富的實務經驗與專業素養。", multiLocations: [
+              { name: "台北所", url: "https://careers.apac.deloitte.com/Taiwan/job/%E3%80%90%E5%AF%A9%E8%A8%88%E8%88%87%E7%A2%BA%E4%BF%A1%E8%AB%AE%E8%A9%A2%E6%9C%8D%E5%8B%99%E3%80%91LDC-%E5%B0%88%E6%A1%88%E6%9C%8D%E5%8B%99%E4%B8%AD%E5%BF%83-%E5%AF%A9%E8%A8%88%E5%B0%88%E5%93%A1%28%E5%8F%B0%E5%8C%97%29/553-zh_TW" },
+              { name: "台中所", url: "https://careers.apac.deloitte.com/Taiwan/job/%E3%80%90%E5%AF%A9%E8%A8%88%E8%88%87%E7%A2%BA%E4%BF%A1%E8%AB%AE%E8%A9%A2%E6%9C%8D%E5%8B%99%E3%80%91LDC-%E5%B0%88%E6%A1%88%E6%9C%8D%E5%8B%99%E4%B8%AD%E5%BF%83-%E5%AF%A9%E8%A8%88%E5%B0%88%E5%93%A1%28%E5%8F%B0%E4%B8%AD%29/787-zh_TW" },
+              { name: "高雄所", url: "https://careers.apac.deloitte.com/Taiwan/job/%E3%80%90%E5%AF%A9%E8%A8%88%E8%88%87%E7%A2%BA%E4%BF%A1%E8%AB%AE%E8%A9%A2%E6%9C%8D%E5%8B%99%E3%80%91LDC-%E5%B0%88%E6%A1%88%E6%9C%8D%E5%8B%99%E4%B8%AD%E5%BF%83-%E5%AF%A9%E8%A8%88%E5%B0%88%E5%93%A1%28%E9%AB%98%E9%9B%84%29/709-zh_TW" }
+            ] }
         ],
-        tax: [
-          {
-            title: "稅務顧問",
-            location: "台北",
-            desc: "協助稅務規劃與申報資料準備，支援專案交付。",
-            url: "https://example.com/job/tax-1",
-          },
-        ],
-        risk: [
-          {
-            title: "風險諮詢顧問",
-            location: "台北",
-            desc: "協助風險評估、內控流程盤點與改善建議產出。",
-            url: "https://example.com/job/risk-1",
-          },
-        ],
-        tt: [
-          {
-            title: "科技與轉型顧問",
-            location: "台北",
-            desc: "支援轉型專案需求分析、流程設計與系統導入協作。",
-            url: "https://example.com/job/tt-1",
-          },
-        ],
-        ics: [
-          {
-            title: "Internal Client Service - Role Title",
-            location: "台北",
-            desc: "內部支援職能職缺簡介。",
-            url: "https://example.com/job/ics-1",
-          },
-        ],
+        tax: [{ title: "國內稅務研究員", location: "台北", desc: "致力於引領企業與家族接軌最新稅務法令，範疇涵蓋 CFC 議題、移轉訂價及合規簽證。透過整合家族辦公室諮詢，協助高資產客戶進行財富傳承規劃、數據分析試算及遺贈稅申報實務。透過參與租稅優惠申請與數據分析實務，您將在多變法規中鍛鍊敏銳洞察力，為企業守護長期價值。", 
+                url: "https://careers.apac.deloitte.com/Taiwan/job/%E7%A0%94%E7%A9%B6%E5%93%A1%EF%BC%8D%E5%9C%8B%E5%85%A7%E7%A8%85%E5%8B%99%EF%BC%8D%E7%A8%85%E5%8B%99%E6%9C%8D%E5%8B%99%EF%BC%8D%E7%A8%85%E5%8B%99%E8%88%87%E6%B3%95%E5%BE%8B%E6%9C%8D%E5%8B%99/719-zh_TW" },
+              { title: "國際稅務研究員", location: "台北", desc: "加入國際稅務暨併購交易稅務團隊（International Tax & M&A Tax），將有機會參與跨國併購、重組交易及投資架構規劃。工作內容涵蓋 BEPS 2.0、Pillar Two 諮詢與跨境交易稅務優化，專注於協助跨國集團設計理想的投資架構，並精準找出交易中的稅務風險。透過與全球 Deloitte 會員所密切協作，將能實質參與外商來台與台商海外拓展的指標專案，在複雜的全球稅務環境中，協助企業建立符合規範且穩健的發展基礎。", 
+                url: "https://careers.apac.deloitte.com/Taiwan/job/%E7%A0%94%E7%A9%B6%E5%93%A1%EF%BC%8D%E5%9C%8B%E9%9A%9B%E7%A8%85%E5%8B%99%EF%BC%8D%E7%A8%85%E5%8B%99%E6%9C%8D%E5%8B%99%EF%BC%8D%E7%A8%85%E5%8B%99%E8%88%87%E6%B3%95%E5%BE%8B%E6%9C%8D%E5%8B%99/567-zh_TW" },
+              { title: "企業商務運營服務研究員", location: "台北", desc: "提供全方位會計與財務企業商務運營服務，涵蓋了會計財務運營、薪資運營及稅務遵循三大服務領域，負責財報編製、帳務重整及 ERP 協助，並執行薪資扣繳與勞健保法規遵循。服務項目包含跨境電商稅務處理與各類所得稅申報，並彈性提供專業人力借調支援企業稽核與稅務專案，協助企業建立穩健的財務與人力資源營運架構。",
+                url: "https://careers.apac.deloitte.com/Taiwan/job/%E7%A0%94%E7%A9%B6%E5%93%A1%EF%BC%8D%E4%BC%81%E6%A5%AD%E5%95%86%E5%8B%99%E9%81%8B%E7%87%9F%EF%BC%8D%E7%A8%85%E5%8B%99%E6%9C%8D%E5%8B%99%EF%BC%8D%E7%A8%85%E5%8B%99%E8%88%87%E6%B3%95%E5%BE%8B%E6%9C%8D%E5%8B%99/579-zh_TW" },
+              { title: "國際租稅暨移轉訂價研究員", location: "台北", desc: "服務核心涵蓋兩岸移轉訂價基準分析與專案審查，負責台灣移轉訂價報告、集團主檔及國別報告的稅務遵循工作。透過事前規劃與風險評估，協助跨國企業優化營運交易流程並達成合規目標。在此職位將能深度參與專案審查實務，掌握國際稅務遵循的關鍵，為跨國集團提供具備策略思維的交易架構建議。",
+                url: "https://careers.apac.deloitte.com/Taiwan/job/%E7%A0%94%E7%A9%B6%E5%93%A1%EF%BC%8D%E5%9C%8B%E9%9A%9B%E7%A7%9F%E7%A8%85%E6%9A%A8%E7%A7%BB%E8%BD%89%E8%A8%82%E5%83%B9%EF%BC%8D%E7%A8%85%E5%8B%99%E6%9C%8D%E5%8B%99%EF%BC%8D%E7%A8%85%E5%8B%99%E8%88%87%E6%B3%95%E5%BE%8B%E6%9C%8D%E5%8B%99/592-zh_TW" },
+              { title: "國際稅務實習生", location: "台北", desc: "主要負責協助跨國個人所得稅申報支援、外資投資人（FINI）稅務資料整理及專案行政管理。實習期間將能初步掌握台外籍人士的稅務申報流程，並參與獨立性審查與合約維護等風險控管工作。透過專案進度追蹤與溝通協作，不僅能學習專業服務團隊的運作模式，更能建立對外資投資稅務及個人稅法規的實務經驗。",
+                url: "https://careers.apac.deloitte.com/Taiwan/job/%E5%AF%A6%E7%BF%92%E7%94%9F%EF%BC%8D%E5%9C%8B%E9%9A%9B%E7%A8%85%E5%8B%99%EF%BC%8D%E7%A8%85%E5%8B%99%E6%9C%8D%E5%8B%99%EF%BC%8D%E7%A8%85%E5%8B%99%E8%88%87%E6%B3%95%E5%BE%8B%E6%9C%8D%E5%8B%99/590-zh_TW" },
+],
+        risk: [{ title: "企業永續發展顧問", location: "台北", desc: "負責協助企業建立永續發展機制，並提供全方位的諮詢服務。透過持續追蹤國際趨勢與法規變動，為客戶提供具備實務深度的策略建議。工作核心在於找出不同產業在永續發展中的風險與機會，並針對治理現況提出優化方案；同時協助客戶彙整關鍵績效，編製符合國際指標的永續報告書。此職位不僅需要對特定產業有敏銳的洞察力，更需具備邏輯分析與解決複雜問題的能力，協助企業在落實合規經營的同時，創造長遠的永續價值。",
+                 url: "https://careers.apac.deloitte.com/Taiwan/job/Analyst-Senior-Consultant-Manager%EF%BC%8DDeloitte-Sustainability%EF%BC%8DConsulting-Businesses/738-zh_TW/" },
+               { title: "金融犯罪與數位鑑識顧問", location: "台北", desc: "專注金融犯罪防制與企業舞弊調查，協助機構優化洗錢防制、制裁風險及公平待客流程。整合生成式 AI 與數據分析技術提升效能，並結合會計、法律專業提供訴訟支援與合規諮詢，強化企業治理與風險控管。",
+                 url: "https://careers.apac.deloitte.com/Taiwan/job/Analyst-Consultant-Senior-Consultant%EF%BC%8DDeloitte-Forensic-&-Financial-Crime%EF%BC%8DConsulting-Businesses/607-zh_TW/" },
+              ],
+        tt: [{ title: "SAP 顧問", location: "台北", desc: "在 SAP 顧問團隊中，你將透過收集與整合數據，針對企業解決方案進行基礎分析並產出洞察，並運用 Deloitte 專業方法論、內部工具以及團隊協作，共同優化客戶體驗。在過程中，我們將協助你發展策略思考、領導力、業務銷售及專案管理等全方位素養，在變革中展現卓越價值，成就顧問職涯。",
+               url: "https://careers.apac.deloitte.com/Taiwan/job/Analyst%EF%BC%8DSAP%EF%BC%8DEnterprise-Technology-&amp;-Performance%EF%BC%8DConsulting-Businesses/761-zh_TW" },
+            { title: "資安顧問", location: "台北", desc: "協助客戶規劃數位安全策略與風險管理制度，並執行End-to-End的資安優化。在顧問專案中，負責資料分析、撰寫專業報告並追蹤執行進度。此職位需具備良好的邏輯思維與中英文溝通能力，能針對雲端或物聯網環境提供安控建議。你將與團隊緊密協作，因應科技趨勢與產業需求變化，為客戶解決複雜的資安挑戰並提供實務對策。",
+               url: "https://careers.apac.deloitte.com/Taiwan/job/Analyst-Consultant-%EF%BC%8DCyber-Strategy-&amp;-Transformation%EF%BC%8DConsulting-Businesses/851-zh_TW" },
+            ],
+        jsg: [{ title: "【審計與確信諮詢服務】日商服務-審計員", location: "台北", desc: "負責台、日商財務報表審計、內控審查與數據分析，確保跨境財務資訊準確性。透過專業洞察協助客戶解決挑戰，並在跨國協作中深化日企文化理解。應徵者須具備 JLPT N3 或以上能力，能與日商客戶進行基礎商務溝通。",
+                url: "https://careers.apac.deloitte.com/Taiwan/job/Auditor-%28JSG%29%EF%BC%8DAudit%EF%BC%8DA&amp;A/895-zh_TW" },
+              { title: "【稅務與法律服務】日商服務企業商務運營服務研究員", location: "台北", desc: "專注於支援台企拓展日本市場，深度參與跨境專案之行政協調與實務運作。透過蒐集市場資訊、分析產業趨勢以撰寫研究報告，並支援國內外稅務法規等專業諮詢服務。需具日檢 N2 以上能力，確保跨境專案順利推進，從中累積跨領域商務經驗與跨文化溝通實力。",
+                url: "https://careers.apac.deloitte.com/Taiwan/job/Consultant-%28JSG%29%EF%BC%8DSAP%EF%BC%8DEnterprise-Technology-&amp;-Performance%EF%BC%8DConsulting-Businesses/894-zh_TW" },
+              { title: "【科技與轉型服務】日商服務SAP顧問", location: "台北", desc: "透過蒐集、彙整並分析數據，掌握日商企業的目前轉型的需求，並利用 Deloitte 工具及方法論導入 SAP 解決方案，同時協助系統功能測試及業務流程落差識別以進行優化調整。因需與日商企業有密切且深度的合作，需具備日檢 N2 以上能力，能直接參與國際專案之溝通與行政協調。",
+                url: "https://careers.apac.deloitte.com/Taiwan/job/Researcher-%28JSG%29%EF%BC%8DBusiness-Process-Solutions%EF%BC%8DBusiness-Process-Solutions%EF%BC%8DT&amp;L/896-zh_TW" },
+]
       };
 
       function escapeHtml(str) {
-        return String(str)
-          .replaceAll("&", "&amp;")
-          .replaceAll("<", "&lt;")
-          .replaceAll(">", "&gt;")
-          .replaceAll('"', "&quot;")
-          .replaceAll("'", "&#039;");
+        return String(str).replace(/[&<>"']/g, m => ({
+          '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#039;'
+        })[m]);
       }
 
       function renderJobs(buKey) {
         const jobs = jobData[buKey] || [];
         jobGrid.innerHTML = "";
-
-        jobPanelTitle.textContent = buTitleMap[buKey] || "職缺";
+        jobPanelTitle.textContent = buTitleMap[buKey] || "相關職缺";
         jobCount.textContent = `${jobs.length} roles`;
+        learnMoreLink.href = buLearnMoreLinks[buKey] || "#";
 
-        if (!jobs.length) {
+        if (jobs.length === 0) {
           jobEmpty.style.display = "block";
-          return;
-        }
-        jobEmpty.style.display = "none";
-
-        const cardsHtml = jobs
-          .map((j) => {
-            const title = escapeHtml(j.title || "");
-            const location = escapeHtml(j.location || "");
-            const desc = escapeHtml(j.desc || "");
-            const url = escapeHtml(j.url || "#");
+          jobGrid.style.display = "none";
+        } else {
+          jobEmpty.style.display = "none";
+          jobGrid.style.display = "grid";
+          
+          const cardsHtml = jobs.map(j => {
+            const hasMultiLoc = j.multiLocations && j.multiLocations.length > 0;
+            
+            // 地點列表區塊
+            const locActionHtml = hasMultiLoc 
+              ? `
+                <div class="job-custom-dropdown">
+                  <div class="job-dropdown-trigger">
+                    <span>選擇應徵地點 Apply at...</span>
+                    <svg class="arrow-icon" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5H7z"/></svg>
+                  </div>
+                  <div class="job-location-list">
+                    ${j.multiLocations.map(loc => `
+                      <a href="${escapeHtml(loc.url)}" class="job-location-item" target="_blank">${escapeHtml(loc.name)}</a>
+                    `).join('')}
+                  </div>
+                </div>
+              `
+              : `<a class="job-card-link" href="${escapeHtml(j.url)}" target="_blank">查看詳細內容</a>`;
 
             return `
               <div class="job-card">
-                <h4 class="job-card-title">${title}</h4>
-
-                <div class="job-card-meta">
-                  <span class="job-pill"><strong>地點</strong> ${location}</span>
-                </div>
-
-                <p class="job-card-desc">${desc}</p>
-
-                <a class="job-card-link" href="${url}" target="_blank" rel="noopener noreferrer">
-                  查看職缺
-                </a>
+                <h4 class="job-card-title">${escapeHtml(j.title)}</h4>
+                <div class="job-card-meta"><span class="job-pill">${escapeHtml(j.location)}</span></div>
+                <p class="job-card-desc">${escapeHtml(j.desc)}</p>
+                ${locActionHtml}
               </div>
             `;
-          })
-          .join("");
+          }).join("");
+          
+          jobGrid.innerHTML = cardsHtml;
 
-        jobGrid.innerHTML = cardsHtml;
+          // 綁定點擊展開事件
+          document.querySelectorAll('.job-dropdown-trigger').forEach(trigger => {
+            trigger.addEventListener('click', function(e) {
+              const dropdown = this.parentElement;
+              // 先關閉其他的
+              document.querySelectorAll('.job-custom-dropdown').forEach(d => {
+                if(d !== dropdown) d.classList.remove('is-open');
+              });
+              // 切換目前的
+              dropdown.classList.toggle('is-open');
+            });
+          });
+        }
       }
 
-      function setActiveButton(activeBtn) {
-        buButtons.forEach((btn) => {
-          const isActive = btn === activeBtn;
-          btn.classList.toggle("is-active", isActive);
-          btn.setAttribute("aria-selected", isActive ? "true" : "false");
-        });
-      }
-
-      buButtons.forEach((btn) => {
+      buButtons.forEach(btn => {
         btn.addEventListener("click", function () {
-          const buKey = btn.getAttribute("data-bu");
-          setActiveButton(btn);
-          renderJobs(buKey);
+          buButtons.forEach(b => b.classList.remove("is-active"));
+          this.classList.add("is-active");
+          renderJobs(this.getAttribute("data-bu"));
         });
       });
 
