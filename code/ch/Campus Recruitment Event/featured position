@@ -170,7 +170,7 @@
       transition: all 0.2s ease;
     }
 
-    .job-dropdown-trigger:hover { background-color: #f7f9f5; }
+    .job-dropdown-trigger:hover { background-color: #f7f9f5; color: #ffffff !important;}
 
     .job-dropdown-trigger .arrow-icon {
       width: 14px;
@@ -207,7 +207,7 @@
 
     .job-location-item:hover {
       background-color: #86BC25;
-      color: #ffffff;
+      color: #ffffff!important;
       padding-left: 18px; /* 稍微位移增加動感 */
     }
 
@@ -232,7 +232,7 @@
       transition: all 0.2s ease;
     }
 
-    .job-card-link:hover { background: #86BC25; color: #fff; }
+    .job-card-link:hover { background: #86BC25; color: #ffffff!important; }
 
     /* ===== Learn More 按鈕 ===== */
     .learn-more-container {
