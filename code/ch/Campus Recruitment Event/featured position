@@ -170,7 +170,7 @@
       transition: all 0.2s ease;
     }
 
-    .job-dropdown-trigger:hover { background-color: #f7f9f5; color: #ffffff !important;}
+    .job-dropdown-trigger:hover { background-color: #f7f9f5; color: #86BC25 !important;}
 
     .job-dropdown-trigger .arrow-icon {
       width: 14px;
@@ -205,10 +205,11 @@
       transition: all 0.2s ease;
     }
 
-    .job-location-item:hover {
-      background-color: #86BC25;
-      color: #ffffff!important;
-      padding-left: 18px; /* 稍微位移增加動感 */
+.job-custom-dropdown .job-location-list .job-location-item:hover {
+      background-color: #86BC25;  /* 背景變成企業綠 */
+      color: #ffffff !important;  /* 強制字體變成白色 */
+      padding-left: 18px;         /* 維持原本那個可愛的向右滑動效果 */
+      text-decoration: none;      /* 確保沒有底線 */
     }
 
     @keyframes fadeInDown {
@@ -232,7 +233,13 @@
       transition: all 0.2s ease;
     }
 
-    .job-card-link:hover { background: #86BC25; color: #ffffff!important; }
+    .job-card .job-card-link:hover {
+      background-color: #86BC25;    /* 企業色綠色背景 */
+      color: #ffffff !important;    /* 強制字體變白 */
+      border-color: #86BC25;        /* 邊框也變綠 */
+      text-decoration: none;        /* 確保沒有底線干擾 */
+      opacity: 1;                   /* 確保不透明 */
+    }
 
     /* ===== Learn More 按鈕 ===== */
     .learn-more-container {
@@ -280,7 +287,7 @@
       <div class="job-left">
         <div class="campus-event-recruitment-job-eyebrow">FEATURED POSITIONS</div>
         <h2 class="campus-event-recruitment-job-title">精選職缺</h2>
-        <p class="campus-event-recruitment-job-subtitle">點選以下事業單位，探索最適合您的職涯機會。</p>
+        <p class="campus-event-recruitment-job-subtitle">點選以下專業服務，探索最適合您的職涯機會。</p>
 
         <div class="job-bu-buttons" role="tablist">
           <button class="job-bu-btn is-active" type="button" role="tab" data-bu="audit">
@@ -349,6 +356,13 @@
                                 risk: "https://careers.apac.deloitte.com/Taiwan/go/Strategy%2C-Risk-&amp;-Transactions/511750/",
                                 tt: "https://careers.apac.deloitte.com/Taiwan/go/Technology-&amp;-Transformation/511850/",
                                 jsg: "https://careers.apac.deloitte.com/Taiwan/go/JSG/511950/" };
+     const buLearnMoreTexts = {
+        audit: "查看審計與確信服務所有職缺 Learn More",
+        tax: "查看稅務與法律服務所有職缺 Learn More",
+        risk: "查看策略、風險與交易服務所有職缺 Learn More",
+        tt: "查看科技與轉型服務所有職缺 Learn More",
+        jsg: "查看日商服務所有職缺 Learn More"
+      };
 
       const jobData = {
         audit: [
@@ -405,7 +419,7 @@
 ]
       };
 
-      function escapeHtml(str) {
+function escapeHtml(str) {
         return String(str).replace(/[&<>"']/g, m => ({
           '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#039;'
         })[m]);
@@ -413,11 +427,23 @@
 
       function renderJobs(buKey) {
         const jobs = jobData[buKey] || [];
+        
+        // 1. 更新標題與職缺數量
         jobGrid.innerHTML = "";
         jobPanelTitle.textContent = buTitleMap[buKey] || "相關職缺";
         jobCount.textContent = `${jobs.length} roles`;
+        
+        // 2. 更新按鈕連結
         learnMoreLink.href = buLearnMoreLinks[buKey] || "#";
 
+        /* ★★★ 3. 更新按鈕文字 (針對不同 BU 顯示不同文字) ★★★ */
+        const btnTextSpan = learnMoreLink.querySelector("span");
+        if (btnTextSpan) {
+            // 如果對照表有資料就用對照表的，沒有就用預設值
+            btnTextSpan.textContent = buLearnMoreTexts[buKey] || "查看所有職缺 Learn More";
+        }
+
+        // 4. 處理職缺卡片顯示邏輯
         if (jobs.length === 0) {
           jobEmpty.style.display = "block";
           jobGrid.style.display = "none";
@@ -457,7 +483,7 @@
           
           jobGrid.innerHTML = cardsHtml;
 
-          // 綁定點擊展開事件
+          // 綁定點擊展開事件 (Dropdown)
           document.querySelectorAll('.job-dropdown-trigger').forEach(trigger => {
             trigger.addEventListener('click', function(e) {
               const dropdown = this.parentElement;
@@ -472,6 +498,7 @@
         }
       }
 
+      // 綁定上方 BU 按鈕切換事件
       buButtons.forEach(btn => {
         btn.addEventListener("click", function () {
           buButtons.forEach(b => b.classList.remove("is-active"));
@@ -480,7 +507,8 @@
         });
       });
 
+      // 初始化顯示 Audit
       renderJobs("audit");
-    });
+    }); // 這裡對應原本最外層的 DOMContentLoaded
   </script>
 </section>
