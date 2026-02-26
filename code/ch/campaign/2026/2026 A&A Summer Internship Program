@@ -1,173 +1,347 @@
 <style>
 /* =========================
-   Deloitte 2026 AA Summer Internship - CSS
+   Deloitte AA Summer Intern – Refined UI
+   Brand: 黑 / 白 / #86BC25
    ========================= */
-:root {
-  --brand: #86BC25;      /* Deloitte Green */
-  --black: #000;
-  --white: #fff;
-  --accent-1: #43B02A;
-  --accent-2: #26890D;
-  --accent-3: #046A38;
-  --accent-4: #0D8390;
-  --accent-5: #007CB0;
-
-  --text: #1a1a1a;
-  --muted: #666;
-  --border: #e6e6e6;
-  --card: #ffffff;
-  --surface: #f7f9f5;
-  --radius: 16px;
-  --shadow: 0 2px 10px rgba(0,0,0,.04);
+:root{
+  --brand:#86BC25;
+  --black:#000000;
+  --white:#ffffff;
+  --text:#1a1a1a;
+  --muted:#666;
+  --border:#e6e6e6;
+  --card:#ffffff;
+  --surface:#f7f9f5;     /* 計畫內容背景 */
+  --light-gray:#f5f5f5;   /* 時程區塊背景 */
+  --radius:16px;
+  --shadow:0 2px 10px rgba(0,0,0,.04);
 }
 
-/* 通用區塊 */
-.aa-summer { padding: 56px 20px; }
-.container { max-width: 1080px; margin: 0 auto; }
+/* 通用區塊樣式 */
+.summer { padding: 64px 20px; }
+@media (max-width: 768px) {
+  .summer { padding: 32px 12px; }
+}
+
+/* 寬幅容器設定 (1400px) */
+.container {
+  width: 90%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+@media (max-width: 768px) {
+  .container { width: 94%; }
+}
+
+/* Eyebrow (眉標) */
+.eyebrow {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--brand);
+  text-transform: uppercase;
+  letter-spacing: 0.12rem;
+  margin-bottom: 10px;
+}
+
+/* 主標題 */
 .section-title {
   font-size: clamp(24px, 3vw, 32px);
   font-weight: 600;
   margin: 0 0 16px;
-  color: var(--brand) !important;
+  color: var(--black) !important;
   letter-spacing: .5px;
 }
+
 .lead {
   font-size: clamp(16px, 2.2vw, 18px);
   line-height: 1.8;
   color: var(--text);
   margin: 0 0 16px;
 }
-
-/* 亮點條列 */
-.highlights { margin: 12px 0 20px; padding: 0 0 0 20px; }
-.highlights li { margin: 8px 0; line-height: 1.7; color: var(--text); }
-.highlights li span { color: var(--brand); font-weight: 700; }
-
-/* 需求條件 */
-.meta { display: grid; gap: 10px; margin-top: 8px; font-size: 15px; color: #333; }
-
-/* 區塊背景控制 */
-.about { background: var(--white); }
-.requirements {
-  background: #f5f5f5 !important;
-  border-top: 1px solid var(--border);
-  border-bottom: 1px solid var(--border);
+@media (max-width: 768px) {
+  .lead { font-size: 15px; line-height: 1.6; }
 }
-.apply { background: var(--surface); }
 
-/* 職缺卡片 */
-.job-list { display: grid; grid-template-columns: 1fr; gap: 16px; }
-@media (min-width: 720px) { .job-list { grid-template-columns: 1fr 1fr; } }
-.job-card {
-  background: var(--card);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  padding: 18px;
-  box-shadow: var(--shadow);
+/* --- 清單圓點：縮小尺寸並精準對齊 --- */
+.highlights, .content-list { 
+  margin: 12px 0 20px; 
+  padding: 0; 
+  list-style: none;
 }
-.job-title { font-size: 18px; margin: 0; color: #111; font-weight: 700; }
-.job-info { list-style: none; margin: 12px 0 16px; padding: 0; color: #333; font-size: 14px; }
-.job-info li { margin: 6px 0; }
+.highlights li, .content-list li { 
+  position: relative;
+  padding-left: 22px; /* 縮小圓點後稍微調窄間距，比例更協調 */
+  margin: 8px 0; 
+  line-height: 1.8; 
+  color: var(--text); 
+  font-size: 16px; 
+}
+@media (max-width: 768px) {
+  .highlights li, .content-list li { font-size: 14px; margin: 6px 0; line-height: 1.7; }
+}
 
-/* 按鈕樣式 */
-.btn-primary {
-  display: inline-block;
-  text-decoration: none;
-  padding: 10px 20px;
-  border-radius: 10px;
-  font-weight: 700;
-  font-size: 14px;
+/* CSS 繪製精緻小圓點 (5px) */
+.highlights li::before, .content-list li::before {
+  content: "";
+  position: absolute;
+  left: 6px;
+  
+  /* 縮小為 5px */
+  width: 5px;
+  height: 5px;
+  background-color: var(--brand);
+  border-radius: 50%;
+  
+  /* 精準對齊文字中心點 */
+  /* 電腦版 (16px * 1.8) / 2 - 2.5 = 11.9px */
+  top: 12px; 
+}
+
+/* 手機版垂直位置微調 */
+@media (max-width: 768px) {
+  .highlights li::before, .content-list li::before {
+     /* 手機版 (14px * 1.7) / 2 - 2.5 = 9.4px */
+     top: 10px;
+  }
+}
+
+/* 冒號前粗體 */
+.highlights li span { 
+  color: var(--black);
+  font-weight: 800; 
+}
+
+/* 背景顏色設定 */
+.bg-light-green { background-color: var(--surface) !important; color: #333; }
+.bg-light-gray { background-color: var(--light-gray) !important; color: #333; }
+
+/* --- 佈局控制 --- */
+.info-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  text-align: left;
+  margin-bottom: 48px;
+}
+@media (min-width: 992px) {
+  .info-grid { flex-direction: row; gap: 100px; }
+  .info-col { flex: 1; }
+}
+
+.info-sub-title {
+  font-size: 22px;
+  color: var(--black);
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+}
+.info-sub-title::before {
+  content: "";
+  width: 4px;
+  height: 20px;
   background: var(--brand);
-  color: var(--white);
-  border: 2px solid var(--brand);
-  transition: transform .1s ease;
+  margin-right: 12px;
 }
-.btn-primary:hover { filter: brightness(.95); }
 
-/* Timeline 圓圈樣式 */
-.timeline-circles { margin-top: 28px; text-align: center; }
-.timeline-circles .steps { display: flex; justify-content: space-between; gap: 32px; }
-.timeline-circles .step { flex: 1; display: flex; flex-direction: column; align-items: center; gap: 12px; }
-.timeline-circles .circle {
-  width: 120px; height: 120px; border-radius: 50%;
-  display: flex; align-items: center; justify-content: center;
-  color: #fff; font-weight: 800; background: var(--accent-4); /* 使用輔色 #0D8390 做層次區隔 */
+.note-box {
+  margin-top: 24px;
+  padding: 16px;
+  background: rgba(134, 188, 37, 0.04);
+  border-left: 3px solid var(--brand);
+  font-size: 14px;
+  color: #555;
+  line-height: 1.6;
 }
-.timeline-circles .label { font-size: 15px; font-weight: 600; color: #53565A; }
+@media (max-width: 768px) {
+  .note-box { font-size: 13px; }
+}
+
+/* --- 大尺寸 Timeline 樣式 --- */
+.timeline-area {
+  margin-top: 48px;
+}
+.timeline-circles .steps {
+  display: flex;
+  position: relative;
+}
+
+@media (min-width: 769px) {
+  .timeline-circles .steps {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+  }
+  .timeline-circles .steps::before {
+    content: "";
+    position: absolute; left: 10%; right: 10%; 
+    top: 70px; /* 大圓圈 140px 的中心 */
+    height: 3px; background: var(--brand);
+    z-index: 0;
+  }
+  .timeline-circles .circle {
+    width: 140px; height: 140px;
+    font-size: 22px;
+  }
+}
 
 @media (max-width: 768px) {
-  .timeline-circles .steps { flex-direction: column; align-items: center; gap: 20px; }
-  .timeline-circles .circle { width: 90px; height: 90px; }
+  .timeline-circles .steps {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+  }
+  .timeline-circles .steps::before { display: none; }
+  .timeline-circles .circle {
+    width: 100px !important; 
+    height: 100px !important; 
+    font-size: 16px !important;
+  }
+  .timeline-circles .label { font-size: 13px !important; }
+}
+
+.timeline-circles .step {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 1;
+}
+.timeline-circles .circle {
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  color: var(--black);
+  background: var(--white);
+  border: 5px solid var(--brand) !important;
+  font-weight: 800;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+  margin-bottom: 16px;
+}
+.timeline-circles .label {
+  font-size: 16px; font-weight: 600; color: #53565A;
+}
+
+/* --- 按鈕樣式 (白底、綠框、黑字) --- */
+.apply-footer { text-align: center; margin-top: 16px; }
+.btn-apply {
+  display: inline-block !important;
+  text-decoration: none !important;
+  padding: 18px 80px !important;
+  background-color: #ffffff !important;
+  color: #000000 !important;
+  border: 2px solid var(--brand) !important;
+  border-radius: 8px !important;
+  font-weight: 700 !important;
+  font-size: 18px !important;
+  transition: all 0.3s ease !important;
+  cursor: pointer;
+}
+.btn-apply:hover {
+  background-color: #f7f9f5 !important;
+  color: #86BC25 !important;
+  border: 2px solid #86BC25 !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 6px 15px rgba(134, 188, 37, 0.15) !important;
+}
+@media (max-width: 768px) {
+  .btn-apply { width: 100%; padding: 14px 20px !important; box-sizing: border-box; }
 }
 </style>
 
-<section class="aa-summer about" id="about-summer">
+<section class="summer about" id="about-summer" style="background: #fff;">
   <div class="container">
-    <h2 class="section-title"About  Summer Internship Program</h2>
+    <span class="eyebrow">About 2026 A&A Summer Internship</span>
+    <h2 class="section-title">關於 2026 審計暑期實習計畫</h2>
+
     <p class="lead">
-      Deloitte 審計與確信服務（Audit & Assurance）致力於引領數位審計革命。
-      在 **暑期實習計畫** 中，你將跨出課本，親身體驗全球頂尖事務所的工作環境。
-      我們不只提供實務操作的機會，更透過導師制度，讓你提早與專業職場接軌，建立紮實的職涯起點。
+      Deloitte 審計與確信服務（Audit & Assurance）以高速且高效的團隊協作，結合最新數位工具，
+      為國內外知名企業提供高品質、具前瞻性的專業服務。透過 <strong>2026 審計暑期實習計畫</strong>，你將在資深審計員帶領下，
+      參與審計專案，協助查核流程、憑證追蹤、分析性程序等審計工作。
     </p>
 
-    <h3>加入 2026 Summer Program，你將獲得：</h3>
+    <h3>透過此計畫成為 Deloitte 發揮影響力的夥伴，你將獲得：</h3>
     <ul class="highlights">
-      <li><span>實戰專業培訓：</span>針對暑期實習生量身打造的審計數位工具教學與工作坊。</li>
-      <li><span>多元產業視野：</span>接觸不同產業的標竿企業，深入了解商業邏輯與內部控制。</li>
-      <li><span>優先錄用機會：</span>表現優異的實習生，將有機會於畢業前提前獲得 Deloitte 正職 Offer。</li>
+      <li><span>專業課程訓練：</span>由資深審計專業團隊帶領，建立審計專業基礎與實務能力。</li>
+      <li><span>協助審計專案經驗：</span>參與真實審計專案，實際操作查核流程，深入了解企業運作。</li>
+      <li><span>職涯方向探索：</span>透過導師制度與團隊交流，為未來專業執照與職涯定位奠定基礎。</li>
     </ul>
   </div>
 </section>
 
-<section class="aa-summer requirements" id="requirements-summer">
+<section class="summer bg-light-gray" id="program-timeline">
   <div class="container">
-    <h2 class="section-title">Application Requirements</h2>
-    <div class="meta">
-      <div><strong>招募對象：</strong>全台大專院校會計系所（含雙主修/輔系）學生，預計於 2027 年畢業生優先。</div>
-      <div><strong>實習期間：</strong>2026年7月 – 2026年8月（暑假期間全職實習）。</div>
-      <div><strong>履歷投遞截止：</strong>2026年4月中旬（依後續公告為準）。</div>
-    </div>
-    
-    <p style="color: #666; font-size: 13px; margin-top: 15px;">
-      *註：需已修畢中級會計學。
-    </p>
+    <span class="eyebrow">Program Timeline</span>
+    <h2 class="section-title">計畫時程</h2>
 
-    <div class="timeline-circles">
-      <div class="steps">
-        <div class="step">
-          <div class="circle"><span>4月</span></div>
-          <p class="label">線上履歷投遞</p>
-        </div>
-        <div class="step">
-          <div class="circle"><span>5-6月</span></div>
-          <p class="label">面試與錄取</p>
-        </div>
-        <div class="step">
-          <div class="circle"><span>7月</span></div>
-          <p class="label">暑期實習報到</p>
+    <div class="timeline-area">
+      <div class="timeline-circles" aria-label="Important Dates">
+        <div class="steps">
+          <div class="step">
+            <div class="circle"><span>04/05</span></div>
+            <p class="label">線上投遞截止</p>
+          </div>
+          <div class="step">
+            <div class="circle"><span>05月</span></div>
+            <p class="label">錄取通知</p>
+          </div>
+          <div class="step">
+            <div class="circle"><span>06月</span></div>
+            <p class="label">報到入職</p>
+          </div>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<section class="aa-summer apply" id="apply-summer">
+<section class="summer bg-light-green" id="application-info">
   <div class="container">
-    <h2 class="section-title">Ready to Join Us?</h2>
-    <div class="job-list">
-      <article class="job-card">
-        <h3 class="job-title">2026 審計暑期實習生</h3>
-        <p style="font-size: 14px; color: var(--brand); margin: 5px 0;">全台各辦公室（台北/新竹/台中/台南/高雄）</p>
-        <ul class="job-info">
-          <li>● 參與各產業客戶之期中查核預備作業</li>
-          <li>● 學習運用 Deloitte 數位審計平台進行數據驗證</li>
-          <li>● 協助團隊整理工作底稿與相關財務憑證</li>
-          <li>● 參與內部職涯分享會與專業講座</li>
-        </ul>
-        <div class="job-actions">
-          <a class="btn-primary" href="#">立即申請 2026 AA Summer</a>
+    <span class="eyebrow">Program Details</span>
+    <h2 class="section-title">計畫說明</h2>
+
+    <div class="info-grid">
+      <div class="info-col">
+        <div style="margin-bottom: 40px;">
+          <h3 class="info-sub-title">工作內容</h3>
+          <ul class="content-list">
+            <li>協助執行證實性查核程序（如：翻找憑證及核對憑證）</li>
+            <li>協助執行分析性覆核程序之數據</li>
+            <li>財務報表數字核對</li>
+            <li>整理函證及回函</li>
+            <li>其他主管交辦事項</li>
+          </ul>
         </div>
-      </article>
+
+        <div>
+          <h3 class="info-sub-title">申請資格</h3>
+          <ul class="content-list">
+            <li>大三以上會計系所(含雙主修/輔系)及商管學院同學</li>
+            <li style="list-style: none; padding-left: 24px; color: var(--brand); font-weight: 600;">(已修畢初級會計學且修畢或正在修習中級會計學)</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="info-col">
+        <h3 class="info-sub-title">相關資訊</h3>
+        <ul class="content-list">
+          <li><strong>實習地點：</strong>台北、新竹、台中、台南</li>
+          <li><strong>實習期間：</strong>2026/06/29 – 2026/08/21（每週5天）</li>
+          <li style="list-style: none; padding-left: 24px;">(若欲提前報到敬請來信至校園招募信箱: <a href="mailto:twhrcampus@deloitte.com.tw" style="color: var(--brand)!important; font-weight: 600; text-decoration: underline;">twhrcampus@deloitte.com.tw</a>)</li>
+          <li><strong>履歷投遞截止：</strong>2026/04/05（日）23:59（台灣時間）</li>
+        </ul>
+        
+        <div class="note-box">
+          <strong>小提醒：</strong><br>
+          • 第一週將安排實習生訓練課程，須全程參加。<br>
+          • 請務必上傳成績單並填寫初會/中會學期成績。<br>
+          • 未正確線上登錄或資料不齊全者將不予審核。
+        </div>
+      </div>
+    </div>
+
+    <div class="apply-footer">
+      <a class="btn-apply" href="#" target="_blank" rel="noopener">立即投遞</a>
     </div>
   </div>
 </section>
