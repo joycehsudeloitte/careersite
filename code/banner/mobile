@@ -1,5 +1,5 @@
 <section style="text-align: center; padding: 0px 0;">
-  <img src="#" 
-       alt="#" 
+  <img src="#" //改成raw格式
+       alt="#"  //根據不同專頁調整
        style="max-width: 100%; height: auto; display: inline-block;">
 </section>
