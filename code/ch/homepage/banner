@@ -2,8 +2,14 @@
   
   <div style="text-align: center !important; background-color: #000 !important;">
     <img src="https://raw.githubusercontent.com/joycehsudeloitte/careersite/main/images/banner/desktop/career_site_banner_desktop.jpg" 
-         alt="Job at Deloitte" 
-         style="max-width: 100% !important; height: auto !important; display: block !important; margin: 0 auto !important;">
+         alt="Job at Deloitte Desktop" 
+         class="banner-desktop-img"
+         style="max-width: 100% !important; height: auto !important; margin: 0 auto !important;">
+    
+    <img src="https://raw.githubusercontent.com/joycehsudeloitte/careersite/main/images/banner/mobile/hompage_banner_mobile.jpg" 
+         alt="Job at Deloitte Mobile" 
+         class="banner-mobile-img"
+         style="max-width: 100% !important; height: auto !important; margin: 0 auto !important;">
   </div>
 
   <div class="entry-container">
@@ -11,8 +17,8 @@
     <div class="entry-card campus-entry" onclick="openModal('campusModal')">
       <div class="card-content">
         <span class="en-title">Graduates</span>
-        <h2>校園招募</h2>
-        <p>實習生計畫 / 校園招募活動</p>
+        <h2 class="force-white">校園招募</h2>
+        <p class="force-white">實習生計畫 / 校園招募活動</p>
         <div class="btn-ghost">查看更多資訊</div>
       </div>
     </div>
@@ -20,8 +26,8 @@
     <div class="entry-card eh-entry" onclick="openModal('ehModal')">
       <div class="card-content">
         <span class="en-title">Professionals</span>
-        <h2>社會招募</h2>
-        <p>探索專業領域職缺</p>
+        <h2 class="force-white">社會招募</h2>
+        <p class="force-white">探索專業領域職缺</p>
         <div class="btn-ghost">選擇專業服務</div>
       </div>
     </div>
@@ -29,7 +35,11 @@
   </div>
 
   <style>
-    /* 佈局樣式 */
+    /* --- Banner 顯示控制 --- */
+    .banner-desktop-img { display: block !important; }
+    .banner-mobile-img { display: none !important; }
+
+    /* 佈局容器 */
     .entry-container {
       max-width: 1000px !important;
       margin: -70px auto 0 auto !important; 
@@ -38,7 +48,7 @@
       padding: 0 20px !important;
       position: relative !important;
       z-index: 100 !important;
-      flex-wrap: wrap !important;
+      flex-wrap: nowrap !important;
     }
 
     .entry-card {
@@ -46,44 +56,58 @@
       min-width: 300px !important;
       padding: 50px 30px !important;
       border-radius: 2px !important;
-      color: #ffffff !important;
       cursor: pointer !important;
-      transition: all 0.3s ease !important;
+      transition: transform 0.3s ease !important;
       display: flex !important;
       flex-direction: column !important;
       justify-content: center !important;
       align-items: center !important;
       text-align: center !important;
       box-shadow: 0 15px 35px rgba(0,0,0,0.2) !important;
+      text-decoration: none !important;
     }
 
+    /* 僅保留上浮感，不改變背景 */
     .entry-card:hover {
       transform: translateY(-8px) !important;
-      box-shadow: 0 20px 45px rgba(0,0,0,0.3) !important;
     }
 
     .campus-entry { background-color: #86BC25 !important; } 
     .eh-entry { background-color: #000000 !important; } 
 
-    .en-title { font-size: 11px !important; text-transform: uppercase !important; letter-spacing: 2px !important; opacity: 0.85 !important; margin-bottom: 10px !important; color: #ffffff !important; }
-    .entry-card h2 { margin: 0 0 12px 0 !important; font-size: 30px !important; font-weight: bold !important; color: #ffffff !important; }
-    .entry-card p { margin: 0 0 30px 0 !important; font-size: 16px !important; opacity: 0.8 !important; color: #ffffff !important; }
+    /* --- 強制文字顏色邏輯 --- */
+    /* 確保一般狀態與 Hover 狀態文字都固定為白色 */
+    .en-title, 
+    .entry-card h2, 
+    .entry-card p,
+    .entry-card:hover h2,
+    .entry-card:hover p,
+    .entry-card:hover .en-title {
+      color: #ffffff !important;
+      opacity: 1 !important;
+      text-decoration: none !important;
+    }
 
-    /* 修正：確保首頁卡片上的「查看更多」文字為白色 */
+    .en-title { font-size: 11px !important; text-transform: uppercase !important; letter-spacing: 2px !important; opacity: 0.85 !important; margin-bottom: 10px !important; display: block !important; }
+    .entry-card h2 { margin: 0 0 12px 0 !important; font-size: 30px !important; font-weight: bold !important; }
+    .entry-card p { margin: 0 0 30px 0 !important; font-size: 16px !important; }
+
+    /* 按鈕基礎樣式 */
     .btn-ghost {
       border: 2px solid #ffffff !important;
       padding: 10px 30px !important;
       border-radius: 30px !important;
       font-weight: bold !important;
       font-size: 14px !important;
-      transition: 0.3s !important;
-      color: #ffffff !important; /* 強制文字白色 */
+      color: #ffffff !important;
+      transition: all 0.3s ease !important;
       text-decoration: none !important;
     }
 
-    .entry-card:hover .btn-ghost { 
-      background-color: #ffffff !important; 
-      color: #000000 !important; /* 懸浮時背景變白，文字變黑以保持對比 */
+    /* 僅按鈕在滑過時變色 */
+    .btn-ghost:hover {
+      background-color: #ffffff !important;
+      color: #000000 !important;
     }
 
     /* --- Modal 樣式 --- */
@@ -103,37 +127,42 @@
     .modal-header { border-bottom: 3px solid #86BC25 !important; margin-bottom: 25px !important; padding-bottom: 10px !important; }
     .modal-header h3 { margin: 0 !important; font-size: 24px !important; color: #000 !important; }
 
-    .modal-grid { display: grid !important; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)) !important; gap: 15px !important; margin-top: 20px !important; }
+    /* 兩排一列佈局 */
+    html body .modal-grid { 
+      display: grid !important; 
+      grid-template-columns: 1fr 1fr !important; 
+      gap: 15px !important; 
+      margin-top: 20px !important; 
+    }
 
-    .modal-item {
+    html body .modal-item {
       padding: 20px !important; border: 1px solid #eee !important; text-decoration: none !important; color: #333 !important;
       border-left: 6px solid #ccc !important; transition: 0.2s !important;
-      display: block !important;
+      display: flex !important; align-items: center !important; justify-content: center !important; text-align: center !important;
+      min-height: 80px !important;
     }
-    .modal-item:hover { background: #f9fff0 !important; border-color: #86BC25 !important; transform: scale(1.02) !important; }
+    .modal-item:hover { background: #f9fff0 !important; border-color: #86BC25 !important; }
 
-    /* 修正策略 1：CSS 強化 - 增加選擇器特定性 (Selector Specificity) */
     html body .view-all-btn {
-      display: block !important; 
-      width: 100% !important; 
-      text-align: center !important; 
-      margin-top: 30px !important;
-      padding: 15px !important; 
-      background-color: #000 !important; 
-      color: #ffffff !important; /* 強制文字白色 */
-      text-decoration: none !important; 
-      font-weight: bold !important; 
-      border-radius: 2px !important;
-      transition: 0.3s !important;
-    }
-    
-    html body .view-all-btn:hover { 
-      background-color: #86BC25 !important; 
-      color: #ffffff !important; /* 懸浮時保持白色文字 */
+      display: block !important; width: 100% !important; text-align: center !important; margin-top: 30px !important;
+      padding: 15px !important; background-color: #000 !important; color: #ffffff !important; 
+      text-decoration: none !important; font-weight: bold !important;
     }
 
+    /* --- 手機版響應式設定 --- */
     @media (max-width: 768px) {
-      .entry-container { margin-top: 20px !important; }
+      .banner-desktop-img { display: none !important; }
+      .banner-mobile-img { display: block !important; }
+      
+      .entry-container { 
+        margin: 20px auto 0 auto !important; 
+        flex-direction: column !important;
+        flex-wrap: wrap !important;
+      }
+      
+      .entry-card { width: 100% !important; min-width: 100% !important; }
+
+      html body .modal-grid { grid-template-columns: 1fr !important; }
     }
   </style>
 
@@ -158,16 +187,10 @@
 <div id="campusModal" class="modal-overlay">
   <div class="modal-content">
     <span onclick="closeModal('campusModal')" style="position:absolute !important; right:25px !important; top:20px !important; font-size:35px !important; cursor:pointer !important; color:#ccc !important;">&times;</span>
-    <div class="modal-header">
-      <h3>校園專案與實習計畫</h3>
-    </div>
+    <div class="modal-header"><h3>校園專案與實習計畫</h3></div>
     <div class="modal-grid">
-      <a href="https://careers.apac.deloitte.com/Taiwan/content/Campus-Recruitment-Events/?locale=zh_TW" class="modal-item" style="border-left-color: #046A38 !important;">
-        <strong>2026 校園博覽會</strong>
-      </a>
-      <a href="https://careers.apac.deloitte.com/Taiwan/content/2026-AA-Summer-Internship-Program/?locale=zh_TW" class="modal-item" style="border-left-color: #86BC25 !important;">
-        <strong>2026 審計暑期實習生</strong>
-      </a>
+      <a href="https://careers.apac.deloitte.com/Taiwan/content/Campus-Recruitment-Events/?locale=zh_TW" class="modal-item" style="border-left-color: #046A38 !important;"><strong>2026 校園博覽會</strong></a>
+      <a href="https://careers.apac.deloitte.com/Taiwan/content/2026-AA-Summer-Internship-Program/?locale=zh_TW" class="modal-item" style="border-left-color: #86BC25 !important;"><strong>2026 審計暑期實習生</strong></a>
     </div>
     <a href="https://careers.apac.deloitte.com/Taiwan/go/%E6%A0%A1%E5%9C%92%E6%96%B0%E9%AE%AE%E4%BA%BA%E6%8B%9B%E5%8B%9F/510750/" class="view-all-btn" style="color: #ffffff !important;">探索所有實習/新鮮人職缺 →</a>
   </div>
@@ -176,9 +199,7 @@
 <div id="ehModal" class="modal-overlay">
   <div class="modal-content">
     <span onclick="closeModal('ehModal')" style="position:absolute !important; right:25px !important; top:20px !important; font-size:35px !important; cursor:pointer !important; color:#ccc !important;">&times;</span>
-    <div class="modal-header" style="border-bottom-color: #000 !important;">
-      <h3>專業服務</h3>
-    </div>
+    <div class="modal-header" style="border-bottom-color: #000 !important;"><h3>專業服務</h3></div>
     <div class="modal-grid">
       <a href="https://careers.apac.deloitte.com/Taiwan/go/%E5%AF%A9%E8%A8%88%E8%88%87%E7%A2%BA%E4%BF%A1%E6%9C%8D%E5%8B%99/511550/" class="modal-item" style="border-left-color: #046A38 !important;"><strong>審計與確信服務 (Audit & Assurance)</strong></a>
       <a href="https://careers.apac.deloitte.com/Taiwan/go/%E7%A8%85%E5%8B%99%E8%88%87%E6%B3%95%E5%BE%8B%E6%9C%8D%E5%8B%99/511650/" class="modal-item" style="border-left-color: #43B02A !important;"><strong>稅務與法律服務 (Tax & Legal)</strong></a>
