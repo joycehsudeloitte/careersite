@@ -1,0 +1,210 @@
+<section style="position: relative !important; background-color: #f4f4f4 !important; padding-bottom: 60px !important;">
+  
+  <div style="text-align: center !important; background-color: #000 !important;">
+    <img src="https://raw.githubusercontent.com/joycehsudeloitte/careersite/main/images/banner/desktop/career_site_banner_desktop.jpg" 
+         alt="Join Deloitte - Desktop" 
+         class="banner-desktop-img"
+         style="max-width: 100% !important; height: auto !important; margin: 0 auto !important;">
+    
+    <img src="https://raw.githubusercontent.com/joycehsudeloitte/careersite/main/images/banner/mobile/hompage_banner_mobile.jpg" 
+         alt="Join Deloitte - Mobile" 
+         class="banner-mobile-img"
+         style="max-width: 100% !important; height: auto !important; margin: 0 auto !important;">
+  </div>
+
+  <div class="entry-container">
+    
+    <div class="entry-card campus-entry" onclick="openModal('campusModal')">
+      <div class="card-content">
+        <span class="en-title">Students & Graduates</span>
+        <h2 class="force-white">Campus Recruitment</h2>
+        <p class="force-white">Internship Programs / Campus Events</p>
+        <div class="btn-ghost">Explore More Info</div>
+      </div>
+    </div>
+
+    <div class="entry-card eh-entry" onclick="openModal('ehModal')">
+      <div class="card-content">
+        <span class="en-title">Professionals</span>
+        <h2 class="force-white">Experienced Hiring</h2>
+        <p class="force-white">Explore Professional Opportunities</p>
+        <div class="btn-ghost">Explore All Jobs</div>
+      </div>
+    </div>
+
+  </div>
+
+  <style>
+    /* --- Banner Visibility Control --- */
+    .banner-desktop-img { display: block !important; }
+    .banner-mobile-img { display: none !important; }
+
+    /* Layout Containers */
+    .entry-container {
+      max-width: 1000px !important;
+      margin: -70px auto 0 auto !important; 
+      display: flex !important;
+      gap: 25px !important;
+      padding: 0 20px !important;
+      position: relative !important;
+      z-index: 100 !important;
+      flex-wrap: nowrap !important;
+    }
+
+    .entry-card {
+      flex: 1 !important;
+      min-width: 300px !important;
+      padding: 50px 30px !important;
+      border-radius: 2px !important;
+      cursor: pointer !important;
+      transition: transform 0.3s ease !important;
+      display: flex !important;
+      flex-direction: column !important;
+      justify-content: center !important;
+      align-items: center !important;
+      text-align: center !important;
+      box-shadow: 0 15px 35px rgba(0,0,0,0.2) !important;
+      text-decoration: none !important;
+    }
+
+    .entry-card:hover {
+      transform: translateY(-8px) !important;
+    }
+
+    .campus-entry { background-color: #86BC25 !important; } 
+    .eh-entry { background-color: #000000 !important; } 
+
+    /* --- Color Enforcement --- */
+    .en-title, 
+    .entry-card h2, 
+    .entry-card p,
+    .entry-card:hover h2,
+    .entry-card:hover p,
+    .entry-card:hover .en-title {
+      color: #ffffff !important;
+      opacity: 1 !important;
+      text-decoration: none !important;
+    }
+
+    .en-title { font-size: 11px !important; text-transform: uppercase !important; letter-spacing: 2px !important; opacity: 0.85 !important; margin-bottom: 10px !important; display: block !important; }
+    .entry-card h2 { margin: 0 0 12px 0 !important; font-size: 26px !important; font-weight: bold !important; }
+    .entry-card p { margin: 0 0 30px 0 !important; font-size: 16px !important; }
+
+    /* Button Styles */
+    .btn-ghost {
+      border: 2px solid #ffffff !important;
+      padding: 10px 30px !important;
+      border-radius: 30px !important;
+      font-weight: bold !important;
+      font-size: 14px !important;
+      color: #ffffff !important;
+      transition: all 0.3s ease !important;
+      text-decoration: none !important;
+    }
+
+    .btn-ghost:hover {
+      background-color: #ffffff !important;
+      color: #000000 !important;
+    }
+
+    /* --- Modal Styles --- */
+    .modal-overlay {
+      position: fixed !important; top: 0 !important; left: 0 !important; width: 100% !important; height: 100% !important;
+      background: rgba(0,0,0,0.85) !important; display: none !important; 
+      justify-content: center !important; align-items: center !important; z-index: 9999 !important;
+      backdrop-filter: blur(8px) !important;
+    }
+
+    .modal-content {
+      background: white !important; width: 90% !important; max-width: 850px !important;
+      padding: 45px !important; border-radius: 4px !important; position: relative !important;
+      max-height: 90vh !important; overflow-y: auto !important;
+    }
+
+    .modal-header { border-bottom: 3px solid #86BC25 !important; margin-bottom: 25px !important; padding-bottom: 10px !important; }
+    .modal-header h3 { margin: 0 !important; font-size: 24px !important; color: #000 !important; }
+
+    /* 2-Column Grid for Modals */
+    html body .modal-grid { 
+      display: grid !important; 
+      grid-template-columns: 1fr 1fr !important; 
+      gap: 15px !important; 
+      margin-top: 20px !important; 
+    }
+
+    html body .modal-item {
+      padding: 20px !important; border: 1px solid #eee !important; text-decoration: none !important; color: #333 !important;
+      border-left: 6px solid #ccc !important; transition: 0.2s !important;
+      display: flex !important; align-items: center !important; justify-content: center !important; text-align: center !important;
+      min-height: 80px !important; font-weight: bold !important;
+    }
+    .modal-item:hover { background: #f9fff0 !important; border-color: #86BC25 !important; }
+
+    html body .view-all-btn {
+      display: block !important; width: 100% !important; text-align: center !important; margin-top: 30px !important;
+      padding: 15px !important; background-color: #000 !important; color: #ffffff !important; 
+      text-decoration: none !important; font-weight: bold !important;
+    }
+
+    /* --- Responsive Mobile Settings --- */
+    @media (max-width: 768px) {
+      .banner-desktop-img { display: none !important; }
+      .banner-mobile-img { display: block !important; }
+      
+      .entry-container { 
+        margin: 20px auto 0 auto !important; 
+        flex-direction: column !important;
+        flex-wrap: wrap !important;
+      }
+      
+      .entry-card { width: 100% !important; min-width: 100% !important; }
+
+      html body .modal-grid { grid-template-columns: 1fr !important; }
+    }
+  </style>
+
+  <script>
+    function openModal(id) {
+      document.getElementById(id).style.setProperty('display', 'flex', 'important');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeModal(id) {
+      document.getElementById(id).style.setProperty('display', 'none', 'important');
+      document.body.style.overflow = 'auto';
+    }
+    window.onclick = function(e) {
+      if (e.target.className === 'modal-overlay') {
+        e.target.style.setProperty('display', 'none', 'important');
+        document.body.style.overflow = 'auto';
+      }
+    }
+  </script>
+</section>
+
+<div id="campusModal" class="modal-overlay">
+  <div class="modal-content">
+    <span onclick="closeModal('campusModal')" style="position:absolute !important; right:25px !important; top:20px !important; font-size:35px !important; cursor:pointer !important; color:#ccc !important;">&times;</span>
+    <div class="modal-header"><h3>Campus Programs & Internships</h3></div>
+    <div class="modal-grid">
+      <a href="https://careers.apac.deloitte.com/Taiwan/content/Campus-Recruitment-Events/?locale=zh_TW" class="modal-item" style="border-left-color: #046A38 !important;"><strong>2026 Campus Career Fairs</strong></a>
+      <a href="https://careers.apac.deloitte.com/Taiwan/content/2026-AA-Summer-Internship-Program/?locale=zh_TW" class="modal-item" style="border-left-color: #86BC25 !important;"><strong>2026 Audit Summer Internship</strong></a>
+    </div>
+    <a href="https://careers.apac.deloitte.com/Taiwan/go/GraduatesStudents/510450/" class="view-all-btn" style="color: #ffffff !important;">Explore More Intern/ Graduate roles →</a>
+  </div>
+</div>
+
+<div id="ehModal" class="modal-overlay">
+  <div class="modal-content">
+    <span onclick="closeModal('ehModal')" style="position:absolute !important; right:25px !important; top:20px !important; font-size:35px !important; cursor:pointer !important; color:#ccc !important;">&times;</span>
+    <div class="modal-header" style="border-bottom-color: #000 !important;"><h3>Our Services</h3></div>
+    <div class="modal-grid">
+      <a href="https://careers.apac.deloitte.com/Taiwan/go/Aduit-&-Assurance/512050/" class="modal-item" style="border-left-color: #046A38 !important;"><strong>Audit & Assurance</strong></a>
+      <a href="https://careers.apac.deloitte.com/Taiwan/go/Tax-&-Legal/512150/" class="modal-item" style="border-left-color: #43B02A !important;"><strong>Tax & Legal</strong></a>
+      <a href="https://careers.apac.deloitte.com/Taiwan/go/Strategy%2C-Risk-&-Transactions/512250/" class="modal-item" style="border-left-color: #0D8390 !important;"><strong>Strategy, Risk & Transactions</strong></a>
+      <a href="https://careers.apac.deloitte.com/Taiwan/go/Technology-&-Transformation/512450/" class="modal-item" style="border-left-color: #007CB0 !important;"><strong>Technology & Transformation</strong></a>
+      <a href="https://careers.apac.deloitte.com/Taiwan/content/LDC/?locale=zh_TW" class="modal-item" style="border-left-color: #26890D !important;"><strong>Local Delivery Center (LDC)</strong></a>
+      <a href="https://careers.apac.deloitte.com/Taiwan/go/Japanese-Services-Group/512550/" class="modal-item" style="border-left-color: #046A38 !important;"><strong>Japanese Service Group (JSG)</strong></a>
+    </div>
+    <a href="https://careers.apac.deloitte.com/Taiwan/go/Professional/510550/" class="view-all-btn" style="color: #ffffff !important;">View All Opportunities →</a>
+  </div>
+</div>
