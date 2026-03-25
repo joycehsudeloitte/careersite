@@ -1,379 +1,552 @@
-<style>
-/* =========================================
-   1. 基礎版面樣式 (Section Base)
-========================================= */
-.ldc-intern-section {
-  width: 100%;
-  padding: 80px 0;
-  background-color: #f7f9f5;
-  font-family: "Noto Sans TC", "Microsoft JhengHei", sans-serif;
-}
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2026 LDC Campus Recruitment</title>
+    <style>
+        /* =========================================
+           1. 基礎版面樣式 (Section Base)
+        ========================================= */
+        .ldc-intern-section {
+            width: 100%;
+            padding: 80px 0;
+            background-color: #f7f9f5;
+            font-family: "Noto Sans TC", "Microsoft JhengHei", sans-serif;
+            color: #333;
+        }
 
-/* 頂部標題區塊 */
-.ldc-intern-header {
-  width: 90%;
-  max-width: 1400px;
-  margin: 0 auto 50px;
-  text-align: left;
-}
+        .ldc-intern-header {
+            width: 90%;
+            max-width: 1400px;
+            margin: 0 auto 50px;
+            text-align: left;
+        }
 
-.ldc-intern-container {
-  width: 90%;
-  max-width: 1400px;
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 60px;
-}
+        .ldc-intern-container {
+            width: 90%;
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 60px;
+        }
 
-/* =========================================
-   2. 文字與內容樣式 (Text Content)
-========================================= */
-.ldc-intern-text-box { flex: 1; }
+        /* =========================================
+           2. 文字與內容樣式 (Text Content)
+        ========================================= */
+        .ldc-intern-text-box { flex: 1; }
 
-.ldc-intern-eyebrow {
-  font-size: 16px;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  color: #86BC25;
-  margin-bottom: 12px;
-  display: block;
-}
+        .ldc-intern-eyebrow {
+            font-size: 16px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #86BC25;
+            margin-bottom: 12px;
+            display: block;
+        }
 
-.ldc-intern-title {
-  font-size: 42px;
-  font-weight: 800;
-  line-height: 1.3;
-  color: #000000;
-  margin: 0;
-}
+        .ldc-intern-title {
+            font-size: 42px;
+            font-weight: 800;
+            line-height: 1.3;
+            color: #000000;
+            margin: 0;
+        }
 
-.ldc-intern-content {
-  font-size: 18px;
-  line-height: 1.8;
-  color: #333333;
-  margin-bottom: 16px;
-}
+        .ldc-intern-content {
+            font-size: 18px;
+            line-height: 1.8;
+            color: #333333;
+            margin-bottom: 16px;
+        }
 
-.ldc-intern-highlight {
-  font-size: 20px;
-  font-weight: 600;
-  color: #86BC25;
-  margin-top: 24px;
-  margin-bottom: 12px;
-}
+        .ldc-intern-highlight {
+            font-size: 20px;
+            font-weight: 600;
+            color: #86BC25;
+            margin-top: 24px;
+            margin-bottom: 12px;
+        }
 
-.highlights { list-style: none; padding-left: 0; margin: 0; }
-.highlights li {
-  margin-bottom: 12px;
-  position: relative;
-  padding-left: 20px;
-  line-height: 1.7;
-  display: block;
-  color: #333333;
-}
-.highlights li::before {
-  content: "•";
-  position: absolute; left: 0; top: 4px;
-  font-size: 20px; color: #86BC25;
-}
-.highlights li span { font-weight: 700; }
+        .highlights { list-style: none; padding-left: 0; margin: 0; }
+        .highlights li {
+            margin-bottom: 12px;
+            position: relative;
+            padding-left: 20px;
+            line-height: 1.7;
+            display: block;
+        }
+        .highlights li::before {
+            content: "•";
+            position: absolute; left: 0; top: 4px;
+            font-size: 20px; color: #86BC25;
+        }
+        .highlights li span { font-weight: 700; }
 
-/* =========================================
-   3. 圖片樣式
-========================================= */
-.ldc-intern-image-box { flex: 1; text-align: left; }
-.ldc-intern-image-box img {
-  width: 100%; max-width: 550px;
-  border-radius: 12px;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-}
+        /* =========================================
+           3. 圖片樣式
+        ========================================= */
+        .ldc-intern-image-box { flex: 1; text-align: left; }
+        .ldc-intern-image-box img {
+            width: 100%; max-width: 550px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+        }
 
-/* =========================================
-   4. 下方資訊區塊 (Timeline / Events / Req)
-========================================= */
-.ldc-intern-bottom {
-  width: 90%;
-  max-width: 1400px;
-  margin: 60px auto 0;
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
-}
+        /* =========================================
+           4. 下方資訊區塊 (Timeline / Events / Jobs)
+        ========================================= */
+        .ldc-intern-bottom {
+            width: 90%;
+            max-width: 1400px;
+            margin: 60px auto 0;
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+        }
 
-/* 招募時程圓圈 */
-.ldc-intern-timeline-wrapper { position: relative; padding: 20px 0; }
-.ldc-intern-timeline-line {
-  position: absolute; top: 70px; left: 0; right: 0; height: 2px; background: #d9d9d9; z-index: 1;
-}
-.ldc-intern-timeline-items { display: flex; justify-content: space-between; position: relative; z-index: 2; }
-.ldc-intern-timeline-item { text-align: center; flex: 1; }
-.ldc-intern-timeline-circle {
-  width: 100px; height: 100px; margin: 0 auto 15px;
-  border-radius: 50%; border: 3px solid #86BC25; background: #ffffff;
-  display: flex; align-items: center; justify-content: center;
-  font-weight: 700; font-size: 20px; color: #000000;
-}
+        .ldc-intern-timeline-wrapper { position: relative; padding: 20px 0; }
+        .ldc-intern-timeline-line {
+            position: absolute; top: 70px; left: 0; right: 0; height: 2px; background: #d9d9d9; z-index: 1;
+        }
+        .ldc-intern-timeline-items { display: flex; justify-content: space-between; position: relative; z-index: 2; }
+        .ldc-intern-timeline-item { text-align: center; flex: 1; }
+        .ldc-intern-timeline-circle {
+            width: 100px; height: 100px; margin: 0 auto 15px;
+            border-radius: 50%; border: 3px solid #86BC25; background: #ffffff;
+            display: flex; align-items: center; justify-content: center;
+            font-weight: 700; font-size: 20px; color: #000000;
+            flex-shrink: 0;
+        }
 
-/* Grid 佈局達成標題水平對齊 */
-.ldc-events-section {  
-  display: grid;  
-  grid-template-columns: 1fr 1fr;  
-  grid-template-rows: auto 1fr;  
-  gap: 0 48px;  
-  align-items: start;
-}
+        .ldc-events-section {  
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+        }
 
-.ldc-section-title {
-  font-size: 22px;
-  font-weight: 700;
-  color: #333;
-  margin-bottom: 20px;
-  padding-left: 12px;
-  border-left: 6px solid #86BC25;
-  line-height: 1.2;
-}
+        .ldc-section-title {
+            font-size: 22px;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 20px;
+            padding-left: 12px;
+            border-left: 6px solid #86BC25;
+            line-height: 1.2;
+        }
 
-.title-events { grid-column: 1; grid-row: 1; }
-.title-req { grid-column: 2; grid-row: 1; }
+        .ldc-events-box {  
+            background: #ffffff; padding: 25px; border-radius: 12px;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+        }
 
-.ldc-events-box {  
-  grid-column: 1; grid-row: 2;  
-  background: #ffffff; padding: 25px; border-radius: 12px;
-  box-shadow: 0 2px 15px rgba(0,0,0,0.05);
-}
-.ldc-intern-req-box { grid-column: 2; grid-row: 2; }
+        /* 職缺卡片容器 - 電腦版橫向排列 */
+        .ldc-intern-req-box { 
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            width: 100%;
+        }
 
-/* 活動列表項目 */
-.ldc-event-item {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 12px 0;
-  border-bottom: 1px solid #f0f0f0;
-}
-.ldc-event-item:last-child { border-bottom: none; }
-.ldc-event-school { font-size: 16px; font-weight: 700; color: #000; display: block; margin-bottom: 2px; }
-.ldc-event-date { font-size: 13px; color: #666; }
+        /* Job Card 樣式 */
+        .ldc-job-card {
+            background: #fff;
+            border-radius: 12px;
+            padding: 24px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            border-top: 6px solid #86BC25;
+            transition: transform 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            position: relative; 
+        }
+        .ldc-job-card:hover { transform: translateY(-5px); }
+        .card-audit { border-top-color: #86BC25; }
+        .card-digital { border-top-color: #0D8390; }
+        .card-intern { border-top-color: #007CB0; }
 
-/* 立即報名按鈕樣式 */
-.ldc-reg-btn {
-  padding: 6px 16px;
-  border: 2px solid #86BC25 !important;
-  background-color: transparent !important;
-  color: #86BC25 !important;
-  text-decoration: none !important;
-  border-radius: 20px;
-  font-size: 13px;
-  font-weight: 700;
-  transition: all 0.3s ease;
-  white-space: nowrap;
-}
-.ldc-reg-btn:hover {
-  background-color: #000000 !important;
-  border-color: #000000 !important;
-  color: #ffffff !important;
-}
+        .job-card-title { font-size: 18px; font-weight: 800; color: #000; margin-bottom: 6px; display: block; }
+        .job-card-loc { font-size: 13px; font-weight: 700; color: #666; margin-bottom: 12px; display: block; }
+        
+        .job-card-list { padding-left: 18px; margin: 0 0 20px 0; flex-grow: 1; }
+        .job-card-list li { font-size: 13.5px; color: #444; line-height: 1.6; margin-bottom: 8px; }
+        .job-card-list li::marker { color: #86BC25; }
 
-.event-item-ended { opacity: 0.5; }
-.event-item-ended .ldc-reg-btn {
-  border-color: #ccc !important;
-  color: #999 !important;
-  pointer-events: none;
-  background: #f5f5f5 !important;
-}
+        /* --- 下拉選單元件樣式 --- */
+        .ldc-dropdown {
+            position: relative;
+            display: inline-block;
+            width: 100%;
+        }
 
-/* 應徵小提醒樣式 */
-.ldc-notice-box {
-  margin-top: 25px;
-  padding: 15px;
-  background-color: #f1f4eb;
-  border-radius: 8px;
-  font-size: 14px;
-  color: #444;
-  line-height: 1.6;
-}
-.ldc-notice-title {
-  display: block;
-  font-weight: 700;
-  color: #000;
-  margin-bottom: 8px;
-}
-.ldc-notice-list { padding-left: 20px; margin: 0; }
-.ldc-notice-list li { margin-bottom: 5px; }
-.ldc-notice-email { color: #86BC25; text-decoration: none; font-weight: 600; }
+        .ldc-dropdown-content {
+            display: none;
+            position: absolute;
+            bottom: 110%; 
+            left: 0;
+            width: 100%;
+            background-color: #ffffff;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+            z-index: 100;
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid #eee;
+            animation: fadeIn 0.2s ease-out;
+        }
 
-/* 底部投遞按鈕 */
-.ldc-btn-container { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 20px; }
-a.ldc-apply-btn, a.ldc-apply-btn:link, a.ldc-apply-btn:visited {
-  display: inline-block !important; padding: 12px 15px !important;
-  background-color: transparent !important; border-radius: 8px !important;
-  font-size: 15px !important; font-weight: 700 !important;
-  text-decoration: none !important; text-align: center !important;
-  transition: all 0.3s ease !important; border: 3px solid !important;
-  flex: 1; min-width: 120px; box-sizing: border-box !important;
-}
-a.btn-taipei { border-color: #86BC25 !important; color: #86BC25 !important; }
-a.btn-taipei:hover { background-color: #86BC25 !important; color: #fff !important; }
-a.btn-taichung { border-color: #43B02A !important; color: #43B02A !important; }
-a.btn-taichung:hover { background-color: #43B02A !important; color: #fff !important; }
-a.btn-kaohsiung { border-color: #26890D !important; color: #26890D !important; }
-a.btn-kaohsiung:hover { background-color: #26890D !important; color: #fff !important; }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
 
-@media (max-width: 900px) {
-  .ldc-events-section { display: flex; flex-direction: column; gap: 32px; }
-  .ldc-intern-container { flex-direction: column; }
-  .ldc-intern-image-box { order: -1; text-align: center; }
-  .ldc-intern-timeline-items { flex-direction: column; align-items: center; gap: 20px; }
-  .ldc-event-item { flex-direction: column; align-items: flex-start; gap: 10px; }
-  .ldc-reg-btn { width: 100%; text-align: center; }
-}
-</style>
+        .ldc-dropdown-content a {
+            color: #333;
+            padding: 14px 16px;
+            text-decoration: none;
+            display: block;
+            font-size: 14px;
+            font-weight: 600;
+            border-bottom: 1px solid #f5f5f5;
+            transition: all 0.2s;
+            text-align: center;
+        }
+        .ldc-dropdown-content a:last-child { border-bottom: none; }
+        .ldc-dropdown-content a:hover {
+            background-color: #f1f4eb;
+            color: #86BC25;
+        }
+
+        .show { display: block !important; }
+
+        /* 按鈕樣式 */
+        .ldc-reg-btn, .ldc-card-apply-btn {
+            padding: 10px 20px;
+            border: 2px solid #86BC25 !important;
+            background-color: transparent !important;
+            color: #86BC25 !important;
+            text-decoration: none !important;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 700;
+            transition: all 0.3s ease;
+            white-space: nowrap;
+            display: inline-block;
+            text-align: center;
+            width: 100%;
+            box-sizing: border-box;
+            cursor: pointer;
+            outline: none;
+        }
+        .ldc-reg-btn:hover, .ldc-card-apply-btn:hover {
+            background-color: #000000 !important;
+            border-color: #000000 !important;
+            color: #ffffff !important;
+        }
+
+        /* 說明會列表樣式 - 文字左按鈕右 */
+        .ldc-event-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px 0;
+            border-bottom: 1px solid #f0f0f0;
+            gap: 15px; 
+        }
+        .ldc-event-item:last-child { border-bottom: none; }
+        .ldc-event-info { flex: 1; }
+        .ldc-event-school { font-size: 16px; font-weight: 700; color: #000; display: block; margin-bottom: 4px; }
+        .ldc-event-date { font-size: 13.5px; color: #666; }
+
+        .ldc-reg-btn-event { width: auto; }
+
+        .event-item-ended { opacity: 0.5; }
+        .event-item-ended .ldc-reg-btn {
+            border-color: #ccc !important;
+            color: #999 !important;
+            pointer-events: none;
+            background: #f5f5f5 !important;
+        }
+
+        /* 小提醒樣式 */
+        .ldc-notice-box {
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #f1f4eb;
+            border-radius: 12px;
+            font-size: 14px;
+            color: #444;
+            line-height: 1.6;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        .ldc-notice-title { font-weight: 700; color: #000; margin-bottom: 8px; display: block; }
+        .ldc-notice-list { padding-left: 20px; margin: 0; }
+        .ldc-notice-list li { margin-bottom: 6px; }
+        .ldc-notice-email { color: #86BC25; text-decoration: none; font-weight: 600; }
+
+        /* =========================================
+           5. 響應式修正 (Mobile Responsive)
+        ========================================= */
+        @media (max-width: 1024px) {
+            .ldc-intern-req-box { grid-template-columns: 1fr; }
+        }
+
+        @media (max-width: 900px) {
+            .ldc-intern-section { padding: 40px 0; }
+            .ldc-intern-header { width: 92%; margin-bottom: 30px; }
+            .ldc-intern-title { font-size: 28px; }
+            
+            .ldc-intern-container { 
+                width: 92%; 
+                flex-direction: column; 
+                gap: 30px; 
+                align-items: center; 
+            }
+            .ldc-intern-image-box { order: -1; text-align: center; width: 100%; }
+            .ldc-intern-image-box img { max-width: 100%; height: auto; }
+            .ldc-intern-text-box { width: 100%; }
+
+            .ldc-intern-bottom { width: 92%; gap: 50px; }
+
+            .ldc-intern-timeline-items { flex-direction: column; align-items: center; gap: 30px; }
+            .ldc-intern-timeline-line { display: none; }
+            .ldc-intern-timeline-circle { width: 80px; height: 80px; font-size: 18px; margin-bottom: 10px; }
+
+            .ldc-event-item { flex-direction: row; justify-content: space-between; }
+            .ldc-reg-btn-event { font-size: 12px; padding: 8px 12px; }
+
+            .ldc-dropdown-content { bottom: auto; top: 110%; }
+        }
+    </style>
+</head>
+<body>
 
 <section class="ldc-intern-section">
-  
-  <header class="ldc-intern-header">
-    <span class="ldc-intern-eyebrow">2026 LDC Campus Recruitment</span>
-    <h1 class="ldc-intern-title">2026 專案服務中心審計專員 校園招募計畫</h1>
-  </header>
+    <header class="ldc-intern-header">
+        <span class="ldc-intern-eyebrow">2026 LDC Campus Recruitment</span>
+        <h1 class="ldc-intern-title">2026 專案服務中心審計專員 校園招募計畫</h1>
+    </header>
 
-  <div class="ldc-intern-container">
-    <div class="ldc-intern-image-box">
-      <img src="https://raw.githubusercontent.com/joycehsudeloitte/careersite/main/images/LDC/2026_LDC_internship.png" alt="LDC Internship Program">
-    </div>
-    <div class="ldc-intern-text-box">
-      <p class="ldc-intern-content">
-        Deloitte LDC 是 Deloitte 審計服務的重要合作夥伴，結合創新流程與企業級AI工具，提升工作效率與品質，你將有機會接觸多元產業專案，累積實務經驗，解鎖履歷新亮點。<br>
-        我們歡迎不同科系、對數位化審計與商業流程有興趣的優秀人才，加入LDC探索審計工作並實現自我突破。
-      </p>
+    <div class="ldc-intern-container">
+        <div class="ldc-intern-image-box">
+            <img src="https://raw.githubusercontent.com/joycehsudeloitte/careersite/main/images/LDC/2026_LDC_internship.png" alt="LDC Internship Program">
+        </div>
+        <div class="ldc-intern-text-box">
+            <p class="ldc-intern-content">
+                Deloitte LDC 是 Deloitte 審計服務的重要合作夥伴，結合創新流程與企業級AI工具，提升工作效率與品質，你將有機會接觸多元產業專案，累積實務經驗，解鎖履歷新亮點。<br>
+                我們歡迎不同科系、對數位化審計與商業流程有興趣的優秀人才，加入LDC探索審計工作並實現自我突破。
+            </p>
 
-      <h3 class="ldc-intern-highlight">成為 LDC 發揮影響力的夥伴，你將獲得：</h3>
-      <ul class="highlights">
-        <li><span>培養數位轉型與細節敏銳度：</span>透過數位化審計工具，在大量資料檢核中培養精準度與邏輯思維。</li>
-        <li><span>實務經驗與技能提升：</span>協助底稿編製與文件核對，快速累積專業技能。</li>
-        <li><span>探索職涯方向與未來機會：</span>了解審計工作全貌，掌握自我定位與發展方向。</li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="ldc-intern-bottom">
-    
-    <div class="ldc-intern-timeline-wrapper">
-      <div class="ldc-intern-timeline-line"></div>
-      <div class="ldc-intern-timeline-items">
-        <div class="ldc-intern-timeline-item">
-          <div class="ldc-intern-timeline-circle">3-4月</div>
-          <div class="ldc-intern-timeline-title">校園說明會<br>履歷投遞及線上測驗</div>
+            <h3 class="ldc-intern-highlight">成為 LDC 發揮影響力的夥伴，你將獲得：</h3>
+            <ul class="highlights">
+                <li><span>培養數位轉型與細節敏銳度：</span>透過數位化審計工具，在大量資料檢核中培養精準度與邏輯思維。</li>
+                <li><span>實務經驗與技能提升：</span>協助底稿編製與文件核對，快速累積專業技能。</li>
+                <li><span>探索職涯方向與未來機會：</span>了解審計工作全貌，掌握自我定位與發展方向。</li>
+            </ul>
         </div>
-        <div class="ldc-intern-timeline-item">
-          <div class="ldc-intern-timeline-circle">5-6月</div>
-          <div class="ldc-intern-timeline-title">安排面談/錄取通知</div>
-        </div>
-        <div class="ldc-intern-timeline-item">
-          <div class="ldc-intern-timeline-circle">7-9月</div>
-          <div class="ldc-intern-timeline-title">入職報到</div>
-        </div>
-      </div>
     </div>
 
-    <div class="ldc-events-section">
-      <h3 class="ldc-section-title title-events">校園說明會時程</h3>
-      <h3 class="ldc-section-title title-req">職缺資訊及申請資格</h3>
-
-      <div class="ldc-events-box">
-        <ul class="ldc-event-list">
-          <li class="ldc-event-item" data-date="2026-03-27">
-            <div class="ldc-event-info">
-              <span class="ldc-event-school">國立高雄科技大學 (NKUST)</span>
-              <span class="ldc-event-date">2026/03/27 (五) 11:00-12:00</span>
+    <div class="ldc-intern-bottom">
+        <!-- 招募時程 -->
+        <div class="ldc-intern-timeline-wrapper">
+            <div class="ldc-intern-timeline-line"></div>
+            <div class="ldc-intern-timeline-items">
+                <div class="ldc-intern-timeline-item">
+                    <div class="ldc-intern-timeline-circle">3-4月</div>
+                    <div class="ldc-intern-timeline-title">校園說明會<br>履歷投遞及線上測驗</div>
+                </div>
+                <div class="ldc-intern-timeline-item">
+                    <div class="ldc-intern-timeline-circle">5-6月</div>
+                    <div class="ldc-intern-timeline-title">安排面談/錄取通知</div>
+                </div>
+                <div class="ldc-intern-timeline-item">
+                    <div class="ldc-intern-timeline-circle">7-9月</div>
+                    <div class="ldc-intern-timeline-title">入職報到</div>
+                </div>
             </div>
-            <a href="https://forms.office.com/e/mQT43T9ZtL" class="ldc-reg-btn">立即報名</a>
-          </li>
-          <li class="ldc-event-item" data-date="2026-03-30">
-            <div class="ldc-event-info">
-              <span class="ldc-event-school">國立屏東大學 (NPTU)</span>
-              <span class="ldc-event-date">2026/03/30 (一) 16:00-17:00</span>
-            </div>
-            <a href="https://forms.office.com/e/ipZSkSgg2t" class="ldc-reg-btn">立即報名</a>
-          </li>
-          <li class="ldc-event-item" data-date="2026-04-08">
-            <div class="ldc-event-info">
-              <span class="ldc-event-school">國立臺中科技大學 (NUTC)</span>
-              <span class="ldc-event-date">2026/04/08 (三) 16:00-17:00</span>
-            </div>
-            <a href="https://forms.office.com/e/fqfVdXjj6X" class="ldc-reg-btn">立即報名</a>
-          </li>
-          <li class="ldc-event-item" data-date="2026-04-15">
-            <div class="ldc-event-info">
-              <span class="ldc-event-school">朝陽科技大學 (CYUT)</span>
-              <span class="ldc-event-date">2026/04/15 (三) 14:00-15:00</span>
-            </div>
-            <a href="https://forms.office.com/e/enjEsKH7vT" class="ldc-reg-btn">立即報名</a>
-          </li>
-          <li class="ldc-event-item" data-date="2026-04-16">
-            <div class="ldc-event-info">
-              <span class="ldc-event-school">致理科技大學 (CLUT)</span>
-              <span class="ldc-event-date">2026/04/16 (四) 12:30-13:30</span>
-            </div>
-            <a href="https://forms.office.com/e/5pkTFXRe8c" class="ldc-reg-btn">立即報名</a>
-          </li>
-          <li class="ldc-event-item" data-date="2026-04-17">
-            <div class="ldc-event-info">
-              <span class="ldc-event-school">銘傳大學 (MCU)</span>
-              <span class="ldc-event-date">2026/04/17 (五) 12:30-13:30</span>
-            </div>
-            <a href="https://forms.office.com/e/aMJuAiLdEB" class="ldc-reg-btn">立即報名</a>
-          </li>
-        </ul>
-      </div>
-
-      <div class="ldc-intern-req-box">
-        <ul class="ldc-intern-req-list">
-          <li>地點：台北、台中、高雄</li>
-          <li>招募對象對象：大學新鮮人</li>
-          <li>入職報到：2026年7月–9月</li>
-        </ul>
-
-        <div class="ldc-btn-container">
-  <a href="https://careers.apac.deloitte.com/job/%E3%80%90%E5%AF%A9%E8%A8%88%E8%88%87%E7%A2%BA%E4%BF%A1%E8%AB%AE%E8%A9%A2%E6%9C%8D%E5%8B%99%E3%80%91LDC-%E5%B0%88%E6%A1%88%E6%9C%8D%E5%8B%99%E4%B8%AD%E5%BF%83-%E5%AF%A9%E8%A8%88%E5%B0%88%E5%93%A1%28%E5%8F%B0%E5%8C%97%29/553-zh_TW/" class="ldc-apply-btn btn-taipei">立即投遞：台北</a>
-        <a href="https://careers.apac.deloitte.com/Taiwan/job/%E3%80%90%E5%AF%A9%E8%A8%88%E8%88%87%E7%A2%BA%E4%BF%A1%E8%AB%AE%E8%A9%A2%E6%9C%8D%E5%8B%99%E3%80%91LDC-%E5%B0%88%E6%A1%88%E6%9C%8D%E5%8B%99%E4%B8%AD%E5%BF%83-%E5%AF%A9%E8%A8%88%E5%B0%88%E5%93%A1%28%E5%8F%B0%E4%B8%AD%29/787-zh_TW" class="ldc-apply-btn btn-taichung">立即投遞：台中</a>
-        <a href="https://careers.apac.deloitte.com/Taiwan/job/%E3%80%90%E5%AF%A9%E8%A8%88%E8%88%87%E7%A2%BA%E4%BF%A1%E8%AB%AE%E8%A9%A2%E6%9C%8D%E5%8B%99%E3%80%91LDC-%E5%B0%88%E6%A1%88%E6%9C%8D%E5%8B%99%E4%B8%AD%E5%BF%83-%E5%AF%A9%E8%A8%88%E5%B0%88%E5%93%A1%28%E9%AB%98%E9%9B%84%29/709-zh_TW" class="ldc-apply-btn btn-kaohsiung">立即投遞：高雄</a>
         </div>
 
-        <div class="ldc-notice-box">
-          <span class="ldc-notice-title">💡小提醒：</span>
-          <ul class="ldc-notice-list">
-            <li>根據會計師法規定，審計人員須修畢會計、審計、稅務或電腦相關科目合計 <strong>10學分以上</strong>，請於投遞職缺時上傳成績單。</li>
-            <li>本次職缺有安排<strong>線上測驗</strong>，請於投遞履歷 7 天內完成測驗。</li>
-            <li>若欲提前報到，敬請來信至校園招募信箱：<a href="mailto:twhrcampus@deloitte.com.tw" class="ldc-notice-email">twhrcampus@deloitte.com.tw</a></li>
-          </ul>
+        <div class="ldc-events-section">
+            <div class="ldc-events-container">
+                <h3 class="ldc-section-title">校園說明會時程</h3>
+                <div class="ldc-events-box">
+                    <ul class="ldc-event-list" style="list-style: none; padding: 0; margin: 0;">
+                        <li class="ldc-event-item" data-date="2026-03-27">
+                            <div class="ldc-event-info">
+                                <span class="ldc-event-school">國立高雄科技大學 (NKUST)</span>
+                                <span class="ldc-event-date">2026/03/27 (五) 11:00-12:00</span>
+                            </div>
+                            <a href="https://forms.office.com/e/mQT43T9ZtL" class="ldc-reg-btn ldc-reg-btn-event">立即報名</a>
+                        </li>
+                        <li class="ldc-event-item" data-date="2026-03-30">
+                            <div class="ldc-event-info">
+                                <span class="ldc-event-school">國立屏東大學 (NPTU)</span>
+                                <span class="ldc-event-date">2026/03/30 (一) 16:00-17:00</span>
+                            </div>
+                            <a href="https://forms.office.com/e/ipZSkSgg2t" class="ldc-reg-btn ldc-reg-btn-event">立即報名</a>
+                        </li>
+                        <li class="ldc-event-item" data-date="2026-04-08">
+                            <div class="ldc-event-info">
+                                <span class="ldc-event-school">國立臺中科技大學 (NUTC)</span>
+                                <span class="ldc-event-date">2026/04/08 (三) 16:00-17:00</span>
+                            </div>
+                            <a href="https://forms.office.com/e/fqfVdXjj6X" class="ldc-reg-btn ldc-reg-btn-event">立即報名</a>
+                        </li>
+                        <li class="ldc-event-item" data-date="2026-04-15">
+                            <div class="ldc-event-info">
+                                <span class="ldc-event-school">朝陽科技大學 (CYUT)</span>
+                                <span class="ldc-event-date">2026/04/15 (三) 14:00-15:00</span>
+                            </div>
+                            <a href="https://forms.office.com/e/enjEsKH7vT" class="ldc-reg-btn ldc-reg-btn-event">立即報名</a>
+                        </li>
+                        <li class="ldc-event-item" data-date="2026-04-16">
+                            <div class="ldc-event-info">
+                                <span class="ldc-event-school">致理科技大學 (CLUT)</span>
+                                <span class="ldc-event-date">2026/04/16 (四) 12:30-13:30</span>
+                            </div>
+                            <a href="https://forms.office.com/e/5pkTFXRe8c" class="ldc-reg-btn ldc-reg-btn-event">立即報名</a>
+                        </li>
+                        <li class="ldc-event-item" data-date="2026-04-17">
+                            <div class="ldc-event-info">
+                                <span class="ldc-event-school">銘傳大學 (MCU)</span>
+                                <span class="ldc-event-date">2026/04/17 (五) 12:30-13:30</span>
+                            </div>
+                            <a href="https://forms.office.com/e/aMJuAiLdEB" class="ldc-reg-btn ldc-reg-btn-event">立即報名</a>
+                        </li>
+                        <li class="ldc-event-item" data-date="2026-04-29">
+                            <div class="ldc-event-info">
+                                <span class="ldc-event-school">中國文化大學 (PCCU)</span>
+                                <span class="ldc-event-date">2026/04/29 (三) 14:30-15:30</span>
+                            </div>
+                            <a href="https://forms.office.com/e/4pms5gg5cD" class="ldc-reg-btn ldc-reg-btn-event">立即報名</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="ldc-req-container">
+                <h3 class="ldc-section-title">職缺資訊及申請資格</h3>
+                <div class="ldc-intern-req-box">
+                    
+                    <!-- Job Card 1 -->
+                    <div class="ldc-job-card card-audit">
+                        <div>
+                            <span class="job-card-title">LDC 審計專員</span>
+                            <span class="job-card-loc">地點:台北、台中、高雄</span>
+                            <ul class="job-card-list">
+                                <li><b>審計核心：</b>編制標準化底稿、參與憑證核對</li>
+                                <li><b>財報核對：</b>執行中英文財報數據校閱與翻譯</li>
+                                <li><b>數位轉型：</b>協助導入 AI 工具，優化審計作業流程</li>
+                            </ul>
+                        </div>
+                        <div class="ldc-dropdown">
+                            <button onclick="toggleDropdown('dropdown-audit')" class="ldc-card-apply-btn">立即投遞 (選擇地點)</button>
+                            <div id="dropdown-audit" class="ldc-dropdown-content">
+                                <a href="https://careers.apac.deloitte.com/Taiwan/job/%E3%80%90%E5%AF%A9%E8%A8%88%E8%88%87%E7%A2%BA%E4%BF%A1%E8%AB%AE%E8%A9%A2%E6%9C%8D%E5%8B%99%E3%80%91LDC-%E5%B0%88%E6%A1%88%E6%9C%8D%E5%8B%99%E4%B8%AD%E5%BF%83-%E5%AF%A9%E8%A8%88%E5%B0%88%E5%93%A1%28%E5%8F%B0%E5%8C%97%29/553-zh_TW">台北</a>
+                                <a href="https://careers.apac.deloitte.com/Taiwan/job/%E3%80%90%E5%AF%A9%E8%A8%88%E8%88%87%E7%A2%BA%E4%BF%A1%E8%AB%AE%E8%A9%A2%E6%9C%8D%E5%8B%99%E3%80%91LDC-%E5%B0%88%E6%A1%88%E6%9C%8D%E5%8B%99%E4%B8%AD%E5%BF%83-%E5%AF%A9%E8%A8%88%E5%B0%88%E5%93%A1%28%E5%8F%B0%E4%B8%AD%29/787-zh_TW">台中</a>
+                                <a href="https://careers.apac.deloitte.com/Taiwan/job/%E3%80%90%E5%AF%A9%E8%A8%88%E8%88%87%E7%A2%BA%E4%BF%A1%E8%AB%AE%E8%A9%A2%E6%9C%8D%E5%8B%99%E3%80%91LDC-%E5%B0%88%E6%A1%88%E6%9C%8D%E5%8B%99%E4%B8%AD%E5%BF%83-%E5%AF%A9%E8%A8%88%E5%B0%88%E5%93%A1%28%E9%AB%98%E9%9B%84%29/709-zh_TW">高雄</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Job Card 2 -->
+                    <div class="ldc-job-card card-digital" style="border-top-color: #0D8390;">
+                        <div>
+                            <span class="job-card-title">LDC 數位專員</span>
+                            <span class="job-card-loc">地點: 台北</span>
+                            <ul class="job-card-list">
+                                <li><b>數位支援：</b>結合會計知識，協助導入自動化系統</li>
+                                <li><b>數據實務：</b>運用 SQL 進行資料清理與分析</li>
+                                <li>歡迎無相關經驗者，有興趣即可投遞！</li>
+                            </ul>
+                        </div>
+                        <a href="https://careers.apac.deloitte.com/Taiwan/job/%E3%80%90%E5%AF%A9%E8%A8%88%E8%88%87%E7%A2%BA%E4%BF%A1%E8%AB%AE%E8%A9%A2%E6%9C%8D%E5%8B%99%E3%80%91LDC-%E5%B0%88%E6%A1%88%E6%9C%8D%E5%8B%99%E4%B8%AD%E5%BF%83-%E6%95%B8%E4%BD%8D%E5%B0%88%E5%93%A1%28%E5%8F%B0%E5%8C%97%29/1098-zh_TW" class="ldc-card-apply-btn" style="border-color:#0D8390 !important; color:#0D8390 !important;">立即投遞</a>
+                    </div>
+
+                    <!-- Job Card 3 -->
+                    <div class="ldc-job-card card-intern" style="border-top-color: #007CB0;">
+                        <div>
+                            <span class="job-card-title">LDC 長期實習生</span>
+                            <span class="job-card-loc">地點: 台北、台中、高雄</span>
+                            <ul class="job-card-list">
+                                <li><b>實習期間：</b>為期一年 (2026年9月開始)</li>
+                                <li><b>招募對象：</b>大三以上同學 (已修畢初級會計)</li>
+                                <li><b>發展機會：</b>表現良好者，有機會取得正式聘用</li>
+                            </ul>
+                        </div>
+                        <div class="ldc-dropdown">
+                            <button onclick="toggleDropdown('dropdown-intern')" class="ldc-card-apply-btn" style="border-color:#007CB0 !important; color:#007CB0 !important;">立即投遞 (選擇地點)</button>
+                            <div id="dropdown-intern" class="ldc-dropdown-content">
+                                <a href="https://careers.apac.deloitte.com/Taiwan/job/FY27%E3%80%90%E5%AF%A9%E8%A8%88%E8%88%87%E7%A2%BA%E4%BF%A1%E8%AB%AE%E8%A9%A2%E6%9C%8D%E5%8B%99%E3%80%91LDC-%E5%B0%88%E6%A1%88%E6%9C%8D%E5%8B%99%E4%B8%AD%E5%BF%83-%E5%AF%A6%E7%BF%92%E7%94%9F-%28%E5%8F%B0%E5%8C%97%29/1094-zh_TW">台北 (實習)</a>
+                                <a href="https://careers.apac.deloitte.com/job/FY27%E3%80%90%E5%AF%A9%E8%A8%88%E8%88%87%E7%A2%BA%E4%BF%A1%E8%AB%AE%E8%A9%A2%E6%9C%8D%E5%8B%99%E3%80%91LDC-%E5%B0%88%E6%A1%88%E6%9C%8D%E5%8B%99%E4%B8%AD%E5%BF%83-%E5%AF%A6%E7%BF%92%E7%94%9F%28%E5%8F%B0%E4%B8%AD%29/1096-zh_TW/">台中 (實習)</a>
+                                <a href="https://careers.apac.deloitte.com/job/FY27%E3%80%90%E5%AF%A9%E8%A8%88%E8%88%87%E7%A2%BA%E4%BF%A1%E8%AB%AE%E8%A9%A2%E6%9C%8D%E5%8B%99%E3%80%91LDC-%E5%B0%88%E6%A1%88%E6%9C%8D%E5%8B%99%E4%B8%AD%E5%BF%83-%E5%AF%A6%E7%BF%92%E7%94%9F%28%E9%AB%98%E9%9B%84%29/1097-zh_TW/">高雄 (實習)</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 小提醒 -->
+                <div class="ldc-notice-box">
+                    <span class="ldc-notice-title">💡 小提醒：</span>
+                    <ul class="ldc-notice-list">
+                        <li>根據會計師法規定，審計人員須修畢會計相關科目合計 <strong>10學分以上</strong>，請於投遞職缺時上傳成績單。</li>
+                        <li>本次"LDC 審計專員"及"LDC 長期實習生"職缺有安排 <strong>線上測驗</strong>，請於投遞履歷 7 天內完成測驗。</li>
+                        <li>若欲提前報到，敬請來信至：<a href="mailto:twhrcampus@deloitte.com.tw" class="ldc-notice-email">twhrcampus@deloitte.com.tw</a></li>
+                    </ul>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-  </div>
 </section>
 
 <script>
-document.addEventListener('DOMContentLoaded', function() {
-  const events = document.querySelectorAll('.ldc-event-item');
-  const today = new Date();
-  today.setHours(0, 0, 0, 0);
-
-  events.forEach(event => {
-    const eventDateStr = event.getAttribute('data-date');
-    if (eventDateStr) {
-      const eventDate = new Date(eventDateStr);
-      if (today > eventDate) {
-        event.classList.add('event-item-ended');
-        const btn = event.querySelector('.ldc-reg-btn');
-        if (btn) {
-          btn.textContent = '已結束';
-          btn.setAttribute('href', 'javascript:void(0)');
+/* --- 下拉選單切換邏輯 --- */
+function toggleDropdown(id) {
+    const allDropdowns = document.querySelectorAll('.ldc-dropdown-content');
+    allDropdowns.forEach(dropdown => {
+        if (dropdown.id !== id) {
+            dropdown.classList.remove('show');
         }
-      }
+    });
+    document.getElementById(id).classList.toggle("show");
+}
+
+window.onclick = function(event) {
+    if (!event.target.matches('.ldc-card-apply-btn')) {
+        const dropdowns = document.querySelectorAll('.ldc-dropdown-content');
+        dropdowns.forEach(dropdown => {
+            if (dropdown.classList.contains('show')) {
+                dropdown.classList.remove('show');
+            }
+        });
     }
-  });
+}
+
+/* --- 活動過期自動檢查 --- */
+document.addEventListener('DOMContentLoaded', function() {
+    const events = document.querySelectorAll('.ldc-event-item');
+    const today = new Date();
+    today.setHours(0, 0, 0, 0);
+
+    events.forEach(event => {
+        const eventDateStr = event.getAttribute('data-date');
+        if (eventDateStr) {
+            const eventDate = new Date(eventDateStr);
+            if (today > eventDate) {
+                event.classList.add('event-item-ended');
+                const btn = event.querySelector('.ldc-reg-btn');
+                if (btn) {
+                    btn.textContent = '已結束';
+                    btn.setAttribute('href', 'javascript:void(0)');
+                }
+            }
+        }
+    });
 });
 </script>
+</body>
+</html>
