@@ -1,253 +1,242 @@
-<style>
-/* =========================
-   Deloitte AA Summer Intern – Refined UI
-   Brand: 黑 / 白 / #86BC25
-   ========================= */
-:root{
-  --brand:#86BC25;
-  --black:#000000;
-  --white:#ffffff;
-  --text:#1a1a1a;
-  --muted:#666;
-  --border:#e6e6e6;
-  --card:#ffffff;
-  --surface:#f7f9f5;     /* 計畫內容背景 */
-  --light-gray:#f5f5f5;   /* 時程區塊背景 */
-  --radius:16px;
-  --shadow:0 2px 10px rgba(0,0,0,.04);
-}
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2026 Deloitte A&A Summer Internship</title>
+    <style>
+        /* =========================
+           Deloitte AA Summer Intern – Refined UI
+           Brand: 黑 / 白 / #86BC25
+           ========================= */
+        :root {
+            --brand: #86BC25;
+            --black: #000000;
+            --white: #ffffff;
+            --text: #1a1a1a;
+            --muted: #666;
+            --border: #e6e6e6;
+            --card: #ffffff;
+            --surface: #f7f9f5;      /* 計畫內容背景 */
+            --light-gray: #f5f5f5;    /* 時程區塊背景 */
+            --radius: 16px;
+            --shadow: 0 2px 10px rgba(0,0,0,.04);
+            
+            /* 新增：已結束狀態的顏色 */
+            --disabled: #cccccc;
+            --disabled-text: #999999;
+        }
 
-/* 通用區塊樣式 */
-.summer { padding: 64px 20px; }
-@media (max-width: 768px) {
-  .summer { padding: 32px 12px; }
-}
+        /* 通用區塊樣式 */
+        .summer { padding: 64px 20px; }
+        @media (max-width: 768px) {
+            .summer { padding: 32px 12px; }
+        }
 
-/* 寬幅容器設定 (1400px) */
-.container {
-  width: 90%;
-  max-width: 1400px;
-  margin: 0 auto;
-}
-@media (max-width: 768px) {
-  .container { width: 94%; }
-}
+        /* 寬幅容器設定 (1400px) */
+        .container {
+            width: 90%;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        @media (max-width: 768px) {
+            .container { width: 94%; }
+        }
 
-/* Eyebrow (眉標) */
-.eyebrow {
-  display: block;
-  font-size: 14px;
-  font-weight: 600;
-  color: var(--brand);
-  text-transform: uppercase;
-  letter-spacing: 0.12rem;
-  margin-bottom: 10px;
-}
+        /* Eyebrow (眉標) */
+        .eyebrow {
+            display: block;
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--brand);
+            text-transform: uppercase;
+            letter-spacing: 0.12rem;
+            margin-bottom: 10px;
+        }
 
-/* 主標題 */
-.section-title {
-  font-size: clamp(24px, 3vw, 32px);
-  font-weight: 600;
-  margin: 0 0 16px;
-  color: var(--black) !important;
-  letter-spacing: .5px;
-}
+        /* 主標題 */
+        .section-title {
+            font-size: clamp(24px, 3vw, 32px);
+            font-weight: 600;
+            margin: 0 0 16px;
+            color: var(--black) !important;
+            letter-spacing: .5px;
+        }
 
-.lead {
-  font-size: clamp(16px, 2.2vw, 18px);
-  line-height: 1.8;
-  color: var(--text);
-  margin: 0 0 16px;
-}
-@media (max-width: 768px) {
-  .lead { font-size: 15px; line-height: 1.6; }
-}
+        .lead {
+            font-size: clamp(16px, 2.2vw, 18px);
+            line-height: 1.8;
+            color: var(--text);
+            margin: 0 0 16px;
+        }
+        @media (max-width: 768px) {
+            .lead { font-size: 15px; line-height: 1.6; }
+        }
 
-/* --- 清單圓點：縮小尺寸並精準對齊 --- */
-.highlights, .content-list { 
-  margin: 12px 0 20px; 
-  padding: 0; 
-  list-style: none;
-}
-.highlights li, .content-list li { 
-  position: relative;
-  padding-left: 22px; /* 縮小圓點後稍微調窄間距，比例更協調 */
-  margin: 8px 0; 
-  line-height: 1.8; 
-  color: var(--text); 
-  font-size: 16px; 
-}
-@media (max-width: 768px) {
-  .highlights li, .content-list li { font-size: 14px; margin: 6px 0; line-height: 1.7; }
-}
+        /* 清單樣式 */
+        .highlights, .content-list { 
+            margin: 12px 0 20px; 
+            padding: 0; 
+            list-style: none;
+        }
+        .highlights li, .content-list li { 
+            position: relative;
+            padding-left: 22px;
+            margin: 8px 0; 
+            line-height: 1.8; 
+            color: var(--text); 
+            font-size: 16px; 
+        }
+        @media (max-width: 768px) {
+            .highlights li, .content-list li { font-size: 14px; margin: 6px 0; line-height: 1.7; }
+        }
 
-/* CSS 繪製精緻小圓點 (5px) */
-.highlights li::before, .content-list li::before {
-  content: "";
-  position: absolute;
-  left: 6px;
-  
-  /* 縮小為 5px */
-  width: 5px;
-  height: 5px;
-  background-color: var(--brand);
-  border-radius: 50%;
-  
-  /* 精準對齊文字中心點 */
-  /* 電腦版 (16px * 1.8) / 2 - 2.5 = 11.9px */
-  top: 12px; 
-}
+        /* 圓點 */
+        .highlights li::before, .content-list li::before {
+            content: "";
+            position: absolute;
+            left: 6px;
+            width: 5px;
+            height: 5px;
+            background-color: var(--brand);
+            border-radius: 50%;
+            top: 12px; 
+        }
+        @media (max-width: 768px) {
+            .highlights li::before, .content-list li::before { top: 10px; }
+        }
 
-/* 手機版垂直位置微調 */
-@media (max-width: 768px) {
-  .highlights li::before, .content-list li::before {
-     /* 手機版 (14px * 1.7) / 2 - 2.5 = 9.4px */
-     top: 10px;
-  }
-}
+        .highlights li span { 
+            color: var(--black);
+            font-weight: 800; 
+        }
 
-/* 冒號前粗體 */
-.highlights li span { 
-  color: var(--black);
-  font-weight: 800; 
-}
+        .bg-light-green { background-color: var(--surface) !important; color: #333; }
+        .bg-light-gray { background-color: var(--light-gray) !important; color: #333; }
 
-/* 背景顏色設定 */
-.bg-light-green { background-color: var(--surface) !important; color: #333; }
-.bg-light-gray { background-color: var(--light-gray) !important; color: #333; }
+        /* 佈局控制 */
+        .info-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+            text-align: left;
+            margin-bottom: 48px;
+        }
+        @media (min-width: 992px) {
+            .info-grid { flex-direction: row; gap: 100px; }
+            .info-col { flex: 1; }
+        }
 
-/* --- 佈局控制 --- */
-.info-grid {
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
-  text-align: left;
-  margin-bottom: 48px;
-}
-@media (min-width: 992px) {
-  .info-grid { flex-direction: row; gap: 100px; }
-  .info-col { flex: 1; }
-}
+        .info-sub-title {
+            font-size: 22px;
+            color: var(--black);
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            font-weight: 600;
+        }
+        .info-sub-title::before {
+            content: "";
+            width: 4px;
+            height: 20px;
+            background: var(--brand);
+            margin-right: 12px;
+        }
 
-.info-sub-title {
-  font-size: 22px;
-  color: var(--black);
-  margin-bottom: 20px;
-  display: flex;
-  align-items: center;
-  font-weight: 600;
-}
-.info-sub-title::before {
-  content: "";
-  width: 4px;
-  height: 20px;
-  background: var(--brand);
-  margin-right: 12px;
-}
+        .note-box {
+            margin-top: 24px;
+            padding: 16px;
+            background: rgba(134, 188, 37, 0.04);
+            border-left: 3px solid var(--brand);
+            font-size: 14px;
+            color: #555;
+            line-height: 1.6;
+        }
 
-.note-box {
-  margin-top: 24px;
-  padding: 16px;
-  background: rgba(134, 188, 37, 0.04);
-  border-left: 3px solid var(--brand);
-  font-size: 14px;
-  color: #555;
-  line-height: 1.6;
-}
-@media (max-width: 768px) {
-  .note-box { font-size: 13px; }
-}
+        /* Timeline 樣式 */
+        .timeline-area { margin-top: 48px; }
+        .timeline-circles .steps { display: flex; position: relative; }
 
-/* --- 大尺寸 Timeline 樣式 --- */
-.timeline-area {
-  margin-top: 48px;
-}
-.timeline-circles .steps {
-  display: flex;
-  position: relative;
-}
+        @media (min-width: 769px) {
+            .timeline-circles .steps {
+                flex-direction: row;
+                justify-content: space-around;
+                align-items: flex-start;
+            }
+            .timeline-circles .steps::before {
+                content: "";
+                position: absolute; left: 10%; right: 10%; 
+                top: 70px; 
+                height: 3px; background: var(--brand);
+                z-index: 0;
+            }
+            .timeline-circles .circle {
+                width: 140px; height: 140px;
+                font-size: 22px;
+            }
+        }
 
-@media (min-width: 769px) {
-  .timeline-circles .steps {
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: flex-start;
-  }
-  .timeline-circles .steps::before {
-    content: "";
-    position: absolute; left: 10%; right: 10%; 
-    top: 70px; /* 大圓圈 140px 的中心 */
-    height: 3px; background: var(--brand);
-    z-index: 0;
-  }
-  .timeline-circles .circle {
-    width: 140px; height: 140px;
-    font-size: 22px;
-  }
-}
+        @media (max-width: 768px) {
+            .timeline-circles .steps { flex-direction: column; align-items: center; gap: 40px; }
+            .timeline-circles .steps::before { display: none; }
+            .timeline-circles .circle { width: 100px !important; height: 100px !important; font-size: 16px !important; }
+            .timeline-circles .label { font-size: 13px !important; }
+        }
 
-@media (max-width: 768px) {
-  .timeline-circles .steps {
-    flex-direction: column;
-    align-items: center;
-    gap: 40px;
-  }
-  .timeline-circles .steps::before { display: none; }
-  .timeline-circles .circle {
-    width: 100px !important; 
-    height: 100px !important; 
-    font-size: 16px !important;
-  }
-  .timeline-circles .label { font-size: 13px !important; }
-}
+        .timeline-circles .step { flex: 1; display: flex; flex-direction: column; align-items: center; z-index: 1; }
+        .timeline-circles .circle {
+            border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            color: var(--black);
+            background: var(--white);
+            border: 5px solid var(--brand) !important;
+            font-weight: 800;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            margin-bottom: 16px;
+        }
+        .timeline-circles .label { font-size: 16px; font-weight: 600; color: #53565A; }
 
-.timeline-circles .step {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  z-index: 1;
-}
-.timeline-circles .circle {
-  border-radius: 50%;
-  display: flex; align-items: center; justify-content: center;
-  color: var(--black);
-  background: var(--white);
-  border: 5px solid var(--brand) !important;
-  font-weight: 800;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-  margin-bottom: 16px;
-}
-.timeline-circles .label {
-  font-size: 16px; font-weight: 600; color: #53565A;
-}
+        /* --- 按鈕樣式 --- */
+        .apply-footer { text-align: center; margin-top: 16px; }
+        
+        /* 原本的投遞按鈕樣式 (保留) */
+        .btn-apply {
+            display: inline-block !important;
+            text-decoration: none !important;
+            padding: 18px 80px !important;
+            background-color: #ffffff !important;
+            color: #000000 !important;
+            border: 2px solid var(--brand) !important;
+            border-radius: 8px !important;
+            font-weight: 700 !important;
+            font-size: 18px !important;
+            transition: all 0.3s ease !important;
+            cursor: pointer;
+        }
 
-/* --- 按鈕樣式 (白底、綠框、黑字) --- */
-.apply-footer { text-align: center; margin-top: 16px; }
-.btn-apply {
-  display: inline-block !important;
-  text-decoration: none !important;
-  padding: 18px 80px !important;
-  background-color: #ffffff !important;
-  color: #000000 !important;
-  border: 2px solid var(--brand) !important;
-  border-radius: 8px !important;
-  font-weight: 700 !important;
-  font-size: 18px !important;
-  transition: all 0.3s ease !important;
-  cursor: pointer;
-}
-.btn-apply:hover {
-  background-color: #f7f9f5 !important;
-  color: #86BC25 !important;
-  border: 2px solid #86BC25 !important;
-  transform: translateY(-2px) !important;
-  box-shadow: 0 6px 15px rgba(134, 188, 37, 0.15) !important;
-}
-@media (max-width: 768px) {
-  .btn-apply { width: 100%; padding: 14px 20px !important; box-sizing: border-box; }
-}
-</style>
+        /* --- 新增：已結束按鈕樣式 (灰底、灰框、灰字) --- */
+        .btn-closed {
+            display: inline-block !important;
+            text-decoration: none !important;
+            padding: 18px 80px !important;
+            background-color: #f5f5f5 !important;
+            color: var(--disabled-text) !important;
+            border: 2px solid var(--disabled) !important;
+            border-radius: 8px !important;
+            font-weight: 700 !important;
+            font-size: 18px !important;
+            cursor: not-allowed !important; /* 顯示禁用滑鼠游標 */
+            pointer-events: none;          /* 徹底禁用點擊事件 */
+            box-shadow: none !important;
+            transform: none !important;
+        }
+
+        @media (max-width: 768px) {
+            .btn-apply, .btn-closed { width: 100%; padding: 14px 20px !important; box-sizing: border-box; }
+        }
+    </style>
+</head>
+<body>
 
 <section class="summer about" id="about-summer" style="background: #fff;">
   <div class="container">
@@ -339,8 +328,12 @@
       </div>
     </div>
 
+    <!-- 按鈕調整部分 -->
     <div class="apply-footer">
-      <a class="btn-apply" href="https://careers.apac.deloitte.com/Taiwan/job/%E5%AF%A6%E7%BF%92%E7%94%9F-2026%E6%9A%91%E6%9C%9F%E5%AF%A6%E7%BF%92-%E5%AF%A9%E8%A8%88%E6%9C%8D%E5%8B%99-%E5%AF%A9%E8%A8%88%E8%88%87%E7%A2%BA%E4%BF%A1%E8%AB%AE%E8%A9%A2%E6%9C%8D%E5%8B%99/1082-zh_TW/?st=8A2E0AE55F5D977BE55995EA334886BB161EF634" target="_blank" rel="noopener">立即投遞</a>
+      <a class="btn-closed">申請已結束</a>
     </div>
   </div>
 </section>
+
+</body>
+</html>
